@@ -81,22 +81,11 @@
 		AFD1FEFB21A6F3A800D2894F /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 		AFD1FEFD21A803F300D2894F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		AFD1FEFF21A8047600D2894F /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
-		AFD1FF2A21A8126500D2894F /* FormUrlParameterEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormUrlParameterEncoder.swift; sourceTree = "<group>"; };
-		AFD1FF2B21A8126500D2894F /* ParameterEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterEncoder.swift; sourceTree = "<group>"; };
-		AFD1FF2C21A8126500D2894F /* URLParameterEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLParameterEncoder.swift; sourceTree = "<group>"; };
-		AFD1FF2D21A8126500D2894F /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
-		AFD1FF2E21A8126500D2894F /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
-		AFD1FF2F21A8126500D2894F /* EndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
-		AFD1FF3021A8126600D2894F /* Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		AFD1FF3D21A8253600D2894F /* ServerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerResponse.swift; sourceTree = "<group>"; };
 		AFD1FF4321A8266500D2894F /* MockData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		AFD1FF4521A826EF00D2894F /* serverResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = serverResponse.json; sourceTree = "<group>"; };
 		AFD1FF4721A827DC00D2894F /* simpleServerResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = simpleServerResponse.json; sourceTree = "<group>"; };
 		AFD1FF4A21A8284700D2894F /* noResultsServerResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = noResultsServerResponse.json; sourceTree = "<group>"; };
-		AFD1FF4D21A8439700D2894F /* ServiceProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceProvider.swift; sourceTree = "<group>"; };
-		AFD1FF5121A8444300D2894F /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
-		AFD1FF5321A8448900D2894F /* iTunesAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iTunesAPI.swift; sourceTree = "<group>"; };
-		AFD1FF5521A8476C00D2894F /* SearchiTunesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchiTunesService.swift; sourceTree = "<group>"; };
 		AFD1FF5721A8490600D2894F /* SearchiTunesServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchiTunesServiceTests.swift; sourceTree = "<group>"; };
 		AFD1FF5921A84C8300D2894F /* MockNetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockNetworkService.swift; sourceTree = "<group>"; };
 		AFD1FF5E21A85CE200D2894F /* SearchWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchWireframe.swift; sourceTree = "<group>"; };
@@ -234,35 +223,8 @@
 		AFD1FF0421A8053900D2894F /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				AFD1FF2921A8126500D2894F /* Encoder */,
-				AFD1FF2F21A8126500D2894F /* EndPoint.swift */,
-				AFD1FF3021A8126600D2894F /* Networking.swift */,
-				AFD1FF2E21A8126500D2894F /* Router.swift */,
-				AFD1FF0521A8053F00D2894F /* Networking */,
 			);
 			path = Services;
-			sourceTree = "<group>";
-		};
-		AFD1FF0521A8053F00D2894F /* Networking */ = {
-			isa = PBXGroup;
-			children = (
-				AFD1FF5321A8448900D2894F /* iTunesAPI.swift */,
-				AFD1FF5121A8444300D2894F /* NetworkService.swift */,
-				AFD1FF4D21A8439700D2894F /* ServiceProvider.swift */,
-				AFD1FF5521A8476C00D2894F /* SearchiTunesService.swift */,
-			);
-			path = Networking;
-			sourceTree = "<group>";
-		};
-		AFD1FF2921A8126500D2894F /* Encoder */ = {
-			isa = PBXGroup;
-			children = (
-				AFD1FF2A21A8126500D2894F /* FormUrlParameterEncoder.swift */,
-				AFD1FF2B21A8126500D2894F /* ParameterEncoder.swift */,
-				AFD1FF2C21A8126500D2894F /* URLParameterEncoder.swift */,
-				AFD1FF2D21A8126500D2894F /* JSONParameterEncoder.swift */,
-			);
-			path = Encoder;
 			sourceTree = "<group>";
 		};
 		AFD1FF3C21A8252A00D2894F /* Model */ = {
