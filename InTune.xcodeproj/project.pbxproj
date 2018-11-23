@@ -24,7 +24,6 @@
 		AFD1FF4421A8266500D2894F /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FF4321A8266500D2894F /* MockData.swift */; };
 		AFD1FF5821A8490600D2894F /* SearchiTunesServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FF5721A8490600D2894F /* SearchiTunesServiceTests.swift */; };
 		AFD1FF5A21A84C8400D2894F /* MockNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FF5921A84C8300D2894F /* MockNetworkService.swift */; };
-		AFD1FF5B21A84C8B00D2894F /* noResultsServerResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = AFD1FF4A21A8284700D2894F /* noResultsServerResponse.json */; };
 		AFD1FF5C21A84C8F00D2894F /* simpleServerResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = AFD1FF4721A827DC00D2894F /* simpleServerResponse.json */; };
 		AFD1FF5D21A84C9200D2894F /* serverResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = AFD1FF4521A826EF00D2894F /* serverResponse.json */; };
 		AFD1FF5F21A85CE200D2894F /* SearchWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FF5E21A85CE200D2894F /* SearchWireframe.swift */; };
@@ -45,6 +44,10 @@
 		AFD1FFA721A868B200D2894F /* iTunesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FFA321A868B100D2894F /* iTunesAPI.swift */; };
 		AFD1FFA821A868B200D2894F /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FFA421A868B100D2894F /* NetworkService.swift */; };
 		AFD1FFA921A868B200D2894F /* ServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FFA521A868B100D2894F /* ServiceProvider.swift */; };
+		AFD1FFAA21A86E2700D2894F /* noResultsServerResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = AFD1FF4A21A8284700D2894F /* noResultsServerResponse.json */; };
+		AFD1FFAB21A86E2A00D2894F /* simpleServerResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = AFD1FF4721A827DC00D2894F /* simpleServerResponse.json */; };
+		AFD1FFAC21A86E2F00D2894F /* serverResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = AFD1FF4521A826EF00D2894F /* serverResponse.json */; };
+		AFD1FFAD21A86E3200D2894F /* noResultsServerResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = AFD1FF4A21A8284700D2894F /* noResultsServerResponse.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -526,7 +529,10 @@
 				AFD1FED021A6CE7700D2894F /* LaunchScreen.storyboard in Resources */,
 				AFD1FEFE21A803F300D2894F /* Default-568h@2x.png in Resources */,
 				AFD1FECD21A6CE7700D2894F /* Assets.xcassets in Resources */,
+				AFD1FFAB21A86E2A00D2894F /* simpleServerResponse.json in Resources */,
 				AFD1FECB21A6CE7400D2894F /* Main.storyboard in Resources */,
+				AFD1FFAA21A86E2700D2894F /* noResultsServerResponse.json in Resources */,
+				AFD1FFAC21A86E2F00D2894F /* serverResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -534,8 +540,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFD1FFAD21A86E3200D2894F /* noResultsServerResponse.json in Resources */,
 				AFD1FF5D21A84C9200D2894F /* serverResponse.json in Resources */,
-				AFD1FF5B21A84C8B00D2894F /* noResultsServerResponse.json in Resources */,
 				AFD1FF5C21A84C8F00D2894F /* simpleServerResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

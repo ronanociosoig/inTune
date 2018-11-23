@@ -14,6 +14,7 @@ class SearchiTunesService: NetworkService, SearchiTunesLoadingService {
         
         if term.count == 0 {
             completion(nil, NetworkResponse.noData.rawValue)
+            return
         }
         
         router.request(.search(term: term)) { (data, response, error) in

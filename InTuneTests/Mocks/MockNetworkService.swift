@@ -13,13 +13,35 @@ import Networking
 
 class MockNetworkService: ServiceProvider {
     func makeSearchiTunesService() -> SearchiTunesLoadingService {
-        return SearchiTunesService()
+        return MockSearchiTunesService()
     }
 }
 
 class MockSearchiTunesService: NetworkService, SearchiTunesLoadingService {
+    
+    enum MockResponseType {
+        case complexResponse
+        case simpleResponse
+        case noResultsResponse
+    }
+    
+    var responseType: MockResponseType = .complexResponse
+    
     func load(term: String, completion: @escaping (Data?, String?) -> ()) {
-        let outputData = try! MockData.loadComplexServerResponse()
-        completion(outputData, nil)
+        
+        switch responseType {
+        case MockResponseType.complexResponse:
+            let outputData = try! MockData.loadComplexServerResponse()
+            completion(outputData, nil)
+            return
+        case MockResponseType.simpleResponse:
+            let outputData = try! MockData.loadSimpleResponse()
+            completion(outputData, nil)
+            return
+        default:
+            let outputData = try! MockData.loadNoResultsResponse()
+            completion(outputData, nil)
+            return
+        }
     }
 }
