@@ -10,4 +10,10 @@ import Foundation
 
 class DataProvider {
     let appData = AppData()
+    
+    // let networkService: ServiceProvider
+    
+//    init(service: ServiceProvider) {
+//        self.networkService = service
+//    }
 }

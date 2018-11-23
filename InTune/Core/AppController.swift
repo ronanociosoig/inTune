@@ -9,9 +9,13 @@
 import Foundation
 
 class AppController {
-    let dataProvider = DataProvider()
+    // let dataProvider = DataProvider(service: NetworkService())
+    var coordinator: Coordinator?
     
     func start() {
-        
+        coordinator = Coordinator()
+        //coordinator?.dataProvider = dataProvider
+        coordinator?.start()
+
     }
 }

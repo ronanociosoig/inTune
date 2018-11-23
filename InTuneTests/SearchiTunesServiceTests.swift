@@ -21,10 +21,22 @@ class SearchiTunesServiceTests: XCTestCase {
     }
     
     func testSearchWithEmptyTermReturnsError() {
-        let referenceResponse = try! MockData.loadNoResultsResponse()
+        // let referenceResponse = try! MockData.loadNoResultsResponse()
         
+        let expectation = self.expectation(description: "No results in response data")
         
+        let networkService = MockNetworkService()
+        let searchService = networkService.makeSearchiTunesService()
         
+        searchService.load(term: "") { (data, errorMessage) in
+            XCTAssertNotNil(errorMessage)
+            
+            if errorMessage != nil {
+                expectation.fulfill()
+            }
+        }
+        
+        waitForExpectations(timeout: 1, handler: nil)
     }
 
     func testLoadWithNoResultsResponse() {
