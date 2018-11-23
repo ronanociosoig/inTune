@@ -39,43 +39,6 @@ class SearchiTunesServiceTests: XCTestCase {
 
         waitForExpectations(timeout: 1, handler: nil)
     }
-
-    func testLoadWithNoResultsResponse() {
-        let expectation = self.expectation(description: "No results in response data")
-        
-        let networkService = MockNetworkService()
-        let searchService = networkService.makeSearchiTunesService() as! MockSearchiTunesService
-        searchService.responseType = .noResultsResponse
-        
-        searchService.load(term: "something you cannot find") { (data, errorMessage) in
-            XCTAssertNotNil(data)
-            
-            if data != nil {
-                expectation.fulfill()
-            }
-        }
-        
-        waitForExpectations(timeout: 1, handler: nil)
-        
-    }
-    
-    func testLoadSimpleResponse() {
-        let expectation = self.expectation(description: "No results in response data")
-        
-        let networkService = MockNetworkService()
-        let searchService = networkService.makeSearchiTunesService() as! MockSearchiTunesService
-        searchService.responseType = .simpleResponse
-        
-        searchService.load(term: "something you cannot find") { (data, errorMessage) in
-            XCTAssertNotNil(data)
-            
-            if data != nil {
-                expectation.fulfill()
-            }
-        }
-        
-        waitForExpectations(timeout: 1, handler: nil)
-    }
     
     func testLoadComplexResponse() {
         let expectation = self.expectation(description: "No results in response data")
