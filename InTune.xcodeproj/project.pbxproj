@@ -41,6 +41,10 @@
 		AFD1FF9E21A8674800D2894F /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FF9721A8674700D2894F /* Router.swift */; };
 		AFD1FF9F21A8674800D2894F /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FF9821A8674700D2894F /* EndPoint.swift */; };
 		AFD1FFA021A8674800D2894F /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FF9921A8674700D2894F /* Networking.swift */; };
+		AFD1FFA621A868B200D2894F /* SearchiTunesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FFA221A868B100D2894F /* SearchiTunesService.swift */; };
+		AFD1FFA721A868B200D2894F /* iTunesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FFA321A868B100D2894F /* iTunesAPI.swift */; };
+		AFD1FFA821A868B200D2894F /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FFA421A868B100D2894F /* NetworkService.swift */; };
+		AFD1FFA921A868B200D2894F /* ServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FFA521A868B100D2894F /* ServiceProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -137,6 +141,10 @@
 		AFD1FF9721A8674700D2894F /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		AFD1FF9821A8674700D2894F /* EndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
 		AFD1FF9921A8674700D2894F /* Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		AFD1FFA221A868B100D2894F /* SearchiTunesService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchiTunesService.swift; path = Networking/SearchiTunesService.swift; sourceTree = "<group>"; };
+		AFD1FFA321A868B100D2894F /* iTunesAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = iTunesAPI.swift; path = Networking/iTunesAPI.swift; sourceTree = "<group>"; };
+		AFD1FFA421A868B100D2894F /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkService.swift; path = Networking/NetworkService.swift; sourceTree = "<group>"; };
+		AFD1FFA521A868B100D2894F /* ServiceProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServiceProvider.swift; path = Networking/ServiceProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -290,6 +298,10 @@
 		AFD1FF0421A8053900D2894F /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				AFD1FFA321A868B100D2894F /* iTunesAPI.swift */,
+				AFD1FFA421A868B100D2894F /* NetworkService.swift */,
+				AFD1FFA221A868B100D2894F /* SearchiTunesService.swift */,
+				AFD1FFA521A868B100D2894F /* ServiceProvider.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -559,11 +571,15 @@
 				AFD1FEFC21A6F3A800D2894F /* DataProvider.swift in Sources */,
 				AFD1FEC821A6CE7400D2894F /* ViewController.swift in Sources */,
 				AFD1FEC621A6CE7400D2894F /* AppDelegate.swift in Sources */,
+				AFD1FFA721A868B200D2894F /* iTunesAPI.swift in Sources */,
 				AFD1FEF621A6E2E900D2894F /* Constants.swift in Sources */,
 				AFD1FEF821A6F38300D2894F /* AppController.swift in Sources */,
+				AFD1FFA621A868B200D2894F /* SearchiTunesService.swift in Sources */,
 				AFD1FF5F21A85CE200D2894F /* SearchWireframe.swift in Sources */,
 				AFD1FF3E21A8253600D2894F /* ServerResponse.swift in Sources */,
 				AFD1FEFA21A6F39600D2894F /* AppData.swift in Sources */,
+				AFD1FFA921A868B200D2894F /* ServiceProvider.swift in Sources */,
+				AFD1FFA821A868B200D2894F /* NetworkService.swift in Sources */,
 				AFD1FF0021A8047600D2894F /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -912,6 +928,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Networking/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -942,6 +959,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Networking/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

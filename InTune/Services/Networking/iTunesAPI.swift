@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Networking
 
 enum iTunesAPI {
     case search(term: String)

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Networking
 
 class SearchiTunesService: NetworkService, SearchiTunesLoadingService {
     func load(term: String, completion: @escaping (_ data: Data?,_ error: String?)->()) {
