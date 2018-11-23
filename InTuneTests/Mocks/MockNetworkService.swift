@@ -7,19 +7,19 @@
 //
 
 import Foundation
-// import Network
+import Networking
 
-//@testable import InTune
-//
-//class MockNetworkService: ServiceProvider {
-//    func makeSearchiTunesService() -> SearchiTunesLoadingService {
-//        return SearchiTunesService()
-//    }
-//}
-//
-//class MockSearchiTunesService: NetworkService, SearchiTunesLoadingService {
-//    func load(term: String, completion: @escaping (Data?, String?) -> ()) {
-//        let outputData = try! MockData.loadComplexServerResponse()
-//        completion(outputData, nil)
-//    }
-//}
+@testable import InTune
+
+class MockNetworkService: ServiceProvider {
+    func makeSearchiTunesService() -> SearchiTunesLoadingService {
+        return SearchiTunesService()
+    }
+}
+
+class MockSearchiTunesService: NetworkService, SearchiTunesLoadingService {
+    func load(term: String, completion: @escaping (Data?, String?) -> ()) {
+        let outputData = try! MockData.loadComplexServerResponse()
+        completion(outputData, nil)
+    }
+}
