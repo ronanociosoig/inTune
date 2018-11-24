@@ -8,8 +8,13 @@
 
 import Foundation
 
-class AppController {
-    // let dataProvider = DataProvider(service: NetworkService())
+protocol AppControlling {
+    func start()
+    func search(term: String)
+}
+
+class AppController: AppControlling {
+    let dataProvider = DataProvider(service: NetworkService())
     var coordinator: Coordinator?
     
     func start() {
@@ -17,5 +22,9 @@ class AppController {
         //coordinator?.dataProvider = dataProvider
         coordinator?.start()
 
+    }
+    
+    func search(term: String) {
+        dataProvider.search(term: term)
     }
 }

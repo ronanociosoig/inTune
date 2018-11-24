@@ -9,5 +9,6 @@
 import Foundation
 
 class AppData {
-    
+    var searchTerm: String?
+    var results = [Result]()
 }

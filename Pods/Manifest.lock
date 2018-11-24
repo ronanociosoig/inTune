@@ -1,0 +1,20 @@
+PODS:
+  - Haneke (1.0.2)
+  - JGProgressHUD (2.0.3)
+
+DEPENDENCIES:
+  - Haneke
+  - JGProgressHUD
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Haneke
+    - JGProgressHUD
+
+SPEC CHECKSUMS:
+  Haneke: 01454a67322faa0dd9d81fc0f447885044e71521
+  JGProgressHUD: 12b20a8f4ffe05258f8635c1ab92816e451f904d
+
+PODFILE CHECKSUM: 82b65146b98560ee9a4cdea725c31befdc84ace0
+
+COCOAPODS: 1.5.3

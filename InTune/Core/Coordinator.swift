@@ -7,7 +7,7 @@
 //
 
 import UIKit
-// import JGProgressHUD
+import JGProgressHUD
 
 class Coordinator {
     let window: UIWindow
@@ -15,7 +15,7 @@ class Coordinator {
     // var appController: AppController!
     // let actions: Actions
     
-    // var hud: JGProgressHUD?
+    var hud: JGProgressHUD?
     
     init() {
         // self.actions = actions
@@ -32,7 +32,56 @@ class Coordinator {
         window.rootViewController = viewController
     }
     
+    func showSearchResults() {
+        
+    }
+    
     func showSongDetail() {
         
+    }
+    
+    func showLoading() {
+        
+        guard let topViewController = window.rootViewController else { return }
+        
+        hud = JGProgressHUD(style: .dark)
+        hud?.textLabel.text = Constants.Translations.loading
+        hud?.show(in: topViewController.view)
+    }
+    
+    func dismissLoading() {
+        hud?.dismiss(animated: true)
+    }
+    
+    func showAlert(with message: String) {
+        let alertController = UIAlertController(title: nil,
+                                                message: message,
+                                                preferredStyle: .alert)
+        
+        let okButton = UIAlertAction(title: Constants.Translations.ok,
+                                     style: .default,
+                                     handler: nil)
+        
+        alertController.addAction(okButton)
+        
+        guard let viewController = window.rootViewController else { return }
+        
+        viewController.present(alertController,
+                               animated: true,
+                               completion: nil)
+    }
+}
+
+extension Coordinator: DataLoaded {
+    func dataReceived(errorMessage: String?) {
+        DispatchQueue.main.async {
+            self.dismissLoading()
+            
+            if let errorMessage = errorMessage {
+                self.showAlert(with: errorMessage)
+            } else {
+                self.showSearchResults()
+            }
+        }
     }
 }

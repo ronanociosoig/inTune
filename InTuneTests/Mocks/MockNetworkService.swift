@@ -12,18 +12,27 @@ import Networking
 @testable import InTune
 
 class MockNetworkService: ServiceProvider {
+    
+    var responseType: MockResponseType = .complexResponse
+    
+    func simulateResponseType(responseType: MockResponseType) {
+        self.responseType = responseType
+    }
+    
     func makeSearchiTunesService() -> SearchiTunesLoadingService {
-        return MockSearchiTunesService()
+        let service = MockSearchiTunesService()
+        service.responseType = responseType
+        return service
     }
 }
 
+enum MockResponseType {
+    case complexResponse
+    case simpleResponse
+    case noResultsResponse
+}
+
 class MockSearchiTunesService: NetworkService, SearchiTunesLoadingService {
-    
-    enum MockResponseType {
-        case complexResponse
-        case simpleResponse
-        case noResultsResponse
-    }
     
     var responseType: MockResponseType = .complexResponse
     

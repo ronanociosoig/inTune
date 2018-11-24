@@ -13,4 +13,14 @@ struct Constants {
         static let baseUrlPath = "https://itunes.apple.com/search"
         static let searchPath = "terms"
     }
+    
+    struct Translations {
+        static let loading = "Loading"
+        static let ok = "OK"
+        static let searchResultsTitle = " to "
+    
+        struct Error {
+            static let jsonDecodingError = "Error: JSON decoding error."
+        }
+    }
 }
