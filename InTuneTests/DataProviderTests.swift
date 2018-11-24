@@ -61,4 +61,35 @@ class DataProviderTests: XCTestCase {
         XCTAssertTrue(dataProvider.appData.results.count > 0)
         XCTAssertTrue(dataProvider.appData.results.count == 50)
     }
+    
+    func testInvalidResponseCallsDataLoaderWithError() {
+        networkService.responseType = .invalidDateResponse
+        let dataLoader = MockDataLoader()
+        dataProvider.dataLoaded = dataLoader
+        dataProvider.search(term: referenceSearchTerm)
+        
+        XCTAssertNotNil(dataLoader.errorMessage)
+    }
+    
+    func testValidResponseCallsDataLoaderWithoutError() {
+        networkService.responseType = .complexResponse
+        let dataLoader = MockDataLoader()
+        dataProvider.dataLoaded = dataLoader
+        dataProvider.search(term: referenceSearchTerm)
+        
+        XCTAssertNil(dataLoader.errorMessage)
+        XCTAssertTrue(dataLoader.calledReceived)
+    }
+}
+
+class MockDataLoader: DataLoaded {
+    
+    var errorMessage: String?
+    var calledReceived: Bool = false
+    
+    func dataReceived(errorMessage: String?) {
+        self.errorMessage = errorMessage
+        
+        calledReceived = true
+    }
 }

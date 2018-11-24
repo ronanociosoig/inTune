@@ -43,4 +43,8 @@ struct MockData {
     static func loadComplexServerResponse() throws -> Data? {
         return try load(name:"serverResponse")
     }
+    
+    static func loadInvalidDateResponse() throws -> Data? {
+        return try load(name:"invalidDateResponse")
+    }
 }

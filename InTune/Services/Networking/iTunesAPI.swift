@@ -32,7 +32,9 @@ extension iTunesAPI: EndPointType {
     public var httpTask: HTTPTask {
         switch self {
         case .search(let term):
-            return .requestParameters(bodyParameters: nil, bodyEncoding: .urlEncoding, urlParameters: ["term":term])
+            return .requestParameters(bodyParameters: nil,
+                                      bodyEncoding: .urlEncoding,
+                                      urlParameters: [Constants.Network.searchParameter:term])
         }
     }
     

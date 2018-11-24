@@ -11,6 +11,8 @@ import XCTest
 @testable import InTune
 
 class AppControllerTests: XCTestCase {
+    
+    let appController = AppController()
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -21,6 +23,12 @@ class AppControllerTests: XCTestCase {
     }
 
     func testHasDataProvider() {
-        
+        XCTAssertNotNil(appController)
+        XCTAssertNotNil(appController.dataProvider)
+    }
+    
+    func testHasCoordinator() {
+        appController.start()
+        XCTAssertNotNil(appController.coordinator)
     }
 }

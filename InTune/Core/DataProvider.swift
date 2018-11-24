@@ -7,17 +7,23 @@
 //
 
 import Foundation
+import os.log
 
 protocol DataProviding {
     init(service: ServiceProvider)
     func search(term: String)
 }
 
+struct Log {
+    static var data = OSLog(subsystem: "com.sonomos.InTune", category: "data")
+    static var network = OSLog(subsystem: "com.sonomos.InTune", category: "network")
+}
+
 class DataProvider: DataProviding {
     let appData = AppData()
-    
+    var dataLoaded: DataLoaded?
     let networkService: ServiceProvider
-    
+
     required init(service: ServiceProvider) {
         self.networkService = service
     }
@@ -29,25 +35,26 @@ class DataProvider: DataProviding {
         
         searchService.load(term: term) { (data, errorMessage) in
             if let errorMessage = errorMessage {
-                // write a test for this error message.
-                print("Error message.\(errorMessage)")
+                os_log("Error message: %s", log: Log.network, type: .error, errorMessage)
+                self.dataLoaded?.dataReceived(errorMessage: errorMessage)
                 return
             }
             
             guard let data = data else {
-                print("Error: No data received.")
-                //self.dataLoaded?.dataReceived(errorMessage: "Error: No data received.")
+                os_log("Error message: %s", log: Log.network, type: .error, Constants.Translations.Error.noDataError)
+                self.dataLoaded?.dataReceived(errorMessage: Constants.Translations.Error.noDataError)
                 return
             }
             
             do {
-                let serverResponse = try JSONDecoder().decode(ServerResponse.self, from: data)
+                let decoder = JSONDecoder()
+                decoder.dateDecodingStrategy = .iso8601
+                let serverResponse = try decoder.decode(ServerResponse.self, from: data)
                 self.appData.results = serverResponse.results
-                
-                
+                self.dataLoaded?.dataReceived(errorMessage: nil)
             } catch {
-                print("Error: \(error)")
-                print(Constants.Translations.Error.jsonDecodingError)
+                os_log("Error: %s", log: Log.data, type: .error, error.localizedDescription)
+                self.dataLoaded?.dataReceived(errorMessage: error.localizedDescription)
             }
             
         }

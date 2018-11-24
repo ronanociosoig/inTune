@@ -8,19 +8,24 @@
 
 import Foundation
 
+protocol LocalisedMessages {
+    
+}
+
 struct Constants {
     struct Network {
         static let baseUrlPath = "https://itunes.apple.com/search"
-        static let searchPath = "terms"
+        static let searchParameter = "terms"
     }
     
     struct Translations {
         static let loading = "Loading"
         static let ok = "OK"
-        static let searchResultsTitle = " to "
     
         struct Error {
             static let jsonDecodingError = "Error: JSON decoding error."
+            static let noDataError = "Error: No data received."
         }
     }
 }
+

@@ -9,13 +9,13 @@
 import UIKit
 
 struct SearchWireframe {
-    static func makeViewController() -> ViewController {
-        let moduleName = "ViewController"
-        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
-        return storyboard.instantiateViewController(withIdentifier: moduleName) as! ViewController
+    static func makeViewController() -> SearchViewController {
+        let moduleName = "SearchViewController"
+        let storyboard = UIStoryboard.init(name: "Search", bundle: nil)
+        return storyboard.instantiateViewController(withIdentifier: moduleName) as! SearchViewController
     }
     
-    static func prepare(viewController: ViewController) {
+    static func prepare(viewController: SearchViewController) {
         
     }
 }
