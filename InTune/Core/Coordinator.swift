@@ -19,7 +19,6 @@ class Coordinator {
     var presenter: SearchPresenter?
     
     init() {
-        // self.actions = actions
         window = UIWindow(frame: UIScreen.main.bounds)
         window.makeKeyAndVisible()
     }

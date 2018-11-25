@@ -10,11 +10,16 @@ import Foundation
 
 protocol SearchAction {
     func search(term: String)
+    func select(item: Result)
 }
 
 extension AppController: SearchAction {
     func search(term: String) {
         dataProvider.search(term: term)
         coordinator?.showLoading()
+    }
+    
+    func select(item: Result) {
+        
     }
 }

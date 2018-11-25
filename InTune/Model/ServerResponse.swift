@@ -20,21 +20,17 @@ struct Result: Codable {
     let artistID, collectionID: Int
     let trackID: Int
     let artistName: String
-    let collectionName, trackName, collectionCensoredName, trackCensoredName: String
-    let artistViewURL, collectionViewURL, trackViewURL: String
+    let trackName: String
+    let artistViewURL, trackViewURL: String
     let previewURL: String
     let artworkUrl30, artworkUrl60, artworkUrl100: String
-    let collectionPrice, trackPrice: Double
+    let trackPrice: Double
     let releaseDate: Date
-    let discCount, discNumber, trackCount, trackNumber: Int
     let trackTimeMillis: Int
-    let country: Country
-    let currency: Currency
-    let primaryGenreName: String
+    let country: String
+    let currency: String
     let isStreamable: Bool?
-    let collectionArtistName, shortDescription, longDescription: String?
-    let contentAdvisoryRating: ContentAdvisoryRating?
-    let collectionArtistID: Int?
+    let shortDescription, longDescription: String?
     
     enum CodingKeys: String, CodingKey {
         case wrapperType, kind
@@ -42,38 +38,15 @@ struct Result: Codable {
         case collectionID = "collectionId"
         case trackID = "trackId"
         case artistName = "artistName"
-        case collectionName, trackName, collectionCensoredName, trackCensoredName
+        case trackName
         case artistViewURL = "artistViewUrl"
-        case collectionViewURL = "collectionViewUrl"
         case trackViewURL = "trackViewUrl"
         case previewURL = "previewUrl"
         case artworkUrl30, artworkUrl60, artworkUrl100
-        case collectionPrice, trackPrice
+        case trackPrice
         case releaseDate
-        case discCount, discNumber, trackCount, trackNumber, trackTimeMillis, country, currency, primaryGenreName, isStreamable, collectionArtistName, shortDescription, longDescription, contentAdvisoryRating
-        case collectionArtistID = "collectionArtistId"
+        case trackTimeMillis, country, currency
+        case isStreamable
+        case shortDescription, longDescription
     }
-}
-
-enum ArtistName: String, Codable {
-    case birdsOfPrey = "Birds of Prey"
-    case jeanMichelJarrePrimalScream = "Jean-Michel Jarre & Primal Scream"
-    case kolchakTheNightStalker = "Kolchak: The Night Stalker"
-    case maynardFerguson = "Maynard Ferguson"
-    case mötleyCrüe = "Mötley Crüe"
-    case primalScream = "Primal Scream"
-    case rustedRoot = "Rusted Root"
-}
-
-enum ContentAdvisoryRating: String, Codable {
-    case explicit = "Explicit"
-    case tv14 = "TV-14"
-}
-
-enum Country: String, Codable {
-    case usa = "USA"
-}
-
-enum Currency: String, Codable {
-    case usd = "USD"
 }

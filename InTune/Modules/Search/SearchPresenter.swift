@@ -9,6 +9,11 @@
 import Foundation
 
 class SearchPresenter {
+    
+    enum SortOption: Int {
+        case length, genre, price
+    }
+    
     var action: SearchAction!
     var viewController: ViewController!
     var dataProvider: SearchDataProvider!

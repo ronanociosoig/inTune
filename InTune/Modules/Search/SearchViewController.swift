@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Haneke
 
 protocol ViewController {
     func reload()
@@ -31,6 +32,10 @@ class SearchViewController: UIViewController {
         navigationItem.searchController = searchController
         definesPresentationContext = true
         searchController.searchBar.delegate = self
+        
+        tableView.rowHeight = 50
+        
+        addNavigationButton()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -48,9 +53,24 @@ class SearchViewController: UIViewController {
         }
     }
     
+    func addNavigationButton() {
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: Constants.Translations.sortButtonTitle, style: .plain, target: self, action: #selector(buttonAction))
+    }
+    
+    @objc func buttonAction(_ sender: Any) {
+        
+    }
+    
     func register() {
         // let cell = UITableViewCell(style: .default, reuseIdentifier: cellIdentifier)
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
+    }
+}
+
+extension SearchViewController {
+    func showSortOptionsAlert() {
+        
     }
 }
 
@@ -66,12 +86,20 @@ extension SearchViewController: UITableViewDataSource {
         let artist = item.artistName
         cell.textLabel?.text = name
         cell.detailTextLabel?.text = artist
+        if let url = URL(string: item.artworkUrl100) {
+            cell.imageView?.image = UIImage(named: Constants.Images.placeholder)
+            cell.imageView?.sizeToFit()
+            cell.imageView?.hnk_setImage(from: url, placeholder: UIImage(named: Constants.Images.placeholder))
+        }
+        
         return cell
     }
 }
 
 extension SearchViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 }
 
 extension SearchViewController: UISearchBarDelegate {

@@ -28,11 +28,16 @@ struct Constants {
         static let loading = "Loading"
         static let ok = "OK"
         static let searchBarPlaceholder = "Search iTunes for music."
+        static let sortButtonTitle = "Sort"
     
         struct Error {
             static let jsonDecodingError = "Error: JSON decoding error."
             static let noDataError = "Error: No data received."
         }
+    }
+    
+    struct Images {
+        static let placeholder = "Placeholder"
     }
 }
 
