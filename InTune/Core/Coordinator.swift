@@ -12,10 +12,11 @@ import JGProgressHUD
 class Coordinator {
     let window: UIWindow
     var dataProvider: DataProvider!
-    // var appController: AppController!
-    // let actions: Actions
+    var appController: AppController!
     
     var hud: JGProgressHUD?
+    
+    var presenter: SearchPresenter?
     
     init() {
         // self.actions = actions
@@ -30,13 +31,19 @@ class Coordinator {
     func showSearch() {
         let viewController = SearchWireframe.makeViewController()
         
+        SearchWireframe.prepare(viewController: viewController,
+                                action: appController as SearchAction,
+                                dataProvider: dataProvider as SearchDataProvider)
+        
+        presenter = viewController.presenter
+        
         let navigationController = UINavigationController(rootViewController: viewController)
         
         window.rootViewController = navigationController
     }
     
     func showSearchResults() {
-        
+        presenter?.dataReceived()
     }
 
 //    func showSongDetail() {

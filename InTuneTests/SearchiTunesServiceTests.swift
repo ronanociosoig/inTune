@@ -57,4 +57,37 @@ class SearchiTunesServiceTests: XCTestCase {
         
         waitForExpectations(timeout: 1, handler: nil)
     }
+    
+    func testLoadDataFromServer() {
+        let searchTerm = "Moby"
+        let expectation = self.expectation(description: "Search for Moby on iTunes.")
+        let networkService = NetworkService()
+        let searchService = networkService.makeSearchiTunesService()
+ 
+        searchService.load(term: searchTerm) { (data, errorMessage) in
+            if let errorMessage = errorMessage {
+                print("Error message: \(errorMessage)")
+                XCTFail()
+                return
+            }
+            
+            guard let data = data else {
+                XCTFail()
+                return
+            }
+            
+            do {
+                let jsonData = try JSONSerialization.jsonObject(with: data, options: .mutableContainers)
+                let dict = jsonData as? NSDictionary
+                let results = dict?["results"]
+                
+                print("results output: \(String(describing: results))")
+                expectation.fulfill()
+            } catch {
+                XCTFail()
+            }
+        }
+        
+        waitForExpectations(timeout: 1, handler: nil)
+    }
 }

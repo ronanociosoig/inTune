@@ -14,8 +14,8 @@ protocol LocalisedMessages {
 
 struct Constants {
     struct Network {
-        static let baseUrlPath = "https://itunes.apple.com/search"
-        static let searchParameter = "terms"
+        static let baseUrlPath = "https://itunes.apple.com"
+        static let searchParameter = "term"
     }
     
     struct Translations {

@@ -22,7 +22,7 @@ extension iTunesAPI: EndPointType {
     }
     
     public var path: String {
-        return ""
+        return "search"
     }
 
     public var httpMethod: HTTPMethod {
@@ -34,7 +34,9 @@ extension iTunesAPI: EndPointType {
         case .search(let term):
             return .requestParameters(bodyParameters: nil,
                                       bodyEncoding: .urlEncoding,
-                                      urlParameters: [Constants.Network.searchParameter:term])
+                                      urlParameters: [Constants.Network.searchParameter:term, "media":"music",
+                                          "entity":"song",
+                                          "limit": 2])
         }
     }
     

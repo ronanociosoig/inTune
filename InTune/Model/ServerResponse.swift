@@ -24,18 +24,18 @@ struct Result: Codable {
     let artistViewURL, collectionViewURL, trackViewURL: String
     let previewURL: String
     let artworkUrl30, artworkUrl60, artworkUrl100: String
-    let collectionPrice, trackPrice: Double
-    let releaseDate: Date
-    let collectionExplicitness, trackExplicitness: Explicitness
-    let discCount, discNumber, trackCount, trackNumber: Int
-    let trackTimeMillis: Int
-    let country: Country
-    let currency: Currency
-    let primaryGenreName: String
-    let isStreamable: Bool?
-    let collectionArtistName, shortDescription, longDescription: String?
-    let contentAdvisoryRating: ContentAdvisoryRating?
-    let collectionArtistID: Int?
+//    let collectionPrice, trackPrice: Double
+//    let releaseDate: Date
+//    let collectionExplicitness, trackExplicitness: Explicitness
+//    let discCount, discNumber, trackCount, trackNumber: Int
+//    let trackTimeMillis: Int
+//    let country: Country
+//    let currency: Currency
+//    let primaryGenreName: String
+//    let isStreamable: Bool?
+//    let collectionArtistName, shortDescription, longDescription: String?
+//    let contentAdvisoryRating: ContentAdvisoryRating?
+//    let collectionArtistID: Int?
     
     enum CodingKeys: String, CodingKey {
         case wrapperType, kind
@@ -49,10 +49,10 @@ struct Result: Codable {
         case trackViewURL = "trackViewUrl"
         case previewURL = "previewUrl"
         case artworkUrl30, artworkUrl60, artworkUrl100
-        case collectionPrice, trackPrice
-        case releaseDate
-        case collectionExplicitness, trackExplicitness, discCount, discNumber, trackCount, trackNumber, trackTimeMillis, country, currency, primaryGenreName, isStreamable, collectionArtistName, shortDescription, longDescription, contentAdvisoryRating
-        case collectionArtistID = "collectionArtistId"
+//        case collectionPrice, trackPrice
+//        case releaseDate
+//        case collectionExplicitness, trackExplicitness, discCount, discNumber, trackCount, trackNumber, trackTimeMillis, country, currency, primaryGenreName, isStreamable, collectionArtistName, shortDescription, longDescription, contentAdvisoryRating
+//        case collectionArtistID = "collectionArtistId"
     }
 }
 
