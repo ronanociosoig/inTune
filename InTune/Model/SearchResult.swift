@@ -7,3 +7,14 @@
 //
 
 import Foundation
+
+struct SearchResult: Codable {
+    let trackID: Int
+    let artworkUrl100: URL
+    let artistName: String
+    let trackName: String
+    let date: String
+    let length: String
+    let trackPrice: String
+    let genre: String
+}

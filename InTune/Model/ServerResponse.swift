@@ -29,6 +29,7 @@ struct Result: Codable {
     let trackTimeMillis: Int
     let country: String
     let currency: String
+    let primaryGenreName: String
     let isStreamable: Bool?
     let shortDescription, longDescription: String?
     
@@ -47,6 +48,7 @@ struct Result: Codable {
         case releaseDate
         case trackTimeMillis, country, currency
         case isStreamable
+        case primaryGenreName
         case shortDescription, longDescription
     }
 }

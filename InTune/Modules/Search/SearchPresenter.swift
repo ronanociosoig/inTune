@@ -8,12 +8,15 @@
 
 import Foundation
 
+enum SortOption: Int {
+    case length, genre, price
+}
+
+protocol SearchPresenting {
+    func selected(option: SortOption)
+}
+
 class SearchPresenter {
-    
-    enum SortOption: Int {
-        case length, genre, price
-    }
-    
     var action: SearchAction!
     var viewController: ViewController!
     var dataProvider: SearchDataProvider!
@@ -40,5 +43,11 @@ class SearchPresenter {
     func item(at indexPath: IndexPath) -> Result {
         let item = dataProvider.searchResults()[indexPath.item]
         return item
+    }
+}
+
+extension SearchPresenter: SearchPresenting {
+    func selected(option: SortOption) {
+        
     }
 }
