@@ -27,6 +27,7 @@ struct Constants {
     struct Translations {
         static let loading = "Loading"
         static let ok = "OK"
+        static let searchBarPlaceholder = "Search iTunes for music."
     
         struct Error {
             static let jsonDecodingError = "Error: JSON decoding error."

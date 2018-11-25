@@ -27,11 +27,25 @@ class SearchViewController: UIViewController {
         
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
-        navigationItem.hidesSearchBarWhenScrolling = true
-        searchController.searchBar.placeholder = "Search iTunes"
+        searchController.searchBar.placeholder = Constants.Translations.searchBarPlaceholder
         navigationItem.searchController = searchController
         definesPresentationContext = true
         searchController.searchBar.delegate = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationItem.hidesSearchBarWhenScrolling = false
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        navigationItem.hidesSearchBarWhenScrolling = true
+        
+        if presenter.numberOfItems() == 0 {
+            searchController.searchBar.becomeFirstResponder()
+        }
     }
     
     func register() {

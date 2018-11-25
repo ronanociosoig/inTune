@@ -15,5 +15,6 @@ protocol SearchAction {
 extension AppController: SearchAction {
     func search(term: String) {
         dataProvider.search(term: term)
+        coordinator?.showLoading()
     }
 }
