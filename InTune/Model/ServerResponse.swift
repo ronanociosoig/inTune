@@ -15,8 +15,8 @@ struct ServerResponse: Codable {
 }
 
 struct Result: Codable {
-    let wrapperType: WrapperType
-    let kind: Kind
+    let wrapperType: String
+    let kind: String
     let artistID, collectionID: Int
     let trackID: Int
     let artistName: String
@@ -24,18 +24,17 @@ struct Result: Codable {
     let artistViewURL, collectionViewURL, trackViewURL: String
     let previewURL: String
     let artworkUrl30, artworkUrl60, artworkUrl100: String
-//    let collectionPrice, trackPrice: Double
-//    let releaseDate: Date
-//    let collectionExplicitness, trackExplicitness: Explicitness
-//    let discCount, discNumber, trackCount, trackNumber: Int
-//    let trackTimeMillis: Int
-//    let country: Country
-//    let currency: Currency
-//    let primaryGenreName: String
-//    let isStreamable: Bool?
-//    let collectionArtistName, shortDescription, longDescription: String?
-//    let contentAdvisoryRating: ContentAdvisoryRating?
-//    let collectionArtistID: Int?
+    let collectionPrice, trackPrice: Double
+    let releaseDate: Date
+    let discCount, discNumber, trackCount, trackNumber: Int
+    let trackTimeMillis: Int
+    let country: Country
+    let currency: Currency
+    let primaryGenreName: String
+    let isStreamable: Bool?
+    let collectionArtistName, shortDescription, longDescription: String?
+    let contentAdvisoryRating: ContentAdvisoryRating?
+    let collectionArtistID: Int?
     
     enum CodingKeys: String, CodingKey {
         case wrapperType, kind
@@ -49,10 +48,10 @@ struct Result: Codable {
         case trackViewURL = "trackViewUrl"
         case previewURL = "previewUrl"
         case artworkUrl30, artworkUrl60, artworkUrl100
-//        case collectionPrice, trackPrice
-//        case releaseDate
-//        case collectionExplicitness, trackExplicitness, discCount, discNumber, trackCount, trackNumber, trackTimeMillis, country, currency, primaryGenreName, isStreamable, collectionArtistName, shortDescription, longDescription, contentAdvisoryRating
-//        case collectionArtistID = "collectionArtistId"
+        case collectionPrice, trackPrice
+        case releaseDate
+        case discCount, discNumber, trackCount, trackNumber, trackTimeMillis, country, currency, primaryGenreName, isStreamable, collectionArtistName, shortDescription, longDescription, contentAdvisoryRating
+        case collectionArtistID = "collectionArtistId"
     }
 }
 
@@ -66,11 +65,6 @@ enum ArtistName: String, Codable {
     case rustedRoot = "Rusted Root"
 }
 
-enum Explicitness: String, Codable {
-    case explicit = "explicit"
-    case notExplicit = "notExplicit"
-}
-
 enum ContentAdvisoryRating: String, Codable {
     case explicit = "Explicit"
     case tv14 = "TV-14"
@@ -82,13 +76,4 @@ enum Country: String, Codable {
 
 enum Currency: String, Codable {
     case usd = "USD"
-}
-
-enum Kind: String, Codable {
-    case song = "song"
-    case tvEpisode = "tv-episode"
-}
-
-enum WrapperType: String, Codable {
-    case track = "track"
 }

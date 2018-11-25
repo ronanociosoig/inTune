@@ -34,9 +34,9 @@ extension iTunesAPI: EndPointType {
         case .search(let term):
             return .requestParameters(bodyParameters: nil,
                                       bodyEncoding: .urlEncoding,
-                                      urlParameters: [Constants.Network.searchParameter:term, "media":"music",
-                                          "entity":"song",
-                                          "limit": 2])
+                                      urlParameters: [Constants.Network.searchParameter:term, Constants.Network.media:Constants.Network.music,
+                                          Constants.Network.entity:Constants.Network.song,
+                                          Constants.Network.limit: Constants.Network.resultsLimit])
         }
     }
     

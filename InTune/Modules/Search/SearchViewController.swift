@@ -27,6 +27,7 @@ class SearchViewController: UIViewController {
         
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
+        navigationItem.hidesSearchBarWhenScrolling = true
         searchController.searchBar.placeholder = "Search iTunes"
         navigationItem.searchController = searchController
         definesPresentationContext = true
