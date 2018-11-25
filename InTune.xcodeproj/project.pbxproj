@@ -362,14 +362,13 @@
 		AFD1FF0221A804F100D2894F /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				AFD1FFCC21AB5B4F00D2894F /* Cells */,
 				AFD1FF5E21A85CE200D2894F /* SearchWireframe.swift */,
 				AFD1FEC721A6CE7400D2894F /* SearchViewController.swift */,
 				AFD1FEC921A6CE7400D2894F /* Search.storyboard */,
 				AFD1FFC021A9D5E600D2894F /* SearchPresenter.swift */,
 				AFD1FFC221AA10F900D2894F /* SearchDataProvider.swift */,
 				AFD1FFC421AA156400D2894F /* SearchAction.swift */,
-				AFD1FFC621AB471900D2894F /* ResultTableViewCell.swift */,
-				AFD1FFC721AB471900D2894F /* ResultTableViewCell.xib */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -446,6 +445,15 @@
 				AFD1FF9621A8674600D2894F /* JSONParameterEncoder.swift */,
 			);
 			path = Encoder;
+			sourceTree = "<group>";
+		};
+		AFD1FFCC21AB5B4F00D2894F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				AFD1FFC621AB471900D2894F /* ResultTableViewCell.swift */,
+				AFD1FFC721AB471900D2894F /* ResultTableViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

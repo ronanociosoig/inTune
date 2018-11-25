@@ -25,7 +25,7 @@
                             <constraint firstAttribute="width" constant="50" id="W14-hg-h6d"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Song Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B1G-Sr-cHT">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B1G-Sr-cHT">
                         <rect key="frame" x="61" y="3" width="199" height="18"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                         <nil key="textColor"/>
@@ -35,7 +35,6 @@
                         <rect key="frame" x="61" y="20" width="199" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="Dcv-ud-RUB"/>
-                            <constraint firstAttribute="width" constant="199" id="XFP-2J-meM"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                         <nil key="textColor"/>
@@ -85,11 +84,13 @@
                 <constraints>
                     <constraint firstItem="9K7-th-K4E" firstAttribute="leading" secondItem="Sao-uc-TSl" secondAttribute="trailing" constant="6" id="0rc-8A-Yob"/>
                     <constraint firstItem="exY-ai-bPP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="11" id="6SD-Sg-tFf"/>
-                    <constraint firstItem="9K7-th-K4E" firstAttribute="top" secondItem="B1G-Sr-cHT" secondAttribute="bottom" constant="-1" id="BB4-ks-SXq"/>
+                    <constraint firstItem="DvA-nj-JNd" firstAttribute="leading" secondItem="9K7-th-K4E" secondAttribute="trailing" constant="5" id="8Fc-bX-mlX"/>
+                    <constraint firstItem="DvA-nj-JNd" firstAttribute="leading" secondItem="B1G-Sr-cHT" secondAttribute="trailing" constant="5" id="JV5-Py-2CI"/>
                     <constraint firstItem="jln-0P-lSe" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" constant="9" id="QHB-KK-dQ4"/>
                     <constraint firstItem="Sao-uc-TSl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="QiQ-ja-AYp"/>
                     <constraint firstItem="B1G-Sr-cHT" firstAttribute="leading" secondItem="Sao-uc-TSl" secondAttribute="trailing" constant="6" id="RH1-n1-wYU"/>
                     <constraint firstItem="TdC-Fp-D4d" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" constant="11" id="WSM-ut-pgU"/>
+                    <constraint firstItem="9K7-th-K4E" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="9" id="XT1-Nt-pm2"/>
                     <constraint firstItem="Sao-uc-TSl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="Z8n-Hi-NmM"/>
                     <constraint firstItem="B1G-Sr-cHT" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="3" id="gp7-ky-eng"/>
                     <constraint firstItem="TdC-Fp-D4d" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="45" id="mRw-xM-TCa"/>
@@ -100,6 +101,15 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="artistNameLabel" destination="9K7-th-K4E" id="7Pv-P9-lxs"/>
+                <outlet property="artworkImageView" destination="Sao-uc-TSl" id="1U1-lA-bOR"/>
+                <outlet property="durationLabel" destination="DvA-nj-JNd" id="Uxy-ff-peM"/>
+                <outlet property="genreLabel" destination="TdC-Fp-D4d" id="8Iy-ES-WVR"/>
+                <outlet property="priceLabel" destination="jln-0P-lSe" id="AA8-Ij-SQg"/>
+                <outlet property="releaseDateLabel" destination="exY-ai-bPP" id="Bk1-ZL-M8p"/>
+                <outlet property="trackNameLabel" destination="B1G-Sr-cHT" id="18p-93-aPs"/>
+            </connections>
             <point key="canvasLocation" x="25.600000000000001" y="103.89805097451276"/>
         </tableViewCell>
     </objects>

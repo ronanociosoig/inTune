@@ -10,11 +10,11 @@ import Foundation
 
 struct SearchResult: Codable {
     let trackID: Int
-    let artworkUrl100: URL
+    let artworkUrl: URL
     let artistName: String
     let trackName: String
-    let date: String
-    let length: String
-    let trackPrice: String
     let genre: String
+    let duration: String
+    let releaseDate: String
+    let trackPrice: String
 }
