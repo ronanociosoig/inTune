@@ -73,17 +73,17 @@ class SearchViewController: UIViewController {
 
 extension SearchViewController {
     func showSortOptions() {
-        searchController.searchBar.isHidden = true
+       //  searchController.searchBar.isHidden = true
         sortOptionsView = SortOptionsView.fromNib()
-        navigationItem.hidesSearchBarWhenScrolling = false
+      //   navigationItem.hidesSearchBarWhenScrolling = false
         let screenWidth = view.frame.size.width
-        guard let navigationBar = navigationController?.navigationBar else { return }
+     //  guard let navigationBar = navigationController?.navigationBar else { return }
         guard let sortOptionsView = sortOptionsView else { return }
         
-        let optionsFrame = CGRect(origin: CGPoint(x: 0, y: navigationBar.frame.size.height), size: CGSize(width: screenWidth, height: 50))
+        let optionsFrame = CGRect(origin: CGPoint(x: 0, y: 100), size: CGSize(width: screenWidth, height: 50))
         sortOptionsView.frame = optionsFrame
         
-        navigationBar.addSubview(sortOptionsView)
+        view.addSubview(sortOptionsView)
         //view.bringSubviewToFront(sortOptionsView)
     }
 }
