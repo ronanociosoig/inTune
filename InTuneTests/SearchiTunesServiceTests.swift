@@ -59,7 +59,7 @@ class SearchiTunesServiceTests: XCTestCase {
     }
     
     func testLoadDataFromServer() {
-        let searchTerm = "Moby"
+        let searchTerm = "South Side"
         let expectation = self.expectation(description: "Search for Moby on iTunes.")
         let networkService = NetworkService()
         let searchService = networkService.makeSearchiTunesService()
