@@ -22,8 +22,6 @@ class SearchViewController: UIViewController {
     
     var presenter: SearchPresenter!
     
-    var sortOptionsView: SortOptionsView?
-    
     let searchController = UISearchController(searchResultsController: nil)
     
     override func viewDidLoad() {
@@ -73,18 +71,37 @@ class SearchViewController: UIViewController {
 
 extension SearchViewController {
     func showSortOptions() {
-       //  searchController.searchBar.isHidden = true
-        sortOptionsView = SortOptionsView.fromNib()
-      //   navigationItem.hidesSearchBarWhenScrolling = false
-        let screenWidth = view.frame.size.width
-     //  guard let navigationBar = navigationController?.navigationBar else { return }
-        guard let sortOptionsView = sortOptionsView else { return }
+        let alertController = UIAlertController(title: nil,
+                                                message: "Sorting Options",
+                                                preferredStyle: .actionSheet)
         
-        let optionsFrame = CGRect(origin: CGPoint(x: 0, y: 100), size: CGSize(width: screenWidth, height: 50))
-        sortOptionsView.frame = optionsFrame
+        let lengthAction = UIAlertAction(title: "Length",
+                                        style: .default,
+                                        handler: nil)
         
-        view.addSubview(sortOptionsView)
-        //view.bringSubviewToFront(sortOptionsView)
+        alertController.addAction(lengthAction)
+        
+        let genreAction = UIAlertAction(title: "Genre",
+                                     style: .default,
+                                     handler: nil)
+        
+        alertController.addAction(genreAction)
+        
+        let priceAction = UIAlertAction(title: "Price",
+                                        style: .default,
+                                        handler: nil)
+        
+        alertController.addAction(priceAction)
+        
+        let cancelAction = UIAlertAction(title: "Cancel",
+                                        style: .cancel,
+                                        handler: nil)
+        
+        alertController.addAction(cancelAction)
+        
+        present(alertController,
+                               animated: true,
+                               completion: nil)
     }
 }
 
