@@ -14,7 +14,7 @@ protocol LocalisedMessages {
 
 struct Constants {
     struct Date {
-        static let formatingString = "dd-MM-YYYY"
+        static let formatingString = "dd-MM-yyyy"
     }
     
     struct Network {

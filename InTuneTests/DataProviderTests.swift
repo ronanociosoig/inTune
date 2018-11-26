@@ -80,6 +80,26 @@ class DataProviderTests: XCTestCase {
         XCTAssertNil(dataLoader.errorMessage)
         XCTAssertTrue(dataLoader.calledReceived)
     }
+    
+    func testParsingResults() {
+        networkService.responseType = .complexResponse
+        dataProvider.search(term: referenceSearchTerm)
+
+        let results = dataProvider.appData.results
+        let searchResults = dataProvider.parseResults(results: results)
+        XCTAssertNotNil(searchResults)
+        XCTAssertTrue(results.count == searchResults.count)
+    }
+    
+    func testParsingResultsStoredInAppData() {
+        networkService.responseType = .complexResponse
+        dataProvider.search(term: referenceSearchTerm)
+        
+        let results = dataProvider.appData.results
+        let searchResults = dataProvider.appData.searchResults
+        XCTAssertNotNil(searchResults)
+        XCTAssertTrue(results.count == searchResults.count)
+    }
 }
 
 class MockDataLoader: DataLoaded {

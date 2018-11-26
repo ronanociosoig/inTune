@@ -17,6 +17,7 @@ class Coordinator {
     var hud: JGProgressHUD?
     
     var presenter: SearchPresenter?
+    var currentViewController: UIViewController?
     
     init() {
         window = UIWindow(frame: UIScreen.main.bounds)
@@ -39,6 +40,8 @@ class Coordinator {
         let navigationController = UINavigationController(rootViewController: viewController)
         
         window.rootViewController = navigationController
+        
+        currentViewController = viewController
     }
     
     func showSearchResults() {

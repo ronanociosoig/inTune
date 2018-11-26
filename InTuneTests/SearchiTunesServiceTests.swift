@@ -88,6 +88,6 @@ class SearchiTunesServiceTests: XCTestCase {
             }
         }
         
-        waitForExpectations(timeout: 1, handler: nil)
+        waitForExpectations(timeout: 5, handler: nil)
     }
 }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Haneke
 
 class ResultTableViewCell: UITableViewCell {
 
@@ -18,6 +19,7 @@ class ResultTableViewCell: UITableViewCell {
     @IBOutlet weak var releaseDateLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     
+    var identifier: Int?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,7 +27,15 @@ class ResultTableViewCell: UITableViewCell {
     }
     
     func configure(with item: SearchResult) {
-        
+        artworkImageView.image = UIImage(named: Constants.Images.placeholder)
+        artworkImageView.hnk_setImage(from: item.artworkUrl, placeholder: UIImage(named: Constants.Images.placeholder))
+        trackNameLabel.text = item.trackName
+        artistNameLabel.text = item.artistName
+        genreLabel.text = item.genre
+        durationLabel.text = item.duration
+        releaseDateLabel.text = item.releaseDate
+        priceLabel.text = item.price
+        identifier = item.identifier
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

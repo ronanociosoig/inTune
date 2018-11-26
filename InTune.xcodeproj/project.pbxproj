@@ -62,6 +62,9 @@
 		AFD1FFCB21AB5AB100D2894F /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FFCA21AB5AB100D2894F /* SearchResult.swift */; };
 		AFD1FFCE21AB5EAB00D2894F /* ResultParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FFCD21AB5EAB00D2894F /* ResultParser.swift */; };
 		AFD1FFD121ABF1EA00D2894F /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FFD021ABF1EA00D2894F /* DateFormatter.swift */; };
+		AFD1FFD321ABF4A800D2894F /* ResultParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FFD221ABF4A800D2894F /* ResultParserTests.swift */; };
+		AFD1FFD521AC0F9F00D2894F /* TimeFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FFD421AC0F9F00D2894F /* TimeFormatterTests.swift */; };
+		AFD1FFD721AC10AE00D2894F /* TimeFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FFD621AC10AE00D2894F /* TimeFormatter.swift */; };
 		B483399F3AD8E299739B8F0B /* Pods_Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF89E08B00C765396865DE0D /* Pods_Networking.framework */; };
 		BE719DA2D49198FC0FD53F64 /* Pods_InTuneUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51D48556BB2301451B481FC3 /* Pods_InTuneUITests.framework */; };
 		E4BE3F949A5B670372AEB014 /* Pods_InTune.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C87B554B8921AC78E7322DC8 /* Pods_InTune.framework */; };
@@ -190,6 +193,9 @@
 		AFD1FFCA21AB5AB100D2894F /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 		AFD1FFCD21AB5EAB00D2894F /* ResultParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultParser.swift; sourceTree = "<group>"; };
 		AFD1FFD021ABF1EA00D2894F /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		AFD1FFD221ABF4A800D2894F /* ResultParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultParserTests.swift; sourceTree = "<group>"; };
+		AFD1FFD421AC0F9F00D2894F /* TimeFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFormatterTests.swift; sourceTree = "<group>"; };
+		AFD1FFD621AC10AE00D2894F /* TimeFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFormatter.swift; sourceTree = "<group>"; };
 		C87B554B8921AC78E7322DC8 /* Pods_InTune.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InTune.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF89E08B00C765396865DE0D /* Pods_Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -318,6 +324,8 @@
 				AFD1FF6021A85D8700D2894F /* CoordinatorTests.swift */,
 				AFD1FFAE21A8704800D2894F /* DataProviderTests.swift */,
 				AFD1FFB421A87BAB00D2894F /* AppControllerTests.swift */,
+				AFD1FFD221ABF4A800D2894F /* ResultParserTests.swift */,
+				AFD1FFD421AC0F9F00D2894F /* TimeFormatterTests.swift */,
 			);
 			path = InTuneTests;
 			sourceTree = "<group>";
@@ -402,6 +410,7 @@
 				AFD1FF3D21A8253600D2894F /* ServerResponse.swift */,
 				AFD1FFCA21AB5AB100D2894F /* SearchResult.swift */,
 				AFD1FFCD21AB5EAB00D2894F /* ResultParser.swift */,
+				AFD1FFD621AC10AE00D2894F /* TimeFormatter.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -845,6 +854,7 @@
 				AFD1FF3E21A8253600D2894F /* ServerResponse.swift in Sources */,
 				AFD1FEFA21A6F39600D2894F /* AppData.swift in Sources */,
 				AFD1FFA921A868B200D2894F /* ServiceProvider.swift in Sources */,
+				AFD1FFD721AC10AE00D2894F /* TimeFormatter.swift in Sources */,
 				AFD1FFA821A868B200D2894F /* NetworkService.swift in Sources */,
 				AFD1FFC321AA10F900D2894F /* SearchDataProvider.swift in Sources */,
 				AFD1FFC821AB471900D2894F /* ResultTableViewCell.swift in Sources */,
@@ -857,11 +867,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFD1FF5A21A84C8400D2894F /* MockNetworkService.swift in Sources */,
+				AFD1FFD521AC0F9F00D2894F /* TimeFormatterTests.swift in Sources */,
 				AFD1FF6121A85D8700D2894F /* CoordinatorTests.swift in Sources */,
 				AFD1FFB521A87BAB00D2894F /* AppControllerTests.swift in Sources */,
 				AFD1FFAF21A8704800D2894F /* DataProviderTests.swift in Sources */,
 				AFD1FF5821A8490600D2894F /* SearchiTunesServiceTests.swift in Sources */,
 				AFD1FF4421A8266500D2894F /* MockData.swift in Sources */,
+				AFD1FFD321ABF4A800D2894F /* ResultParserTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

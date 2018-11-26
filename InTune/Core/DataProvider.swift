@@ -51,6 +51,9 @@ class DataProvider: DataProviding {
                 decoder.dateDecodingStrategy = .iso8601
                 let serverResponse = try decoder.decode(ServerResponse.self, from: data)
                 self.appData.results = serverResponse.results
+                
+                self.prepareSearchResults()
+                
                 self.dataLoaded?.dataReceived(errorMessage: nil)
             } catch {
                 os_log("Error: %s", log: Log.data, type: .error, error.localizedDescription)
@@ -58,5 +61,21 @@ class DataProvider: DataProviding {
             }
             
         }
+    }
+    
+    func prepareSearchResults() {
+        let results = appData.results
+        appData.searchResults = parseResults(results: results)
+    }
+    
+    func parseResults(results: [Result]) -> [SearchResult] {
+        var searchResults = [SearchResult]()
+        let parser = ResultParser()
+        
+        for result in results {
+            let searchResult = parser.parse(result: result)
+            searchResults.append(searchResult)
+        }
+        return searchResults
     }
 }
