@@ -13,6 +13,10 @@ protocol LocalisedMessages {
 }
 
 struct Constants {
+    struct Date {
+        static let formatingString = "dd-MM-YYYY"
+    }
+    
     struct Network {
         static let baseUrlPath = "https://itunes.apple.com"
         static let searchParameter = "term"

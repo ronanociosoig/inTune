@@ -60,6 +60,8 @@
 		AFD1FFC821AB471900D2894F /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FFC621AB471900D2894F /* ResultTableViewCell.swift */; };
 		AFD1FFC921AB471900D2894F /* ResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFD1FFC721AB471900D2894F /* ResultTableViewCell.xib */; };
 		AFD1FFCB21AB5AB100D2894F /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FFCA21AB5AB100D2894F /* SearchResult.swift */; };
+		AFD1FFCE21AB5EAB00D2894F /* ResultParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FFCD21AB5EAB00D2894F /* ResultParser.swift */; };
+		AFD1FFD121ABF1EA00D2894F /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FFD021ABF1EA00D2894F /* DateFormatter.swift */; };
 		B483399F3AD8E299739B8F0B /* Pods_Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF89E08B00C765396865DE0D /* Pods_Networking.framework */; };
 		BE719DA2D49198FC0FD53F64 /* Pods_InTuneUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51D48556BB2301451B481FC3 /* Pods_InTuneUITests.framework */; };
 		E4BE3F949A5B670372AEB014 /* Pods_InTune.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C87B554B8921AC78E7322DC8 /* Pods_InTune.framework */; };
@@ -186,6 +188,8 @@
 		AFD1FFC621AB471900D2894F /* ResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
 		AFD1FFC721AB471900D2894F /* ResultTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultTableViewCell.xib; sourceTree = "<group>"; };
 		AFD1FFCA21AB5AB100D2894F /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
+		AFD1FFCD21AB5EAB00D2894F /* ResultParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultParser.swift; sourceTree = "<group>"; };
+		AFD1FFD021ABF1EA00D2894F /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		C87B554B8921AC78E7322DC8 /* Pods_InTune.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InTune.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF89E08B00C765396865DE0D /* Pods_Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -295,6 +299,7 @@
 		AFD1FEC421A6CE7400D2894F /* InTune */ = {
 			isa = PBXGroup;
 			children = (
+				AFD1FFCF21ABE77600D2894F /* Extensions */,
 				AFD1FF3C21A8252A00D2894F /* Model */,
 				AFD1FF0421A8053900D2894F /* Services */,
 				AFD1FF0121A804E800D2894F /* Modules */,
@@ -396,6 +401,7 @@
 			children = (
 				AFD1FF3D21A8253600D2894F /* ServerResponse.swift */,
 				AFD1FFCA21AB5AB100D2894F /* SearchResult.swift */,
+				AFD1FFCD21AB5EAB00D2894F /* ResultParser.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -454,6 +460,14 @@
 				AFD1FFC721AB471900D2894F /* ResultTableViewCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		AFD1FFCF21ABE77600D2894F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AFD1FFD021ABF1EA00D2894F /* DateFormatter.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -817,8 +831,10 @@
 				AFD1FEFC21A6F3A800D2894F /* DataProvider.swift in Sources */,
 				AFD1FEC821A6CE7400D2894F /* SearchViewController.swift in Sources */,
 				AFD1FFC121A9D5E600D2894F /* SearchPresenter.swift in Sources */,
+				AFD1FFD121ABF1EA00D2894F /* DateFormatter.swift in Sources */,
 				AFD1FFB721A888EA00D2894F /* DataLoaded.swift in Sources */,
 				AFD1FEC621A6CE7400D2894F /* AppDelegate.swift in Sources */,
+				AFD1FFCE21AB5EAB00D2894F /* ResultParser.swift in Sources */,
 				AFD1FFC521AA156400D2894F /* SearchAction.swift in Sources */,
 				AFD1FFA721A868B200D2894F /* iTunesAPI.swift in Sources */,
 				AFD1FEF621A6E2E900D2894F /* Constants.swift in Sources */,
