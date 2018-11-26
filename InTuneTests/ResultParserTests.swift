@@ -22,7 +22,7 @@ class ResultParserTests: XCTestCase {
         XCTAssertTrue(searchResult.trackName == sampleResult.trackName)
         XCTAssertTrue(searchResult.genre == sampleResult.primaryGenreName)
         XCTAssertTrue(searchResult.duration == "05:35")
-        // XCTAssertTrue(searchResult.releaseDate == "21-11-1994")
+        XCTAssertTrue(searchResult.releaseDate == "02-11-1991")
         XCTAssertTrue(searchResult.price == "$2.55")
     }
 }
@@ -31,7 +31,9 @@ struct TestResult {
     static func makeResult() -> Result {
         let trackTime: Int = (1000 * 60 * 5) + (1000 * 35) // 05:35
         let dateFormatter = DateFormatter.simpleDateFormatter()
-        let releaseDate = dateFormatter.date(from: "21-11-1994")!
+        // Need to shift the hour of the date.
+        let date = dateFormatter.date(from: "02-11-1991")!
+        let releaseDate = date.addingTimeInterval(3600*2)
         return Result(wrapperType: "track",
                             kind: "song",
                             artistID: 139342,
