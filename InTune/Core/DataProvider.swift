@@ -31,7 +31,15 @@ class DataProvider: DataProviding {
     func search(term: String) {
         let searchService = networkService.makeSearchiTunesService()
         
+        // If the search is the same as the last one performed, dismiss the HUD and return
+        if term == appData.searchTerm {
+            self.dataLoaded?.dataReceived(errorMessage: nil)
+            return
+        }
+        
         appData.searchTerm = term
+        appData.results.removeAll()
+        appData.searchResults.removeAll()
         
         searchService.load(term: term) { (data, errorMessage) in
             if let errorMessage = errorMessage {
@@ -52,8 +60,12 @@ class DataProvider: DataProviding {
                 let serverResponse = try decoder.decode(ServerResponse.self, from: data)
                 self.appData.results = serverResponse.results
                 
-                self.prepareSearchResults()
+                if serverResponse.resultCount == 0 {
+                    self.dataLoaded?.dataReceived(errorMessage: Constants.Translations.Error.noResultsFound)
+                    return
+                }
                 
+                self.prepareSearchResults()
                 self.dataLoaded?.dataReceived(errorMessage: nil)
             } catch {
                 os_log("Error: %s", log: Log.data, type: .error, error.localizedDescription)

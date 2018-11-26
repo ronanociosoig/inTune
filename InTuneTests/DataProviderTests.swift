@@ -100,6 +100,19 @@ class DataProviderTests: XCTestCase {
         XCTAssertNotNil(searchResults)
         XCTAssertTrue(results.count == searchResults.count)
     }
+    
+    func testDataIsResetOnNextSearch() {
+        networkService.responseType = .complexResponse
+        dataProvider.search(term: referenceSearchTerm)
+        
+        XCTAssertTrue(dataProvider.appData.results.count > 0)
+        XCTAssertTrue(dataProvider.appData.results.count == 50)
+        
+        networkService.responseType = .simpleResponse
+        dataProvider.search(term: referenceSearchTerm)
+        
+        XCTAssertTrue(dataProvider.appData.results.count == 2)
+    }
 }
 
 class MockDataLoader: DataLoaded {

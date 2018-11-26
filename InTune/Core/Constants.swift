@@ -37,6 +37,7 @@ struct Constants {
         struct Error {
             static let jsonDecodingError = "Error: JSON decoding error."
             static let noDataError = "Error: No data received."
+            static let noResultsFound = "No results were found for your search."
         }
     }
     
