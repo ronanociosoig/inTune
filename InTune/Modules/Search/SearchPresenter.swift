@@ -20,6 +20,8 @@ class SearchPresenter {
     var action: SearchAction!
     var viewController: ViewController!
     var dataProvider: SearchDataProvider!
+    var searchResults = [SearchResult]()
+    var currentSortOption: SortOption = .length
     
     init(viewController: ViewController, action: SearchAction, dataProvider: SearchDataProvider) {
         self.viewController = viewController

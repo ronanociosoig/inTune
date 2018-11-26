@@ -19,7 +19,7 @@ class ResultTableViewCell: UITableViewCell {
     @IBOutlet weak var releaseDateLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     
-    var identifier: Int?
+    var trackIdentifier: Int?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -35,7 +35,7 @@ class ResultTableViewCell: UITableViewCell {
         durationLabel.text = item.duration
         releaseDateLabel.text = item.releaseDate
         priceLabel.text = item.price
-        identifier = item.identifier
+        trackIdentifier = item.identifier
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -65,6 +65,8 @@
 		AFD1FFD321ABF4A800D2894F /* ResultParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FFD221ABF4A800D2894F /* ResultParserTests.swift */; };
 		AFD1FFD521AC0F9F00D2894F /* TimeFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FFD421AC0F9F00D2894F /* TimeFormatterTests.swift */; };
 		AFD1FFD721AC10AE00D2894F /* TimeFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FFD621AC10AE00D2894F /* TimeFormatter.swift */; };
+		AFD1FFD921AC64B200D2894F /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FFD821AC64B200D2894F /* UIView+Extension.swift */; };
+		AFD1FFDB21AC651800D2894F /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FFDA21AC651800D2894F /* UITableViewCell+Extension.swift */; };
 		B483399F3AD8E299739B8F0B /* Pods_Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF89E08B00C765396865DE0D /* Pods_Networking.framework */; };
 		BE719DA2D49198FC0FD53F64 /* Pods_InTuneUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51D48556BB2301451B481FC3 /* Pods_InTuneUITests.framework */; };
 		E4BE3F949A5B670372AEB014 /* Pods_InTune.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C87B554B8921AC78E7322DC8 /* Pods_InTune.framework */; };
@@ -196,6 +198,8 @@
 		AFD1FFD221ABF4A800D2894F /* ResultParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultParserTests.swift; sourceTree = "<group>"; };
 		AFD1FFD421AC0F9F00D2894F /* TimeFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFormatterTests.swift; sourceTree = "<group>"; };
 		AFD1FFD621AC10AE00D2894F /* TimeFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFormatter.swift; sourceTree = "<group>"; };
+		AFD1FFD821AC64B200D2894F /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		AFD1FFDA21AC651800D2894F /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
 		C87B554B8921AC78E7322DC8 /* Pods_InTune.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InTune.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF89E08B00C765396865DE0D /* Pods_Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -475,6 +479,8 @@
 			isa = PBXGroup;
 			children = (
 				AFD1FFD021ABF1EA00D2894F /* DateFormatter.swift */,
+				AFD1FFD821AC64B200D2894F /* UIView+Extension.swift */,
+				AFD1FFDA21AC651800D2894F /* UITableViewCell+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -847,6 +853,7 @@
 				AFD1FFC521AA156400D2894F /* SearchAction.swift in Sources */,
 				AFD1FFA721A868B200D2894F /* iTunesAPI.swift in Sources */,
 				AFD1FEF621A6E2E900D2894F /* Constants.swift in Sources */,
+				AFD1FFD921AC64B200D2894F /* UIView+Extension.swift in Sources */,
 				AFD1FEF821A6F38300D2894F /* AppController.swift in Sources */,
 				AFD1FFCB21AB5AB100D2894F /* SearchResult.swift in Sources */,
 				AFD1FFA621A868B200D2894F /* SearchiTunesService.swift in Sources */,
@@ -855,6 +862,7 @@
 				AFD1FEFA21A6F39600D2894F /* AppData.swift in Sources */,
 				AFD1FFA921A868B200D2894F /* ServiceProvider.swift in Sources */,
 				AFD1FFD721AC10AE00D2894F /* TimeFormatter.swift in Sources */,
+				AFD1FFDB21AC651800D2894F /* UITableViewCell+Extension.swift in Sources */,
 				AFD1FFA821A868B200D2894F /* NetworkService.swift in Sources */,
 				AFD1FFC321AA10F900D2894F /* SearchDataProvider.swift in Sources */,
 				AFD1FFC821AB471900D2894F /* ResultTableViewCell.swift in Sources */,
