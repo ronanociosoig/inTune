@@ -13,7 +13,7 @@ protocol ViewController {
     func reload()
     func setDataSource(dataSource: SearchDataSource)
     func sortButton(enabled: Bool)
-    func showSortOptionsAlert()
+    func showSortOptions()
 }
 
 class SearchViewController: UIViewController {
@@ -21,6 +21,8 @@ class SearchViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
     
     var presenter: SearchPresenter!
+    
+    var sortOptionsView: SortOptionsView?
     
     let searchController = UISearchController(searchResultsController: nil)
     
@@ -70,19 +72,19 @@ class SearchViewController: UIViewController {
 }
 
 extension SearchViewController {
-    func showSortOptionsAlert() {
+    func showSortOptions() {
+        searchController.searchBar.isHidden = true
+        sortOptionsView = SortOptionsView.fromNib()
+        navigationItem.hidesSearchBarWhenScrolling = false
+        let screenWidth = view.frame.size.width
+        guard let navigationBar = navigationController?.navigationBar else { return }
+        guard let sortOptionsView = sortOptionsView else { return }
         
-        let alertController = UIAlertController(title: nil,
-                                                message: "Sort options",
-                                                preferredStyle: .alert)
+        let optionsFrame = CGRect(origin: CGPoint(x: 0, y: navigationBar.frame.size.height), size: CGSize(width: screenWidth, height: 50))
+        sortOptionsView.frame = optionsFrame
         
-        let okButton = UIAlertAction(title: Constants.Translations.ok,
-                                     style: .default,
-                                     handler: nil)
-        
-        alertController.addAction(okButton)
-
-        present(alertController, animated: true, completion: nil)
+        navigationBar.addSubview(sortOptionsView)
+        //view.bringSubviewToFront(sortOptionsView)
     }
 }
 
