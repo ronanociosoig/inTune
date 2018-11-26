@@ -26,15 +26,21 @@ struct ResultParser {
     
     // Returns a format: 01:45:04
     func parseDuration(duration: Int) -> String {
-        let durationInSeconds: Int = duration/1000
+        let durationInSeconds: Int = duration / 1000
         let seconds = durationInSeconds % 60
         let minutes: Int = durationInSeconds / 60
-        if minutes > 60 {
+
+        if minutes > 59 {
             let hours = minutes / 60
             let remainder: Int = minutes % 60
-            return "\(hours):\(remainder):\(seconds)"
+            
+            return "\(zeroPrefix(hours)):\(zeroPrefix(remainder)):\(zeroPrefix(seconds))"
         }
         
-        return "\(minutes):\(seconds)"
+        return "\(zeroPrefix(minutes)):\(zeroPrefix(seconds))"
+    }
+    
+    func zeroPrefix(_ value: Int) -> String {
+        return (value < 10) ? "0\(value)" : "\(value)"
     }
 }
