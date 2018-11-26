@@ -40,9 +40,12 @@ class SearchViewController: UIViewController {
         super.viewWillAppear(animated)
         
         navigationItem.hidesSearchBarWhenScrolling = false
+    }
+    
+    override func viewDidLayoutSubviews() {
         tableView.rowHeight = 61
         tableView.separatorInset = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
-        presenter.viewWillAppear()
+        presenter.viewDidLayoutSubviews()
     }
     
     override func viewDidAppear(_ animated: Bool) {

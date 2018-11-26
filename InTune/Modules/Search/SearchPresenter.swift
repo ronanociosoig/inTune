@@ -36,7 +36,7 @@ class SearchPresenter {
         self.dataSource = dataSource
     }
     
-    func viewWillAppear() {
+    func viewDidLayoutSubviews() {
         viewController.setDataSource(dataSource: dataSource)
     }
     
@@ -59,6 +59,15 @@ class SearchPresenter {
     func item(at indexPath: IndexPath) -> SearchResult {
         return searchResults[indexPath.row]
     }
+    
+//    func sortResults(searchResults: [SearchResult], with option: SortOption) -> [SearchResult] {
+//        switch option {
+//        case .genre:
+//
+//        default:
+//            <#code#>
+//        }
+//    }
 }
 
 extension SearchPresenter: SearchPresenting {
