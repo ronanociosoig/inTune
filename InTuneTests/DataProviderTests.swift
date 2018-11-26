@@ -109,7 +109,7 @@ class DataProviderTests: XCTestCase {
         XCTAssertTrue(dataProvider.appData.results.count == 50)
         
         networkService.responseType = .simpleResponse
-        dataProvider.search(term: referenceSearchTerm)
+        dataProvider.search(term: "Queen")
         
         XCTAssertTrue(dataProvider.appData.results.count == 2)
     }
