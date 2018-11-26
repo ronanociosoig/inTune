@@ -6,11 +6,7 @@
 //  Copyright © 2018 Sonomos. All rights reserved.
 //
 
-import Foundation
-
-protocol LocalisedMessages {
-    
-}
+import UIKit
 
 struct Constants {
     struct Date {
@@ -43,6 +39,10 @@ struct Constants {
     
     struct Images {
         static let placeholder = "Placeholder"
+    }
+    
+    struct Theme {
+        static let tintColor = UIColor(red: 249/255, green: 163/255, blue: 61/255, alpha: 1.0)
     }
 }
 

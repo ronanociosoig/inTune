@@ -13,6 +13,7 @@ enum SortOption: Int {
 }
 
 protocol SearchPresenting {
+    func sortBarButtonAction()
     func selected(option: SortOption)
     func viewWillAppear()
 }
@@ -45,6 +46,8 @@ class SearchPresenter {
     
     func dataReceived() {
         searchResults = dataProvider.searchResults()
+        
+        viewController.sortButton(enabled: (searchResults.count > 0))
         viewController.reload()
     }
     
@@ -59,6 +62,10 @@ class SearchPresenter {
 }
 
 extension SearchPresenter: SearchPresenting {
+    func sortBarButtonAction() {
+        viewController.showSortOptionsAlert()
+    }
+    
     func selected(option: SortOption) {
         
     }

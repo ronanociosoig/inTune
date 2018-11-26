@@ -12,6 +12,8 @@ import Haneke
 protocol ViewController {
     func reload()
     func setDataSource(dataSource: SearchDataSource)
+    func sortButton(enabled: Bool)
+    func showSortOptionsAlert()
 }
 
 class SearchViewController: UIViewController {
@@ -39,7 +41,7 @@ class SearchViewController: UIViewController {
         
         navigationItem.hidesSearchBarWhenScrolling = false
         tableView.rowHeight = 61
-        tableView.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        tableView.separatorInset = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
         presenter.viewWillAppear()
     }
     
@@ -53,18 +55,31 @@ class SearchViewController: UIViewController {
     }
     
     func addNavigationButton() {
-        
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: Constants.Translations.sortButtonTitle, style: .plain, target: self, action: #selector(buttonAction))
+        let barButton = UIBarButtonItem(title: Constants.Translations.sortButtonTitle, style: .plain, target: self, action: #selector(buttonAction))
+        barButton.tintColor = Constants.Theme.tintColor
+        barButton.isEnabled = false
+        navigationItem.rightBarButtonItem = barButton
     }
     
     @objc func buttonAction(_ sender: Any) {
-        
+        presenter.sortBarButtonAction()
     }
 }
 
 extension SearchViewController {
     func showSortOptionsAlert() {
         
+        let alertController = UIAlertController(title: nil,
+                                                message: "Sort options",
+                                                preferredStyle: .alert)
+        
+        let okButton = UIAlertAction(title: Constants.Translations.ok,
+                                     style: .default,
+                                     handler: nil)
+        
+        alertController.addAction(okButton)
+
+        present(alertController, animated: true, completion: nil)
     }
 }
 
@@ -91,6 +106,10 @@ extension SearchViewController: ViewController {
     
     func setDataSource(dataSource: SearchDataSource) {
         dataSource.register(tableView: tableView)
+    }
+    
+    func sortButton(enabled: Bool) {
+        navigationItem.rightBarButtonItem?.isEnabled = enabled
     }
 }
 
