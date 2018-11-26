@@ -9,11 +9,11 @@
 import Foundation
 
 protocol SearchDataProvider {
-    func searchResults() -> [Result]
+    func searchResults() -> [SearchResult]
 }
 
 extension DataProvider: SearchDataProvider {
-    func searchResults() -> [Result] {
-        return appData.results
+    func searchResults() -> [SearchResult] {
+        return appData.searchResults
     }
 }

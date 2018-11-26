@@ -44,17 +44,17 @@ class SearchPresenter {
     }
     
     func dataReceived() {
+        searchResults = dataProvider.searchResults()
         viewController.reload()
     }
     
     func numberOfItems() -> Int {
-        let count = dataProvider.searchResults().count
+        let count = searchResults.count
         return count
     }
     
-    func item(at indexPath: IndexPath) -> Result {
-        let item = dataProvider.searchResults()[indexPath.item]
-        return item
+    func item(at indexPath: IndexPath) -> SearchResult {
+        return searchResults[indexPath.row]
     }
 }
 
