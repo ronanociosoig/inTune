@@ -16,31 +16,27 @@ extension NumberFormatter {
 
 struct ResultParser {
     
-    let dateFormatter = DateFormatter()
+    let dateFormatter = DateFormatter.simpleDateFormatter()
     let priceFormatter = NumberFormatter()
-    // let timeFormatter =
     
-//    func parse(result: Result) -> SearchResult {
-//        return SearchResult()
-//    }
-    
-    // Returns a format: 01:45:04
-    func parseDuration(duration: Int) -> String {
-        let durationInSeconds: Int = duration / 1000
-        let seconds = durationInSeconds % 60
-        let minutes: Int = durationInSeconds / 60
-
-        if minutes > 59 {
-            let hours = minutes / 60
-            let remainder: Int = minutes % 60
-            
-            return "\(zeroPrefix(hours)):\(zeroPrefix(remainder)):\(zeroPrefix(seconds))"
-        }
+    func parse(result: Result) -> SearchResult {
+        priceFormatter.numberStyle = .currency
+        priceFormatter.currencyCode = result.currency
+        priceFormatter.currencySymbol = "$"
         
-        return "\(zeroPrefix(minutes)):\(zeroPrefix(seconds))"
-    }
-    
-    func zeroPrefix(_ value: Int) -> String {
-        return (value < 10) ? "0\(value)" : "\(value)"
+        let duration = TimeFormatter.string(from: result.trackTimeMillis)
+        let priceNumber = result.trackPrice as NSNumber
+        let price = priceFormatter.string(from: priceNumber) ?? "$0.00"
+        let artworkUrl = URL(string: result.artworkUrl100)
+        let releaseDate = dateFormatter.string(from: result.releaseDate)
+
+        return SearchResult(identifier: result.artistID,
+                            artworkUrl: artworkUrl,
+                            artistName: result.artistName,
+                            trackName: result.trackName,
+                            genre: result.primaryGenreName,
+                            duration: duration,
+                            releaseDate: releaseDate,
+                            price: price)
     }
 }

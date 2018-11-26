@@ -17,7 +17,7 @@ struct ServerResponse: Codable {
 struct Result: Codable {
     let wrapperType: String
     let kind: String
-    let artistID, collectionID: Int
+    let artistID: Int
     let trackID: Int
     let artistName: String
     let trackName: String
@@ -36,7 +36,6 @@ struct Result: Codable {
     enum CodingKeys: String, CodingKey {
         case wrapperType, kind
         case artistID = "artistId"
-        case collectionID = "collectionId"
         case trackID = "trackId"
         case artistName = "artistName"
         case trackName
@@ -50,5 +49,49 @@ struct Result: Codable {
         case isStreamable
         case primaryGenreName
         case shortDescription, longDescription
+    }
+    
+    init(wrapperType: String,
+         kind: String,
+         artistID: Int,
+        trackID: Int,
+        artistName: String,
+        trackName: String,
+        artistViewURL: String,
+        trackViewURL: String,
+        previewURL: String,
+        artworkUrl30: String,
+        artworkUrl60: String,
+        artworkUrl100: String,
+        trackPrice: Double,
+        releaseDate: Date,
+        trackTimeMillis: Int,
+        country: String,
+        currency: String,
+        primaryGenreName: String,
+        isStreamable: Bool?,
+        shortDescription: String?,
+        longDescription: String?) {
+        self.wrapperType = wrapperType
+        self.kind = kind
+        self.artistID = artistID
+        self.trackID = trackID
+        self.artistName = artistName
+        self.trackName = trackName
+        self.artistViewURL = artistViewURL
+        self.trackViewURL = trackViewURL
+        self.previewURL = previewURL
+        self.artworkUrl100 = artworkUrl100
+        self.artworkUrl30 = artworkUrl30
+        self.artworkUrl60 = artworkUrl60
+        self.trackPrice = trackPrice
+        self.releaseDate = releaseDate
+        self.trackTimeMillis = trackTimeMillis
+        self.country = country
+        self.currency = currency
+        self.primaryGenreName = primaryGenreName
+        self.isStreamable = isStreamable
+        self.shortDescription = shortDescription
+        self.longDescription = longDescription
     }
 }

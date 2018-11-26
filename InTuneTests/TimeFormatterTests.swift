@@ -8,26 +8,38 @@
 
 import XCTest
 
+@testable import InTune
+
 class TimeFormatterTests: XCTestCase {
-
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func testZeroPrefixTrue() {
+        let output = TimeFormatter.zeroPrefix(5)
+        let expectedOutput = "05"
+        XCTAssertTrue(output == expectedOutput)
     }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    func testZeroPrefixFalse() {
+        let output = TimeFormatter.zeroPrefix(12)
+        let expectedOutput = "12"
+        XCTAssertTrue(output == expectedOutput)
     }
-
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
+    func testOneSecondDurationParsing() {
+        let output = TimeFormatter.string(from:1000)
+        XCTAssertTrue(output == "00:01")
     }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    func testOneMinuteDurationParsing() {
+        let output = TimeFormatter.string(from: 1000 * 60)
+        XCTAssertTrue(output == "01:00")
     }
-
+    
+    func testFifteenMinutesDurationParsing() {
+        let output = TimeFormatter.string(from: 1000 * 60 * 15)
+        XCTAssertTrue(output == "15:00")
+    }
+    
+    func testOneHourDurationParsing() {
+        let output = TimeFormatter.string(from: 1000 * 60 * 60)
+        XCTAssertTrue(output == "01:00:00")
+    }
 }

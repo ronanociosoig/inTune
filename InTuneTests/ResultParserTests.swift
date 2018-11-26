@@ -13,35 +13,45 @@ import XCTest
 class ResultParserTests: XCTestCase {
     let parser = ResultParser()
     
-    func testZeroPrefixTrue() {
-        let output = parser.zeroPrefix(5)
-        let expectedOutput = "05"
-        XCTAssertTrue(output == expectedOutput)
+    func testResultValues() {
+        let sampleResult = TestResult.makeResult()
+        let searchResult = parser.parse(result: sampleResult)
+        
+        XCTAssertTrue(searchResult.identifier == sampleResult.artistID)
+        XCTAssertTrue(searchResult.artistName == sampleResult.artistName)
+        XCTAssertTrue(searchResult.trackName == sampleResult.trackName)
+        XCTAssertTrue(searchResult.genre == sampleResult.primaryGenreName)
+        XCTAssertTrue(searchResult.duration == "05:35")
+        // XCTAssertTrue(searchResult.releaseDate == "21-11-1994")
+        XCTAssertTrue(searchResult.price == "$2.55")
     }
-    
-    func testZeroPrefixFalse() {
-        let output = parser.zeroPrefix(12)
-        let expectedOutput = "12"
-        XCTAssertTrue(output == expectedOutput)
-    }
-    
-    func testOneSecondDurationParsing() {
-        let output = parser.parseDuration(duration: 1000)
-        XCTAssertTrue(output == "00:01")
-    }
-    
-    func testOneMinuteDurationParsing() {
-        let output = parser.parseDuration(duration: 1000 * 60)
-        XCTAssertTrue(output == "01:00")
-    }
-    
-    func testFifteenMinutesDurationParsing() {
-        let output = parser.parseDuration(duration: 1000 * 60 * 15)
-        XCTAssertTrue(output == "15:00")
-    }
-    
-    func testOneHourDurationParsing() {
-        let output = parser.parseDuration(duration: 1000 * 60 * 60)
-        XCTAssertTrue(output == "01:00:00")
+}
+
+struct TestResult {
+    static func makeResult() -> Result {
+        let trackTime: Int = (1000 * 60 * 5) + (1000 * 35) // 05:35
+        let dateFormatter = DateFormatter.simpleDateFormatter()
+        let releaseDate = dateFormatter.date(from: "21-11-1994")!
+        return Result(wrapperType: "track",
+                            kind: "song",
+                            artistID: 139342,
+                            trackID: 72953472,
+                            artistName: "Moby",
+                            trackName: "Go",
+                            artistViewURL: "https://itunes.apple.com/artist/139342",
+                            trackViewURL: "https://itunes.apple.com/track/72953472",
+                            previewURL: "https://itunes.apple.com/preview/72953472",
+                            artworkUrl30: "https://itunes.apple.com/artworkl30/72953472",
+                            artworkUrl60: "https://itunes.apple.com/artworkl60/72953472",
+                            artworkUrl100: "https://itunes.apple.com/artworkl00/72953472",
+                            trackPrice: 2.55,
+                            releaseDate: releaseDate,
+                            trackTimeMillis: trackTime,
+            country: "USA",
+            currency: "USD",
+            primaryGenreName: "Electronic",
+            isStreamable: false,
+            shortDescription: nil,
+            longDescription: nil)
     }
 }
