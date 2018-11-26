@@ -26,11 +26,5 @@ class SearchWireframeTests: XCTestCase {
         
         XCTAssertNotNil(presenter)
         XCTAssertNotNil(presenter!.dataSource)
-        
-        viewController.viewDidLoad()
-        viewController.viewWillAppear(false)
-        
-        XCTAssertNotNil(viewController.tableView.dataSource)
     }
-
 }
