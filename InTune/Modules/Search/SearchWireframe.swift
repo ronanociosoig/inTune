@@ -17,10 +17,14 @@ struct SearchWireframe {
     
     static func prepare(viewController: SearchViewController, action: SearchAction, dataProvider: SearchDataProvider) {
         let view = viewController as ViewController
+        let dataSource = SearchDataSource()
         let presenter = SearchPresenter(viewController: view,
                                         action: action,
-                                        dataProvider: dataProvider)
+                                        dataProvider: dataProvider,
+                                        dataSource: dataSource)
         
         viewController.presenter = presenter
+        dataSource.presenter = presenter
+        
     }
 }

@@ -14,6 +14,7 @@ enum SortOption: Int {
 
 protocol SearchPresenting {
     func selected(option: SortOption)
+    func viewWillAppear()
 }
 
 class SearchPresenter {
@@ -22,11 +23,20 @@ class SearchPresenter {
     var dataProvider: SearchDataProvider!
     var searchResults = [SearchResult]()
     var currentSortOption: SortOption = .length
+    let dataSource: SearchDataSource
     
-    init(viewController: ViewController, action: SearchAction, dataProvider: SearchDataProvider) {
+    init(viewController: ViewController,
+         action: SearchAction,
+         dataProvider: SearchDataProvider,
+         dataSource: SearchDataSource) {
         self.viewController = viewController
         self.action = action
         self.dataProvider = dataProvider
+        self.dataSource = dataSource
+    }
+    
+    func viewWillAppear() {
+        viewController.setDataSource(dataSource: dataSource)
     }
     
     func search(term: String) {

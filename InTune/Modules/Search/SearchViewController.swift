@@ -11,6 +11,7 @@ import Haneke
 
 protocol ViewController {
     func reload()
+    func setDataSource(dataSource: SearchDataSource)
 }
 
 class SearchViewController: UIViewController {
@@ -19,22 +20,17 @@ class SearchViewController: UIViewController {
     
     var presenter: SearchPresenter!
     
-    let cellIdentifier = "cellIdentifier"
-    
     let searchController = UISearchController(searchResultsController: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = Constants.Translations.searchBarPlaceholder
         navigationItem.searchController = searchController
         definesPresentationContext = true
         searchController.searchBar.delegate = self
-        
-        tableView.rowHeight = 50
-        
+
         addNavigationButton()
     }
     
@@ -42,6 +38,9 @@ class SearchViewController: UIViewController {
         super.viewWillAppear(animated)
         
         navigationItem.hidesSearchBarWhenScrolling = false
+        tableView.rowHeight = 61
+        tableView.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        presenter.viewWillAppear()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -61,38 +60,11 @@ class SearchViewController: UIViewController {
     @objc func buttonAction(_ sender: Any) {
         
     }
-    
-    func register() {
-        // let cell = UITableViewCell(style: .default, reuseIdentifier: cellIdentifier)
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
-    }
 }
 
 extension SearchViewController {
     func showSortOptionsAlert() {
         
-    }
-}
-
-extension SearchViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return presenter.numberOfItems()
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) else { return UITableViewCell() }
-        let item = presenter.item(at: indexPath)
-        let name = item.trackName
-        let artist = item.artistName
-        cell.textLabel?.text = name
-        cell.detailTextLabel?.text = artist
-        if let url = URL(string: item.artworkUrl100) {
-            cell.imageView?.image = UIImage(named: Constants.Images.placeholder)
-            cell.imageView?.sizeToFit()
-            cell.imageView?.hnk_setImage(from: url, placeholder: UIImage(named: Constants.Images.placeholder))
-        }
-        
-        return cell
     }
 }
 
@@ -106,29 +78,19 @@ extension SearchViewController: UISearchBarDelegate {
     // MARK: - UISearchBar Delegate
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        // print("Search for: \(String(describing: searchBar.text))")
-        
         if let text = searchBar.text, text.count > 0 {
             presenter.search(term: text)
         }
-    }
-    
-    func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
-        
-    }
-}
-
-extension SearchViewController: UISearchResultsUpdating {
-    // MARK: - UISearchResultsUpdating Delegate
-    func updateSearchResults(for searchController: UISearchController) {
-        // let searchBar = searchController.searchBar
-
     }
 }
 
 extension SearchViewController: ViewController {
     func reload() {
         tableView.reloadData()
+    }
+    
+    func setDataSource(dataSource: SearchDataSource) {
+        dataSource.register(tableView: tableView)
     }
 }
 

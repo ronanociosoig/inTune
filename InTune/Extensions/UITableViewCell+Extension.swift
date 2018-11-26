@@ -28,4 +28,21 @@ extension UITableView {
     public func register(cellTypes: UITableViewCell.Type...) {
         cellTypes.forEach(register)
     }
+    
+    /**
+     Dequeue generic type `element` of `UITableViewCell` for `indexPath`
+     
+     - Parameters:
+     - cellType: Element.Type
+     - indexPath: header for `IndexPath`
+     */
+    public func dequeue<Element: UITableViewCell>(cellType: Element.Type, for indexPath: IndexPath) -> Element {
+        let cell = dequeueReusableCell(withIdentifier: cellType.identifier, for: indexPath)
+        
+        guard let element = cell as? Element else {
+            fatalError("Cell \(cell) cannot be casted as \(cellType.identifier)")
+        }
+        
+        return element
+    }
 }

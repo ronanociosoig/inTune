@@ -67,6 +67,8 @@
 		AFD1FFD721AC10AE00D2894F /* TimeFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FFD621AC10AE00D2894F /* TimeFormatter.swift */; };
 		AFD1FFD921AC64B200D2894F /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FFD821AC64B200D2894F /* UIView+Extension.swift */; };
 		AFD1FFDB21AC651800D2894F /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FFDA21AC651800D2894F /* UITableViewCell+Extension.swift */; };
+		AFD1FFDD21AC688E00D2894F /* SearchDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FFDC21AC688E00D2894F /* SearchDataSource.swift */; };
+		AFD1FFDF21AC6B4300D2894F /* SearchWireframeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FFDE21AC6B4300D2894F /* SearchWireframeTests.swift */; };
 		B483399F3AD8E299739B8F0B /* Pods_Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF89E08B00C765396865DE0D /* Pods_Networking.framework */; };
 		BE719DA2D49198FC0FD53F64 /* Pods_InTuneUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51D48556BB2301451B481FC3 /* Pods_InTuneUITests.framework */; };
 		E4BE3F949A5B670372AEB014 /* Pods_InTune.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C87B554B8921AC78E7322DC8 /* Pods_InTune.framework */; };
@@ -200,6 +202,8 @@
 		AFD1FFD621AC10AE00D2894F /* TimeFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFormatter.swift; sourceTree = "<group>"; };
 		AFD1FFD821AC64B200D2894F /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		AFD1FFDA21AC651800D2894F /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
+		AFD1FFDC21AC688E00D2894F /* SearchDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDataSource.swift; sourceTree = "<group>"; };
+		AFD1FFDE21AC6B4300D2894F /* SearchWireframeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchWireframeTests.swift; sourceTree = "<group>"; };
 		C87B554B8921AC78E7322DC8 /* Pods_InTune.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InTune.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF89E08B00C765396865DE0D /* Pods_Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -330,6 +334,7 @@
 				AFD1FFB421A87BAB00D2894F /* AppControllerTests.swift */,
 				AFD1FFD221ABF4A800D2894F /* ResultParserTests.swift */,
 				AFD1FFD421AC0F9F00D2894F /* TimeFormatterTests.swift */,
+				AFD1FFDE21AC6B4300D2894F /* SearchWireframeTests.swift */,
 			);
 			path = InTuneTests;
 			sourceTree = "<group>";
@@ -380,9 +385,10 @@
 			isa = PBXGroup;
 			children = (
 				AFD1FFCC21AB5B4F00D2894F /* Cells */,
+				AFD1FEC921A6CE7400D2894F /* Search.storyboard */,
 				AFD1FF5E21A85CE200D2894F /* SearchWireframe.swift */,
 				AFD1FEC721A6CE7400D2894F /* SearchViewController.swift */,
-				AFD1FEC921A6CE7400D2894F /* Search.storyboard */,
+				AFD1FFDC21AC688E00D2894F /* SearchDataSource.swift */,
 				AFD1FFC021A9D5E600D2894F /* SearchPresenter.swift */,
 				AFD1FFC221AA10F900D2894F /* SearchDataProvider.swift */,
 				AFD1FFC421AA156400D2894F /* SearchAction.swift */,
@@ -854,6 +860,7 @@
 				AFD1FFA721A868B200D2894F /* iTunesAPI.swift in Sources */,
 				AFD1FEF621A6E2E900D2894F /* Constants.swift in Sources */,
 				AFD1FFD921AC64B200D2894F /* UIView+Extension.swift in Sources */,
+				AFD1FFDD21AC688E00D2894F /* SearchDataSource.swift in Sources */,
 				AFD1FEF821A6F38300D2894F /* AppController.swift in Sources */,
 				AFD1FFCB21AB5AB100D2894F /* SearchResult.swift in Sources */,
 				AFD1FFA621A868B200D2894F /* SearchiTunesService.swift in Sources */,
@@ -879,6 +886,7 @@
 				AFD1FF6121A85D8700D2894F /* CoordinatorTests.swift in Sources */,
 				AFD1FFB521A87BAB00D2894F /* AppControllerTests.swift in Sources */,
 				AFD1FFAF21A8704800D2894F /* DataProviderTests.swift in Sources */,
+				AFD1FFDF21AC6B4300D2894F /* SearchWireframeTests.swift in Sources */,
 				AFD1FF5821A8490600D2894F /* SearchiTunesServiceTests.swift in Sources */,
 				AFD1FF4421A8266500D2894F /* MockData.swift in Sources */,
 				AFD1FFD321ABF4A800D2894F /* ResultParserTests.swift in Sources */,
