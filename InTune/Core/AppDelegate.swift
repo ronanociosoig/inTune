@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import AVFoundation
+// import AVFoundation
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,15 +18,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         appController.start()
-        
-        let audioSession = AVAudioSession.sharedInstance()
-        do {
-            let category = AVAudioSession.Category.playback
-            try audioSession.setCategory(category, mode: .default, options: .defaultToSpeaker)
-        }
-        catch {
-            print("Setting category to AVAudioSessionCategoryPlayback failed.")
-        }
         
         return true
     }

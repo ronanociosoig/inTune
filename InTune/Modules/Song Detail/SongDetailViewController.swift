@@ -17,6 +17,8 @@ class SongDetailViewController: UIViewController {
     
     var presenter: SongDetailPresenter!
     var songDetailView: SongDetailView?
+    
+    var player: AVAudioPlayer?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,14 +71,29 @@ class SongDetailViewController: UIViewController {
     }
     
     func play(url: URL) {
+        
+        let bundle = Bundle.main
+        guard let path = bundle.path(forResource: "Vibrationz", ofType: "mp3") else { return }
+        let fileUrl = URL(fileURLWithPath: path)
+        
         do {
-            let player = try AVAudioPlayer(contentsOf: url)
+            let audioSession = AVAudioSession.sharedInstance()
+            do {
+                let category = AVAudioSession.Category.playback
+                try audioSession.setCategory(category, mode: .default, options: .defaultToSpeaker)
+            }
+            catch {
+                print("Setting category to AVAudioSessionCategoryPlayback failed.")
+            }
             
-            player.prepareToPlay()
-            player.play()
+            player = try AVAudioPlayer(contentsOf: fileUrl)
+            player?.prepareToPlay()
+            player?.volume = 1.0
+            player?.play()
             
         } catch let sessionError {
             print("Error: \(sessionError)")
+            print("\(url.absoluteString)")
         }
     }
 }

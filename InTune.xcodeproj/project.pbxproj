@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		25EDE2F7700C844F6A3F7DA1 /* Pods_InTuneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C7455699D1A2AC12AFC8AFB /* Pods_InTuneTests.framework */; };
 		90A688FB600B13D45538BBD9 /* Pods_NetworkingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40BEA9DD20041FF6B39B66D6 /* Pods_NetworkingTests.framework */; };
+		AF93015E21ADBAB8002CEAAA /* Vibrationz.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AF93015D21ADBAB8002CEAAA /* Vibrationz.mp3 */; };
 		AFD1000021ADA14A00D2894F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFD1FFFF21ADA14A00D2894F /* AVFoundation.framework */; };
 		AFD1FEC621A6CE7400D2894F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FEC521A6CE7400D2894F /* AppDelegate.swift */; };
 		AFD1FEC821A6CE7400D2894F /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FEC721A6CE7400D2894F /* SearchViewController.swift */; };
@@ -154,6 +155,7 @@
 		895D4BE0FD5C2656055DB11A /* Pods-NetworkingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkingTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NetworkingTests/Pods-NetworkingTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9EACBB391B286CA5CF1436BB /* Pods-InTuneUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InTuneUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InTuneUITests/Pods-InTuneUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A91C5F5DB97EE765EA898C9A /* Pods-Networking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Networking.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Networking/Pods-Networking.debug.xcconfig"; sourceTree = "<group>"; };
+		AF93015D21ADBAB8002CEAAA /* Vibrationz.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Vibrationz.mp3; path = InTune/Vibrationz.mp3; sourceTree = SOURCE_ROOT; };
 		AFD1FEC221A6CE7400D2894F /* InTune.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InTune.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFD1FEC521A6CE7400D2894F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFD1FEC721A6CE7400D2894F /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -398,6 +400,7 @@
 		AFD1FEF421A6DE7300D2894F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AF93015D21ADBAB8002CEAAA /* Vibrationz.mp3 */,
 				AFD1FED121A6CE7700D2894F /* Info.plist */,
 				AFD1FECE21A6CE7700D2894F /* LaunchScreen.storyboard */,
 				AFD1FECC21A6CE7700D2894F /* Assets.xcassets */,
@@ -667,6 +670,11 @@
 				TargetAttributes = {
 					AFD1FEC121A6CE7400D2894F = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					AFD1FED521A6CE7700D2894F = {
 						CreatedOnToolsVersion = 10.1;
@@ -719,6 +727,7 @@
 				AFD1FEFE21A803F300D2894F /* Default-568h@2x.png in Resources */,
 				AFD1FECD21A6CE7700D2894F /* Assets.xcassets in Resources */,
 				AFD1FFAB21A86E2A00D2894F /* simpleServerResponse.json in Resources */,
+				AF93015E21ADBAB8002CEAAA /* Vibrationz.mp3 in Resources */,
 				AFD1FFBF21A9935600D2894F /* invalidDateResponse.json in Resources */,
 				AFD1FECB21A6CE7400D2894F /* Search.storyboard in Resources */,
 				AFD1FFAA21A86E2700D2894F /* noResultsServerResponse.json in Resources */,
