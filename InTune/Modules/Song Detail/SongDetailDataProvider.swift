@@ -9,16 +9,32 @@
 import Foundation
 
 protocol SongDetailDataProvider {
-    func next()
-    func previous()
+    func nextResult() -> Result?
+    func previousResult() -> Result?
+    func selectedResult() -> Result?
 }
 
 extension DataProvider: SongDetailDataProvider {
-    func next() {
-        
+    func nextResult() -> Result? {
+        if appData.selectedIndex < appData.searchResults.count - 1 {
+            appData.selectedIndex += 1
+        } else {
+            appData.selectedIndex = 0
+        }
+        return selectedResult()
     }
     
-    func previous() {
-        
+    func previousResult() -> Result? {
+        if appData.selectedIndex > 0 {
+           appData.selectedIndex -= 1
+        } else {
+            appData.selectedIndex = appData.searchResults.count - 1
+        }
+        return selectedResult()
+    }
+    
+    func selectedResult() -> Result? {
+        let selectedIndex = appData.selectedIndex
+        return result(at: selectedIndex)
     }
 }

@@ -17,7 +17,6 @@ class AppData {
     var results = [Result]()
     var searchResults = [SearchResult]()
     var selectedIndex: Int = 0
-    
     var currentSortOption: SortOption = .length
     
     func sort(option: SortOption) {

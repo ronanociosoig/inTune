@@ -8,10 +8,15 @@
 
 import Foundation
 
+protocol SongDetailPresenting {
+    func willLayoutSubviews()
+}
+
 class SongDetailPresenter {
     var actions: SongDetailActions!
     var viewController: SongDetailController!
     var dataProvider: SongDetailDataProvider!
+    var selectedResult: Result?
     
     init(viewController: SongDetailController,
          actions: SongDetailActions,
@@ -19,5 +24,14 @@ class SongDetailPresenter {
         self.viewController = viewController
         self.actions = actions
         self.dataProvider = dataProvider
+        self.selectedResult = dataProvider.selectedResult()
+    }
+}
+
+extension SongDetailPresenter: SongDetailPresenting {
+    func willLayoutSubviews() {
+        if let result = selectedResult {
+            viewController.show(result: result)
+        }
     }
 }

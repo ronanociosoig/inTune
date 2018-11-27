@@ -9,7 +9,7 @@
 import UIKit
 
 protocol SongDetailController {
-    
+    func show(result: Result)
 }
 
 class SongDetailViewController: UIViewController {
@@ -21,8 +21,17 @@ class SongDetailViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    override func viewWillLayoutSubviews() {
+        presenter.willLayoutSubviews()
+    }
 }
 
 extension SongDetailViewController: SongDetailController {
-    
+    func show(result: Result) {
+        guard let songDetailView: SongDetailView = SongDetailView.loadFromNib() else { return }
+        songDetailView.configure(with: result)
+        songDetailView.frame = view.bounds
+        view.addSubview(songDetailView)
+    }
 }

@@ -94,4 +94,14 @@ class DataProvider: DataProviding {
     func sort(option: SortOption) {
         appData.sort(option: option)
     }
+    
+    func result(at index: Int) -> Result? {
+        let searchResult = appData.searchResults[index]
+        let identifier = searchResult.identifier
+        
+        let filterOutput = appData.results.filter {$0.trackID == identifier}
+        
+        guard let firstResult = filterOutput.first else { return nil }
+        return firstResult
+    }
 }

@@ -35,7 +35,7 @@ struct ResultParser {
         let artworkUrl = URL(string: result.artworkUrl100)
         let releaseDate = dateFormatter.string(from: result.releaseDate)
 
-        return SearchResult(identifier: result.artistID,
+        return SearchResult(identifier: result.trackID,
                             artworkUrl: artworkUrl,
                             artistName: result.artistName,
                             trackName: result.trackName,
