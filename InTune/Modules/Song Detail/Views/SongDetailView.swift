@@ -14,6 +14,7 @@ class SongDetailView: UIView {
     @IBOutlet weak var trackNameLabel: UILabel!
     @IBOutlet weak var artistNameLabel: UILabel!
     @IBOutlet weak var releaseDateLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
     
     func configure(with result: Result) {
         trackNameLabel.text = result.trackName
@@ -23,6 +24,14 @@ class SongDetailView: UIView {
         releaseDateLabel.text = dateFormatter.string(from: result.releaseDate)
         
         artworkImageView.image = UIImage(named: Constants.Images.largePlaceholder)
+        
+        if let text = result.longDescription {
+            descriptionLabel.text = text
+        } else if let text = result.shortDescription {
+            descriptionLabel.text = text
+        } else {
+            descriptionLabel.text = ""
+        }
         
         guard let url = URL(string: result.artworkUrl60) else { return }
         artworkImageView.hnk_setImage(from: url, placeholder: UIImage(named: Constants.Images.largePlaceholder))

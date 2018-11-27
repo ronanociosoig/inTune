@@ -15,6 +15,7 @@ protocol SongDetailController {
 class SongDetailViewController: UIViewController {
     
     var presenter: SongDetailPresenter!
+    var songDetailView: SongDetailView?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +25,38 @@ class SongDetailViewController: UIViewController {
     
     override func viewWillLayoutSubviews() {
         presenter.willLayoutSubviews()
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.action, target: self, action: #selector(share(sender:)))
+        
+        navigationItem.rightBarButtonItem?.accessibilityLabel = "Share"
+        
+        // UIBarButtonItem(title: "Share", style: .plain, target: self, action: )
+    }
+    
+    @objc func share(sender: Any) {
+        
+        guard let songDetailView = songDetailView else { return }
+        
+        let image = UIImage(named: Constants.Images.largePlaceholder)
+        
+        let activity = UIActivityViewController(activityItems: [
+            songDetailView.trackNameLabel.text ?? "Unknown",
+            songDetailView.artistNameLabel.text ?? "Unknown",
+            songDetailView.artworkImageView.image ?? image!], applicationActivities: nil)
+        
+        // Anything you want to exclude
+        activity.excludedActivityTypes = [
+            UIActivity.ActivityType.postToWeibo,
+            UIActivity.ActivityType.print,
+            UIActivity.ActivityType.assignToContact,
+            UIActivity.ActivityType.saveToCameraRoll,
+            UIActivity.ActivityType.addToReadingList,
+            UIActivity.ActivityType.postToFlickr,
+            UIActivity.ActivityType.postToVimeo,
+            UIActivity.ActivityType.postToTencentWeibo,
+        ]
+        
+        self.present(activity, animated: true, completion: nil)
     }
 }
 
@@ -33,5 +66,7 @@ extension SongDetailViewController: SongDetailController {
         songDetailView.configure(with: result)
         songDetailView.frame = view.bounds
         view.addSubview(songDetailView)
+        
+        self.songDetailView = songDetailView
     }
 }

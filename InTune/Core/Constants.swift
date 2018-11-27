@@ -10,7 +10,7 @@ import UIKit
 
 struct Constants {
     struct Date {
-        static let formatingString = "dd-MM-yyyy"
+        static let formatingString = "yyyy" // "dd-MM-yyyy"
     }
     
     struct Network {
