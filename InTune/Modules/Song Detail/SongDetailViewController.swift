@@ -18,7 +18,7 @@ class SongDetailViewController: UIViewController {
     var presenter: SongDetailPresenter!
     var songDetailView: SongDetailView?
     
-    var player: AVPlayer? // AVAudioPlayer?
+    var player: AVPlayer?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,7 +46,6 @@ class SongDetailViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        // playSample()
     }
     
     @objc func share(sender: Any) {
@@ -75,38 +74,7 @@ class SongDetailViewController: UIViewController {
         self.present(activity, animated: true, completion: nil)
     }
     
-    func playSample() {
-        
-        let bundle = Bundle.main
-        guard let path = bundle.path(forResource: "Vibrationz", ofType: "mp3") else { return }
-        let fileUrl = URL(fileURLWithPath: path)
-
-        let audioSession = AVAudioSession.sharedInstance()
-        do {
-            let category = AVAudioSession.Category.playback
-            try audioSession.setCategory(category, mode: .default, options: .mixWithOthers)
-            try audioSession.setActive(true)
-        }
-        catch {
-            print("Setting category to AVAudioSessionCategoryPlayback failed.")
-        }
-        
-        let playerItem = AVPlayerItem(url: fileUrl)
-        
-        print("Starting with player item")
-        player = AVPlayer(playerItem: playerItem)
-        print("play it... ")
-        player?.play()
-        print("playing.... in theory.")
-    }
-    
     func play(url: URL) {
-        
-//        let bundle = Bundle.main
-//        guard let path = bundle.path(forResource: "Vibrationz", ofType: "mp3") else { return }
-//        let fileUrl = URL(fileURLWithPath: path)
-        
-        //do {
             let audioSession = AVAudioSession.sharedInstance()
             do {
                 let category = AVAudioSession.Category.playback
@@ -120,15 +88,7 @@ class SongDetailViewController: UIViewController {
             let playerItem = AVPlayerItem(url: url)
             
             player = AVPlayer(playerItem: playerItem)
-            // player?.prepareToPlay()
-            // player?.volume = 1.0
             player?.play()
-            
-        //}
-        //catch let sessionError {
-        //    print("Error: \(sessionError)")
-        //    print("\(url.absoluteString)")
-        //}
     }
 }
 
