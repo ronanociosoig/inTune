@@ -46,7 +46,7 @@ class SearchPresenter {
     
     func dataReceived() {
         searchResults = dataProvider.searchResults()
-        
+        selected(option: currentSortOption)
         viewController.sortButton(enabled: (searchResults.count > 0))
         viewController.reload()
     }
@@ -59,15 +59,6 @@ class SearchPresenter {
     func item(at indexPath: IndexPath) -> SearchResult {
         return searchResults[indexPath.row]
     }
-    
-//    func sortResults(searchResults: [SearchResult], with option: SortOption) -> [SearchResult] {
-//        switch option {
-//        case .genre:
-//
-//        default:
-//            <#code#>
-//        }
-//    }
 }
 
 extension SearchPresenter: SearchPresenting {
@@ -77,6 +68,9 @@ extension SearchPresenter: SearchPresenting {
     }
     
     func selected(option: SortOption) {
+        
+        currentSortOption = option
+        
         switch option {
         case .length:
             searchResults.sort {

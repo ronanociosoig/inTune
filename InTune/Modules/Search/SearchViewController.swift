@@ -72,28 +72,31 @@ class SearchViewController: UIViewController {
 extension SearchViewController {
     func showSortOptions() {
         let alertController = UIAlertController(title: nil,
-                                                message: "Sorting Options",
+                                                message: Constants.Translations.sortOptions,
                                                 preferredStyle: .actionSheet)
         
-        let lengthAction = UIAlertAction(title: "Length",
-                                        style: .default,
-                                        handler: nil)
+        let lengthAction = UIAlertAction(title: Constants.Translations.lengthSortOption,
+                                         style: .default) { (_) in
+            self.sort(with: .length)
+        }
         
         alertController.addAction(lengthAction)
         
-        let genreAction = UIAlertAction(title: "Genre",
-                                     style: .default,
-                                     handler: nil)
+        let genreAction = UIAlertAction(title: Constants.Translations.genreSortOption,
+                                        style: .default) { (_) in
+                self.sort(with: .genre)
+        }
         
         alertController.addAction(genreAction)
         
-        let priceAction = UIAlertAction(title: "Price",
-                                        style: .default,
-                                        handler: nil)
+        let priceAction = UIAlertAction(title: Constants.Translations.priceSortOption,
+                                        style: .default) { (_) in
+                                            self.sort(with: .price)
+        }
         
         alertController.addAction(priceAction)
         
-        let cancelAction = UIAlertAction(title: "Cancel",
+        let cancelAction = UIAlertAction(title: Constants.Translations.cancel,
                                         style: .cancel,
                                         handler: nil)
         
@@ -102,6 +105,11 @@ extension SearchViewController {
         present(alertController,
                                animated: true,
                                completion: nil)
+    }
+    
+    func sort(with option: SortOption) {
+        
+        presenter.selected(option: option)
     }
 }
 

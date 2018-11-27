@@ -27,8 +27,13 @@ struct Constants {
     struct Translations {
         static let loading = "Loading"
         static let ok = "OK"
+        static let cancel = "Cancel"
         static let searchBarPlaceholder = "Search iTunes for music."
         static let sortButtonTitle = "Sort"
+        static let sortOptions = "Sorting Options"
+        static let genreSortOption = "Genre"
+        static let lengthSortOption = "Length"
+        static let priceSortOption = "Price"
     
         struct Error {
             static let jsonDecodingError = "Error: JSON decoding error."
