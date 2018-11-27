@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Haneke
 
 protocol ViewController {
     func reload()
@@ -115,6 +114,7 @@ class SearchViewController: UIViewController {
 extension SearchViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        presenter.select(index: indexPath.row)
     }
 }
 

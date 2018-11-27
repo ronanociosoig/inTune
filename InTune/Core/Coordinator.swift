@@ -49,9 +49,16 @@ class Coordinator {
         presenter?.dataReceived()
     }
 
-//    func showSongDetail() {
-//
-//    }
+    func showSongDetail() {
+        let viewController = SongDetailWireframe.makeViewController()
+        
+        SongDetailWireframe.prepare(viewController: viewController,
+                                    actions: appController as SongDetailActions,
+                                    dataProvider: dataProvider as SongDetailDataProvider)
+        
+        guard let navigationController = window.rootViewController as? UINavigationController else { return }
+        navigationController.pushViewController(viewController, animated: true)
+    }
     
     func showLoading() {
         

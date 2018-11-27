@@ -66,12 +66,12 @@ class DataProvider: DataProviding {
                 }
                 
                 self.prepareSearchResults()
+                self.sort(option: self.appData.currentSortOption)
                 self.dataLoaded?.dataReceived(errorMessage: nil)
             } catch {
                 os_log("Error: %s", log: Log.data, type: .error, error.localizedDescription)
                 self.dataLoaded?.dataReceived(errorMessage: error.localizedDescription)
             }
-            
         }
     }
     
@@ -89,5 +89,9 @@ class DataProvider: DataProviding {
             searchResults.append(searchResult)
         }
         return searchResults
+    }
+    
+    func sort(option: SortOption) {
+        appData.sort(option: option)
     }
 }

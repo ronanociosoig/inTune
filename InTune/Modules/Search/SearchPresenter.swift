@@ -8,14 +8,11 @@
 
 import Foundation
 
-enum SortOption: Int {
-    case length, genre, price
-}
-
 protocol SearchPresenting {
     func sortBarButtonAction()
     func selected(option: SortOption)
     func viewDidLayoutSubviews()
+    func select(index: Int)
 }
 
 class SearchPresenter {
@@ -23,7 +20,6 @@ class SearchPresenter {
     var viewController: ViewController!
     var dataProvider: SearchDataProvider!
     var searchResults = [SearchResult]()
-    var currentSortOption: SortOption = .length
     let dataSource: SearchDataSource
     
     init(viewController: ViewController,
@@ -46,7 +42,6 @@ class SearchPresenter {
     
     func dataReceived() {
         searchResults = dataProvider.searchResults()
-        selected(option: currentSortOption)
         viewController.sortButton(enabled: (searchResults.count > 0))
         viewController.reload()
     }
@@ -68,24 +63,12 @@ extension SearchPresenter: SearchPresenting {
     }
     
     func selected(option: SortOption) {
-        
-        currentSortOption = option
-        
-        switch option {
-        case .length:
-            searchResults.sort {
-                $0.duration < $1.duration
-            }
-        case .genre:
-            searchResults.sort {
-                $0.genre < $1.genre
-            }
-        case .price:
-            searchResults.sort {
-                $0.price < $1.price
-            }
-        }
+        actions.sort(option: option)
         
         viewController.reload()
+    }
+    
+    func select(index: Int) {
+        actions.select(index: index)
     }
 }

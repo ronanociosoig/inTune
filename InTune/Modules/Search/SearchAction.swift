@@ -10,7 +10,8 @@ import Foundation
 
 protocol SearchActions {
     func search(term: String)
-    func select(item: Result)
+    func select(index: Int)
+    func sort(option: SortOption)
 }
 
 extension AppController: SearchActions {
@@ -19,7 +20,12 @@ extension AppController: SearchActions {
         coordinator?.showLoading()
     }
     
-    func select(item: Result) {
-        
+    func select(index: Int) {
+        dataProvider.appData.selectedIndex = index
+        coordinator?.showSongDetail()
+    }
+    
+    func sort(option: SortOption) {
+        dataProvider.sort(option: option)
     }
 }
