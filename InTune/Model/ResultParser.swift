@@ -35,7 +35,8 @@ struct ResultParser {
                             artistName: result.artistName,
                             trackName: result.trackName,
                             genre: result.primaryGenreName,
-                            duration: duration,
+                            duration: result.trackTimeMillis,
+                            durationText: duration,
                             releaseDate: releaseDate,
                             price: price)
     }

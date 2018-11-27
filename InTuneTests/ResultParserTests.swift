@@ -21,7 +21,7 @@ class ResultParserTests: XCTestCase {
         XCTAssertTrue(searchResult.artistName == sampleResult.artistName)
         XCTAssertTrue(searchResult.trackName == sampleResult.trackName)
         XCTAssertTrue(searchResult.genre == sampleResult.primaryGenreName)
-        XCTAssertTrue(searchResult.duration == "05:35")
+        XCTAssertTrue(searchResult.durationText == "05:35")
         XCTAssertTrue(searchResult.releaseDate == "02-11-1991")
         XCTAssertTrue(searchResult.price == "$2.55")
     }

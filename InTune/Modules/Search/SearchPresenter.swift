@@ -77,6 +77,21 @@ extension SearchPresenter: SearchPresenting {
     }
     
     func selected(option: SortOption) {
+        switch option {
+        case .length:
+            searchResults.sort {
+                $0.duration < $1.duration
+            }
+        case .genre:
+            searchResults.sort {
+                $0.genre < $1.genre
+            }
+        case .price:
+            searchResults.sort {
+                $0.price < $1.price
+            }
+        }
         
+        viewController.reload()
     }
 }

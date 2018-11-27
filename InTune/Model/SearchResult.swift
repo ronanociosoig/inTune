@@ -14,7 +14,8 @@ struct SearchResult: Codable {
     let artistName: String
     let trackName: String
     let genre: String
-    let duration: String
+    let duration: Int
+    let durationText: String
     let releaseDate: String
     let price: String
     
@@ -23,7 +24,8 @@ struct SearchResult: Codable {
          artistName: String,
          trackName: String,
          genre: String,
-         duration: String,
+         duration: Int,
+         durationText:String,
          releaseDate: String,
          price: String) {
         self.identifier = identifier
@@ -32,6 +34,7 @@ struct SearchResult: Codable {
         self.trackName = trackName
         self.genre = genre
         self.duration = duration
+        self.durationText = durationText
         self.releaseDate = releaseDate
         self.price = price
     }

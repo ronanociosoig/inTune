@@ -32,7 +32,7 @@ class ResultTableViewCell: UITableViewCell {
         trackNameLabel.text = item.trackName
         artistNameLabel.text = item.artistName
         genreLabel.text = item.genre
-        durationLabel.text = item.duration
+        durationLabel.text = item.durationText
         releaseDateLabel.text = item.releaseDate
         priceLabel.text = item.price
         trackIdentifier = item.identifier
