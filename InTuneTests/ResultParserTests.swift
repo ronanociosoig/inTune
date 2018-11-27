@@ -25,6 +25,13 @@ class ResultParserTests: XCTestCase {
         XCTAssertTrue(searchResult.releaseDate == "02-11-1991")
         XCTAssertTrue(searchResult.price == "$2.55")
     }
+    
+    func testNegativePrice() {
+        let sampleResult = TestResult.makeNAResult()
+        let searchResult = parser.parse(result: sampleResult)
+        
+        XCTAssertTrue(searchResult.price == "N/A")
+    }
 }
 
 struct TestResult {
@@ -55,5 +62,34 @@ struct TestResult {
             isStreamable: false,
             shortDescription: nil,
             longDescription: nil)
+    }
+    
+    static func makeNAResult() -> Result {
+        let trackTime: Int = (1000 * 60 * 5) + (1000 * 35) // 05:35
+        let dateFormatter = DateFormatter.simpleDateFormatter()
+        // Need to shift the hour of the date.
+        let date = dateFormatter.date(from: "02-11-1991")!
+        let releaseDate = date.addingTimeInterval(3600*2)
+        return Result(wrapperType: "track",
+                      kind: "song",
+                      artistID: 139342,
+                      trackID: 72953472,
+                      artistName: "Moby",
+                      trackName: "Go",
+                      artistViewURL: "https://itunes.apple.com/artist/139342",
+                      trackViewURL: "https://itunes.apple.com/track/72953472",
+                      previewURL: "https://itunes.apple.com/preview/72953472",
+                      artworkUrl30: "https://itunes.apple.com/artworkl30/72953472",
+                      artworkUrl60: "https://itunes.apple.com/artworkl60/72953472",
+                      artworkUrl100: "https://itunes.apple.com/artworkl00/72953472",
+                      trackPrice: -1.00,
+                      releaseDate: releaseDate,
+                      trackTimeMillis: trackTime,
+                      country: "USA",
+                      currency: "USD",
+                      primaryGenreName: "Electronic",
+                      isStreamable: false,
+                      shortDescription: nil,
+                      longDescription: nil)
     }
 }

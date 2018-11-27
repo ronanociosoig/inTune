@@ -26,7 +26,12 @@ struct ResultParser {
         
         let duration = TimeFormatter.string(from: result.trackTimeMillis)
         let priceNumber = result.trackPrice as NSNumber
-        let price = priceFormatter.string(from: priceNumber) ?? "$0.00"
+        var price = priceFormatter.string(from: priceNumber) ?? "$0.00"
+        
+        if result.trackPrice < 0 {
+            price = "N/A"
+        }
+        
         let artworkUrl = URL(string: result.artworkUrl100)
         let releaseDate = dateFormatter.string(from: result.releaseDate)
 
