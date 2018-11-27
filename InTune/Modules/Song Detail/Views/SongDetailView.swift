@@ -15,20 +15,28 @@ class SongDetailView: UIView {
     @IBOutlet weak var artistNameLabel: UILabel!
     @IBOutlet weak var releaseDateLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var collectionNameLabel: UILabel!
     
     @IBOutlet weak var playButton: UIButton!
+    @IBOutlet weak var nextButton: UIButton!
     
-    var viewController: SongDetailViewController!
-    var songUrl: URL?
+    var songPlayer: SongPlayer!
     
     func configure(with result: Result) {
         trackNameLabel.text = result.trackName
         artistNameLabel.text = result.artistName
+        artistNameLabel.textColor = Constants.Theme.tintColor
         
         let dateFormatter = DateFormatter.simpleDateFormatter()
-        releaseDateLabel.text = dateFormatter.string(from: result.releaseDate)
+        releaseDateLabel.text = result.primaryGenreName + " • " + dateFormatter.string(from: result.releaseDate)
+        
+        let priceFormatter = NumberFormatter.priceFormatter()
+        priceLabel.text = priceFormatter.string(from: result.trackPrice as NSNumber)
         
         artworkImageView.image = UIImage(named: Constants.Images.largePlaceholder)
+        
+        collectionNameLabel.text = result.collectionName
         
         if let text = result.longDescription {
             descriptionLabel.text = text
@@ -38,19 +46,17 @@ class SongDetailView: UIView {
             descriptionLabel.text = ""
         }
         
-        if let url = URL(string: result.artworkUrl60) {
+        if let url = URL(string: result.artworkUrl100) {
             artworkImageView.hnk_setImage(from: url, placeholder: UIImage(named: Constants.Images.largePlaceholder))
         }
-        
-        if let trackUrl = URL(string: result.previewURL) {
-            songUrl = trackUrl
-        }
     }
-        
+    
     @IBAction func playButtonAction(_ sender: Any) {
-        if let songUrl = songUrl {
-            print("\(songUrl.absoluteString)")
-            viewController.play(url: songUrl)
-        }
+        
+        songPlayer.togglePlay()
+    }
+    
+    @IBAction func nextButtonAction(_ sender: Any) {
+        songPlayer.next()
     }
 }

@@ -49,11 +49,19 @@ class SearchViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
+        title = ""
+        
         navigationItem.hidesSearchBarWhenScrolling = true
         
         if presenter.numberOfItems() == 0 {
             searchController.searchBar.becomeFirstResponder()
         }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        title = "Results"
     }
     
     func addNavigationButton() {

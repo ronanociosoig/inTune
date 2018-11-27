@@ -18,8 +18,6 @@ class SongDetailViewController: UIViewController {
     var presenter: SongDetailPresenter!
     var songDetailView: SongDetailView?
     
-    var player: AVPlayer?
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,9 +29,9 @@ class SongDetailViewController: UIViewController {
         songDetailView.frame = view.bounds
         view.addSubview(songDetailView)
         
-        songDetailView.viewController = self
-        
         self.songDetailView = songDetailView
+        
+        songDetailView.songPlayer = presenter as SongPlayer
     }
     
     override func viewWillLayoutSubviews() {
@@ -72,23 +70,6 @@ class SongDetailViewController: UIViewController {
         ]
         
         self.present(activity, animated: true, completion: nil)
-    }
-    
-    func play(url: URL) {
-            let audioSession = AVAudioSession.sharedInstance()
-            do {
-                let category = AVAudioSession.Category.playback
-                try audioSession.setCategory(category, mode: .default, options: .mixWithOthers)
-                try audioSession.setActive(true)
-            }
-            catch {
-                print("Setting category to AVAudioSessionCategoryPlayback failed.")
-            }
-            
-            let playerItem = AVPlayerItem(url: url)
-            
-            player = AVPlayer(playerItem: playerItem)
-            player?.play()
     }
 }
 

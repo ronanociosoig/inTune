@@ -17,12 +17,9 @@ extension NumberFormatter {
 struct ResultParser {
     
     let dateFormatter = DateFormatter.simpleDateFormatter()
-    let priceFormatter = NumberFormatter()
+    let priceFormatter = NumberFormatter.priceFormatter()
     
     func parse(result: Result) -> SearchResult {
-        priceFormatter.numberStyle = .currency
-        priceFormatter.currencyCode = result.currency
-        priceFormatter.currencySymbol = "$"
         
         let duration = TimeFormatter.string(from: result.trackTimeMillis)
         let priceNumber = result.trackPrice as NSNumber
@@ -32,7 +29,7 @@ struct ResultParser {
             price = "N/A"
         }
         
-        let artworkUrl = URL(string: result.artworkUrl100)
+        let artworkUrl = URL(string: result.artworkUrl30)
         let releaseDate = dateFormatter.string(from: result.releaseDate)
 
         return SearchResult(identifier: result.trackID,

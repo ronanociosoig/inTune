@@ -20,6 +20,7 @@ struct Result: Codable {
     let artistID: Int
     let trackID: Int
     let artistName: String
+    let collectionName: String
     let trackName: String
     let artistViewURL, trackViewURL: String
     let previewURL: String
@@ -39,6 +40,7 @@ struct Result: Codable {
         case trackID = "trackId"
         case artistName = "artistName"
         case trackName
+        case collectionName
         case artistViewURL = "artistViewUrl"
         case trackViewURL = "trackViewUrl"
         case previewURL = "previewUrl"
@@ -57,6 +59,7 @@ struct Result: Codable {
         trackID: Int,
         artistName: String,
         trackName: String,
+        collectionName: String,
         artistViewURL: String,
         trackViewURL: String,
         previewURL: String,
@@ -78,6 +81,7 @@ struct Result: Codable {
         self.trackID = trackID
         self.artistName = artistName
         self.trackName = trackName
+        self.collectionName = collectionName
         self.artistViewURL = artistViewURL
         self.trackViewURL = trackViewURL
         self.previewURL = previewURL
