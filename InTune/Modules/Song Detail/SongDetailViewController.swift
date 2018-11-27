@@ -55,7 +55,9 @@ class SongDetailViewController: UIViewController {
         let activity = UIActivityViewController(activityItems: [
             songDetailView.trackNameLabel.text ?? "Unknown",
             songDetailView.artistNameLabel.text ?? "Unknown",
-            songDetailView.artworkImageView.image ?? image!], applicationActivities: nil)
+            songDetailView.artworkImageView.image ?? image!,
+            songDetailView.trackViewURL
+            ], applicationActivities: nil)
         
         // Anything you want to exclude
         activity.excludedActivityTypes = [

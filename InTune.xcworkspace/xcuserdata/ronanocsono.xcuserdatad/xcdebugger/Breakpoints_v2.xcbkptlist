@@ -170,7 +170,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "InTune/Modules/Search/SearchViewController.swift"
-            timestampString = "565049725.920009"
+            timestampString = "565051157.5798841"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "125"
@@ -202,7 +202,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "InTune/Modules/Song Detail/SongDetailPresenter.swift"
-            timestampString = "565049725.920151"
+            timestampString = "565051157.5800149"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "49"
@@ -218,11 +218,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "InTune/Modules/Song Detail/SongDetailViewController.swift"
-            timestampString = "565049725.920218"
+            timestampString = "565051157.580098"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79">
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "show(result:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

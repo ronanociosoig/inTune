@@ -18,18 +18,24 @@ class SongDetailView: UIView {
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var collectionNameLabel: UILabel!
     
+    @IBOutlet weak var openInSafariButton: UIButton!
+    
     @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     
     var songPlayer: SongPlayer!
+    var trackViewURL: String!
+    
+    func dateAndGenre(result: Result) -> String {
+        let dateFormatter = DateFormatter.simpleDateFormatter()
+        return result.primaryGenreName + " • " + dateFormatter.string(from: result.releaseDate)
+    }
     
     func configure(with result: Result) {
         trackNameLabel.text = result.trackName
         artistNameLabel.text = result.artistName
         artistNameLabel.textColor = Constants.Theme.tintColor
-        
-        let dateFormatter = DateFormatter.simpleDateFormatter()
-        releaseDateLabel.text = result.primaryGenreName + " • " + dateFormatter.string(from: result.releaseDate)
+        releaseDateLabel.text = dateAndGenre(result: result)
         
         let priceFormatter = NumberFormatter.priceFormatter()
         priceLabel.text = priceFormatter.string(from: result.trackPrice as NSNumber)
@@ -38,17 +44,13 @@ class SongDetailView: UIView {
         
         collectionNameLabel.text = result.collectionName
         
-        if let text = result.longDescription {
-            descriptionLabel.text = text
-        } else if let text = result.shortDescription {
-            descriptionLabel.text = text
-        } else {
-            descriptionLabel.text = ""
-        }
+        trackViewURL = result.trackViewURL
         
         if let url = URL(string: result.artworkUrl100) {
             artworkImageView.hnk_setImage(from: url, placeholder: UIImage(named: Constants.Images.largePlaceholder))
         }
+        
+        openInSafariButton.setTitle("Open In iTunes", for: .normal)
     }
     
     @IBAction func playButtonAction(_ sender: Any) {
@@ -58,5 +60,12 @@ class SongDetailView: UIView {
     
     @IBAction func nextButtonAction(_ sender: Any) {
         songPlayer.next()
+    }
+    
+    @IBAction func openInSafariButtonAction(_ sender: Any) {
+        print("\(String(describing: trackViewURL))")
+        if let trackViewURL = trackViewURL, let url = URL(string: trackViewURL) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
     }
 }
