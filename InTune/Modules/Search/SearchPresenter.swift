@@ -19,7 +19,6 @@ class SearchPresenter {
     var actions: SearchActions!
     var viewController: ViewController!
     var dataProvider: SearchDataProvider!
-    var searchResults = [SearchResult]()
     let dataSource: SearchDataSource
     
     init(viewController: ViewController,
@@ -41,17 +40,19 @@ class SearchPresenter {
     }
     
     func dataReceived() {
-        searchResults = dataProvider.searchResults()
+        let searchResults = dataProvider.searchResults()
         viewController.sortButton(enabled: (searchResults.count > 0))
         viewController.reload()
     }
     
     func numberOfItems() -> Int {
+        let searchResults = dataProvider.searchResults()
         let count = searchResults.count
         return count
     }
     
     func item(at indexPath: IndexPath) -> SearchResult {
+        let searchResults = dataProvider.searchResults()
         return searchResults[indexPath.row]
     }
 }
