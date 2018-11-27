@@ -67,9 +67,9 @@
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X21-VO-3PC">
-                    <rect key="frame" x="144" y="111" width="39" height="21"/>
+                    <rect key="frame" x="144" y="111" width="106" height="21"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="39" id="RJz-gW-aMD"/>
+                        <constraint firstAttribute="width" constant="106" id="RJz-gW-aMD"/>
                         <constraint firstAttribute="height" constant="21" id="nKO-U8-gw9"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
