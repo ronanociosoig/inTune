@@ -67,9 +67,7 @@ class SearchViewController: UIViewController {
     @objc func buttonAction(_ sender: Any) {
         presenter.sortBarButtonAction()
     }
-}
 
-extension SearchViewController {
     func showSortOptions() {
         let alertController = UIAlertController(title: nil,
                                                 message: Constants.Translations.sortOptions,
@@ -108,10 +106,11 @@ extension SearchViewController {
     }
     
     func sort(with option: SortOption) {
-        
         presenter.selected(option: option)
     }
 }
+
+// MARK: - UITableView Delegate
 
 extension SearchViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -119,15 +118,19 @@ extension SearchViewController: UITableViewDelegate {
     }
 }
 
+// MARK: - UISearchBar Delegate
+
 extension SearchViewController: UISearchBarDelegate {
-    // MARK: - UISearchBar Delegate
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         if let text = searchBar.text, text.count > 0 {
             presenter.search(term: text)
+            searchController.isActive = false
         }
     }
 }
+
+// MARK: - ViewController protocol
 
 extension SearchViewController: ViewController {
     func reload() {
