@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 protocol SongDetailController {
     func show(result: Result)
@@ -19,8 +20,16 @@ class SongDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        guard let songDetailView: SongDetailView = SongDetailView.loadFromNib() else {
+            print("Error loading the nib. ")
+            return
+        }
+        
+        songDetailView.frame = view.bounds
+        view.addSubview(songDetailView)
+        
+        self.songDetailView = songDetailView
     }
     
     override func viewWillLayoutSubviews() {
@@ -29,8 +38,6 @@ class SongDetailViewController: UIViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.action, target: self, action: #selector(share(sender:)))
         
         navigationItem.rightBarButtonItem?.accessibilityLabel = "Share"
-        
-        // UIBarButtonItem(title: "Share", style: .plain, target: self, action: )
     }
     
     @objc func share(sender: Any) {
@@ -58,15 +65,26 @@ class SongDetailViewController: UIViewController {
         
         self.present(activity, animated: true, completion: nil)
     }
+    
+    func play(url: URL) {
+        do {
+            let player = try AVAudioPlayer(contentsOf: url)
+            
+            player.prepareToPlay()
+            player.play()
+            
+        } catch let sessionError {
+            print("Error: \(sessionError)")
+        }
+    }
 }
 
 extension SongDetailViewController: SongDetailController {
     func show(result: Result) {
-        guard let songDetailView: SongDetailView = SongDetailView.loadFromNib() else { return }
-        songDetailView.configure(with: result)
-        songDetailView.frame = view.bounds
-        view.addSubview(songDetailView)
         
-        self.songDetailView = songDetailView
+        if let songDetailView = songDetailView {
+            songDetailView.configure(with: result)
+            songDetailView.frame = view.bounds
+        }
     }
 }

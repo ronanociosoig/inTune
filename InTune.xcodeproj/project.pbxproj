@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		25EDE2F7700C844F6A3F7DA1 /* Pods_InTuneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C7455699D1A2AC12AFC8AFB /* Pods_InTuneTests.framework */; };
 		90A688FB600B13D45538BBD9 /* Pods_NetworkingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40BEA9DD20041FF6B39B66D6 /* Pods_NetworkingTests.framework */; };
+		AFD1000021ADA14A00D2894F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFD1FFFF21ADA14A00D2894F /* AVFoundation.framework */; };
 		AFD1FEC621A6CE7400D2894F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FEC521A6CE7400D2894F /* AppDelegate.swift */; };
 		AFD1FEC821A6CE7400D2894F /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FEC721A6CE7400D2894F /* SearchViewController.swift */; };
 		AFD1FECB21A6CE7400D2894F /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFD1FEC921A6CE7400D2894F /* Search.storyboard */; };
@@ -79,6 +80,9 @@
 		AFD1FFF321AD4D4F00D2894F /* SongDetailWireframeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FFF221AD4D4F00D2894F /* SongDetailWireframeTests.swift */; };
 		AFD1FFF521AD697400D2894F /* SongDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFD1FFF421AD697400D2894F /* SongDetailView.xib */; };
 		AFD1FFF721AD6C2900D2894F /* SongDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FFF621AD6C2900D2894F /* SongDetailView.swift */; };
+		AFD1FFFA21AD9FBF00D2894F /* PlayerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FFF921AD9FBF00D2894F /* PlayerService.swift */; };
+		AFD1FFFC21AD9FE300D2894F /* MediaPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FFFB21AD9FE300D2894F /* MediaPlayer.swift */; };
+		AFD1FFFE21ADA03700D2894F /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFD1FFFD21ADA03700D2894F /* AVKit.framework */; };
 		B483399F3AD8E299739B8F0B /* Pods_Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF89E08B00C765396865DE0D /* Pods_Networking.framework */; };
 		BE719DA2D49198FC0FD53F64 /* Pods_InTuneUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51D48556BB2301451B481FC3 /* Pods_InTuneUITests.framework */; };
 		E4BE3F949A5B670372AEB014 /* Pods_InTune.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C87B554B8921AC78E7322DC8 /* Pods_InTune.framework */; };
@@ -224,6 +228,10 @@
 		AFD1FFF221AD4D4F00D2894F /* SongDetailWireframeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongDetailWireframeTests.swift; sourceTree = "<group>"; };
 		AFD1FFF421AD697400D2894F /* SongDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SongDetailView.xib; sourceTree = "<group>"; };
 		AFD1FFF621AD6C2900D2894F /* SongDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongDetailView.swift; sourceTree = "<group>"; };
+		AFD1FFF921AD9FBF00D2894F /* PlayerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerService.swift; sourceTree = "<group>"; };
+		AFD1FFFB21AD9FE300D2894F /* MediaPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPlayer.swift; sourceTree = "<group>"; };
+		AFD1FFFD21ADA03700D2894F /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		AFD1FFFF21ADA14A00D2894F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		C87B554B8921AC78E7322DC8 /* Pods_InTune.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InTune.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF89E08B00C765396865DE0D /* Pods_Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -233,6 +241,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFD1000021ADA14A00D2894F /* AVFoundation.framework in Frameworks */,
+				AFD1FFFE21ADA03700D2894F /* AVKit.framework in Frameworks */,
 				AFD1FF8A21A8671300D2894F /* Networking.framework in Frameworks */,
 				E4BE3F949A5B670372AEB014 /* Pods_InTune.framework in Frameworks */,
 			);
@@ -294,6 +304,8 @@
 		8945FFC58F970ADBAA1A21E0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AFD1FFFF21ADA14A00D2894F /* AVFoundation.framework */,
+				AFD1FFFD21ADA03700D2894F /* AVKit.framework */,
 				C87B554B8921AC78E7322DC8 /* Pods_InTune.framework */,
 				5C7455699D1A2AC12AFC8AFB /* Pods_InTuneTests.framework */,
 				51D48556BB2301451B481FC3 /* Pods_InTuneUITests.framework */,
@@ -438,6 +450,8 @@
 				AFD1FFA421A868B100D2894F /* NetworkService.swift */,
 				AFD1FFA221A868B100D2894F /* SearchiTunesService.swift */,
 				AFD1FFA521A868B100D2894F /* ServiceProvider.swift */,
+				AFD1FFF921AD9FBF00D2894F /* PlayerService.swift */,
+				AFD1FFFB21AD9FE300D2894F /* MediaPlayer.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -907,6 +921,8 @@
 				AFD1FEF821A6F38300D2894F /* AppController.swift in Sources */,
 				AFD1FFCB21AB5AB100D2894F /* SearchResult.swift in Sources */,
 				AFD1FFA621A868B200D2894F /* SearchiTunesService.swift in Sources */,
+				AFD1FFFA21AD9FBF00D2894F /* PlayerService.swift in Sources */,
+				AFD1FFFC21AD9FE300D2894F /* MediaPlayer.swift in Sources */,
 				AFD1FFF121AD490200D2894F /* SongDetailActions.swift in Sources */,
 				AFD1FF5F21A85CE200D2894F /* SearchWireframe.swift in Sources */,
 				AFD1FFF721AD6C2900D2894F /* SongDetailView.swift in Sources */,

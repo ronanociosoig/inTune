@@ -82,7 +82,7 @@
                 <outlet property="releaseDateLabel" destination="rWl-X9-gcM" id="Nbb-If-EM3"/>
                 <outlet property="trackNameLabel" destination="Xek-Ow-Esj" id="V7d-C3-grb"/>
             </connections>
-            <point key="canvasLocation" x="105" y="59"/>
+            <point key="canvasLocation" x="461.60000000000002" y="-477.21139430284859"/>
         </view>
     </objects>
     <resources>

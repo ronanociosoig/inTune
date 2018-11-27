@@ -12,6 +12,10 @@ protocol SongDetailPresenting {
     func willLayoutSubviews()
 }
 
+//protocol SongPlayer {
+//    func play()
+//}
+
 class SongDetailPresenter {
     var actions: SongDetailActions!
     var viewController: SongDetailController!

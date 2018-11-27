@@ -16,6 +16,11 @@ class SongDetailView: UIView {
     @IBOutlet weak var releaseDateLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     
+    @IBOutlet weak var playButton: UIButton!
+    
+    var viewController: SongDetailViewController!
+    var songUrl: URL?
+    
     func configure(with result: Result) {
         trackNameLabel.text = result.trackName
         artistNameLabel.text = result.artistName
@@ -33,7 +38,18 @@ class SongDetailView: UIView {
             descriptionLabel.text = ""
         }
         
-        guard let url = URL(string: result.artworkUrl60) else { return }
-        artworkImageView.hnk_setImage(from: url, placeholder: UIImage(named: Constants.Images.largePlaceholder))
+        if let url = URL(string: result.artworkUrl60) {
+            artworkImageView.hnk_setImage(from: url, placeholder: UIImage(named: Constants.Images.largePlaceholder))
+        }
+        
+        if let trackUrl = URL(string: result.previewURL) {
+            songUrl = trackUrl
+        }
+    }
+    
+    @IBAction func playButtonAction(_ sender: Any) {
+        if let songUrl = songUrl {
+            viewController.play(url: songUrl)
+        }
     }
 }
