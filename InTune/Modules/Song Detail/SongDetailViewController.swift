@@ -29,6 +29,8 @@ class SongDetailViewController: UIViewController {
         songDetailView.frame = view.bounds
         view.addSubview(songDetailView)
         
+        songDetailView.viewController = self
+        
         self.songDetailView = songDetailView
     }
     

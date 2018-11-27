@@ -49,6 +49,7 @@ class SongDetailView: UIView {
     
     @IBAction func playButtonAction(_ sender: Any) {
         if let songUrl = songUrl {
+            print("\(songUrl.absoluteString)")
             viewController.play(url: songUrl)
         }
     }
