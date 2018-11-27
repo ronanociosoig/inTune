@@ -32,7 +32,7 @@ class SearchViewController: UIViewController {
         navigationItem.searchController = searchController
         definesPresentationContext = true
         searchController.searchBar.delegate = self
-
+        searchController.searchBar.tintColor = Constants.Theme.tintColor
         addNavigationButton()
     }
     

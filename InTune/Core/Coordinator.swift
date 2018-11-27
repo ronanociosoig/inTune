@@ -22,6 +22,7 @@ class Coordinator {
     init() {
         window = UIWindow(frame: UIScreen.main.bounds)
         window.makeKeyAndVisible()
+        window.tintColor = Constants.Theme.tintColor
     }
     
     func start() {
