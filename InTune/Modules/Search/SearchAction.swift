@@ -8,12 +8,12 @@
 
 import Foundation
 
-protocol SearchAction {
+protocol SearchActions {
     func search(term: String)
     func select(item: Result)
 }
 
-extension AppController: SearchAction {
+extension AppController: SearchActions {
     func search(term: String) {
         dataProvider.search(term: term)
         coordinator?.showLoading()

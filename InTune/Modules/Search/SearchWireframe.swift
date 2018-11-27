@@ -15,11 +15,11 @@ struct SearchWireframe {
         return storyboard.instantiateViewController(withIdentifier: moduleName) as! SearchViewController
     }
     
-    static func prepare(viewController: SearchViewController, action: SearchAction, dataProvider: SearchDataProvider) {
+    static func prepare(viewController: SearchViewController, actions: SearchActions, dataProvider: SearchDataProvider) {
         let view = viewController as ViewController
         let dataSource = SearchDataSource()
         let presenter = SearchPresenter(viewController: view,
-                                        action: action,
+                                        actions: actions,
                                         dataProvider: dataProvider,
                                         dataSource: dataSource)
         

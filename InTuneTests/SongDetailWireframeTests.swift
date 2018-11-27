@@ -1,8 +1,8 @@
 //
-//  SearchWireframeTests.swift
+//  SongDetailWireframeTests.swift
 //  InTuneTests
 //
-//  Created by Ronan on 26/11/2018.
+//  Created by Ronan on 27/11/2018.
 //  Copyright © 2018 Sonomos. All rights reserved.
 //
 
@@ -10,21 +10,19 @@ import XCTest
 
 @testable import InTune
 
-class SearchWireframeTests: XCTestCase {
-    
+class SongDetailWireframeTests: XCTestCase {
     func testWireframeConnections() {
-        let viewController = SearchWireframe.makeViewController()
+        let viewController = SongDetailWireframe.makeViewController()
         let appController = AppController()
-        let searchDataProvider = appController.dataProvider as SearchDataProvider
-        let actions = appController as SearchActions
+        let searchDataProvider = appController.dataProvider as SongDetailDataProvider
+        let actions = appController as SongDetailActions
         
-        SearchWireframe.prepare(viewController: viewController,
+        SongDetailWireframe.prepare(viewController: viewController,
                                 actions: actions,
                                 dataProvider: searchDataProvider)
         
         let presenter = viewController.presenter
         
         XCTAssertNotNil(presenter)
-        XCTAssertNotNil(presenter!.dataSource)
     }
 }

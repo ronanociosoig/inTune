@@ -12,4 +12,5 @@ class AppData {
     var searchTerm: String?
     var results = [Result]()
     var searchResults = [SearchResult]()
+    var selectedIndex: Int = 0
 }

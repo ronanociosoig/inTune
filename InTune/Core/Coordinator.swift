@@ -33,7 +33,7 @@ class Coordinator {
         let viewController = SearchWireframe.makeViewController()
         
         SearchWireframe.prepare(viewController: viewController,
-                                action: appController as SearchAction,
+                                actions: appController as SearchActions,
                                 dataProvider: dataProvider as SearchDataProvider)
         
         presenter = viewController.presenter

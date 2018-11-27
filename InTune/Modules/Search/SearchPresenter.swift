@@ -19,7 +19,7 @@ protocol SearchPresenting {
 }
 
 class SearchPresenter {
-    var action: SearchAction!
+    var actions: SearchActions!
     var viewController: ViewController!
     var dataProvider: SearchDataProvider!
     var searchResults = [SearchResult]()
@@ -27,11 +27,11 @@ class SearchPresenter {
     let dataSource: SearchDataSource
     
     init(viewController: ViewController,
-         action: SearchAction,
+         actions: SearchActions,
          dataProvider: SearchDataProvider,
          dataSource: SearchDataSource) {
         self.viewController = viewController
-        self.action = action
+        self.actions = actions
         self.dataProvider = dataProvider
         self.dataSource = dataSource
     }
@@ -41,7 +41,7 @@ class SearchPresenter {
     }
     
     func search(term: String) {
-        action.search(term: term)
+        actions.search(term: term)
     }
     
     func dataReceived() {
