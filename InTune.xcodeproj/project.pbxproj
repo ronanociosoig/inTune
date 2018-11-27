@@ -420,14 +420,13 @@
 		AFD1FF0321A8050700D2894F /* Song Detail */ = {
 			isa = PBXGroup;
 			children = (
+				AFD1FFF821AD90F300D2894F /* Views */,
 				AFD1FFE621AD464100D2894F /* SongDetailWireframe.swift */,
 				AFD1FFE821AD482000D2894F /* SongDetail.storyboard */,
 				AFD1FFEA21AD486D00D2894F /* SongDetailViewController.swift */,
 				AFD1FFEC21AD48A900D2894F /* SongDetailPresenter.swift */,
 				AFD1FFEE21AD48F400D2894F /* SongDetailDataProvider.swift */,
 				AFD1FFF021AD490200D2894F /* SongDetailActions.swift */,
-				AFD1FFF421AD697400D2894F /* SongDetailView.xib */,
-				AFD1FFF621AD6C2900D2894F /* SongDetailView.swift */,
 			);
 			path = "Song Detail";
 			sourceTree = "<group>";
@@ -519,6 +518,15 @@
 				AFD1FFE421ACABAC00D2894F /* Loadable.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		AFD1FFF821AD90F300D2894F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AFD1FFF421AD697400D2894F /* SongDetailView.xib */,
+				AFD1FFF621AD6C2900D2894F /* SongDetailView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

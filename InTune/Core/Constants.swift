@@ -44,6 +44,7 @@ struct Constants {
     
     struct Images {
         static let placeholder = "Placeholder"
+        static let largePlaceholder = "LargePlaceholder"
     }
     
     struct Theme {

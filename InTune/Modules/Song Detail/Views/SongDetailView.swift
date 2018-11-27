@@ -21,5 +21,10 @@ class SongDetailView: UIView {
         
         let dateFormatter = DateFormatter.simpleDateFormatter()
         releaseDateLabel.text = dateFormatter.string(from: result.releaseDate)
+        
+        artworkImageView.image = UIImage(named: Constants.Images.largePlaceholder)
+        
+        guard let url = URL(string: result.artworkUrl60) else { return }
+        artworkImageView.hnk_setImage(from: url, placeholder: UIImage(named: Constants.Images.largePlaceholder))
     }
 }
