@@ -34,8 +34,11 @@ class MusicPlayerView: UIView {
         artworkImageView.hnk_setImage(from: url, placeholder: UIImage(named: Constants.Images.placeholder))
     }
     
-    func update() {
-        // Update the next and previous buttons. 
+    func updateButtons() {
+        // Update the next and previous buttons.
+        previousButton.isEnabled = (selectedIndex > 0)
+        nextButton.isEnabled = (selectedIndex < maxIndex)
+        updatePlayerButton()
     }
     
     override func awakeFromNib() {
@@ -48,6 +51,10 @@ class MusicPlayerView: UIView {
     
     @IBAction func togglePlayButtonAction(_ sender: Any) {
         mediaPlayer.togglePlay()
+        updatePlayerButton()
+    }
+    
+    func updatePlayerButton() {
         let image = mediaPlayer.playing ? pauseIcon : playIcon
         togglePlayButton.setImage(image, for: .normal)
     }

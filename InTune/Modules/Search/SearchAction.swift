@@ -28,8 +28,9 @@ extension AppController: SearchActions {
             coordinator?.showMusicPlayer()
         }
         
-        coordinator?.configureMusicPlayer()
         configureMediaPlayer()
+        coordinator?.configureMusicPlayer()
+        
     }
     
     func sort(option: SortOption) {

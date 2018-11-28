@@ -75,9 +75,10 @@ class Coordinator {
         
         guard let result = dataProvider.selectedResult() else { return }
         if let musicPlayerView = musicPlayerView {
-            musicPlayerView.configure(result: result)
             musicPlayerView.selectedIndex = selectedIndex
             musicPlayerView.maxIndex = maxIndex
+            musicPlayerView.configure(result: result)
+            musicPlayerView.updateButtons()
         }
     }
     
