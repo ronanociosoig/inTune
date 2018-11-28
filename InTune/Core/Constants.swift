@@ -10,7 +10,7 @@ import UIKit
 
 struct Constants {
     struct Date {
-        static let formatingString = "yyyy" // "dd-MM-yyyy"
+        static let formatingString = "dd-MM-yyyy"
     }
     
     struct Network {
@@ -34,6 +34,8 @@ struct Constants {
         static let genreSortOption = "Genre"
         static let lengthSortOption = "Length"
         static let priceSortOption = "Price"
+        static let openIniTunes = "Open In iTunes"
+        static let searchScreenTitle = "Results"
     
         struct Error {
             static let jsonDecodingError = "Error: JSON decoding error."
