@@ -20,10 +20,6 @@ class SongDetailView: UIView {
     
     @IBOutlet weak var openInSafariButton: UIButton!
     
-    @IBOutlet weak var playButton: UIButton!
-    @IBOutlet weak var nextButton: UIButton!
-    
-    var songPlayer: SongPlayer!
     var trackViewURL: String!
     
     func dateAndGenre(result: Result) -> String {
@@ -52,15 +48,6 @@ class SongDetailView: UIView {
         }
         
         openInSafariButton.setTitle(Constants.Translations.openIniTunes, for: .normal)
-    }
-    
-    @IBAction func playButtonAction(_ sender: Any) {
-        
-        songPlayer.togglePlay()
-    }
-    
-    @IBAction func nextButtonAction(_ sender: Any) {
-        songPlayer.next()
     }
     
     @IBAction func openInSafariButtonAction(_ sender: Any) {

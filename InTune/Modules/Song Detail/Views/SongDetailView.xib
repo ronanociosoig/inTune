@@ -46,17 +46,6 @@
                     <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CLv-YV-9yv">
-                    <rect key="frame" x="214" y="389" width="60" height="30"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="30" id="2Ys-24-9Aw"/>
-                        <constraint firstAttribute="width" constant="60" id="LRd-Pp-QAw"/>
-                    </constraints>
-                    <state key="normal" title="Play"/>
-                    <connections>
-                        <action selector="playButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="SdF-0R-nkR"/>
-                    </connections>
-                </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X21-VO-3PC">
                     <rect key="frame" x="144" y="122" width="106" height="21"/>
                     <constraints>
@@ -77,17 +66,6 @@
                     <color key="textColor" red="0.53725490200000003" green="0.50980392159999999" blue="0.58039215690000001" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ede-2X-lmD">
-                    <rect key="frame" x="290" y="389" width="30" height="30"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="30" id="CJh-rm-Cvy"/>
-                        <constraint firstAttribute="height" constant="30" id="GOj-KB-gUg"/>
-                    </constraints>
-                    <state key="normal" title="&gt;&gt;"/>
-                    <connections>
-                        <action selector="nextButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="muT-gt-Dvb"/>
-                    </connections>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j86-C2-kas">
                     <rect key="frame" x="16" y="237" width="343" height="30"/>
                     <constraints>
@@ -106,18 +84,13 @@
                 <constraint firstItem="iVa-mt-9Ty" firstAttribute="top" secondItem="Xek-Ow-Esj" secondAttribute="bottom" constant="3" id="5ok-0g-LHU"/>
                 <constraint firstItem="M6F-DF-56t" firstAttribute="top" secondItem="1H6-Yt-4uL" secondAttribute="bottom" constant="8" id="CVj-fl-bCO"/>
                 <constraint firstItem="Xek-Ow-Esj" firstAttribute="leading" secondItem="1H6-Yt-4uL" secondAttribute="trailing" constant="8" id="Hv8-no-SWX"/>
-                <constraint firstItem="CLv-YV-9yv" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" constant="56.5" id="LyO-ZV-CHU"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Ede-2X-lmD" secondAttribute="bottom" constant="20" id="NLc-iP-mXr"/>
                 <constraint firstItem="iVa-mt-9Ty" firstAttribute="leading" secondItem="1H6-Yt-4uL" secondAttribute="trailing" constant="8" id="QrA-YP-eJl"/>
                 <constraint firstItem="1H6-Yt-4uL" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="SuW-kI-WgE"/>
                 <constraint firstItem="j86-C2-kas" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="VeV-Oo-GVB"/>
                 <constraint firstItem="rWl-X9-gcM" firstAttribute="leading" secondItem="1H6-Yt-4uL" secondAttribute="trailing" constant="8" id="WDX-GL-p8U"/>
                 <constraint firstItem="X21-VO-3PC" firstAttribute="leading" secondItem="1H6-Yt-4uL" secondAttribute="trailing" constant="8" id="XOX-cL-isW"/>
-                <constraint firstItem="Ede-2X-lmD" firstAttribute="leading" secondItem="CLv-YV-9yv" secondAttribute="trailing" constant="16" id="ZEF-vW-M4Y"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Ede-2X-lmD" secondAttribute="trailing" constant="55" id="a2Y-hb-gz1"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="j86-C2-kas" secondAttribute="trailing" constant="16" id="bBL-Ly-uDt"/>
                 <constraint firstItem="1H6-Yt-4uL" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="bQx-ds-NnF"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="CLv-YV-9yv" secondAttribute="bottom" constant="20" id="h7U-xR-Y5v"/>
                 <constraint firstItem="X21-VO-3PC" firstAttribute="top" secondItem="rWl-X9-gcM" secondAttribute="bottom" constant="6" id="hq4-WI-ala"/>
                 <constraint firstItem="M6F-DF-56t" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="iQo-hK-FqQ"/>
                 <constraint firstItem="rWl-X9-gcM" firstAttribute="top" secondItem="iVa-mt-9Ty" secondAttribute="bottom" constant="14" id="p1E-80-t6K"/>
@@ -132,9 +105,7 @@
                 <outlet property="artistNameLabel" destination="iVa-mt-9Ty" id="pZp-kM-499"/>
                 <outlet property="artworkImageView" destination="1H6-Yt-4uL" id="aVM-Be-Sm2"/>
                 <outlet property="collectionNameLabel" destination="M6F-DF-56t" id="y7H-r8-nbb"/>
-                <outlet property="nextButton" destination="Ede-2X-lmD" id="A59-sF-h4E"/>
                 <outlet property="openInSafariButton" destination="j86-C2-kas" id="ZuD-YJ-Dl8"/>
-                <outlet property="playButton" destination="CLv-YV-9yv" id="6rP-jq-kCQ"/>
                 <outlet property="priceLabel" destination="X21-VO-3PC" id="mFb-lO-33y"/>
                 <outlet property="releaseDateLabel" destination="rWl-X9-gcM" id="Nbb-If-EM3"/>
                 <outlet property="trackNameLabel" destination="Xek-Ow-Esj" id="V7d-C3-grb"/>

@@ -30,8 +30,6 @@ class SongDetailViewController: UIViewController {
         view.addSubview(songDetailView)
         
         self.songDetailView = songDetailView
-        
-        songDetailView.songPlayer = presenter as SongPlayer
     }
     
     override func viewWillLayoutSubviews() {
