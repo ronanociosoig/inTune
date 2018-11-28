@@ -18,6 +18,7 @@ class AppController: AppControlling {
     let dataProvider = DataProvider(service: NetworkService())
     var coordinator: Coordinator?
     let mediaPlayer = MediaPlayer()
+    var controller: MusicPlayerController?
     
     func start() {
         coordinator = Coordinator()
@@ -27,18 +28,5 @@ class AppController: AppControlling {
         
         dataProvider.dataLoaded = coordinator
         mediaPlayer.delegate = coordinator
-    }
-    
-    func configureMediaPlayer() {
-        if mediaPlayer.playing == true {
-            mediaPlayer.togglePlay()
-        }
-        
-        let selectedIndex = dataProvider.appData.selectedIndex
-        let urls = dataProvider.mediaUrls(from: selectedIndex)
-
-        DispatchQueue.global(qos: .background).async {
-            self.mediaPlayer.addPlayList(list: urls)
-        }
     }
 }

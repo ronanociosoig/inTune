@@ -11,6 +11,10 @@ import Foundation
 protocol MusicPlayerDataProvider {
     func searchResult(at index: Int) -> SearchResult
     func result(with identifier: Int) -> Result?
+    func mediaUrls(from index: Int) -> [URL]
+    func selectedIndex() -> Int
+    func maxIndex() -> Int
+    func selectedResult() -> Result?
 }
 
 extension DataProvider: MusicPlayerDataProvider {
@@ -21,5 +25,13 @@ extension DataProvider: MusicPlayerDataProvider {
     
     func result(with identifier: Int) -> Result? {
         return (appData.results.filter { $0.trackID == identifier }).first
+    }
+    
+    func selectedIndex() -> Int {
+        return appData.selectedIndex
+    }
+    
+    func maxIndex() -> Int {
+        return appData.searchResults.count - 1
     }
 }

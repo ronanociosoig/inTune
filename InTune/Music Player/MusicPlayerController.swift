@@ -28,6 +28,18 @@ class MusicPlayerController: IMusicPlayerController {
         self.dataProvider = dataProvider
     }
     
+    func configureMusicPlayer() {
+        let selectedIndex = dataProvider.selectedIndex()
+        let maxIndex = dataProvider.maxIndex()
+        
+        guard let result = dataProvider.selectedResult() else { return }
+        
+        musicPlayerView.selectedIndex = selectedIndex
+        musicPlayerView.maxIndex = maxIndex
+        musicPlayerView.configure(result: result)
+        musicPlayerView.updateButtons()
+    }
+    
     func togglePlay() {
         mediaPlayer.togglePlay()
     }
@@ -37,7 +49,7 @@ class MusicPlayerController: IMusicPlayerController {
     }
     
     func previousAction() {
-        mediaPlayer.previous()
+        
     }
     
     func nextAction() {
@@ -59,6 +71,24 @@ class MusicPlayerController: IMusicPlayerController {
             musicPlayerView.selectedIndex = selectedIndex
             musicPlayerView.configure(result: result)
             musicPlayerView.updateButtons()
+        }
+    }
+    
+    func loadMediaPlayerItems() {
+        let selectedIndex = dataProvider.selectedIndex()
+        loadMediaPlayerItems(from: selectedIndex)
+    }
+    
+    func loadMediaPlayerItems(from index: Int) {
+        
+        let urls = dataProvider.mediaUrls(from: index)
+        
+        if mediaPlayer.playing == true {
+            mediaPlayer.togglePlay()
+        }
+        
+        DispatchQueue.global(qos: .background).async {
+            self.mediaPlayer.addPlayList(list: urls)
         }
     }
 }

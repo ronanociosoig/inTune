@@ -75,10 +75,6 @@ class MediaPlayer {
         playerQueue?.advanceToNextItem()
     }
     
-    func previous() {
-        // TODO: remove all items, and add all items from the previous index.
-    }
-    
     func togglePlay() {
         
         if playing == true {
