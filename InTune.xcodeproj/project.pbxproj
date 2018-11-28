@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		25EDE2F7700C844F6A3F7DA1 /* Pods_InTuneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C7455699D1A2AC12AFC8AFB /* Pods_InTuneTests.framework */; };
 		90A688FB600B13D45538BBD9 /* Pods_NetworkingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40BEA9DD20041FF6B39B66D6 /* Pods_NetworkingTests.framework */; };
+		AF4A0FEC21AE9BEC005F2A4F /* MusicPlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF4A0FEB21AE9BEC005F2A4F /* MusicPlayerView.xib */; };
 		AF93015E21ADBAB8002CEAAA /* Vibrationz.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AF93015D21ADBAB8002CEAAA /* Vibrationz.mp3 */; };
 		AF93016021ADF5F5002CEAAA /* NumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF93015F21ADF5F5002CEAAA /* NumberFormatter.swift */; };
 		AFD1000021ADA14A00D2894F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFD1FFFF21ADA14A00D2894F /* AVFoundation.framework */; };
@@ -82,7 +83,6 @@
 		AFD1FFF321AD4D4F00D2894F /* SongDetailWireframeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FFF221AD4D4F00D2894F /* SongDetailWireframeTests.swift */; };
 		AFD1FFF521AD697400D2894F /* SongDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFD1FFF421AD697400D2894F /* SongDetailView.xib */; };
 		AFD1FFF721AD6C2900D2894F /* SongDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FFF621AD6C2900D2894F /* SongDetailView.swift */; };
-		AFD1FFFA21AD9FBF00D2894F /* PlayerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FFF921AD9FBF00D2894F /* PlayerService.swift */; };
 		AFD1FFFC21AD9FE300D2894F /* MediaPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FFFB21AD9FE300D2894F /* MediaPlayer.swift */; };
 		AFD1FFFE21ADA03700D2894F /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFD1FFFD21ADA03700D2894F /* AVKit.framework */; };
 		B483399F3AD8E299739B8F0B /* Pods_Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF89E08B00C765396865DE0D /* Pods_Networking.framework */; };
@@ -156,6 +156,7 @@
 		895D4BE0FD5C2656055DB11A /* Pods-NetworkingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkingTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NetworkingTests/Pods-NetworkingTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9EACBB391B286CA5CF1436BB /* Pods-InTuneUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InTuneUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InTuneUITests/Pods-InTuneUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A91C5F5DB97EE765EA898C9A /* Pods-Networking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Networking.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Networking/Pods-Networking.debug.xcconfig"; sourceTree = "<group>"; };
+		AF4A0FEB21AE9BEC005F2A4F /* MusicPlayerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicPlayerView.xib; sourceTree = "<group>"; };
 		AF93015D21ADBAB8002CEAAA /* Vibrationz.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Vibrationz.mp3; path = InTune/Vibrationz.mp3; sourceTree = SOURCE_ROOT; };
 		AF93015F21ADF5F5002CEAAA /* NumberFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFormatter.swift; sourceTree = "<group>"; };
 		AFD1FEC221A6CE7400D2894F /* InTune.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InTune.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -232,7 +233,6 @@
 		AFD1FFF221AD4D4F00D2894F /* SongDetailWireframeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongDetailWireframeTests.swift; sourceTree = "<group>"; };
 		AFD1FFF421AD697400D2894F /* SongDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SongDetailView.xib; sourceTree = "<group>"; };
 		AFD1FFF621AD6C2900D2894F /* SongDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongDetailView.swift; sourceTree = "<group>"; };
-		AFD1FFF921AD9FBF00D2894F /* PlayerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerService.swift; sourceTree = "<group>"; };
 		AFD1FFFB21AD9FE300D2894F /* MediaPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPlayer.swift; sourceTree = "<group>"; };
 		AFD1FFFD21ADA03700D2894F /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		AFD1FFFF21ADA14A00D2894F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -319,6 +319,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		AF4A0FEA21AE9BBE005F2A4F /* Music Player */ = {
+			isa = PBXGroup;
+			children = (
+				AFD1FFFB21AD9FE300D2894F /* MediaPlayer.swift */,
+				AF4A0FEB21AE9BEC005F2A4F /* MusicPlayerView.xib */,
+			);
+			path = "Music Player";
+			sourceTree = "<group>";
+		};
 		AFD1FEB921A6CE7400D2894F = {
 			isa = PBXGroup;
 			children = (
@@ -349,6 +358,7 @@
 		AFD1FEC421A6CE7400D2894F /* InTune */ = {
 			isa = PBXGroup;
 			children = (
+				AF4A0FEA21AE9BBE005F2A4F /* Music Player */,
 				AFD1FFCF21ABE77600D2894F /* Extensions */,
 				AFD1FF3C21A8252A00D2894F /* Model */,
 				AFD1FF0421A8053900D2894F /* Services */,
@@ -455,8 +465,6 @@
 				AFD1FFA421A868B100D2894F /* NetworkService.swift */,
 				AFD1FFA221A868B100D2894F /* SearchiTunesService.swift */,
 				AFD1FFA521A868B100D2894F /* ServiceProvider.swift */,
-				AFD1FFF921AD9FBF00D2894F /* PlayerService.swift */,
-				AFD1FFFB21AD9FE300D2894F /* MediaPlayer.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -733,6 +741,7 @@
 				AF93015E21ADBAB8002CEAAA /* Vibrationz.mp3 in Resources */,
 				AFD1FFBF21A9935600D2894F /* invalidDateResponse.json in Resources */,
 				AFD1FECB21A6CE7400D2894F /* Search.storyboard in Resources */,
+				AF4A0FEC21AE9BEC005F2A4F /* MusicPlayerView.xib in Resources */,
 				AFD1FFAA21A86E2700D2894F /* noResultsServerResponse.json in Resources */,
 				AFD1FFAC21A86E2F00D2894F /* serverResponse.json in Resources */,
 				AFD1FFE921AD482000D2894F /* SongDetail.storyboard in Resources */,
@@ -934,7 +943,6 @@
 				AFD1FEF821A6F38300D2894F /* AppController.swift in Sources */,
 				AFD1FFCB21AB5AB100D2894F /* SearchResult.swift in Sources */,
 				AFD1FFA621A868B200D2894F /* SearchiTunesService.swift in Sources */,
-				AFD1FFFA21AD9FBF00D2894F /* PlayerService.swift in Sources */,
 				AFD1FFFC21AD9FE300D2894F /* MediaPlayer.swift in Sources */,
 				AFD1FFF121AD490200D2894F /* SongDetailActions.swift in Sources */,
 				AFD1FF5F21A85CE200D2894F /* SearchWireframe.swift in Sources */,
