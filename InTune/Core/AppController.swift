@@ -27,4 +27,10 @@ class AppController: AppControlling {
         
         dataProvider.dataLoaded = coordinator
     }
+    
+    func configureMediaPlayer() {
+        let selectedIndex = dataProvider.appData.selectedIndex
+        let urls = dataProvider.mediaUrls(from: selectedIndex)
+        mediaPlayer.addPlayList(list: urls)
+    }
 }

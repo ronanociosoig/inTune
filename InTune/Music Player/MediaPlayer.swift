@@ -30,6 +30,8 @@ class MediaPlayer {
         catch {
             print("Setting category to AVAudioSessionCategoryPlayback failed.")
         }
+        
+        playerQueue = AVQueuePlayer(items: playList)
     }
  
     fileprivate func removePeriodicTimeObserver() {
