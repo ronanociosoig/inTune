@@ -34,8 +34,12 @@ class SongDetailView: UIView {
         artistNameLabel.textColor = Constants.Theme.tintColor
         releaseDateLabel.text = dateAndGenre(result: result)
         
+        if result.trackPrice > 0 {
         let priceFormatter = NumberFormatter.priceFormatter()
         priceLabel.text = priceFormatter.string(from: result.trackPrice as NSNumber)
+        } else {
+            priceLabel.text = Constants.Translations.notAvailable
+        }
         
         artworkImageView.image = UIImage(named: Constants.Images.largePlaceholder)
         

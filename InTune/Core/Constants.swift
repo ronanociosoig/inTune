@@ -36,6 +36,7 @@ struct Constants {
         static let priceSortOption = "Price"
         static let openIniTunes = "Open In iTunes"
         static let searchScreenTitle = "Results"
+        static let notAvailable = "N/A"
     
         struct Error {
             static let jsonDecodingError = "Error: JSON decoding error."

@@ -26,7 +26,7 @@ struct ResultParser {
         var price = priceFormatter.string(from: priceNumber) ?? "$0.00"
         
         if result.trackPrice < 0 {
-            price = "N/A"
+            price = Constants.Translations.notAvailable
         }
         
         let artworkUrl = URL(string: result.artworkUrl30)
