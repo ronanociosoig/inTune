@@ -117,7 +117,9 @@ class Coordinator {
         if selectedIndex < maxIndex {
             selectedIndex += 1
             
-            let result = dataProvider.appData.results[selectedIndex]
+            let searchResult = dataProvider.appData.searchResults[selectedIndex]
+            
+            guard let result = (dataProvider.appData.results.filter { $0.trackID == searchResult.identifier }).first else { return }
             
             musicPlayerView.selectedIndex = selectedIndex
             musicPlayerView.configure(result: result)

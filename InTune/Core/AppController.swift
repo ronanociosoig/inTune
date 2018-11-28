@@ -30,13 +30,15 @@ class AppController: AppControlling {
     }
     
     func configureMediaPlayer() {
+        if mediaPlayer.playing == true {
+            mediaPlayer.togglePlay()
+        }
+        
         let selectedIndex = dataProvider.appData.selectedIndex
         let urls = dataProvider.mediaUrls(from: selectedIndex)
-        if mediaPlayer.playing == true {
-           mediaPlayer.togglePlay()
+
+        DispatchQueue.global(qos: .background).async {
+            self.mediaPlayer.addPlayList(list: urls)
         }
-        mediaPlayer.addPlayList(list: urls)
     }
-    
-    
 }
