@@ -18,7 +18,7 @@ class MusicPlayerView: UIView {
     @IBOutlet weak var togglePlayButton: UIButton!
     @IBOutlet weak var previousButton: UIButton!
     
-    let mediaPlayer = MediaPlayer()
+    var mediaPlayer: MediaPlayer!
     
     func configure(result: Result) {
         trackTitleLabel.text = result.trackName

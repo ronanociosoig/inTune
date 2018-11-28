@@ -23,6 +23,12 @@ extension AppController: SearchActions {
     func select(index: Int) {
         dataProvider.appData.selectedIndex = index
         coordinator?.showSongDetail()
+        
+        if coordinator?.musicPlayerView == nil {
+            coordinator?.showMusicPlayer()
+        }
+        
+        coordinator?.configureMusicPlayer()
     }
     
     func sort(option: SortOption) {

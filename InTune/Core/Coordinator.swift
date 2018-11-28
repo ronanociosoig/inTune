@@ -15,6 +15,7 @@ class Coordinator {
     var appController: AppController!
     var hud: JGProgressHUD?
     var presenter: SearchPresenter?
+    var musicPlayerView: MusicPlayerView?
     
     init() {
         window = UIWindow(frame: UIScreen.main.bounds)
@@ -53,8 +54,6 @@ class Coordinator {
         
         guard let navigationController = window.rootViewController as? UINavigationController else { return }
         navigationController.pushViewController(viewController, animated: true)
-        
-        showMusicPlayer()
     }
     
     func showLoading() {
@@ -66,23 +65,37 @@ class Coordinator {
         hud?.show(in: topViewController.view)
     }
     
+    func configureMusicPlayer() {
+        guard let result = dataProvider.selectedResult() else { return }
+        if let musicPlayerView = musicPlayerView {
+            musicPlayerView.configure(result: result)
+        }
+    }
+    
     func showMusicPlayer() {
         guard let navigationController = window.rootViewController as? UINavigationController else { return }
-        guard let musicPlayerView = MusicPlayerView.loadFromNib() else { return }
+        
+        if let musicPlayerView = musicPlayerView {
+            navigationController.view.addSubview(musicPlayerView)
+            return
+        }
+        
+        guard let musicPlayer = MusicPlayerView.loadFromNib() else { return }
         
         let height = Constants.MusicPlayer.height
         let viewFrame = navigationController.view.frame
         let insets = navigationController.view.safeAreaInsets
         let frame = CGRect(origin: CGPoint(x: 0, y: viewFrame.size.height - height - insets.bottom), size: CGSize(width: viewFrame.size.width, height: height))
-        musicPlayerView.frame = frame
-        navigationController.view.addSubview(musicPlayerView)
-        
-        guard let result = dataProvider.selectedResult() else { return }
-        musicPlayerView.configure(result: result)
+        musicPlayer.frame = frame
+        navigationController.view.addSubview(musicPlayer)
+        musicPlayer.mediaPlayer = appController.mediaPlayer
+        musicPlayerView = musicPlayer
     }
     
     func hideMusicPlayer() {
-        
+        if let musicPlayerView = musicPlayerView {
+            musicPlayerView.removeFromSuperview()
+        }
     }
     
     func dismissLoading() {
