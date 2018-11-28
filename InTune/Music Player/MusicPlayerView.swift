@@ -36,7 +36,7 @@ class MusicPlayerView: UIView {
     }
     
     @IBAction func previousButtonAction(_ sender: Any) {
-        
+        mediaPlayer.previous()
     }
     
     @IBAction func togglePlayButtonAction(_ sender: Any) {
@@ -46,6 +46,6 @@ class MusicPlayerView: UIView {
     }
     
     @IBAction func nextButtonAction(_ sender: Any) {
-        
+        mediaPlayer.next()
     }
 }
