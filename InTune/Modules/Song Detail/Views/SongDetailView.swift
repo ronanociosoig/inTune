@@ -28,6 +28,7 @@ class SongDetailView: UIView {
     
     func dateAndGenre(result: Result) -> String {
         let dateFormatter = DateFormatter.simpleDateFormatter()
+        dateFormatter.dateFormat = "yyyy"
         return result.primaryGenreName + " • " + dateFormatter.string(from: result.releaseDate)
     }
     
@@ -50,7 +51,7 @@ class SongDetailView: UIView {
             artworkImageView.hnk_setImage(from: url, placeholder: UIImage(named: Constants.Images.largePlaceholder))
         }
         
-        openInSafariButton.setTitle("Open In iTunes", for: .normal)
+        openInSafariButton.setTitle(Constants.Translations.openIniTunes, for: .normal)
     }
     
     @IBAction func playButtonAction(_ sender: Any) {

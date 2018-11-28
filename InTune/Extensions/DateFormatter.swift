@@ -12,8 +12,6 @@ extension DateFormatter {
     static func simpleDateFormatter() -> DateFormatter {
         let dateFormatter = DateFormatter()
         dateFormatter.timeZone = TimeZone.current
-        //dateFormatter.calendar = Calendar.current
-        //dateFormatter.locale = Locale.current
         dateFormatter.dateFormat = Constants.Date.formatingString
         return dateFormatter
     }

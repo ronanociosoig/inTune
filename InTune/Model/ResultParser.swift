@@ -30,6 +30,7 @@ struct ResultParser {
         }
         
         let artworkUrl = URL(string: result.artworkUrl30)
+        dateFormatter.dateFormat = "yyyy"
         let releaseDate = dateFormatter.string(from: result.releaseDate)
 
         return SearchResult(identifier: result.trackID,
