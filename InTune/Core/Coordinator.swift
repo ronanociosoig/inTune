@@ -16,6 +16,7 @@ class Coordinator {
     var hud: JGProgressHUD?
     var presenter: SearchPresenter?
     var musicPlayerView: MusicPlayerView?
+    var controller: MusicPlayerController?
     
     init() {
         window = UIWindow(frame: UIScreen.main.bounds)
@@ -98,32 +99,18 @@ class Coordinator {
         let frame = CGRect(origin: CGPoint(x: 0, y: viewFrame.size.height - height - insets.bottom), size: CGSize(width: viewFrame.size.width, height: height))
         musicPlayer.frame = frame
         navigationController.view.addSubview(musicPlayer)
-        musicPlayer.mediaPlayer = appController.mediaPlayer
+        
+        controller =
+            MusicPlayerController(mediaPlayer: appController.mediaPlayer,
+                                  musicPlayerView: musicPlayer,
+                                  dataProvider: dataProvider)
+        musicPlayer.controller = controller
         musicPlayerView = musicPlayer
     }
     
     func hideMusicPlayer() {
         if let musicPlayerView = musicPlayerView {
             musicPlayerView.removeFromSuperview()
-        }
-    }
-    
-    func updateMusicPlayerToNextSearchResult() {
-        guard let musicPlayerView = musicPlayerView else { return }
-        
-        var selectedIndex = musicPlayerView.selectedIndex
-        let maxIndex = musicPlayerView.maxIndex
-        
-        if selectedIndex < maxIndex {
-            selectedIndex += 1
-            
-            let searchResult = dataProvider.appData.searchResults[selectedIndex]
-            
-            guard let result = (dataProvider.appData.results.filter { $0.trackID == searchResult.identifier }).first else { return }
-            
-            musicPlayerView.selectedIndex = selectedIndex
-            musicPlayerView.configure(result: result)
-            musicPlayerView.updateButtons()
         }
     }
     
@@ -162,6 +149,6 @@ extension Coordinator: DataLoaded {
 
 extension Coordinator: MediaPlayerDelegate {
     func update() {
-        updateMusicPlayerToNextSearchResult()
+        controller?.nextItem()
     }
 }
