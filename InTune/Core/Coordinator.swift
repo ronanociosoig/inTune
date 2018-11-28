@@ -76,6 +76,9 @@ class Coordinator {
         let frame = CGRect(origin: CGPoint(x: 0, y: viewFrame.size.height - height - insets.bottom), size: CGSize(width: viewFrame.size.width, height: height))
         musicPlayerView.frame = frame
         navigationController.view.addSubview(musicPlayerView)
+        
+        guard let result = dataProvider.selectedResult() else { return }
+        musicPlayerView.configure(result: result)
     }
     
     func hideMusicPlayer() {
