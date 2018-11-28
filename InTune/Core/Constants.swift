@@ -15,6 +15,7 @@ struct Constants {
     
     struct Network {
         static let baseUrlPath = "https://itunes.apple.com"
+        static let searchPath = "search"
         static let searchParameter = "term"
         static let limit = "limit"
         static let resultsLimit = 200

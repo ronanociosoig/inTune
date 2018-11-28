@@ -70,19 +70,6 @@ class Coordinator {
         navigationController.pushViewController(viewController, animated: true)
     }
     
-//    func configureMusicPlayer() {
-//        let selectedIndex = dataProvider.appData.selectedIndex
-//        let maxIndex = dataProvider.appData.searchResults.count - 1
-//        
-//        guard let result = dataProvider.selectedResult() else { return }
-//        if let musicPlayerView = musicPlayerView {
-//            musicPlayerView.selectedIndex = selectedIndex
-//            musicPlayerView.maxIndex = maxIndex
-//            musicPlayerView.configure(result: result)
-//            musicPlayerView.updateButtons()
-//        }
-//    }
-    
     func showMusicPlayer() {
         guard let navigationController = window.rootViewController as? UINavigationController else { return }
         

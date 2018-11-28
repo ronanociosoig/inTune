@@ -22,7 +22,7 @@ extension iTunesAPI: EndPointType {
     }
     
     public var path: String {
-        return "search"
+        return Constants.Network.searchPath
     }
 
     public var httpMethod: HTTPMethod {

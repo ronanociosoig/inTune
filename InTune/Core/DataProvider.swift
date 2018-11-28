@@ -13,17 +13,9 @@ struct Log {
     static var data = OSLog(subsystem: "com.sonomos.InTune", category: "data")
     static var network = OSLog(subsystem: "com.sonomos.InTune", category: "network")
     static var player = OSLog(subsystem: "com.sonomos.InTune", category: "AVPlayer")
-    
 }
 
-protocol DataProviding {
-    init(service: ServiceProvider)
-    func search(term: String)
-}
-
-
-
-class DataProvider: DataProviding {
+class DataProvider {
     let appData = AppData()
     var dataLoaded: DataLoaded?
     let networkService: ServiceProvider

@@ -8,12 +8,6 @@
 
 import Foundation
 
-extension NumberFormatter {
-    func durationFormatter() {
-        
-    }
-}
-
 struct ResultParser {
     
     let dateFormatter = DateFormatter.simpleDateFormatter()
