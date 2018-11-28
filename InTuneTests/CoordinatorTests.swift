@@ -30,8 +30,5 @@ class CoordinatorTests: XCTestCase {
         
         coordinator.start()
         XCTAssertNotNil(coordinator.window.rootViewController)
-        XCTAssertNotNil(coordinator.currentViewController)
     }
-    
-    
 }

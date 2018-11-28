@@ -17,12 +17,12 @@ class ResultParserTests: XCTestCase {
         let sampleResult = TestResult.makeResult()
         let searchResult = parser.parse(result: sampleResult)
         
-        XCTAssertTrue(searchResult.identifier == sampleResult.artistID)
+        XCTAssertTrue(searchResult.identifier == sampleResult.trackID)
         XCTAssertTrue(searchResult.artistName == sampleResult.artistName)
         XCTAssertTrue(searchResult.trackName == sampleResult.trackName)
         XCTAssertTrue(searchResult.genre == sampleResult.primaryGenreName)
         XCTAssertTrue(searchResult.durationText == "05:35")
-        XCTAssertTrue(searchResult.releaseDate == "02-11-1991")
+        XCTAssertTrue(searchResult.releaseDate == "1991")
         XCTAssertTrue(searchResult.price == "$2.55")
     }
     
