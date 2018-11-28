@@ -69,6 +69,23 @@ class MediaPlayer {
         // TODO: remove all items, and add all items from the previous index.
     }
     
+    func togglePlay() {
+        
+        if playing == true {
+            playing = false
+            playerQueue?.pause()
+            removePeriodicTimeObserver()
+            return
+        }
+        
+        playerQueue?.play()
+        playing = true
+        
+        playerQueue?.actionAtItemEnd = .advance
+        
+        addPeriodicTimeObserver()
+    }
+    
     func addPlayList(list: [URL]) {
         if playing == true {
             playing = false

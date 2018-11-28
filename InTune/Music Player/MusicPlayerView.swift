@@ -20,6 +20,9 @@ class MusicPlayerView: UIView {
     
     var mediaPlayer: MediaPlayer!
     
+    let playIcon = UIImage(named: Constants.Images.playIcon)
+    let pauseIcon = UIImage(named: Constants.Images.pauseIcon)
+    
     func configure(result: Result) {
         trackTitleLabel.text = result.trackName
         
@@ -28,12 +31,18 @@ class MusicPlayerView: UIView {
         artworkImageView.hnk_setImage(from: url, placeholder: UIImage(named: Constants.Images.placeholder))
     }
     
+    override func awakeFromNib() {
+        
+    }
+    
     @IBAction func previousButtonAction(_ sender: Any) {
         
     }
     
     @IBAction func togglePlayButtonAction(_ sender: Any) {
-        
+        mediaPlayer.togglePlay()
+        let image = mediaPlayer.playing ? pauseIcon : playIcon
+        togglePlayButton.setImage(image, for: .normal)
     }
     
     @IBAction func nextButtonAction(_ sender: Any) {
