@@ -17,12 +17,11 @@ protocol SongPlayer {
     func next()
 }
 
-class SongDetailPresenter: SongPlayer {
+class SongDetailPresenter {
     var actions: SongDetailActions!
     var viewController: SongDetailController!
     var dataProvider: SongDetailDataProvider!
     var selectedResult: Result?
-    let mediaPlayer = MediaPlayer()
     
     init(viewController: SongDetailController,
          actions: SongDetailActions,
@@ -31,16 +30,6 @@ class SongDetailPresenter: SongPlayer {
         self.actions = actions
         self.dataProvider = dataProvider
         self.selectedResult = dataProvider.selectedResult()
-    }
-    
-    func togglePlay() {
-        guard let preview = selectedResult?.previewURL else { return }
-        guard let url = URL(string: preview) else { return }
-        mediaPlayer.play(url: url)
-    }
-    
-    func next() {
-        
     }
 }
 

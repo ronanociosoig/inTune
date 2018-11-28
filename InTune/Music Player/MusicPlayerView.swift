@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Haneke
 
 class MusicPlayerView: UIView {
     
@@ -16,6 +17,16 @@ class MusicPlayerView: UIView {
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var togglePlayButton: UIButton!
     @IBOutlet weak var previousButton: UIButton!
+    
+    let mediaPlayer = MediaPlayer()
+    
+    func configure(result: Result) {
+        trackTitleLabel.text = result.trackName
+        
+        let artworkUrl = result.artworkUrl30
+        guard let url = URL(string: artworkUrl) else { return }
+        artworkImageView.hnk_setImage(from: url, placeholder: UIImage(named: Constants.Images.placeholder))
+    }
     
     @IBAction func previousButtonAction(_ sender: Any) {
         
@@ -27,10 +38,5 @@ class MusicPlayerView: UIView {
     
     @IBAction func nextButtonAction(_ sender: Any) {
         
-    }
-    
-    override func awakeFromNib() {
-        artworkImageView.layer.borderWidth = 0.5
-        artworkImageView.layer.borderColor = UIColor.black.cgColor
     }
 }

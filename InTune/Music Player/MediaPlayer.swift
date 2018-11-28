@@ -8,12 +8,17 @@
 
 import Foundation
 import AVFoundation
+import os.log
 
 class MediaPlayer {
-    // var player: AVPlayer?
-    var playerQueue: AVQueuePlayer?
-    var timeObserverToken: Any?
     var playing: Bool = false
+    
+    var playList = [AVPlayerItem]()
+    var currentIndex: Int = 0
+    
+    fileprivate var playerQueue: AVQueuePlayer?
+    fileprivate var timeObserverToken: Any?
+    fileprivate static let trackEndTime: Double = 29.90
     
     init() {
         let audioSession = AVAudioSession.sharedInstance()
@@ -26,9 +31,8 @@ class MediaPlayer {
             print("Setting category to AVAudioSessionCategoryPlayback failed.")
         }
     }
-    
  
-    func removePeriodicTimeObserver() {
+    fileprivate func removePeriodicTimeObserver() {
         // If a time observer exists, remove it
         if let token = timeObserverToken {
             playerQueue?.removeTimeObserver(token)
@@ -36,7 +40,7 @@ class MediaPlayer {
         }
     }
 
-    func addPeriodicTimeObserver() {
+    fileprivate func addPeriodicTimeObserver() {
         // Invoke callback every half second
         let interval = CMTime(seconds: 1.0,
                               preferredTimescale: CMTimeScale(NSEC_PER_MSEC))
@@ -47,26 +51,41 @@ class MediaPlayer {
             playerQueue?.addPeriodicTimeObserver(forInterval: interval, queue: mainQueue) {
                 [weak self] time in
                 // update player transport UI
-
-                let currentTime = self?.playerQueue?.currentTime()
                 
-                print("Current time: \(String(describing: currentTime?.seconds))")
+                if let currentTime = self?.playerQueue?.currentTime(), currentTime.seconds > MediaPlayer.trackEndTime {
+                    // we are ending the track.
+                    // send a notification to the player.
+                    
+                    os_log("Track end.", log: Log.player, type: .info)
+                }
         }
     }
     
-    func play(list: [URL]) {
-        var playList = [AVPlayerItem]()
+    func next() {
+        playerQueue?.advanceToNextItem()
+    }
+    
+    func previous() {
+        // TODO: remove all items, and add all items from the previous index.
+    }
+    
+    func addPlayList(list: [URL]) {
+        if playing == true {
+            playing = false
+            playerQueue?.pause()
+        }
+        playerQueue?.removeAllItems()
+        
         for url in list {
-            let playerItem = AVPlayerItem(url: url)
-            playList.append(playerItem)
+            let avAsset = AVURLAsset(url: url)
+            avAsset.loadValuesAsynchronously(forKeys: ["playable", "tracks", "duration"], completionHandler: {
+                DispatchQueue.main.async {
+                    let item = AVPlayerItem(asset: avAsset)
+                    self.playList.append(item)
+                    self.playerQueue?.insert(item, after: nil)
+                }
+            })
         }
-        
-        if playerQueue != nil {
-            playerQueue?.removeAllItems()
-            playerQueue = nil
-        }
-        
-        playerQueue = AVQueuePlayer(items: playList)
     }
     
     func play(url: URL) {
@@ -87,8 +106,6 @@ class MediaPlayer {
         playing = true
         
         playerQueue?.actionAtItemEnd = .advance
-        
-       // playerQueue?.insert(<#T##item: AVPlayerItem##AVPlayerItem#>, after: <#T##AVPlayerItem?#>)
         
         addPeriodicTimeObserver()
     }
