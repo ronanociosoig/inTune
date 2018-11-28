@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "InTune/Modules/Search/SearchAction.swift"
-            timestampString = "565122327.951444"
+            timestampString = "565123101.612537"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "19"
@@ -154,7 +154,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "InTune/Modules/Search/SearchAction.swift"
-            timestampString = "565122327.951851"
+            timestampString = "565123101.612934"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "24"
@@ -170,7 +170,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "InTune/Modules/Search/SearchViewController.swift"
-            timestampString = "565122327.951924"
+            timestampString = "565123101.613005"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "125"
@@ -186,7 +186,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "InTune/Modules/Song Detail/SongDetailPresenter.swift"
-            timestampString = "565122327.9519891"
+            timestampString = "565123101.613068"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "38"
@@ -202,7 +202,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "InTune/Modules/Song Detail/SongDetailViewController.swift"
-            timestampString = "565122327.9520479"
+            timestampString = "565123101.613124"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "79"
@@ -218,7 +218,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "InTune/Core/DataProvider.swift"
-            timestampString = "565122327.952359"
+            timestampString = "565123101.613434"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "112"
@@ -234,12 +234,44 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "InTune/Modules/Search/SearchAction.swift"
-            timestampString = "565122327.952422"
+            timestampString = "565123101.613499"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "27"
             endingLineNumber = "27"
             landmarkName = "select(index:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "InTune/Core/Coordinator.swift"
+            timestampString = "565123101.61356"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "configureMusicPlayer()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "InTune/Music Player/MusicPlayerView.swift"
+            timestampString = "565123101.613618"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "updateButtons()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

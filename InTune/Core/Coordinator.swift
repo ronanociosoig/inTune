@@ -121,6 +121,7 @@ class Coordinator {
             
             musicPlayerView.selectedIndex = selectedIndex
             musicPlayerView.configure(result: result)
+            musicPlayerView.updateButtons()
         }
     }
     
