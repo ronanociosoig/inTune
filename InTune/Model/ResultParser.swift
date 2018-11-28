@@ -41,6 +41,7 @@ struct ResultParser {
                             duration: result.trackTimeMillis,
                             durationText: duration,
                             releaseDate: releaseDate,
-                            price: price)
+                            price: price,
+                            previewURL: result.previewURL)
     }
 }

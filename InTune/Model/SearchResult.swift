@@ -18,6 +18,7 @@ struct SearchResult: Codable {
     let durationText: String
     let releaseDate: String
     let price: String
+    let previewURL: String
     
     init(identifier: Int,
          artworkUrl: URL?,
@@ -27,7 +28,8 @@ struct SearchResult: Codable {
          duration: Int,
          durationText:String,
          releaseDate: String,
-         price: String) {
+         price: String,
+         previewURL: String) {
         self.identifier = identifier
         self.artworkUrl = artworkUrl
         self.artistName = artistName
@@ -37,5 +39,6 @@ struct SearchResult: Codable {
         self.durationText = durationText
         self.releaseDate = releaseDate
         self.price = price
+        self.previewURL = previewURL
     }
 }
