@@ -28,10 +28,15 @@ class SearchViewController: UIViewController {
         
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = Constants.Translations.searchBarPlaceholder
+        searchController.searchBar.accessibilityLabel = "Search"
+        searchController.searchBar.isAccessibilityElement = true
+        searchController.searchBar.accessibilityTraits = UIAccessibilityTraits.searchField
         navigationItem.searchController = searchController
         definesPresentationContext = true
         searchController.searchBar.delegate = self
         searchController.searchBar.tintColor = Constants.Theme.tintColor
+        searchController.accessibilityLabel = "SearchController"
+        searchController.isAccessibilityElement = true
         addNavigationButton()
     }
     
@@ -47,6 +52,8 @@ class SearchViewController: UIViewController {
         tableView.rowHeight = 61
         tableView.separatorInset = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
         presenter.viewDidLayoutSubviews()
+        tableView.accessibilityLabel = "ResultsTable"
+        tableView.isAccessibilityElement = true
     }
     
     override func viewDidAppear(_ animated: Bool) {

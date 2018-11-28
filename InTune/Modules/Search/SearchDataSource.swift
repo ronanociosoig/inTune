@@ -29,21 +29,11 @@ class SearchDataSource: NSObject, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeue(cellType: ResultTableViewCell.self, for: indexPath)
-        
-        //guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) else { return UITableViewCell() }
         let item = presenter.item(at: indexPath)
         cell.configure(with: item)
-        
-//        let name = item.trackName
-//        let artist = item.artistName
-//        cell.textLabel?.text = name
-//        cell.detailTextLabel?.text = artist
-//        if let url = URL(string: item.artworkUrl100) {
-//            cell.imageView?.image = UIImage(named: Constants.Images.placeholder)
-//            cell.imageView?.sizeToFit()
-//            cell.imageView?.hnk_setImage(from: url, placeholder: UIImage(named: Constants.Images.placeholder))
-//        }
-        
+        cell.accessibilityLabel = "SearchResultCell"
+        cell.isAccessibilityElement = true
+
         return cell
     }
 }

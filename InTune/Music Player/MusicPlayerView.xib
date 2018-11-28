@@ -17,6 +17,9 @@
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="pDP-aH-gqW">
                     <rect key="frame" x="16" y="5" width="40" height="40"/>
+                    <accessibility key="accessibilityConfiguration" label="Artwork">
+                        <bool key="isElement" value="YES"/>
+                    </accessibility>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="GIx-0R-woF"/>
                         <constraint firstAttribute="width" constant="40" id="HJa-Sz-MdT"/>
@@ -24,6 +27,7 @@
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ThO-vY-qHL">
                     <rect key="frame" x="64" y="14.5" width="157" height="21"/>
+                    <accessibility key="accessibilityConfiguration" label="TrackName"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="21" id="tNd-wf-QQf"/>
                     </constraints>
@@ -33,6 +37,7 @@
                 </label>
                 <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MfC-wh-aAa">
                     <rect key="frame" x="329" y="10" width="30" height="30"/>
+                    <accessibility key="accessibilityConfiguration" label="Next"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="30" id="6Sp-xN-CGW"/>
                         <constraint firstAttribute="height" constant="30" id="bzB-0Z-4VZ"/>
@@ -44,6 +49,7 @@
                 </button>
                 <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mjP-xM-GqB">
                     <rect key="frame" x="279" y="10" width="30" height="30"/>
+                    <accessibility key="accessibilityConfiguration" label="Play"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="30" id="QLg-bl-Hc3"/>
                         <constraint firstAttribute="height" constant="30" id="dhw-ho-AiZ"/>
@@ -55,6 +61,7 @@
                 </button>
                 <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IJA-UA-P42">
                     <rect key="frame" x="229" y="10" width="30" height="30"/>
+                    <accessibility key="accessibilityConfiguration" label="Previous"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="30" id="35m-Q6-Is8"/>
                         <constraint firstAttribute="height" constant="30" id="yMz-J4-1uY"/>
