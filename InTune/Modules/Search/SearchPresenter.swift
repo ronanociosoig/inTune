@@ -20,6 +20,7 @@ class SearchPresenter {
     var viewController: ViewController!
     var dataProvider: SearchDataProvider!
     let dataSource: SearchDataSource
+    var term: String?
     
     init(viewController: ViewController,
          actions: SearchActions,
@@ -36,6 +37,7 @@ class SearchPresenter {
     }
     
     func search(term: String) {
+        self.term = term
         actions.search(term: term)
     }
     
