@@ -10,6 +10,7 @@
 		25EDE2F7700C844F6A3F7DA1 /* Pods_InTuneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C7455699D1A2AC12AFC8AFB /* Pods_InTuneTests.framework */; };
 		90A688FB600B13D45538BBD9 /* Pods_NetworkingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40BEA9DD20041FF6B39B66D6 /* Pods_NetworkingTests.framework */; };
 		AF4A0FEC21AE9BEC005F2A4F /* MusicPlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF4A0FEB21AE9BEC005F2A4F /* MusicPlayerView.xib */; };
+		AF4A0FEE21AEA3AC005F2A4F /* MusicPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4A0FED21AEA3AB005F2A4F /* MusicPlayerView.swift */; };
 		AF93015E21ADBAB8002CEAAA /* Vibrationz.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AF93015D21ADBAB8002CEAAA /* Vibrationz.mp3 */; };
 		AF93016021ADF5F5002CEAAA /* NumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF93015F21ADF5F5002CEAAA /* NumberFormatter.swift */; };
 		AFD1000021ADA14A00D2894F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFD1FFFF21ADA14A00D2894F /* AVFoundation.framework */; };
@@ -157,6 +158,7 @@
 		9EACBB391B286CA5CF1436BB /* Pods-InTuneUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InTuneUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InTuneUITests/Pods-InTuneUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A91C5F5DB97EE765EA898C9A /* Pods-Networking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Networking.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Networking/Pods-Networking.debug.xcconfig"; sourceTree = "<group>"; };
 		AF4A0FEB21AE9BEC005F2A4F /* MusicPlayerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicPlayerView.xib; sourceTree = "<group>"; };
+		AF4A0FED21AEA3AB005F2A4F /* MusicPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerView.swift; sourceTree = "<group>"; };
 		AF93015D21ADBAB8002CEAAA /* Vibrationz.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Vibrationz.mp3; path = InTune/Vibrationz.mp3; sourceTree = SOURCE_ROOT; };
 		AF93015F21ADF5F5002CEAAA /* NumberFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFormatter.swift; sourceTree = "<group>"; };
 		AFD1FEC221A6CE7400D2894F /* InTune.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InTune.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -324,6 +326,7 @@
 			children = (
 				AFD1FFFB21AD9FE300D2894F /* MediaPlayer.swift */,
 				AF4A0FEB21AE9BEC005F2A4F /* MusicPlayerView.xib */,
+				AF4A0FED21AEA3AB005F2A4F /* MusicPlayerView.swift */,
 			);
 			path = "Music Player";
 			sourceTree = "<group>";
@@ -949,6 +952,7 @@
 				AFD1FFF721AD6C2900D2894F /* SongDetailView.swift in Sources */,
 				AFD1FF3E21A8253600D2894F /* ServerResponse.swift in Sources */,
 				AFD1FFEB21AD486D00D2894F /* SongDetailViewController.swift in Sources */,
+				AF4A0FEE21AEA3AC005F2A4F /* MusicPlayerView.swift in Sources */,
 				AFD1FEFA21A6F39600D2894F /* AppData.swift in Sources */,
 				AFD1FFA921A868B200D2894F /* ServiceProvider.swift in Sources */,
 				AFD1FFD721AC10AE00D2894F /* TimeFormatter.swift in Sources */,

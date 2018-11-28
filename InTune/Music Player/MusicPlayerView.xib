@@ -9,9 +9,13 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner">
+            <connections>
+                <outlet property="artworkImageView" destination="pDP-aH-gqW" id="Edm-4H-eTr"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MusicPlayerView">
             <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
@@ -38,6 +42,9 @@
                         <constraint firstAttribute="height" constant="30" id="bzB-0Z-4VZ"/>
                     </constraints>
                     <state key="normal" image="NextIcon"/>
+                    <connections>
+                        <action selector="nextButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="y0n-yw-Jq0"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mjP-xM-GqB">
                     <rect key="frame" x="279" y="10" width="30" height="30"/>
@@ -46,6 +53,9 @@
                         <constraint firstAttribute="height" constant="30" id="dhw-ho-AiZ"/>
                     </constraints>
                     <state key="normal" image="PlayIcon"/>
+                    <connections>
+                        <action selector="togglePlayButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="MkT-fU-51P"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IJA-UA-P42">
                     <rect key="frame" x="229" y="10" width="30" height="30"/>
@@ -54,6 +64,9 @@
                         <constraint firstAttribute="height" constant="30" id="yMz-J4-1uY"/>
                     </constraints>
                     <state key="normal" image="BackIcon"/>
+                    <connections>
+                        <action selector="previousButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="MXP-YU-gwW"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -72,7 +85,13 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="-151.19999999999999" y="-145.72713643178412"/>
+            <connections>
+                <outlet property="nextButton" destination="MfC-wh-aAa" id="iSz-aX-j4b"/>
+                <outlet property="previousButton" destination="IJA-UA-P42" id="Z1I-A6-81T"/>
+                <outlet property="togglePlayButton" destination="mjP-xM-GqB" id="atY-4Q-XaV"/>
+                <outlet property="trackTitleLabel" destination="ThO-vY-qHL" id="n5S-cG-C3C"/>
+            </connections>
+            <point key="canvasLocation" x="47" y="-139"/>
         </view>
     </objects>
     <resources>
