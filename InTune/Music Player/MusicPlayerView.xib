@@ -27,7 +27,7 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="21" id="tNd-wf-QQf"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -72,7 +72,7 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.79735659246575341" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.90103274828767121" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="ThO-vY-qHL" firstAttribute="leading" secondItem="pDP-aH-gqW" secondAttribute="trailing" constant="8" id="2ME-Wc-sPr"/>
                 <constraint firstAttribute="trailing" secondItem="Fo0-Zc-O6g" secondAttribute="trailing" id="2iD-gI-tJG"/>
@@ -98,7 +98,7 @@
                 <outlet property="togglePlayButton" destination="mjP-xM-GqB" id="atY-4Q-XaV"/>
                 <outlet property="trackTitleLabel" destination="ThO-vY-qHL" id="n5S-cG-C3C"/>
             </connections>
-            <point key="canvasLocation" x="45.600000000000001" y="-139.43028485757122"/>
+            <point key="canvasLocation" x="68" y="-286"/>
         </view>
     </objects>
     <resources>
