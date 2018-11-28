@@ -20,6 +20,9 @@ class MusicPlayerView: UIView {
     
     var mediaPlayer: MediaPlayer!
     
+    var selectedIndex: Int = 0
+    var maxIndex: Int = 0
+    
     let playIcon = UIImage(named: Constants.Images.playIcon)
     let pauseIcon = UIImage(named: Constants.Images.pauseIcon)
     
@@ -29,6 +32,10 @@ class MusicPlayerView: UIView {
         let artworkUrl = result.artworkUrl30
         guard let url = URL(string: artworkUrl) else { return }
         artworkImageView.hnk_setImage(from: url, placeholder: UIImage(named: Constants.Images.placeholder))
+    }
+    
+    func update() {
+        // Update the next and previous buttons. 
     }
     
     override func awakeFromNib() {

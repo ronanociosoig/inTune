@@ -326,12 +326,19 @@
 		AF4A0FEA21AE9BBE005F2A4F /* Music Player */ = {
 			isa = PBXGroup;
 			children = (
-				AFD1FFFB21AD9FE300D2894F /* MediaPlayer.swift */,
 				AF4A0FEB21AE9BEC005F2A4F /* MusicPlayerView.xib */,
 				AF4A0FED21AEA3AB005F2A4F /* MusicPlayerView.swift */,
-				AF4A0FEF21AED2B1005F2A4F /* MediaPlayerDataProvider.swift */,
 			);
 			path = "Music Player";
+			sourceTree = "<group>";
+		};
+		AF4A0FF121AF09DA005F2A4F /* MediaPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				AF4A0FEF21AED2B1005F2A4F /* MediaPlayerDataProvider.swift */,
+				AFD1FFFB21AD9FE300D2894F /* MediaPlayer.swift */,
+			);
+			path = MediaPlayer;
 			sourceTree = "<group>";
 		};
 		AFD1FEB921A6CE7400D2894F = {
@@ -364,6 +371,7 @@
 		AFD1FEC421A6CE7400D2894F /* InTune */ = {
 			isa = PBXGroup;
 			children = (
+				AF4A0FF121AF09DA005F2A4F /* MediaPlayer */,
 				AF4A0FEA21AE9BBE005F2A4F /* Music Player */,
 				AFD1FFCF21ABE77600D2894F /* Extensions */,
 				AFD1FF3C21A8252A00D2894F /* Model */,

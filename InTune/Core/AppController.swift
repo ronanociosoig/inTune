@@ -26,11 +26,17 @@ class AppController: AppControlling {
         coordinator?.start()
         
         dataProvider.dataLoaded = coordinator
+        mediaPlayer.delegate = coordinator
     }
     
     func configureMediaPlayer() {
         let selectedIndex = dataProvider.appData.selectedIndex
         let urls = dataProvider.mediaUrls(from: selectedIndex)
+        if mediaPlayer.playing == true {
+           mediaPlayer.togglePlay()
+        }
         mediaPlayer.addPlayList(list: urls)
     }
+    
+    
 }

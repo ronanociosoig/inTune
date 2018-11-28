@@ -10,11 +10,17 @@ import Foundation
 import AVFoundation
 import os.log
 
+protocol MediaPlayerDelegate {
+    func update()
+}
+
 class MediaPlayer {
     var playing: Bool = false
     
     var playList = [AVPlayerItem]()
     var currentIndex: Int = 0
+    
+    var delegate: MediaPlayerDelegate!
     
     fileprivate var playerQueue: AVQueuePlayer?
     fileprivate var timeObserverToken: Any?
@@ -59,6 +65,8 @@ class MediaPlayer {
                     // send a notification to the player.
                     
                     os_log("Track end.", log: Log.player, type: .info)
+                    
+                    self?.delegate.update()
                 }
         }
     }

@@ -27,6 +27,19 @@ class Coordinator {
         showSearch()
     }
     
+    func showLoading() {
+        
+        guard let topViewController = window.rootViewController else { return }
+        
+        hud = JGProgressHUD(style: .dark)
+        hud?.textLabel.text = Constants.Translations.loading
+        hud?.show(in: topViewController.view)
+    }
+    
+    func dismissLoading() {
+        hud?.dismiss(animated: true)
+    }
+    
     func showSearch() {
         let viewController = SearchWireframe.makeViewController()
         
@@ -56,19 +69,15 @@ class Coordinator {
         navigationController.pushViewController(viewController, animated: true)
     }
     
-    func showLoading() {
-        
-        guard let topViewController = window.rootViewController else { return }
-        
-        hud = JGProgressHUD(style: .dark)
-        hud?.textLabel.text = Constants.Translations.loading
-        hud?.show(in: topViewController.view)
-    }
-    
     func configureMusicPlayer() {
+        let selectedIndex = dataProvider.appData.selectedIndex
+        let maxIndex = dataProvider.appData.searchResults.count - 1
+        
         guard let result = dataProvider.selectedResult() else { return }
         if let musicPlayerView = musicPlayerView {
             musicPlayerView.configure(result: result)
+            musicPlayerView.selectedIndex = selectedIndex
+            musicPlayerView.maxIndex = maxIndex
         }
     }
     
@@ -98,8 +107,20 @@ class Coordinator {
         }
     }
     
-    func dismissLoading() {
-        hud?.dismiss(animated: true)
+    func updateMusicPlayer() {
+        guard let musicPlayerView = musicPlayerView else { return }
+        
+        var selectedIndex = musicPlayerView.selectedIndex
+        let maxIndex = musicPlayerView.maxIndex
+        
+        if selectedIndex < maxIndex {
+            selectedIndex += 1
+            
+            let result = dataProvider.appData.results[selectedIndex]
+            
+            musicPlayerView.selectedIndex = selectedIndex
+            musicPlayerView.configure(result: result)
+        }
     }
     
     func showAlert(with message: String) {
@@ -132,5 +153,11 @@ extension Coordinator: DataLoaded {
                 self.showSearchResults()
             }
         }
+    }
+}
+
+extension Coordinator: MediaPlayerDelegate {
+    func update() {
+        updateMusicPlayer()
     }
 }
