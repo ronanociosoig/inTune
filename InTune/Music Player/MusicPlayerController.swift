@@ -30,11 +30,16 @@ class MusicPlayerController: IMusicPlayerController {
     
     func configureMusicPlayer() {
         let selectedIndex = dataProvider.selectedIndex()
+        configureMusicPlayer(at: selectedIndex)
+    }
+    
+    func configureMusicPlayer(at index: Int) {
         let maxIndex = dataProvider.maxIndex()
         
-        guard let result = dataProvider.selectedResult() else { return }
+        let searchResult = dataProvider.searchResult(at: index)
+        guard let result = dataProvider.result(with: searchResult.identifier) else { return }
         
-        musicPlayerView.selectedIndex = selectedIndex
+        musicPlayerView.selectedIndex = index
         musicPlayerView.maxIndex = maxIndex
         musicPlayerView.configure(result: result)
         musicPlayerView.updateButtons()
@@ -49,7 +54,12 @@ class MusicPlayerController: IMusicPlayerController {
     }
     
     func previousAction() {
-        
+        var currentPlayingIndex = musicPlayerView.selectedIndex
+        if currentPlayingIndex > 0 {
+            currentPlayingIndex -= 1
+            loadMediaPlayerItems(from: currentPlayingIndex)
+            configureMusicPlayer(at: currentPlayingIndex)
+        }
     }
     
     func nextAction() {
