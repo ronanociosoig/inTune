@@ -108,7 +108,7 @@ class Coordinator {
         }
     }
     
-    func updateMusicPlayer() {
+    func updateMusicPlayerToNextSearchResult() {
         guard let musicPlayerView = musicPlayerView else { return }
         
         var selectedIndex = musicPlayerView.selectedIndex
@@ -162,6 +162,6 @@ extension Coordinator: DataLoaded {
 
 extension Coordinator: MediaPlayerDelegate {
     func update() {
-        updateMusicPlayer()
+        updateMusicPlayerToNextSearchResult()
     }
 }

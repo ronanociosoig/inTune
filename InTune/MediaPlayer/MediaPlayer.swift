@@ -65,7 +65,7 @@ class MediaPlayer {
                     // send a notification to the player.
                     
                     os_log("Track end.", log: Log.player, type: .info)
-                    
+                    self?.next()
                     self?.delegate.update()
                 }
         }
