@@ -31,6 +31,7 @@ struct ResultParser {
                             artworkUrl: artworkUrl,
                             artistName: result.artistName,
                             trackName: result.trackName,
+                            collectionName: result.collectionName,
                             genre: result.primaryGenreName,
                             duration: result.trackTimeMillis,
                             durationText: duration,

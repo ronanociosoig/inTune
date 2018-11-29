@@ -13,6 +13,7 @@ struct SearchResult: Codable {
     let artworkUrl: URL?
     let artistName: String
     let trackName: String
+    let collectionName: String
     let genre: String
     let duration: Int
     let durationText: String
@@ -24,6 +25,7 @@ struct SearchResult: Codable {
          artworkUrl: URL?,
          artistName: String,
          trackName: String,
+         collectionName: String,
          genre: String,
          duration: Int,
          durationText:String,
@@ -34,6 +36,7 @@ struct SearchResult: Codable {
         self.artworkUrl = artworkUrl
         self.artistName = artistName
         self.trackName = trackName
+        self.collectionName = collectionName
         self.genre = genre
         self.duration = duration
         self.durationText = durationText
