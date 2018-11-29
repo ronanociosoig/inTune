@@ -10,6 +10,7 @@ import Foundation
 import os.log
 
 struct Log {
+    static var general = OSLog(subsystem: "com.sonomos.InTune", category: "general")
     static var data = OSLog(subsystem: "com.sonomos.InTune", category: "data")
     static var network = OSLog(subsystem: "com.sonomos.InTune", category: "network")
     static var player = OSLog(subsystem: "com.sonomos.InTune", category: "AVPlayer")

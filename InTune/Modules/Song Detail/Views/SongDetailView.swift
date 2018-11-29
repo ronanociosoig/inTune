@@ -55,7 +55,6 @@ class SongDetailView: UIView {
     }
     
     @IBAction func openInSafariButtonAction(_ sender: Any) {
-        print("\(String(describing: trackViewURL))")
         if let trackViewURL = trackViewURL, let url = URL(string: trackViewURL) {
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }

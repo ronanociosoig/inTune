@@ -8,6 +8,8 @@
 
 import UIKit
 import AVFoundation
+import os.log
+
 
 protocol SongDetailController {
     func show(result: Result)
@@ -22,7 +24,7 @@ class SongDetailViewController: UIViewController {
         super.viewDidLoad()
         
         guard let songDetailView: SongDetailView = SongDetailView.loadFromNib() else {
-            print("Error loading the nib. ")
+            os_log("Error loading the nib. ", log: Log.general, type: .error)
             return
         }
         
