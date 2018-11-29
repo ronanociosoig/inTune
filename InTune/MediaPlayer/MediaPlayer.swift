@@ -34,7 +34,7 @@ class MediaPlayer {
             try audioSession.setActive(true)
         }
         catch {
-            print("Setting category to AVAudioSessionCategoryPlayback failed.")
+            os_log("Setting category to AVAudioSessionCategoryPlayback failed.", log: Log.player, type: .error)
         }
         
         playerQueue = AVQueuePlayer(items: playList)
