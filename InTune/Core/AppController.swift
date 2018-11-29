@@ -18,7 +18,7 @@ class AppController: AppControlling {
     let dataProvider = DataProvider(service: NetworkService())
     var coordinator: Coordinator?
     let mediaPlayer = MediaPlayer()
-    var controller: MusicPlayerController?
+    var musicPlayerPresenter: MusicPlayerPresenter?
     
     func start() {
         coordinator = Coordinator()

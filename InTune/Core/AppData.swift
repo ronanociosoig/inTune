@@ -9,7 +9,7 @@
 import Foundation
 
 enum SortOption: Int {
-    case length, genre, price
+    case length, genre, price, artist, year
 }
 
 class AppData {
@@ -35,6 +35,14 @@ class AppData {
         case .price:
             searchResults.sort {
                 $0.price < $1.price
+            }
+        case .year:
+            searchResults.sort {
+                $0.releaseDate < $1.releaseDate
+            }
+        case .artist:
+            searchResults.sort {
+                $0.artistName < $1.artistName
             }
         }
     }

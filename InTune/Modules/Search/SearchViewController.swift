@@ -87,26 +87,40 @@ class SearchViewController: UIViewController {
                                                 message: Constants.Translations.sortOptions,
                                                 preferredStyle: .actionSheet)
         
-        let lengthAction = UIAlertAction(title: Constants.Translations.lengthSortOption,
+        let lengthAction = UIAlertAction(title: Constants.Translations.SortOptions.length,
                                          style: .default) { (_) in
             self.sort(with: .length)
         }
         
         alertController.addAction(lengthAction)
         
-        let genreAction = UIAlertAction(title: Constants.Translations.genreSortOption,
+        let genreAction = UIAlertAction(title: Constants.Translations.SortOptions.genre,
                                         style: .default) { (_) in
                 self.sort(with: .genre)
         }
         
         alertController.addAction(genreAction)
         
-        let priceAction = UIAlertAction(title: Constants.Translations.priceSortOption,
+        let priceAction = UIAlertAction(title: Constants.Translations.SortOptions.price,
                                         style: .default) { (_) in
                                             self.sort(with: .price)
         }
         
         alertController.addAction(priceAction)
+        
+        let artistNameAction = UIAlertAction(title: Constants.Translations.SortOptions.artist,
+                                        style: .default) { (_) in
+                                            self.sort(with: .artist)
+        }
+        
+        alertController.addAction(artistNameAction)
+        
+        let yearAction = UIAlertAction(title: Constants.Translations.SortOptions.year,
+                                             style: .default) { (_) in
+                                                self.sort(with: .year)
+        }
+        
+        alertController.addAction(yearAction)
         
         let cancelAction = UIAlertAction(title: Constants.Translations.cancel,
                                         style: .cancel,

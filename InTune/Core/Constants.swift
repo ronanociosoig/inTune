@@ -32,12 +32,17 @@ struct Constants {
         static let searchBarPlaceholder = "Search iTunes for music."
         static let sortButtonTitle = "Sort"
         static let sortOptions = "Sorting Options"
-        static let genreSortOption = "Genre"
-        static let lengthSortOption = "Length"
-        static let priceSortOption = "Price"
         static let openIniTunes = "Open In iTunes"
         static let searchScreenTitle = "Results"
         static let notAvailable = "N/A"
+        
+        struct SortOptions {
+            static let genre = "Genre"
+            static let length = "Length"
+            static let price = "Price"
+            static let artist = "Artist"
+            static let year = "Year"
+        }
     
         struct Error {
             static let jsonDecodingError = "Error: JSON decoding error."

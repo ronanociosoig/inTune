@@ -12,7 +12,7 @@
 		AF4A0FEC21AE9BEC005F2A4F /* MusicPlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF4A0FEB21AE9BEC005F2A4F /* MusicPlayerView.xib */; };
 		AF4A0FEE21AEA3AC005F2A4F /* MusicPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4A0FED21AEA3AB005F2A4F /* MusicPlayerView.swift */; };
 		AF4A0FF021AED2B1005F2A4F /* MediaPlayerDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4A0FEF21AED2B1005F2A4F /* MediaPlayerDataProvider.swift */; };
-		AF4A0FF521AF32C5005F2A4F /* MusicPlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4A0FF421AF32C5005F2A4F /* MusicPlayerController.swift */; };
+		AF4A0FF521AF32C5005F2A4F /* MusicPlayerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4A0FF421AF32C5005F2A4F /* MusicPlayerPresenter.swift */; };
 		AF4A0FF721AF3873005F2A4F /* MusicPlayerDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4A0FF621AF3873005F2A4F /* MusicPlayerDataProvider.swift */; };
 		AF93016021ADF5F5002CEAAA /* NumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF93015F21ADF5F5002CEAAA /* NumberFormatter.swift */; };
 		AFD1000021ADA14A00D2894F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFD1FFFF21ADA14A00D2894F /* AVFoundation.framework */; };
@@ -162,7 +162,7 @@
 		AF4A0FEB21AE9BEC005F2A4F /* MusicPlayerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicPlayerView.xib; sourceTree = "<group>"; };
 		AF4A0FED21AEA3AB005F2A4F /* MusicPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerView.swift; sourceTree = "<group>"; };
 		AF4A0FEF21AED2B1005F2A4F /* MediaPlayerDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPlayerDataProvider.swift; sourceTree = "<group>"; };
-		AF4A0FF421AF32C5005F2A4F /* MusicPlayerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerController.swift; sourceTree = "<group>"; };
+		AF4A0FF421AF32C5005F2A4F /* MusicPlayerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerPresenter.swift; sourceTree = "<group>"; };
 		AF4A0FF621AF3873005F2A4F /* MusicPlayerDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerDataProvider.swift; sourceTree = "<group>"; };
 		AF93015F21ADF5F5002CEAAA /* NumberFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFormatter.swift; sourceTree = "<group>"; };
 		AFD1FEC221A6CE7400D2894F /* InTune.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InTune.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -330,7 +330,7 @@
 			children = (
 				AF4A0FEB21AE9BEC005F2A4F /* MusicPlayerView.xib */,
 				AF4A0FED21AEA3AB005F2A4F /* MusicPlayerView.swift */,
-				AF4A0FF421AF32C5005F2A4F /* MusicPlayerController.swift */,
+				AF4A0FF421AF32C5005F2A4F /* MusicPlayerPresenter.swift */,
 				AF4A0FF621AF3873005F2A4F /* MusicPlayerDataProvider.swift */,
 			);
 			path = "Music Player";
@@ -975,7 +975,7 @@
 				AFD1FFDB21AC651800D2894F /* UITableViewCell+Extension.swift in Sources */,
 				AFD1FFA821A868B200D2894F /* NetworkService.swift in Sources */,
 				AFD1FFC321AA10F900D2894F /* SearchDataProvider.swift in Sources */,
-				AF4A0FF521AF32C5005F2A4F /* MusicPlayerController.swift in Sources */,
+				AF4A0FF521AF32C5005F2A4F /* MusicPlayerPresenter.swift in Sources */,
 				AFD1FFC821AB471900D2894F /* ResultTableViewCell.swift in Sources */,
 				AFD1FF0021A8047600D2894F /* Coordinator.swift in Sources */,
 			);

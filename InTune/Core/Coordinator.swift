@@ -16,7 +16,7 @@ class Coordinator {
     var hud: JGProgressHUD?
     var presenter: SearchPresenter?
     var musicPlayerView: MusicPlayerView?
-    var controller: MusicPlayerController?
+    var musicPlayerPresenter: MusicPlayerPresenter?
     
     init() {
         window = UIWindow(frame: UIScreen.main.bounds)
@@ -87,13 +87,13 @@ class Coordinator {
         musicPlayer.frame = frame
         navigationController.view.addSubview(musicPlayer)
         
-        controller =
-            MusicPlayerController(mediaPlayer: appController.mediaPlayer,
+        musicPlayerPresenter =
+            MusicPlayerPresenter(mediaPlayer: appController.mediaPlayer,
                                   musicPlayerView: musicPlayer,
                                   dataProvider: dataProvider)
-        musicPlayer.controller = controller
+        musicPlayer.presenter = musicPlayerPresenter
         musicPlayerView = musicPlayer
-        appController.controller = controller
+        appController.musicPlayerPresenter = musicPlayerPresenter
     }
     
     func hideMusicPlayer() {
@@ -137,6 +137,6 @@ extension Coordinator: DataLoaded {
 
 extension Coordinator: MediaPlayerDelegate {
     func update() {
-        controller?.nextItem()
+        musicPlayerPresenter?.nextItem()
     }
 }

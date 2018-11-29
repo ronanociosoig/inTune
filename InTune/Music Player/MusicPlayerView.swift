@@ -18,11 +18,8 @@ class MusicPlayerView: UIView {
     @IBOutlet weak var togglePlayButton: UIButton!
     @IBOutlet weak var previousButton: UIButton!
     
-    var controller: IMusicPlayerController!
-    
-    var selectedIndex: Int = 0
-    var maxIndex: Int = 0
-    
+    var presenter: MusicPlayerPresenting!
+
     let playIcon = UIImage(named: Constants.Images.playIcon)
     let pauseIcon = UIImage(named: Constants.Images.pauseIcon)
     
@@ -36,8 +33,8 @@ class MusicPlayerView: UIView {
     
     func updateButtons() {
         // Update the next and previous buttons.
-        previousButton.isEnabled = (selectedIndex > 0)
-        nextButton.isEnabled = (selectedIndex < maxIndex)
+        previousButton.isEnabled = (presenter.selectedIndex > 0)
+        nextButton.isEnabled = (presenter.selectedIndex < presenter.maxIndex)
         updatePlayerButton()
     }
     
@@ -46,20 +43,20 @@ class MusicPlayerView: UIView {
     }
     
     @IBAction func previousButtonAction(_ sender: Any) {
-        controller.previousAction()
+        presenter.previousAction()
     }
     
     @IBAction func togglePlayButtonAction(_ sender: Any) {
-        controller.togglePlay()
+        presenter.togglePlay()
         updatePlayerButton()
     }
     
     func updatePlayerButton() {
-        let image = controller.isPlaying() ? pauseIcon : playIcon
+        let image = presenter.isPlaying() ? pauseIcon : playIcon
         togglePlayButton.setImage(image, for: .normal)
     }
     
     @IBAction func nextButtonAction(_ sender: Any) {
-        controller.nextAction()
+        presenter.nextAction()
     }
 }
