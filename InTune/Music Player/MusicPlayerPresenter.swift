@@ -61,7 +61,8 @@ class MusicPlayerPresenter: MusicPlayerPresenting {
         
         if selectedIndex > 0 {
             selectedIndex -= 1
-            loadMediaPlayerItems(from: selectedIndex)
+            mediaPlayer.previous()
+            // mediaPlayer.playFromCurrentIndex()
             configureMusicPlayer(at: selectedIndex)
         }
     }
@@ -86,13 +87,7 @@ class MusicPlayerPresenter: MusicPlayerPresenting {
     }
     
     func loadMediaPlayerItems() {
-        let selectedIndex = dataProvider.selectedIndex()
-        loadMediaPlayerItems(from: selectedIndex)
-    }
-    
-    func loadMediaPlayerItems(from index: Int) {
-        
-        let urls = dataProvider.mediaUrls(from: index)
+        let urls = dataProvider.mediaUrls(from: 0)
         
         if mediaPlayer.playing == true {
             mediaPlayer.togglePlay()

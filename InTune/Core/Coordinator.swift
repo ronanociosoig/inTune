@@ -29,11 +29,15 @@ class Coordinator {
     }
     
     func showLoading() {
+        showHud(with: Constants.Translations.loading)
+    }
+    
+    func showHud(with message: String) {
         
         guard let topViewController = window.rootViewController else { return }
         
         hud = JGProgressHUD(style: .dark)
-        hud?.textLabel.text = Constants.Translations.loading
+        hud?.textLabel.text = message
         hud?.show(in: topViewController.view)
     }
     
@@ -138,5 +142,9 @@ extension Coordinator: DataLoaded {
 extension Coordinator: MediaPlayerDelegate {
     func update() {
         musicPlayerPresenter?.nextItem()
+    }
+    
+    func startedPlaying() {
+        dismissLoading()
     }
 }
