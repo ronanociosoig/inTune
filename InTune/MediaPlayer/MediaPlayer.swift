@@ -100,14 +100,16 @@ class MediaPlayer {
         playerQueue?.removeAllItems()
         
         for url in list {
-            let avAsset = AVURLAsset(url: url)
-            avAsset.loadValuesAsynchronously(forKeys: ["playable", "tracks", "duration"], completionHandler: {
-                DispatchQueue.main.async {
-                    let item = AVPlayerItem(asset: avAsset)
+            // let avAsset = AVURLAsset(url: url)
+            
+            //avAsset.loadValuesAsynchronously(forKeys: ["playable", "tracks", "duration"], completionHandler: {
+                //DispatchQueue.main.async {
+                    // let url = avAsset.url
+                    let item = AVPlayerItem(url: url)
                     self.playList.append(item)
                     self.playerQueue?.insert(item, after: nil)
-                }
-            })
+                //}
+            //})
         }
     }
     

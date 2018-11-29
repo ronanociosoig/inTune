@@ -98,8 +98,8 @@ class MusicPlayerPresenter: MusicPlayerPresenting {
             mediaPlayer.togglePlay()
         }
         
-        DispatchQueue.global(qos: .background).async {
+        //DispatchQueue.global(qos: .background).async {
             self.mediaPlayer.addPlayList(list: urls)
-        }
+        //}
     }
 }
