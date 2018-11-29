@@ -122,6 +122,13 @@ class SearchViewController: UIViewController {
         
         alertController.addAction(yearAction)
         
+        let albumAction = UIAlertAction(title: Constants.Translations.SortOptions.album,
+                                       style: .default) { (_) in
+                                        self.sort(with: .album)
+        }
+        
+        alertController.addAction(albumAction)
+        
         let cancelAction = UIAlertAction(title: Constants.Translations.cancel,
                                         style: .cancel,
                                         handler: nil)

@@ -42,6 +42,7 @@ struct Constants {
             static let price = "Price"
             static let artist = "Artist"
             static let year = "Year"
+            static let album = "Album"
         }
     
         struct Error {
