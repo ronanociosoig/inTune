@@ -58,6 +58,24 @@ class SearchiTunesServiceTests: XCTestCase {
         waitForExpectations(timeout: 1, handler: nil)
     }
     
+    func testLoadIggyPopResponse() {
+        let expectation = self.expectation(description: "No results in response data")
+        
+        let networkService = MockNetworkService()
+        let searchService = networkService.makeSearchiTunesService() as! MockSearchiTunesService
+        searchService.responseType = .IggyPopResponse
+        
+        searchService.load(term: "something you cannot find") { (data, errorMessage) in
+            XCTAssertNotNil(data)
+            
+            if data != nil {
+                expectation.fulfill()
+            }
+        }
+        
+        waitForExpectations(timeout: 1, handler: nil)
+    }
+    
     func testLoadDataFromServer() {
         let searchTerm = "South Side"
         let expectation = self.expectation(description: "Search for Moby on iTunes.")

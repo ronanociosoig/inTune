@@ -113,6 +113,13 @@ class DataProviderTests: XCTestCase {
         
         XCTAssertTrue(dataProvider.appData.results.count == 2)
     }
+    
+    func testFailingWithIggyPop() {
+        networkService.responseType = .IggyPopResponse
+        dataProvider.search(term: "Iggy Pop")
+        
+        XCTAssertTrue(dataProvider.appData.results.count == 50)
+    }
 }
 
 class MockDataLoader: DataLoaded {

@@ -14,6 +14,7 @@
 		AF4A0FF021AED2B1005F2A4F /* MediaPlayerDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4A0FEF21AED2B1005F2A4F /* MediaPlayerDataProvider.swift */; };
 		AF4A0FF521AF32C5005F2A4F /* MusicPlayerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4A0FF421AF32C5005F2A4F /* MusicPlayerPresenter.swift */; };
 		AF4A0FF721AF3873005F2A4F /* MusicPlayerDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4A0FF621AF3873005F2A4F /* MusicPlayerDataProvider.swift */; };
+		AF69214A220B2C5A009B41A7 /* IggyPopResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = AF692149220B2C59009B41A7 /* IggyPopResponse.json */; };
 		AF93016021ADF5F5002CEAAA /* NumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF93015F21ADF5F5002CEAAA /* NumberFormatter.swift */; };
 		AFD1000021ADA14A00D2894F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFD1FFFF21ADA14A00D2894F /* AVFoundation.framework */; };
 		AFD1FEC621A6CE7400D2894F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FEC521A6CE7400D2894F /* AppDelegate.swift */; };
@@ -164,6 +165,7 @@
 		AF4A0FEF21AED2B1005F2A4F /* MediaPlayerDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPlayerDataProvider.swift; sourceTree = "<group>"; };
 		AF4A0FF421AF32C5005F2A4F /* MusicPlayerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerPresenter.swift; sourceTree = "<group>"; };
 		AF4A0FF621AF3873005F2A4F /* MusicPlayerDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerDataProvider.swift; sourceTree = "<group>"; };
+		AF692149220B2C59009B41A7 /* IggyPopResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = IggyPopResponse.json; sourceTree = "<group>"; };
 		AF93015F21ADF5F5002CEAAA /* NumberFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFormatter.swift; sourceTree = "<group>"; };
 		AFD1FEC221A6CE7400D2894F /* InTune.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InTune.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFD1FEC521A6CE7400D2894F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -504,6 +506,7 @@
 				AFD1FF4721A827DC00D2894F /* simpleServerResponse.json */,
 				AFD1FFBD21A987FE00D2894F /* invalidDateResponse.json */,
 				AFD1FF4521A826EF00D2894F /* serverResponse.json */,
+				AF692149220B2C59009B41A7 /* IggyPopResponse.json */,
 				AFD1FF4321A8266500D2894F /* MockData.swift */,
 				AFD1FF5921A84C8300D2894F /* MockNetworkService.swift */,
 			);
@@ -771,6 +774,7 @@
 			files = (
 				AFD1FFAD21A86E3200D2894F /* noResultsServerResponse.json in Resources */,
 				AFD1FF5D21A84C9200D2894F /* serverResponse.json in Resources */,
+				AF69214A220B2C5A009B41A7 /* IggyPopResponse.json in Resources */,
 				AFD1FF5C21A84C8F00D2894F /* simpleServerResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
