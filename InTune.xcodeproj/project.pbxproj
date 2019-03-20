@@ -14,8 +14,10 @@
 		AF4A0FF021AED2B1005F2A4F /* MediaPlayerDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4A0FEF21AED2B1005F2A4F /* MediaPlayerDataProvider.swift */; };
 		AF4A0FF521AF32C5005F2A4F /* MusicPlayerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4A0FF421AF32C5005F2A4F /* MusicPlayerPresenter.swift */; };
 		AF4A0FF721AF3873005F2A4F /* MusicPlayerDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4A0FF621AF3873005F2A4F /* MusicPlayerDataProvider.swift */; };
+		AF6638652242A61F00C6688E /* invalidDateResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = AFD1FFBD21A987FE00D2894F /* invalidDateResponse.json */; };
 		AF69214A220B2C5A009B41A7 /* IggyPopResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = AF692149220B2C59009B41A7 /* IggyPopResponse.json */; };
 		AF93016021ADF5F5002CEAAA /* NumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF93015F21ADF5F5002CEAAA /* NumberFormatter.swift */; };
+		AFC47DAE21B5B37500B98DEC /* DateFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC47DAD21B5B37500B98DEC /* DateFormatterTests.swift */; };
 		AFD1000021ADA14A00D2894F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFD1FFFF21ADA14A00D2894F /* AVFoundation.framework */; };
 		AFD1FEC621A6CE7400D2894F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FEC521A6CE7400D2894F /* AppDelegate.swift */; };
 		AFD1FEC821A6CE7400D2894F /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FEC721A6CE7400D2894F /* SearchViewController.swift */; };
@@ -52,16 +54,12 @@
 		AFD1FFA721A868B200D2894F /* iTunesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FFA321A868B100D2894F /* iTunesAPI.swift */; };
 		AFD1FFA821A868B200D2894F /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FFA421A868B100D2894F /* NetworkService.swift */; };
 		AFD1FFA921A868B200D2894F /* ServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FFA521A868B100D2894F /* ServiceProvider.swift */; };
-		AFD1FFAA21A86E2700D2894F /* noResultsServerResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = AFD1FF4A21A8284700D2894F /* noResultsServerResponse.json */; };
-		AFD1FFAB21A86E2A00D2894F /* simpleServerResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = AFD1FF4721A827DC00D2894F /* simpleServerResponse.json */; };
-		AFD1FFAC21A86E2F00D2894F /* serverResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = AFD1FF4521A826EF00D2894F /* serverResponse.json */; };
 		AFD1FFAD21A86E3200D2894F /* noResultsServerResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = AFD1FF4A21A8284700D2894F /* noResultsServerResponse.json */; };
 		AFD1FFAF21A8704800D2894F /* DataProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FFAE21A8704800D2894F /* DataProviderTests.swift */; };
 		AFD1FFB121A874E600D2894F /* URLParameterEncodingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FFB021A874E600D2894F /* URLParameterEncodingTests.swift */; };
 		AFD1FFB321A874FB00D2894F /* FormUrlEncoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FFB221A874FB00D2894F /* FormUrlEncoderTests.swift */; };
 		AFD1FFB521A87BAB00D2894F /* AppControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FFB421A87BAB00D2894F /* AppControllerTests.swift */; };
 		AFD1FFB721A888EA00D2894F /* DataLoaded.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FFB621A888EA00D2894F /* DataLoaded.swift */; };
-		AFD1FFBF21A9935600D2894F /* invalidDateResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = AFD1FFBD21A987FE00D2894F /* invalidDateResponse.json */; };
 		AFD1FFC121A9D5E600D2894F /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FFC021A9D5E600D2894F /* SearchPresenter.swift */; };
 		AFD1FFC321AA10F900D2894F /* SearchDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FFC221AA10F900D2894F /* SearchDataProvider.swift */; };
 		AFD1FFC521AA156400D2894F /* SearchAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FFC421AA156400D2894F /* SearchAction.swift */; };
@@ -167,6 +165,7 @@
 		AF4A0FF621AF3873005F2A4F /* MusicPlayerDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerDataProvider.swift; sourceTree = "<group>"; };
 		AF692149220B2C59009B41A7 /* IggyPopResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = IggyPopResponse.json; sourceTree = "<group>"; };
 		AF93015F21ADF5F5002CEAAA /* NumberFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFormatter.swift; sourceTree = "<group>"; };
+		AFC47DAD21B5B37500B98DEC /* DateFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterTests.swift; sourceTree = "<group>"; };
 		AFD1FEC221A6CE7400D2894F /* InTune.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InTune.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFD1FEC521A6CE7400D2894F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFD1FEC721A6CE7400D2894F /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -402,6 +401,7 @@
 				AFD1FFD421AC0F9F00D2894F /* TimeFormatterTests.swift */,
 				AFD1FFDE21AC6B4300D2894F /* SearchWireframeTests.swift */,
 				AFD1FFF221AD4D4F00D2894F /* SongDetailWireframeTests.swift */,
+				AFC47DAD21B5B37500B98DEC /* DateFormatterTests.swift */,
 			);
 			path = InTuneTests;
 			sourceTree = "<group>";
@@ -757,12 +757,8 @@
 				AFD1FED021A6CE7700D2894F /* LaunchScreen.storyboard in Resources */,
 				AFD1FEFE21A803F300D2894F /* Default-568h@2x.png in Resources */,
 				AFD1FECD21A6CE7700D2894F /* Assets.xcassets in Resources */,
-				AFD1FFAB21A86E2A00D2894F /* simpleServerResponse.json in Resources */,
-				AFD1FFBF21A9935600D2894F /* invalidDateResponse.json in Resources */,
 				AFD1FECB21A6CE7400D2894F /* Search.storyboard in Resources */,
 				AF4A0FEC21AE9BEC005F2A4F /* MusicPlayerView.xib in Resources */,
-				AFD1FFAA21A86E2700D2894F /* noResultsServerResponse.json in Resources */,
-				AFD1FFAC21A86E2F00D2894F /* serverResponse.json in Resources */,
 				AFD1FFE921AD482000D2894F /* SongDetail.storyboard in Resources */,
 				AFD1FFC921AB471900D2894F /* ResultTableViewCell.xib in Resources */,
 			);
@@ -776,6 +772,7 @@
 				AFD1FF5D21A84C9200D2894F /* serverResponse.json in Resources */,
 				AF69214A220B2C5A009B41A7 /* IggyPopResponse.json in Resources */,
 				AFD1FF5C21A84C8F00D2894F /* simpleServerResponse.json in Resources */,
+				AF6638652242A61F00C6688E /* invalidDateResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -999,6 +996,7 @@
 				AFD1FFD521AC0F9F00D2894F /* TimeFormatterTests.swift in Sources */,
 				AFD1FF6121A85D8700D2894F /* CoordinatorTests.swift in Sources */,
 				AFD1FFB521A87BAB00D2894F /* AppControllerTests.swift in Sources */,
+				AFC47DAE21B5B37500B98DEC /* DateFormatterTests.swift in Sources */,
 				AFD1FFAF21A8704800D2894F /* DataProviderTests.swift in Sources */,
 				AFD1FFDF21AC6B4300D2894F /* SearchWireframeTests.swift in Sources */,
 				AFD1FFF321AD4D4F00D2894F /* SongDetailWireframeTests.swift in Sources */,
