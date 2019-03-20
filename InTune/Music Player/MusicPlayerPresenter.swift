@@ -25,6 +25,7 @@ class MusicPlayerPresenter: MusicPlayerPresenting {
     let dataProvider: MusicPlayerDataProvider
     var selectedIndex: Int = 0
     var maxIndex: Int = 0
+    var activityView: ActivityView?
     
     init(mediaPlayer: MediaPlayer,
          musicPlayerView: MusicPlayerView,
@@ -50,6 +51,7 @@ class MusicPlayerPresenter: MusicPlayerPresenting {
     }
     
     func togglePlay() {
+        mediaPlayer.currentIndex = selectedIndex
         mediaPlayer.togglePlay()
     }
     
@@ -62,7 +64,6 @@ class MusicPlayerPresenter: MusicPlayerPresenting {
         if selectedIndex > 0 {
             selectedIndex -= 1
             mediaPlayer.previous()
-            // mediaPlayer.playFromCurrentIndex()
             configureMusicPlayer(at: selectedIndex)
         }
     }

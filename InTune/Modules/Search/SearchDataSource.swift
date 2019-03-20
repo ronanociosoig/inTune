@@ -14,10 +14,6 @@ class SearchDataSource: NSObject, UITableViewDataSource {
     weak var presenter: SearchPresenter!
     
     func register(tableView: UITableView) {
-        // let nib = ResultTableViewCell.identifier
-        // let cell = UITableViewCell(style: .default, reuseIdentifier: cellIdentifier)
-        // tableView.register(ResultTableViewCell.self, forCellReuseIdentifier: cellIdentifier)
-        
         tableView.register(cellType: ResultTableViewCell.self)
         tableView.dataSource = self
     }

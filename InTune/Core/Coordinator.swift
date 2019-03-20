@@ -9,7 +9,12 @@
 import UIKit
 import JGProgressHUD
 
-class Coordinator {
+protocol ActivityView {
+    func showLoading()
+    func dismissLoading()
+}
+
+class Coordinator: ActivityView {
     let window: UIWindow
     var dataProvider: DataProvider!
     var appController: AppController!
@@ -98,6 +103,7 @@ class Coordinator {
         musicPlayer.presenter = musicPlayerPresenter
         musicPlayerView = musicPlayer
         appController.musicPlayerPresenter = musicPlayerPresenter
+        musicPlayerPresenter?.activityView = self
     }
     
     func hideMusicPlayer() {
@@ -140,6 +146,10 @@ extension Coordinator: DataLoaded {
 }
 
 extension Coordinator: MediaPlayerDelegate {
+    func preroll() {
+        showLoading()
+    }
+    
     func update() {
         musicPlayerPresenter?.nextItem()
     }
@@ -147,4 +157,6 @@ extension Coordinator: MediaPlayerDelegate {
     func startedPlaying() {
         dismissLoading()
     }
+    
+    
 }
