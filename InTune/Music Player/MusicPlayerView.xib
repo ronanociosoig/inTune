@@ -59,7 +59,7 @@
                         <action selector="togglePlayButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="MkT-fU-51P"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IJA-UA-P42">
+                <button hidden="YES" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IJA-UA-P42">
                     <rect key="frame" x="229" y="10" width="30" height="30"/>
                     <accessibility key="accessibilityConfiguration" label="Previous"/>
                     <constraints>
