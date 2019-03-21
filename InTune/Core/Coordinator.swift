@@ -19,7 +19,7 @@ class Coordinator: ActivityView {
     var dataProvider: DataProvider!
     var appController: AppController!
     var hud: JGProgressHUD?
-    var presenter: SearchPresenter?
+    var presenter: SearchPresenting?
     var musicPlayerView: MusicPlayerView?
     var musicPlayerPresenter: MusicPlayerPresenter?
     
@@ -57,11 +57,11 @@ class Coordinator: ActivityView {
                                 actions: appController as SearchActions,
                                 dataProvider: dataProvider as SearchDataProvider)
         
-        presenter = viewController.presenter
-        
         let navigationController = UINavigationController(rootViewController: viewController)
         
         window.rootViewController = navigationController
+        
+        presenter = viewController.presenter
     }
     
     func showSearchResults() {

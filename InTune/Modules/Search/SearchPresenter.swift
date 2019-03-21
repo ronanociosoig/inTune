@@ -13,12 +13,16 @@ protocol SearchPresenting {
     func selected(option: SortOption)
     func viewDidLayoutSubviews()
     func select(index: Int)
+    func search(term: String)
+    func numberOfItems() -> Int
+    func item(at indexPath: IndexPath) -> SearchResult
+    func dataReceived()
 }
 
 class SearchPresenter {
-    var actions: SearchActions!
-    var viewController: ViewController!
-    var dataProvider: SearchDataProvider!
+    var actions: SearchActions
+    var viewController: ViewController
+    var dataProvider: SearchDataProvider
     let dataSource: SearchDataSource
     var term: String?
     
@@ -31,14 +35,11 @@ class SearchPresenter {
         self.dataProvider = dataProvider
         self.dataSource = dataSource
     }
-    
+}
+
+extension SearchPresenter: SearchPresenting {
     func viewDidLayoutSubviews() {
         viewController.setDataSource(dataSource: dataSource)
-    }
-    
-    func search(term: String) {
-        self.term = term
-        actions.search(term: term)
     }
     
     func dataReceived() {
@@ -47,19 +48,21 @@ class SearchPresenter {
         viewController.reload()
     }
     
+    func item(at indexPath: IndexPath) -> SearchResult {
+        let searchResults = dataProvider.searchResults()
+        return searchResults[indexPath.row]
+    }
+    
     func numberOfItems() -> Int {
         let searchResults = dataProvider.searchResults()
         let count = searchResults.count
         return count
     }
     
-    func item(at indexPath: IndexPath) -> SearchResult {
-        let searchResults = dataProvider.searchResults()
-        return searchResults[indexPath.row]
+    func search(term: String) {
+        self.term = term
+        actions.search(term: term)
     }
-}
-
-extension SearchPresenter: SearchPresenting {
     
     func sortBarButtonAction() {
         viewController.showSortOptions()

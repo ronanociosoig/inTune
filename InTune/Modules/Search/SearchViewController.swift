@@ -19,47 +19,54 @@ class SearchViewController: UIViewController {
     
     @IBOutlet var tableView: UITableView!
     
-    var presenter: SearchPresenter!
+    var presenter: SearchPresenting?
     
     let searchController = UISearchController(searchResultsController: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        configureSearchController()
+
+        addNavigationButton()
+    }
+    
+    private func configureSearchController() {
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = Constants.Translations.searchBarPlaceholder
         searchController.searchBar.accessibilityLabel = "Search"
         searchController.searchBar.isAccessibilityElement = true
         searchController.searchBar.accessibilityTraits = UIAccessibilityTraits.searchField
-        navigationItem.searchController = searchController
-        definesPresentationContext = true
         searchController.searchBar.delegate = self
         searchController.searchBar.tintColor = Constants.Theme.tintColor
         searchController.accessibilityLabel = "SearchController"
         searchController.isAccessibilityElement = true
-        addNavigationButton()
+        navigationItem.searchController = searchController
+        definesPresentationContext = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         navigationItem.hidesSearchBarWhenScrolling = false
-        
-        title = presenter.term
     }
     
     override func viewDidLayoutSubviews() {
         tableView.rowHeight = 61
         tableView.separatorInset = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
-        presenter.viewDidLayoutSubviews()
         tableView.accessibilityLabel = "ResultsTable"
         tableView.isAccessibilityElement = true
+        
+        // guard let presenter = presenter else { return }
+        
+        presenter?.viewDidLayoutSubviews()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         navigationItem.hidesSearchBarWhenScrolling = true
+        
+        guard let presenter = presenter else { return }
         
         if presenter.numberOfItems() == 0 {
             searchController.searchBar.becomeFirstResponder()
@@ -79,6 +86,8 @@ class SearchViewController: UIViewController {
     }
     
     @objc func buttonAction(_ sender: Any) {
+        guard let presenter = presenter else { return }
+        
         presenter.sortBarButtonAction()
     }
 
@@ -141,6 +150,7 @@ class SearchViewController: UIViewController {
     }
     
     func sort(with option: SortOption) {
+        guard let presenter = presenter else { return }
         presenter.selected(option: option)
     }
 }
@@ -150,6 +160,8 @@ class SearchViewController: UIViewController {
 extension SearchViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        guard let presenter = presenter else { return }
         presenter.select(index: indexPath.row)
     }
 }
@@ -161,6 +173,8 @@ extension SearchViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         if let text = searchBar.text, text.count > 0 {
             title = text
+            
+            guard let presenter = presenter else { return }
             presenter.search(term: text)
             searchController.isActive = false
         }
