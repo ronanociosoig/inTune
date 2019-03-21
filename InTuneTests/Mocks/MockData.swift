@@ -14,8 +14,6 @@ class MockData {
     static let fileNotFoundError = "File not found"
     
     static func load(name: String) throws -> Data? {
-        // let bundle = Bundle.main
-        // let bundle = Bundle(for: type(of: self) as! AnyClass)
         let bundle = Bundle.init(for: MockData.self)
         
         if let path = bundle.path(forResource: name, ofType: fileType) {
