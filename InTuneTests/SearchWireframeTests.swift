@@ -25,6 +25,5 @@ class SearchWireframeTests: XCTestCase {
         let presenter = viewController.presenter
         
         XCTAssertNotNil(presenter)
-        XCTAssertNotNil(presenter!.dataSource)
     }
 }
