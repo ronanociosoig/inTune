@@ -17,7 +17,10 @@ protocol SearchActions {
 extension AppController: SearchActions {
     func search(term: String) {
         dataProvider.search(term: term)
-        coordinator?.showLoading()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
+            self.coordinator?.showLoading()
+        }
     }
     
     func select(index: Int) {
