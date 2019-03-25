@@ -26,7 +26,7 @@ class Coordinator: ActivityView {
     init() {
         window = UIWindow(frame: UIScreen.main.bounds)
         window.makeKeyAndVisible()
-        window.tintColor = Constants.Theme.tintColor
+        window.tintColor = UIColor(named: Constants.Theme.tintColor)
     }
     
     func start() {

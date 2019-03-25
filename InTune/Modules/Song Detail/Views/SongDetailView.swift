@@ -31,7 +31,7 @@ class SongDetailView: UIView {
     func configure(with result: Result) {
         trackNameLabel.text = result.trackName
         artistNameLabel.text = result.artistName
-        artistNameLabel.textColor = Constants.Theme.tintColor
+        artistNameLabel.textColor = UIColor(named: Constants.Theme.tintColor)
         releaseDateLabel.text = dateAndGenre(result: result)
         
         if let price = result.trackPrice, price > 0 {

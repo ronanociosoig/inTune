@@ -37,7 +37,7 @@ class SearchViewController: UIViewController {
         searchController.searchBar.isAccessibilityElement = true
         searchController.searchBar.accessibilityTraits = UIAccessibilityTraits.searchField
         searchController.searchBar.delegate = self
-        searchController.searchBar.tintColor = Constants.Theme.tintColor
+        searchController.searchBar.tintColor = UIColor(named: Constants.Theme.tintColor)
         searchController.accessibilityLabel = "SearchController"
         searchController.isAccessibilityElement = true
         navigationItem.searchController = searchController
@@ -80,7 +80,7 @@ class SearchViewController: UIViewController {
     
     func addNavigationButton() {
         let barButton = UIBarButtonItem(title: Constants.Translations.sortButtonTitle, style: .plain, target: self, action: #selector(buttonAction))
-        barButton.tintColor = Constants.Theme.tintColor
+        barButton.tintColor = UIColor(named: Constants.Theme.tintColor)
         barButton.isEnabled = false
         navigationItem.rightBarButtonItem = barButton
     }

@@ -60,11 +60,13 @@ struct Constants {
     }
     
     struct Theme {
-        static let tintColor = UIColor(red: 249/255, green: 163/255, blue: 61/255, alpha: 1.0)
+        static let tintColor = "OrangeThemeColor"
+            
+            // UIColor(red: 249/255, green: 163/255, blue: 61/255, alpha: 1.0)
     }
     
     struct MusicPlayer {
-        static let height: CGFloat = 50.0
+        static let height: CGFloat = 64.0
     }
 }
 
