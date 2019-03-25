@@ -22,6 +22,7 @@ class MusicPlayerView: UIView {
 
     let playIcon = UIImage(named: Constants.Images.playIcon)
     let pauseIcon = UIImage(named: Constants.Images.pauseIcon)
+    let blurView = UIVisualEffectView(effect: UIBlurEffect(style: .light))
     
     func configure(result: Result) {
         trackTitleLabel.text = result.trackName
@@ -36,10 +37,16 @@ class MusicPlayerView: UIView {
         previousButton.isEnabled = (presenter.selectedIndex > 0)
         nextButton.isEnabled = (presenter.selectedIndex < presenter.maxIndex)
         updatePlayerButton()
+        
+        blurView.frame = bounds
     }
     
     override func awakeFromNib() {
+        backgroundColor = .clear
         
+        blurView.translatesAutoresizingMaskIntoConstraints = false
+        blurView.frame = bounds
+        insertSubview(blurView, at: 0)
     }
     
     @IBAction func previousButtonAction(_ sender: Any) {
