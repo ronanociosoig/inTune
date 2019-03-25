@@ -86,6 +86,7 @@ class MediaPlayer {
         playerQueue?.advanceToNextItem()
         currentIndex += 1
         playerQueue?.play()
+        playing = true
     }
     
     func previous() {
