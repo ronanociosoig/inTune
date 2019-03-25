@@ -114,11 +114,30 @@ class DataProviderTests: XCTestCase {
         XCTAssertTrue(dataProvider.appData.results.count == 2)
     }
     
-    func testFailingWithIggyPop() {
+    func testIggyPopData() {
         networkService.responseType = .IggyPopResponse
         dataProvider.search(term: "Iggy Pop")
         
         XCTAssertTrue(dataProvider.appData.results.count == 50)
+    }
+    
+    func testResultsCopiedToPlayerResults() {
+        // load data
+        networkService.responseType = .simpleResponse
+        dataProvider.search(term: "Simple")
+        
+        XCTAssertTrue(dataProvider.appData.results.count == 2)
+        
+        dataProvider.copyResults()
+        
+        XCTAssertTrue(dataProvider.appData.playerResults.count == 2)
+        
+        networkService.responseType = .IggyPopResponse
+        
+        dataProvider.search(term: "Iggy Pop")
+        
+        XCTAssertTrue(dataProvider.appData.results.count == 50)
+        XCTAssertTrue(dataProvider.appData.playerResults.count == 2)
     }
 }
 

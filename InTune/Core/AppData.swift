@@ -15,6 +15,7 @@ enum SortOption: Int {
 class AppData {
     var searchTerm: String?
     var results = [Result]()
+    var playerResults = [Result]()
     var searchResults = [SearchResult]()
     var selectedIndex: Int = 0
     var currentSortOption: SortOption = .length
