@@ -14,12 +14,16 @@ struct ResultParser {
     let priceFormatter = NumberFormatter.priceFormatter()
     
     func parse(result: Result) -> SearchResult {
-        
+        var price: String
         let duration = TimeFormatter.string(from: result.trackTimeMillis)
-        let priceNumber = result.trackPrice as NSNumber
-        var price = priceFormatter.string(from: priceNumber) ?? "$0.00"
-        
-        if result.trackPrice < 0 {
+        if let priceTmp = result.trackPrice {
+            let priceNumber = priceTmp as NSNumber
+            price = priceFormatter.string(from: priceNumber) ?? "$0.00"
+            
+            if priceTmp < 0 {
+                price = Constants.Translations.notAvailable
+            }
+        } else {
             price = Constants.Translations.notAvailable
         }
         

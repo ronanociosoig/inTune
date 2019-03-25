@@ -25,7 +25,7 @@ struct Result: Codable {
     let artistViewURL, trackViewURL: String
     let previewURL: String
     let artworkUrl30, artworkUrl60, artworkUrl100: String
-    let trackPrice: Double
+    let trackPrice: Double?
     let releaseDate: Date
     let trackTimeMillis: Int
     let country: String
@@ -66,7 +66,7 @@ struct Result: Codable {
         artworkUrl30: String,
         artworkUrl60: String,
         artworkUrl100: String,
-        trackPrice: Double,
+        trackPrice: Double?,
         releaseDate: Date,
         trackTimeMillis: Int,
         country: String,
