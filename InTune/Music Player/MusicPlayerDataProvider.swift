@@ -14,7 +14,6 @@ protocol MusicPlayerDataProvider {
     func mediaUrls(from index: Int) -> [URL]
     func selectedIndex() -> Int
     func maxIndex() -> Int
-    func selectedResult() -> Result?
 }
 
 extension DataProvider: MusicPlayerDataProvider {
