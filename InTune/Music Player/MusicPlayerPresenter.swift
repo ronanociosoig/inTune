@@ -41,10 +41,13 @@ class MusicPlayerPresenter: MusicPlayerPresenting {
         selectedIndex = dataProvider.selectedIndex()
         searchResults.removeAll()
         searchResults.append(contentsOf: dataProvider.allSearchResults())
+        
         results.removeAll()
         results.append(contentsOf: dataProvider.allResults())
+        
+        maxIndex = results.count - 1
+        
         configureMusicPlayer(at: selectedIndex)
-        maxIndex = dataProvider.maxIndex()
     }
     
     func configureMusicPlayer(at index: Int) {
