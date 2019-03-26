@@ -20,6 +20,7 @@ class SearchViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
     
     var presenter: SearchPresenting?
+    var searchText: String?
     
     let searchController = UISearchController(searchResultsController: nil)
     
@@ -48,6 +49,8 @@ class SearchViewController: UIViewController {
         super.viewWillAppear(animated)
         
         navigationItem.hidesSearchBarWhenScrolling = false
+        
+        title = searchText
     }
     
     override func viewDidLayoutSubviews() {
@@ -173,7 +176,7 @@ extension SearchViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         if let text = searchBar.text, text.count > 0 {
             title = text
-            
+            searchText = text
             guard let presenter = presenter else { return }
             presenter.search(term: text)
             searchController.isActive = false
