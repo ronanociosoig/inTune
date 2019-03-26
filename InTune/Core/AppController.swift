@@ -20,7 +20,7 @@ class AppController: AppControlling {
     var musicPlayerPresenter: MusicPlayerPresenter?
     
     func start() {
-        coordinator = Coordinator()
+        coordinator = Coordinator(appController: self)
         coordinator?.appController = self
         coordinator?.dataProvider = dataProvider
         coordinator?.start()

@@ -16,17 +16,18 @@ protocol ActivityView {
 
 class Coordinator: ActivityView {
     let window: UIWindow
-    var dataProvider: DataProvider!
-    var appController: AppController!
+    var dataProvider: DataProvider?
+    var appController: AppController
     var hud: JGProgressHUD?
     var presenter: SearchPresenting?
     var musicPlayerView: MusicPlayerView?
     var musicPlayerPresenter: MusicPlayerPresenter?
     
-    init() {
+    init(appController: AppController) {
         window = UIWindow(frame: UIScreen.main.bounds)
         window.makeKeyAndVisible()
         window.tintColor = UIColor(named: Constants.Theme.tintColor)
+        self.appController = appController
     }
     
     func start() {
@@ -51,6 +52,7 @@ class Coordinator: ActivityView {
     }
     
     func showSearch() {
+        guard let dataProvider = dataProvider else { return }
         let viewController = SearchWireframe.makeViewController()
         
         SearchWireframe.prepare(viewController: viewController,
@@ -69,6 +71,7 @@ class Coordinator: ActivityView {
     }
 
     func showSongDetail() {
+        guard let dataProvider = dataProvider else { return }
         let viewController = SongDetailWireframe.makeViewController()
         
         SongDetailWireframe.prepare(viewController: viewController,
@@ -80,6 +83,7 @@ class Coordinator: ActivityView {
     }
     
     func showMusicPlayer() {
+        guard let dataProvider = dataProvider else { return }
         guard let navigationController = window.rootViewController as? UINavigationController else { return }
         
         if let musicPlayerView = musicPlayerView {
