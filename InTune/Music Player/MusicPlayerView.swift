@@ -9,7 +9,14 @@
 import UIKit
 import Haneke
 
-class MusicPlayerView: UIView {
+protocol MusicPlayerViewing {
+    func configure(result: Result)
+    func updateButtons()
+    func updatePlayerButton()
+    
+}
+
+class MusicPlayerView: UIView, MusicPlayerViewing {
     
     @IBOutlet weak var artworkImageView: UIImageView!
     @IBOutlet weak var trackTitleLabel: UILabel!

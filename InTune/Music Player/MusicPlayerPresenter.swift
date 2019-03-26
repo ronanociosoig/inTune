@@ -21,7 +21,7 @@ protocol MusicPlayerPresenting {
 
 class MusicPlayerPresenter: MusicPlayerPresenting {
     private var mediaPlayer: MediaPlaying
-    private let musicPlayerView: MusicPlayerView
+    private let musicPlayerView: MusicPlayerViewing
     private let dataProvider: MusicPlayerDataProvider
     internal var selectedIndex: Int = 0
     internal var maxIndex: Int = 0
@@ -29,8 +29,8 @@ class MusicPlayerPresenter: MusicPlayerPresenting {
     private var searchResults = [SearchResult]()
     private var results = [Result]()
     
-    init(mediaPlayer: MediaPlayer,
-         musicPlayerView: MusicPlayerView,
+    init(mediaPlayer: MediaPlaying,
+         musicPlayerView: MusicPlayerViewing,
          dataProvider: MusicPlayerDataProvider) {
         self.mediaPlayer = mediaPlayer
         self.musicPlayerView = musicPlayerView
