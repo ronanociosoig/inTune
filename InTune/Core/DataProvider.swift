@@ -17,6 +17,9 @@ struct Log {
 }
 
 protocol DataProviding: class {
+    
+    init(service: ServiceProvider)
+    
     func search(term: String)
     func sort(option: SortOption)
     func parseResults(results: [Result]) -> [SearchResult]

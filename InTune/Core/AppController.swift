@@ -14,7 +14,7 @@ protocol AppControlling {
 }
     
 class AppController: AppControlling {
-    let dataProvider = DataProvider(service: NetworkService())
+    var dataProvider = DataProvider(service: NetworkService())
     var coordinator: Coordinating?
     let mediaPlayer = MediaPlayer()
     var musicPlayerPresenter: MusicPlayerPresenter?
