@@ -92,6 +92,42 @@ class MusicPlayerPresenterTests: XCTestCase {
         
         XCTAssertTrue(mediaPlayer.togglePlayCalled)
     }
+    
+    func testNextAction() {
+        let musicPlayerPresenter = MusicPlayerPresenter(mediaPlayer: mediaPlayer,
+                                                        musicPlayerView: musicPlayerView,
+                                                        dataProvider: musicDataProvider)
+        
+        musicDataProvider.searchResults = dataProvider.allSearchResults()
+        musicDataProvider.results = dataProvider.allResults()
+        musicPlayerPresenter.configureMusicPlayer()
+        musicPlayerPresenter.selectedIndex = 0
+        
+        musicPlayerView.configureCalled = false
+        
+        musicPlayerPresenter.nextAction()
+        
+        XCTAssertTrue(musicPlayerPresenter.selectedIndex == 1)
+        XCTAssertTrue(mediaPlayer.nextCalled)
+        XCTAssertTrue(musicPlayerView.configureCalled)
+        
+    }
+    
+    func testPreviousAction() {
+        let musicPlayerPresenter = MusicPlayerPresenter(mediaPlayer: mediaPlayer,
+                                                        musicPlayerView: musicPlayerView,
+                                                        dataProvider: musicDataProvider)
+        
+        musicDataProvider.searchResults = dataProvider.allSearchResults()
+        musicDataProvider.results = dataProvider.allResults()
+        musicPlayerPresenter.configureMusicPlayer()
+        musicPlayerPresenter.selectedIndex = 1
+        musicPlayerView.configureCalled = false
+        musicPlayerPresenter.previousAction()
+        
+        XCTAssertTrue(musicPlayerPresenter.selectedIndex == 0)
+        XCTAssertTrue(mediaPlayer.previousCalled)
+    }
 }
 
 class MockMediaPlayer: MediaPlaying {
