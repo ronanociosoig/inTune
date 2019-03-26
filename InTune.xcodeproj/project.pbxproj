@@ -15,6 +15,7 @@
 		AF4A0FF021AED2B1005F2A4F /* MediaPlayerDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4A0FEF21AED2B1005F2A4F /* MediaPlayerDataProvider.swift */; };
 		AF4A0FF521AF32C5005F2A4F /* MusicPlayerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4A0FF421AF32C5005F2A4F /* MusicPlayerPresenter.swift */; };
 		AF4A0FF721AF3873005F2A4F /* MusicPlayerDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4A0FF621AF3873005F2A4F /* MusicPlayerDataProvider.swift */; };
+		AF5E4CB7224A238100791599 /* SongDetailPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5E4CB6224A238100791599 /* SongDetailPresenterTests.swift */; };
 		AF6638652242A61F00C6688E /* invalidDateResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = AFD1FFBD21A987FE00D2894F /* invalidDateResponse.json */; };
 		AF6638692242CB5B00C6688E /* SearchPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6638682242CB5B00C6688E /* SearchPresenterTests.swift */; };
 		AF69214A220B2C5A009B41A7 /* IggyPopResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = AF692149220B2C59009B41A7 /* IggyPopResponse.json */; };
@@ -166,6 +167,7 @@
 		AF4A0FEF21AED2B1005F2A4F /* MediaPlayerDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPlayerDataProvider.swift; sourceTree = "<group>"; };
 		AF4A0FF421AF32C5005F2A4F /* MusicPlayerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerPresenter.swift; sourceTree = "<group>"; };
 		AF4A0FF621AF3873005F2A4F /* MusicPlayerDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerDataProvider.swift; sourceTree = "<group>"; };
+		AF5E4CB6224A238100791599 /* SongDetailPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongDetailPresenterTests.swift; sourceTree = "<group>"; };
 		AF6638682242CB5B00C6688E /* SearchPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenterTests.swift; sourceTree = "<group>"; };
 		AF692149220B2C59009B41A7 /* IggyPopResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = IggyPopResponse.json; sourceTree = "<group>"; };
 		AF93015F21ADF5F5002CEAAA /* NumberFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFormatter.swift; sourceTree = "<group>"; };
@@ -361,6 +363,7 @@
 		AF6638672242C86300C6688E /* Song Detail Tests */ = {
 			isa = PBXGroup;
 			children = (
+				AF5E4CB6224A238100791599 /* SongDetailPresenterTests.swift */,
 			);
 			path = "Song Detail Tests";
 			sourceTree = "<group>";
@@ -1024,6 +1027,7 @@
 				AFD1FFDF21AC6B4300D2894F /* SearchWireframeTests.swift in Sources */,
 				AFD1FFF321AD4D4F00D2894F /* SongDetailWireframeTests.swift in Sources */,
 				AFD1FF5821A8490600D2894F /* SearchiTunesServiceTests.swift in Sources */,
+				AF5E4CB7224A238100791599 /* SongDetailPresenterTests.swift in Sources */,
 				AF0944A82249937500D3E07E /* MusicPlayerDataProviderTests.swift in Sources */,
 				AFD1FF4421A8266500D2894F /* MockData.swift in Sources */,
 				AFD1FFD321ABF4A800D2894F /* ResultParserTests.swift in Sources */,
