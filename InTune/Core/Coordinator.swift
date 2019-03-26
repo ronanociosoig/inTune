@@ -65,6 +65,7 @@ class Coordinator: ActivityView, Coordinating {
     
     func dismissLoading() {
         hud?.dismiss(animated: true)
+        hud = nil
     }
     
     func showSearch() {

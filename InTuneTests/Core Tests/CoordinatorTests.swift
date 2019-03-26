@@ -36,5 +36,9 @@ class CoordinatorTests: XCTestCase {
         coordinator.showLoading()
         
         XCTAssertNotNil(coordinator.hud)
+        
+        coordinator.dismissLoading()
+        
+        XCTAssertNil(coordinator.hud)
     }
 }
