@@ -30,5 +30,9 @@ class AppControllerTests: XCTestCase {
     func testHasCoordinator() {
         appController.start()
         XCTAssertNotNil(appController.coordinator)
+        
+        let coordinator = appController.coordinator
+        
+        XCTAssertNotNil(coordinator?.dataProvider)
     }
 }
