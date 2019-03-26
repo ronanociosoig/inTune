@@ -91,13 +91,6 @@ class MusicPlayerPresenter: MusicPlayerPresenting {
             selectedIndex += 1
             
             configureMusicPlayer(at: selectedIndex)
-            
-//            let searchResult = searchResults[selectedIndex]
-//
-//            guard let result = result(with: searchResult.identifier) else { return }
-//
-//            musicPlayerView.configure(result: result)
-//            musicPlayerView.updateButtons()
         }
     }
     

@@ -61,8 +61,6 @@ struct Constants {
     
     struct Theme {
         static let tintColor = "OrangeThemeColor"
-            
-            // UIColor(red: 249/255, green: 163/255, blue: 61/255, alpha: 1.0)
     }
     
     struct MusicPlayer {

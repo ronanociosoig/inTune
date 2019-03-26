@@ -13,7 +13,6 @@ protocol AppControlling {
     func search(term: String)
 }
 
-
 class AppController: AppControlling {
     let dataProvider = DataProvider(service: NetworkService())
     var coordinator: Coordinator?
