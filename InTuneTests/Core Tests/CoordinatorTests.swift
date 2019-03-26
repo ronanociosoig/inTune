@@ -14,13 +14,9 @@ import UIKit
 class CoordinatorTests: XCTestCase {
 
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        
     }
 
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-    
     func testStartMakesViewController() {
         let appController = AppController()
         let coordinator = Coordinator(appController: appController)
@@ -30,5 +26,15 @@ class CoordinatorTests: XCTestCase {
         
         coordinator.start()
         XCTAssertNotNil(coordinator.window.rootViewController)
+    }
+    
+    func testShowSearch() {
+        let appController = AppController()
+        let coordinator = Coordinator(appController: appController)
+        
+        coordinator.window.rootViewController = UIViewController()
+        coordinator.showLoading()
+        
+        XCTAssertNotNil(coordinator.hud)
     }
 }
