@@ -16,7 +16,15 @@ struct Log {
     static var player = OSLog(subsystem: "com.sonomos.InTune", category: "AVPlayer")
 }
 
-class DataProvider {
+protocol DataProviding {
+    func search(term: String)
+    func prepareSearchResults()
+    func sort(option: SortOption)
+    func parseResults(results: [Result]) -> [SearchResult]
+    func result(at index: Int) -> Result?
+}
+
+class DataProvider: DataProviding {
     let appData = AppData()
     var dataLoaded: DataLoaded?
     let networkService: ServiceProvider
@@ -37,6 +45,7 @@ class DataProvider {
         appData.searchTerm = term
         appData.results.removeAll()
         appData.searchResults.removeAll()
+        appData.selectedIndex = 0
         
         searchService.load(term: term) { (data, errorMessage) in
             if let errorMessage = errorMessage {
