@@ -18,7 +18,6 @@ struct Log {
 
 protocol DataProviding {
     func search(term: String)
-    func prepareSearchResults()
     func sort(option: SortOption)
     func parseResults(results: [Result]) -> [SearchResult]
     func result(at index: Int) -> Result?
@@ -81,7 +80,7 @@ class DataProvider: DataProviding {
         }
     }
     
-    func prepareSearchResults() {
+    fileprivate func prepareSearchResults() {
         let results = appData.results
         appData.searchResults = parseResults(results: results)
     }
