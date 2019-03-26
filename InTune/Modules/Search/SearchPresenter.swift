@@ -20,20 +20,21 @@ protocol SearchPresenting {
 }
 
 class SearchPresenter {
-    var actions: SearchActions
-    var viewController: ViewController
-    var dataProvider: SearchDataProvider
-    let dataSource: SearchDataSource
-    var term: String?
+    private var actions: SearchActions
+    private var viewController: ViewController
+    private var dataProvider: SearchDataProvider
+    private var term: String?
+    
+    let dataSource = SearchDataSource()
     
     init(viewController: ViewController,
          actions: SearchActions,
-         dataProvider: SearchDataProvider,
-         dataSource: SearchDataSource) {
+         dataProvider: SearchDataProvider) {
         self.viewController = viewController
         self.actions = actions
         self.dataProvider = dataProvider
-        self.dataSource = dataSource
+        
+        dataSource.presenter = self
     }
 }
 

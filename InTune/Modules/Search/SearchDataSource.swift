@@ -11,7 +11,7 @@ import UIKit
 class SearchDataSource: NSObject, UITableViewDataSource {
     
     let cellIdentifier = "cellIdentifier"
-    weak var presenter: SearchPresenter!
+    weak var presenter: SearchPresenter?
     
     func register(tableView: UITableView) {
         tableView.register(cellType: ResultTableViewCell.self)
@@ -19,12 +19,17 @@ class SearchDataSource: NSObject, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        guard let presenter = presenter else { return 0 }
         return presenter.numberOfItems()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeue(cellType: ResultTableViewCell.self, for: indexPath)
+        
+        guard let presenter = presenter else {
+            return cell
+        }
         let item = presenter.item(at: indexPath)
         cell.configure(with: item)
         cell.accessibilityLabel = "SearchResultCell"

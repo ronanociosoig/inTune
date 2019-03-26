@@ -10,6 +10,7 @@
 		25EDE2F7700C844F6A3F7DA1 /* Pods_InTuneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C7455699D1A2AC12AFC8AFB /* Pods_InTuneTests.framework */; };
 		90A688FB600B13D45538BBD9 /* Pods_NetworkingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40BEA9DD20041FF6B39B66D6 /* Pods_NetworkingTests.framework */; };
 		AF0944A82249937500D3E07E /* MusicPlayerDataProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0944A72249937500D3E07E /* MusicPlayerDataProviderTests.swift */; };
+		AF1BB3C0224A6490008FBFEC /* SearchResultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1BB3BF224A6490008FBFEC /* SearchResultTests.swift */; };
 		AF4A0FEC21AE9BEC005F2A4F /* MusicPlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF4A0FEB21AE9BEC005F2A4F /* MusicPlayerView.xib */; };
 		AF4A0FEE21AEA3AC005F2A4F /* MusicPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4A0FED21AEA3AB005F2A4F /* MusicPlayerView.swift */; };
 		AF4A0FF021AED2B1005F2A4F /* MediaPlayerDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4A0FEF21AED2B1005F2A4F /* MediaPlayerDataProvider.swift */; };
@@ -162,6 +163,7 @@
 		9EACBB391B286CA5CF1436BB /* Pods-InTuneUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InTuneUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InTuneUITests/Pods-InTuneUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A91C5F5DB97EE765EA898C9A /* Pods-Networking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Networking.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Networking/Pods-Networking.debug.xcconfig"; sourceTree = "<group>"; };
 		AF0944A72249937500D3E07E /* MusicPlayerDataProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerDataProviderTests.swift; sourceTree = "<group>"; };
+		AF1BB3BF224A6490008FBFEC /* SearchResultTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultTests.swift; sourceTree = "<group>"; };
 		AF4A0FEB21AE9BEC005F2A4F /* MusicPlayerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicPlayerView.xib; sourceTree = "<group>"; };
 		AF4A0FED21AEA3AB005F2A4F /* MusicPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerView.swift; sourceTree = "<group>"; };
 		AF4A0FEF21AED2B1005F2A4F /* MediaPlayerDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPlayerDataProvider.swift; sourceTree = "<group>"; };
@@ -355,7 +357,9 @@
 		AF6638662242C85700C6688E /* Search Tests */ = {
 			isa = PBXGroup;
 			children = (
+				AFD1FFDE21AC6B4300D2894F /* SearchWireframeTests.swift */,
 				AF6638682242CB5B00C6688E /* SearchPresenterTests.swift */,
+				AF1BB3BF224A6490008FBFEC /* SearchResultTests.swift */,
 			);
 			path = "Search Tests";
 			sourceTree = "<group>";
@@ -364,6 +368,7 @@
 			isa = PBXGroup;
 			children = (
 				AF5E4CB6224A238100791599 /* SongDetailPresenterTests.swift */,
+				AFD1FFF221AD4D4F00D2894F /* SongDetailWireframeTests.swift */,
 			);
 			path = "Song Detail Tests";
 			sourceTree = "<group>";
@@ -423,8 +428,6 @@
 				AFD1FFB421A87BAB00D2894F /* AppControllerTests.swift */,
 				AFD1FFD221ABF4A800D2894F /* ResultParserTests.swift */,
 				AFD1FFD421AC0F9F00D2894F /* TimeFormatterTests.swift */,
-				AFD1FFDE21AC6B4300D2894F /* SearchWireframeTests.swift */,
-				AFD1FFF221AD4D4F00D2894F /* SongDetailWireframeTests.swift */,
 				AFC47DAD21B5B37500B98DEC /* DateFormatterTests.swift */,
 				AF0944A72249937500D3E07E /* MusicPlayerDataProviderTests.swift */,
 			);
@@ -1022,6 +1025,7 @@
 				AFD1FF6121A85D8700D2894F /* CoordinatorTests.swift in Sources */,
 				AFD1FFB521A87BAB00D2894F /* AppControllerTests.swift in Sources */,
 				AFC47DAE21B5B37500B98DEC /* DateFormatterTests.swift in Sources */,
+				AF1BB3C0224A6490008FBFEC /* SearchResultTests.swift in Sources */,
 				AFD1FFAF21A8704800D2894F /* DataProviderTests.swift in Sources */,
 				AF6638692242CB5B00C6688E /* SearchPresenterTests.swift in Sources */,
 				AFD1FFDF21AC6B4300D2894F /* SearchWireframeTests.swift in Sources */,
