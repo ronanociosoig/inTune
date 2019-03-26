@@ -18,9 +18,13 @@ extension AppController: SearchActions {
     func search(term: String) {
         dataProvider.search(term: term)
         
+        #if arch(i386) || arch(x86_64)
+        self.coordinator?.showLoading()
+        #else
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
             self.coordinator?.showLoading()
         }
+        #endif
     }
     
     func select(index: Int) {
