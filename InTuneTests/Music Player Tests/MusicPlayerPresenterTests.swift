@@ -75,6 +75,23 @@ class MusicPlayerPresenterTests: XCTestCase {
         XCTAssertTrue(musicDataProvider.mediaUrlsCalled)
         XCTAssertTrue(mediaPlayer.togglePlayCalled)
     }
+    
+    func testTogglePlay() {
+        let musicPlayerPresenter = MusicPlayerPresenter(mediaPlayer: mediaPlayer,
+                                                        musicPlayerView: musicPlayerView,
+                                                        dataProvider: musicDataProvider)
+        
+        musicDataProvider.searchResults = dataProvider.allSearchResults()
+        musicDataProvider.results = dataProvider.allResults()
+        musicPlayerPresenter.configureMusicPlayer()
+        
+        
+        mediaPlayer.playing = true
+        
+        musicPlayerPresenter.togglePlay()
+        
+        XCTAssertTrue(mediaPlayer.togglePlayCalled)
+    }
 }
 
 class MockMediaPlayer: MediaPlaying {
