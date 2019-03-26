@@ -26,6 +26,8 @@ class MusicPlayerPresenter: MusicPlayerPresenting {
     var selectedIndex: Int = 0
     var maxIndex: Int = 0
     var activityView: ActivityView?
+    var searchResults = [SearchResult]()
+    var results = [Result]()
     
     init(mediaPlayer: MediaPlayer,
          musicPlayerView: MusicPlayerView,
@@ -37,17 +39,24 @@ class MusicPlayerPresenter: MusicPlayerPresenting {
     
     func configureMusicPlayer() {
         selectedIndex = dataProvider.selectedIndex()
+        searchResults.removeAll()
+        searchResults.append(contentsOf: dataProvider.allSearchResults())
+        results.removeAll()
+        results.append(contentsOf: dataProvider.allResults())
         configureMusicPlayer(at: selectedIndex)
+        maxIndex = dataProvider.maxIndex()
     }
     
     func configureMusicPlayer(at index: Int) {
-        maxIndex = dataProvider.maxIndex()
-        
-        let searchResult = dataProvider.searchResult(at: index)
-        guard let result = dataProvider.result(with: searchResult.identifier) else { return }
+        let searchResult = searchResults[index]
+        guard let result = result(with: searchResult.identifier) else { return }
         
         musicPlayerView.configure(result: result)
         musicPlayerView.updateButtons()
+    }
+    
+    func result(with identifier: Int) -> Result? {
+        return (results.filter { $0.trackID == identifier }).first
     }
     
     func togglePlay() {
@@ -78,12 +87,14 @@ class MusicPlayerPresenter: MusicPlayerPresenting {
         if selectedIndex < maxIndex {
             selectedIndex += 1
             
-            let searchResult = dataProvider.searchResult(at: selectedIndex)
+            configureMusicPlayer(at: selectedIndex)
             
-            guard let result = dataProvider.result(with: searchResult.identifier) else { return }
-            
-            musicPlayerView.configure(result: result)
-            musicPlayerView.updateButtons()
+//            let searchResult = searchResults[selectedIndex]
+//
+//            guard let result = result(with: searchResult.identifier) else { return }
+//
+//            musicPlayerView.configure(result: result)
+//            musicPlayerView.updateButtons()
         }
     }
     
