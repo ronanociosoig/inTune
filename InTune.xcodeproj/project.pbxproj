@@ -334,6 +334,35 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		AF1BB3C1224A8DDF008FBFEC /* Music Player Tests */ = {
+			isa = PBXGroup;
+			children = (
+				AF0944A72249937500D3E07E /* MusicPlayerDataProviderTests.swift */,
+			);
+			path = "Music Player Tests";
+			sourceTree = "<group>";
+		};
+		AF1BB3C2224A8DEA008FBFEC /* Core Tests */ = {
+			isa = PBXGroup;
+			children = (
+				AFD1FF6021A85D8700D2894F /* CoordinatorTests.swift */,
+				AFD1FFB421A87BAB00D2894F /* AppControllerTests.swift */,
+				AFD1FFAE21A8704800D2894F /* DataProviderTests.swift */,
+			);
+			path = "Core Tests";
+			sourceTree = "<group>";
+		};
+		AF1BB3C3224A8E17008FBFEC /* Services Tests */ = {
+			isa = PBXGroup;
+			children = (
+				AFD1FF5721A8490600D2894F /* SearchiTunesServiceTests.swift */,
+				AFD1FFD221ABF4A800D2894F /* ResultParserTests.swift */,
+				AFD1FFD421AC0F9F00D2894F /* TimeFormatterTests.swift */,
+				AFC47DAD21B5B37500B98DEC /* DateFormatterTests.swift */,
+			);
+			path = "Services Tests";
+			sourceTree = "<group>";
+		};
 		AF4A0FEA21AE9BBE005F2A4F /* Music Player */ = {
 			isa = PBXGroup;
 			children = (
@@ -418,18 +447,13 @@
 		AFD1FED921A6CE7700D2894F /* InTuneTests */ = {
 			isa = PBXGroup;
 			children = (
+				AF1BB3C3224A8E17008FBFEC /* Services Tests */,
+				AF1BB3C2224A8DEA008FBFEC /* Core Tests */,
+				AF1BB3C1224A8DDF008FBFEC /* Music Player Tests */,
 				AF6638672242C86300C6688E /* Song Detail Tests */,
 				AF6638662242C85700C6688E /* Search Tests */,
 				AFD1FF4021A8256900D2894F /* Mocks */,
 				AFD1FEDC21A6CE7700D2894F /* Info.plist */,
-				AFD1FF5721A8490600D2894F /* SearchiTunesServiceTests.swift */,
-				AFD1FF6021A85D8700D2894F /* CoordinatorTests.swift */,
-				AFD1FFAE21A8704800D2894F /* DataProviderTests.swift */,
-				AFD1FFB421A87BAB00D2894F /* AppControllerTests.swift */,
-				AFD1FFD221ABF4A800D2894F /* ResultParserTests.swift */,
-				AFD1FFD421AC0F9F00D2894F /* TimeFormatterTests.swift */,
-				AFC47DAD21B5B37500B98DEC /* DateFormatterTests.swift */,
-				AF0944A72249937500D3E07E /* MusicPlayerDataProviderTests.swift */,
 			);
 			path = InTuneTests;
 			sourceTree = "<group>";
