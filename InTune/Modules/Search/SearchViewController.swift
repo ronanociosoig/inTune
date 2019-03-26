@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol ViewController {
+protocol ViewController: class {
     func reload()
     func setDataSource(dataSource: SearchDataSource)
     func sortButton(enabled: Bool)

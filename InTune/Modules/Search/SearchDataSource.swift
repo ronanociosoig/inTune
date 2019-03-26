@@ -9,9 +9,7 @@
 import UIKit
 
 class SearchDataSource: NSObject, UITableViewDataSource {
-    
-    let cellIdentifier = "cellIdentifier"
-    weak var presenter: SearchPresenter?
+    weak var presenter: SearchPresenting?
     
     func register(tableView: UITableView) {
         tableView.register(cellType: ResultTableViewCell.self)

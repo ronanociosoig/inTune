@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol SearchPresenting {
+protocol SearchPresenting: class {
     func sortBarButtonAction()
     func selected(option: SortOption)
     func viewDidLayoutSubviews()

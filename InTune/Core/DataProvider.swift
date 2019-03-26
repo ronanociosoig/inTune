@@ -16,7 +16,7 @@ struct Log {
     static var player = OSLog(subsystem: "com.sonomos.InTune", category: "AVPlayer")
 }
 
-protocol DataProviding {
+protocol DataProviding: class {
     func search(term: String)
     func sort(option: SortOption)
     func parseResults(results: [Result]) -> [SearchResult]

@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol SongDetailPresenting {
+protocol SongDetailPresenting: class {
     func willLayoutSubviews()
 }
 

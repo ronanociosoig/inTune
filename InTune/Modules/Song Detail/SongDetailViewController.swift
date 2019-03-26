@@ -10,7 +10,7 @@ import UIKit
 import AVFoundation
 import os.log
 
-protocol SongDetailController {
+protocol SongDetailController: class {
     func show(result: Result)
 }
 
