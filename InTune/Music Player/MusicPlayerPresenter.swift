@@ -20,14 +20,14 @@ protocol MusicPlayerPresenting {
 }
 
 class MusicPlayerPresenter: MusicPlayerPresenting {
-    let mediaPlayer: MediaPlayer
-    let musicPlayerView: MusicPlayerView
-    let dataProvider: MusicPlayerDataProvider
-    var selectedIndex: Int = 0
-    var maxIndex: Int = 0
-    var activityView: ActivityView?
-    var searchResults = [SearchResult]()
-    var results = [Result]()
+    private var mediaPlayer: MediaPlaying
+    private let musicPlayerView: MusicPlayerView
+    private let dataProvider: MusicPlayerDataProvider
+    internal var selectedIndex: Int = 0
+    internal var maxIndex: Int = 0
+    internal var activityView: ActivityView?
+    private var searchResults = [SearchResult]()
+    private var results = [Result]()
     
     init(mediaPlayer: MediaPlayer,
          musicPlayerView: MusicPlayerView,
@@ -50,7 +50,7 @@ class MusicPlayerPresenter: MusicPlayerPresenting {
         configureMusicPlayer(at: selectedIndex)
     }
     
-    func configureMusicPlayer(at index: Int) {
+    private func configureMusicPlayer(at index: Int) {
         let searchResult = searchResults[index]
         guard let result = result(with: searchResult.identifier) else { return }
         
@@ -58,20 +58,20 @@ class MusicPlayerPresenter: MusicPlayerPresenting {
         musicPlayerView.updateButtons()
     }
     
-    func result(with identifier: Int) -> Result? {
+    private func result(with identifier: Int) -> Result? {
         return (results.filter { $0.trackID == identifier }).first
     }
     
-    func togglePlay() {
+    internal func togglePlay() {
         mediaPlayer.currentIndex = selectedIndex
         mediaPlayer.togglePlay()
     }
     
-    func isPlaying() -> Bool {
+    internal func isPlaying() -> Bool {
         return mediaPlayer.playing
     }
     
-    func previousAction() {
+    internal func previousAction() {
         
         if selectedIndex > 0 {
             selectedIndex -= 1
@@ -80,12 +80,12 @@ class MusicPlayerPresenter: MusicPlayerPresenting {
         }
     }
     
-    func nextAction() {
+    internal func nextAction() {
         mediaPlayer.next()
         nextItem()
     }
     
-    func nextItem() {
+    internal func nextItem() {
 
         if selectedIndex < maxIndex {
             selectedIndex += 1

@@ -16,7 +16,17 @@ protocol MediaPlayerDelegate {
     func startedPlaying()
 }
 
-class MediaPlayer {
+protocol MediaPlaying {
+    var playing: Bool { get set }
+    var currentIndex: Int { get set }
+    
+    func addPlayList(list: [URL])
+    func togglePlay()
+    func next()
+    func previous()
+}
+
+class MediaPlayer: MediaPlaying {
     var playing: Bool = false
     var playList = [AVPlayerItem]()
     var currentIndex: Int = 0
