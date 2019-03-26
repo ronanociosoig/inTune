@@ -11,7 +11,6 @@ import Foundation
 protocol MusicPlayerDataProvider {
     func mediaUrls(from index: Int) -> [URL]
     func selectedIndex() -> Int
-    func maxIndex() -> Int
     func allSearchResults() -> [SearchResult]
     func allResults() -> [Result]
 }
@@ -20,10 +19,6 @@ extension DataProvider: MusicPlayerDataProvider {
     
     func selectedIndex() -> Int {
         return appData.selectedIndex
-    }
-    
-    func maxIndex() -> Int {
-        return appData.searchResults.count - 1
     }
     
     func allSearchResults() -> [SearchResult] {
