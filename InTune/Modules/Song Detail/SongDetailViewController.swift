@@ -10,14 +10,13 @@ import UIKit
 import AVFoundation
 import os.log
 
-
 protocol SongDetailController {
     func show(result: Result)
 }
 
 class SongDetailViewController: UIViewController {
     
-    var presenter: SongDetailPresenter!
+    var presenter: SongDetailPresenting?
     var songDetailView: SongDetailView?
     
     override func viewDidLoad() {
@@ -35,11 +34,13 @@ class SongDetailViewController: UIViewController {
     }
     
     override func viewWillLayoutSubviews() {
-        presenter.willLayoutSubviews()
-        
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.action, target: self, action: #selector(share(sender:)))
         
         navigationItem.rightBarButtonItem?.accessibilityLabel = "Share"
+        
+        guard let presenter = presenter else { return }
+        
+        presenter.willLayoutSubviews()
     }
     
     override func viewDidAppear(_ animated: Bool) {
