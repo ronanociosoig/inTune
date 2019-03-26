@@ -14,9 +14,11 @@ class SongDetailPresenterTests: XCTestCase {
     
     let networkService = MockNetworkService()
     var dataProvider: DataProvider!
+    let viewController = SongDetailWireframe.makeViewController()
+    let appController = AppController()
 
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        dataProvider = DataProvider(service: networkService)
     }
 
     override func tearDown() {
@@ -24,10 +26,6 @@ class SongDetailPresenterTests: XCTestCase {
     }
 
     func testPresenter() {
-        let viewController = SongDetailWireframe.makeViewController()
-        let dataProvider = DataProvider(service: networkService)
-        let appController = AppController()
-        
         let songDetailActions = appController as SongDetailActions
         
         let songDetailPresenter = SongDetailPresenter(viewController: viewController, actions: songDetailActions, dataProvider: dataProvider)
@@ -35,4 +33,38 @@ class SongDetailPresenterTests: XCTestCase {
         XCTAssertNotNil(songDetailPresenter)
     }
     
+    func testWillLayoutCallsShowResult() {
+        let songDetailActions = appController as SongDetailActions
+        let mockViewController = MockViewController()
+        let presenter = SongDetailPresenter(viewController: mockViewController,
+                                                      actions: songDetailActions,
+                                                      dataProvider: dataProvider)
+        
+        networkService.responseType = .simpleResponse
+        dataProvider.search(term: "Moby")
+        
+        guard let result = dataProvider.appData.results.first else {
+            XCTFail()
+            return
+        }
+
+        presenter.selectedResult = result
+        
+        presenter.willLayoutSubviews()
+        
+        XCTAssertTrue(mockViewController.showCalled)
+        XCTAssertNotNil(mockViewController.result)
+        XCTAssertEqual(result.artistID, mockViewController.result!.artistID)
+    }
+    
+}
+
+class MockViewController: SongDetailController {
+    var showCalled: Bool = false
+    var result: Result?
+    
+    func show(result: Result) {
+        showCalled = true
+        self.result = result
+    }
 }
