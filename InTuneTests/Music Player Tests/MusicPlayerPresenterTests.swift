@@ -53,9 +53,27 @@ class MusicPlayerPresenterTests: XCTestCase {
         musicDataProvider.searchResults = dataProvider.allSearchResults()
         musicDataProvider.results = dataProvider.allResults()
         musicPlayerPresenter.configureMusicPlayer()
-        
+        XCTAssertTrue(musicDataProvider.allResultsCalled)
+        XCTAssertTrue(musicDataProvider.allSearchResultsCalled)
         XCTAssertTrue(musicPlayerView.configureCalled)
         XCTAssertTrue(musicPlayerView.updateButtonsCalled)
+    }
+    
+    func testLoadMediaPlayerItems() {
+        let musicPlayerPresenter = MusicPlayerPresenter(mediaPlayer: mediaPlayer,
+                                                        musicPlayerView: musicPlayerView,
+                                                        dataProvider: musicDataProvider)
+        
+        
+        
+        musicDataProvider.searchResults = dataProvider.allSearchResults()
+        musicDataProvider.results = dataProvider.allResults()
+        musicPlayerPresenter.configureMusicPlayer()
+        
+        mediaPlayer.playing = true
+        musicPlayerPresenter.loadMediaPlayerItems()
+        XCTAssertTrue(musicDataProvider.mediaUrlsCalled)
+        XCTAssertTrue(mediaPlayer.togglePlayCalled)
     }
 }
 
@@ -110,21 +128,30 @@ class MockMusicDataProvider: MusicPlayerDataProvider {
     var results = [Result]()
     var searchResults = [SearchResult]()
     
+    var mediaUrlsCalled: Bool = false
+    var selectedIndexCalled: Bool = false
+    var allSearchResultsCalled: Bool = false
+    var allResultsCalled: Bool = false
+    
     func mediaUrls(from index: Int) -> [URL] {
+        mediaUrlsCalled = true
         let url1 = URL(string: "http://www.apple.com/media/file1.mp3")!
         let url2 = URL(string: "http://www.apple.com/media/file2.mp3")!
         return [url1,url2]
     }
     
     func selectedIndex() -> Int {
+        selectedIndexCalled = true
         return 1
     }
     
     func allSearchResults() -> [SearchResult] {
+        allSearchResultsCalled = true
         return searchResults
     }
     
     func allResults() -> [Result] {
+        allResultsCalled = true
         return results
     }
 }
