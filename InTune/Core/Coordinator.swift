@@ -14,7 +14,23 @@ protocol ActivityView {
     func dismissLoading()
 }
 
-class Coordinator: ActivityView {
+protocol Coordinating {
+    var musicPlayerView: MusicPlayerView? { get set }
+    var musicPlayerPresenter: MusicPlayerPresenter? { get set }
+    var dataProvider: DataProvider? { get set }
+    
+    func start()
+    
+    func showLoading()
+    func dismissLoading()
+    
+    func showSearch()
+    func showSearchResults()
+    func showSongDetail()
+    func showMusicPlayer()
+}
+
+class Coordinator: ActivityView, Coordinating {
     let window: UIWindow
     var dataProvider: DataProvider?
     var appController: AppController
@@ -38,7 +54,7 @@ class Coordinator: ActivityView {
         showHud(with: Constants.Translations.loading)
     }
     
-    func showHud(with message: String) {
+    private func showHud(with message: String) {
         
         guard let topViewController = window.rootViewController else { return }
         
