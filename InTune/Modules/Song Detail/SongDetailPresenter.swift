@@ -13,9 +13,9 @@ protocol SongDetailPresenting {
 }
 
 class SongDetailPresenter {
-    var actions: SongDetailActions!
-    var viewController: SongDetailController!
-    var dataProvider: SongDetailDataProvider!
+    var actions: SongDetailActions
+    var viewController: SongDetailController
+    var dataProvider: SongDetailDataProvider
     var selectedResult: Result?
     
     init(viewController: SongDetailController,
