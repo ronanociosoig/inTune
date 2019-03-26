@@ -104,8 +104,4 @@ class DataProvider {
         }
         return nil
     }
-    
-    func copyResults() {
-        appData.playerResults.append(contentsOf: appData.results)
-    }
 }
