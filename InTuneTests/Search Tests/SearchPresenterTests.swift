@@ -52,7 +52,7 @@ class SearchPresenterTests: XCTestCase {
     }
     
     func testSearchActionsCalled() {
-        
+        let expectedIndex: Int = 1
         let presenter = SearchPresenter(viewController: viewController,
                                         actions: actions,
                                         dataProvider: dataProvider)
@@ -62,6 +62,40 @@ class SearchPresenterTests: XCTestCase {
         XCTAssertTrue(actions.searchCalled)
         XCTAssertTrue(actions.term == expectedSearchTerm)
 
+        
+        dataProvider.search(term: expectedSearchTerm)
+        
+        presenter.select(index: expectedIndex)
+        XCTAssertTrue(actions.selectedIndex == expectedIndex)
+        
+        
+    }
+    
+    func testItemAtIndex() {
+        let presenter = SearchPresenter(viewController: viewController,
+                                        actions: actions,
+                                        dataProvider: dataProvider)
+        
+        dataProvider.search(term: expectedSearchTerm)
+        
+        let expectedItem = dataProvider.appData.searchResults[1]
+        let indexPath = IndexPath(item: 1, section: 0)
+        let item = presenter.item(at: indexPath)
+        
+        XCTAssertEqual(expectedItem.identifier, item.identifier)
+        
+    }
+    
+    func testSelectedOption() {
+        let presenter = SearchPresenter(viewController: viewController,
+                                        actions: actions,
+                                        dataProvider: dataProvider)
+        
+        dataProvider.search(term: expectedSearchTerm)
+        
+        presenter.selected(option: .album)
+        XCTAssertTrue(actions.sortCalled)
+        XCTAssertTrue(viewController.reloadCalled)
     }
 }
 
@@ -70,6 +104,7 @@ class MockSearchActions: SearchActions {
     var selectCalled: Bool = false
     var sortCalled: Bool = false
     var term: String?
+    var selectedIndex: Int = -1
     
     func search(term: String) {
         searchCalled = true
@@ -78,6 +113,7 @@ class MockSearchActions: SearchActions {
     
     func select(index: Int) {
         selectCalled = true
+        selectedIndex = index
     }
     
     func sort(option: SortOption) {
