@@ -15,9 +15,16 @@ class MusicPlayerPresenterTests: XCTestCase {
     let mediaPlayer = MockMediaPlayer()
     let musicPlayerView = MockMusicPlayerView()
     let musicDataProvider = MockMusicDataProvider()
+    
+    let networkService = MockNetworkService()
+    var dataProvider: DataProvider!
+    
+    let referenceSearchTerm = "monthy python"
 
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        dataProvider = DataProvider(service: networkService)
+        networkService.responseType = .simpleResponse
+        dataProvider.search(term: referenceSearchTerm)
     }
 
     override func tearDown() {
@@ -34,6 +41,21 @@ class MusicPlayerPresenterTests: XCTestCase {
         let playing = musicPlayerPresenter.isPlaying()
         
         XCTAssertTrue(playing)
+    }
+    
+    func testConfigurePlayer() {
+        let musicPlayerPresenter = MusicPlayerPresenter(mediaPlayer: mediaPlayer,
+                                                        musicPlayerView: musicPlayerView,
+                                                        dataProvider: musicDataProvider)
+        
+        
+        
+        musicDataProvider.searchResults = dataProvider.allSearchResults()
+        musicDataProvider.results = dataProvider.allResults()
+        musicPlayerPresenter.configureMusicPlayer()
+        
+        XCTAssertTrue(musicPlayerView.configureCalled)
+        XCTAssertTrue(musicPlayerView.updateButtonsCalled)
     }
 }
 
