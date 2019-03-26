@@ -55,13 +55,13 @@ class MediaPlayer {
             self.playList.append(item)
         }
         
-        os_log("addPlayList, count: %d", log: Log.player, type: .info, list.count)
+        os_log("AddPlayList, count: %d", log: Log.player, type: .info, list.count)
         
         cachingData = true
     }
     
     func togglePlay() {
-        os_log("togglePlay", log: Log.player, type: .info)
+        os_log("TogglePlay", log: Log.player, type: .info)
         if playing == true {
             playing = false
             playerQueue?.pause()
@@ -77,7 +77,7 @@ class MediaPlayer {
     }
     
     func next() {
-        os_log("next", log: Log.player, type: .info)
+        os_log("Next", log: Log.player, type: .info)
         if playing == true {
             playerQueue?.pause()
         }
@@ -90,7 +90,7 @@ class MediaPlayer {
     }
     
     func previous() {
-        os_log("previous", log: Log.player, type: .info)
+        os_log("Previous", log: Log.player, type: .info)
         
         if playing == true {
             playerQueue?.pause()
@@ -104,7 +104,7 @@ class MediaPlayer {
     // MARK: Private functions
 
     fileprivate func resetPlayerQueue() {
-        os_log("resetPlayerQueue", log: Log.player, type: .info)
+        os_log("ResetPlayerQueue", log: Log.player, type: .info)
         if playing == true {
             playing = false
             playerQueue?.pause()
@@ -114,7 +114,7 @@ class MediaPlayer {
     }
     
     fileprivate func playFromCurrentIndex() {
-        os_log("playFromCurrentIndex: %d", log: Log.player, type: .info, currentIndex)
+        os_log("PlayFromCurrentIndex: %d", log: Log.player, type: .info, currentIndex)
         resetPlayerQueue()
         
         for index in currentIndex..<playList.count {
@@ -142,7 +142,7 @@ class MediaPlayer {
     }
     
     fileprivate func addPeriodicTimeObserver() {
-        os_log("addPeriodicTimeObserver", log: Log.player, type: .info)
+        os_log("AddPeriodicTimeObserver", log: Log.player, type: .info)
         // Invoke callback every half second
         let interval = CMTime(seconds: 1.0,
                               preferredTimescale: CMTimeScale(NSEC_PER_MSEC))
@@ -170,7 +170,7 @@ class MediaPlayer {
                         // we are ending the track.
                         // send a notification to the player.
                         
-                        os_log("Track end.", log: Log.player, type: .info)
+                        os_log("Track end", log: Log.player, type: .info)
                         self?.next()
                         self?.delegate.update()
                     }
@@ -181,7 +181,7 @@ class MediaPlayer {
     fileprivate func removePeriodicTimeObserver() {
         // If a time observer exists, remove it
         if let token = timeObserverToken {
-            os_log("removePeriodicTimeObserver", log: Log.player, type: .info)
+            os_log("RemovePeriodicTimeObserver", log: Log.player, type: .info)
             playerQueue?.removeTimeObserver(token)
             timeObserverToken = nil
         }
