@@ -22,9 +22,9 @@ class CoordinatorTests: XCTestCase {
     }
     
     func testStartMakesViewController() {
-        let coordinator = Coordinator()
         let appController = AppController()
-        coordinator.appController = appController
+        let coordinator = Coordinator(appController: appController)
+        
         coordinator.dataProvider = appController.dataProvider
         XCTAssertNotNil(coordinator.window)
         
