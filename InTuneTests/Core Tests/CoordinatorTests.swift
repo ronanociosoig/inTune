@@ -14,17 +14,23 @@ import UIKit
 class CoordinatorTests: XCTestCase {
     let appController = AppController()
     var coordinator: Coordinator!
+    let presenter = MockSearchPresenter()
+    let musicPlayerPresenter = MockMusicPlayerPresenter()
 
     override func setUp() {
         coordinator = Coordinator(appController: appController)
         coordinator.dataProvider = appController.dataProvider
+        coordinator.start()
     }
 
     func testStartMakesViewController() {
         XCTAssertNotNil(coordinator.window)
         
-        coordinator.start()
         XCTAssertNotNil(coordinator.window.rootViewController)
+    }
+    
+    func testShowSearch() {
+        XCTAssertNotNil(coordinator.presenter)
     }
     
     func testShowLoading() {
@@ -38,19 +44,98 @@ class CoordinatorTests: XCTestCase {
         XCTAssertNil(coordinator.hud)
     }
     
-    func testShowSearch() {
-        coordinator.start()
-        
-        XCTAssertNotNil(coordinator.presenter)
-    }
-    
     func testShowResults() {
         let presenter = MockSearchPresenter()
-        coordinator.start()
         coordinator.presenter = presenter
         coordinator.showSearchResults()
         
         XCTAssertTrue(presenter.dataReceivedCalled)
+    }
+    
+    func testShowSongDetail() {
+        coordinator.presenter = presenter
+        
+        coordinator.showSongDetail()
+        
+        guard let navigationController = coordinator.window.rootViewController as? UINavigationController else {
+            XCTFail()
+            return
+        }
+        
+        let topViewController = navigationController.topViewController
+        
+        XCTAssertNotNil(topViewController)
+    }
+    
+    func testShowMusicPlayer() {
+        coordinator.presenter = presenter
+        coordinator.showMusicPlayer()
+        
+        guard let navigationController = coordinator.window.rootViewController as? UINavigationController else {
+            XCTFail()
+            return
+        }
+        
+        for view in navigationController.view.subviews {
+            let name = String(describing: type(of: view))
+            
+            if name == "MusicPlayerView" {
+                XCTAssertTrue(true)
+            }
+        }
+        
+        coordinator.hideMusicPlayer()
+        
+        for view in navigationController.view.subviews {
+            let name = String(describing: type(of: view))
+            
+            if name == "MusicPlayerView" {
+                
+                XCTFail()
+                return
+            }
+        }
+        
+        XCTAssertTrue(true)
+    }
+    
+    func testShowAlertController() {
+        coordinator.showAlert(with: "Validate Testing")
+        
+        guard let navigationController = coordinator.window.rootViewController as? UINavigationController else {
+            XCTFail()
+            return
+        }
+        
+        if navigationController.presentingViewController != nil {
+            XCTAssertTrue(true)
+        }
+    }
+    
+    func testMediaPlayerDelegateCalls() {
+        coordinator.musicPlayerPresenter = musicPlayerPresenter
+        let mediaPlayerDelegate = coordinator as MediaPlayerDelegate
+        
+        mediaPlayerDelegate.preroll()
+        
+        XCTAssertNotNil(coordinator.hud)
+        
+        mediaPlayerDelegate.startedPlaying()
+        
+        XCTAssertNil(coordinator.hud)
+        
+        mediaPlayerDelegate.update()
+        
+        XCTAssertTrue(musicPlayerPresenter.nextItemCalled)
+    }
+    
+    func testDataReceived() {
+        coordinator.musicPlayerPresenter = musicPlayerPresenter
+        let dataLoadedCallback = coordinator as DataLoaded
+        
+        dataLoadedCallback.dataReceived(errorMessage: nil)
+        
+        
     }
 }
 
@@ -89,4 +174,33 @@ class MockSearchPresenter: SearchPresenting {
         dataReceivedCalled = true
     }
     
+}
+
+class MockMusicPlayerPresenter: MusicPlayerPresenting {
+    var selectedIndex: Int = 0
+    var maxIndex: Int = 0
+    var playing: Bool = false
+    var nextItemCalled = false
+    
+    var activityView: ActivityView?
+    
+    func togglePlay() {
+        
+    }
+    
+    func isPlaying() -> Bool {
+        return playing
+    }
+    
+    func previousAction() {
+        
+    }
+    
+    func nextAction() {
+        
+    }
+    
+    func nextItem() {
+        nextItemCalled = true
+    }
 }

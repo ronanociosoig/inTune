@@ -62,6 +62,8 @@ class MusicPlayerViewTests: XCTestCase {
 class MockMusicPresenter: MusicPlayerPresenting {
     var selectedIndex: Int = 0
     var maxIndex: Int = 0
+    var activityView: ActivityView?
+    
     var playing = false
     var togglePlayCalled = false
     var isPlayingCalled = false
@@ -84,5 +86,9 @@ class MockMusicPresenter: MusicPlayerPresenting {
     
     func nextAction() {
         nextActionCalled = true
+    }
+    
+    func nextItem() {
+        
     }
 }

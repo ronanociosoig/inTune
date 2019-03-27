@@ -48,7 +48,7 @@ class MockCoordinator: Coordinating {
     
     var musicPlayerView: MusicPlayerView?
     
-    var musicPlayerPresenter: MusicPlayerPresenter?
+    var musicPlayerPresenter: MusicPlayerPresenting?
     
     var dataProvider: DataProvider?
     
