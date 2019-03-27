@@ -77,6 +77,9 @@ class SearchViewControllerTests: XCTestCase {
         viewController.reload()
         
         XCTAssertTrue(dataSource.numberOfRowsCalled)
+        let indexPath = IndexPath(row: 0, section: 0)
+        viewController.tableView(tableView, didSelectRowAt: indexPath)
+        XCTAssertTrue(searchPresenter.selectCalled)
     }
 }
 

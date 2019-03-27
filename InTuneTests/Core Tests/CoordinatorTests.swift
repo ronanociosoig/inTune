@@ -153,6 +153,7 @@ class MockSearchPresenter: SearchPresenting {
     var sortBarButtonActionCalled = false
     var selectedCalled = false
     var searchCalled = false
+    var selectCalled = false 
     
     func sortBarButtonAction() {
         sortBarButtonActionCalled = true
@@ -167,7 +168,7 @@ class MockSearchPresenter: SearchPresenting {
     }
     
     func select(index: Int) {
-        
+        selectCalled = true
     }
     
     func search(term: String) {
