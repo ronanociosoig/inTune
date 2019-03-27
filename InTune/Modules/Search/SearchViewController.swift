@@ -20,15 +20,15 @@ class SearchViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
     
     var presenter: SearchPresenting?
-    var searchText: String?
+    private var searchText: String?
     
-    let rowHeight: CGFloat = 61
-    let sideInset: CGFloat = 5
+    private let rowHeight: CGFloat = 61
+    private let sideInset: CGFloat = 5
     
-    let playerContentInset = UIEdgeInsets(top: 0, left: 0, bottom: 63, right: 0)
-    let noPlayerContentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+    private let playerContentInset = UIEdgeInsets(top: 0, left: 0, bottom: 63, right: 0)
+    private let noPlayerContentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     
-    let searchController = UISearchController(searchResultsController: nil)
+    private let searchController = UISearchController(searchResultsController: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,6 +65,7 @@ class SearchViewController: UIViewController {
         tableView.accessibilityLabel = "ResultsTable"
         tableView.isAccessibilityElement = true
         tableView.contentInset = playerContentInset
+        tableView.scrollIndicatorInsets = playerContentInset
         
         presenter?.viewDidLayoutSubviews()
     }
@@ -86,7 +87,7 @@ class SearchViewController: UIViewController {
         title = Constants.Translations.searchScreenTitle
     }
     
-    func addNavigationButton() {
+    private func addNavigationButton() {
         let barButton = UIBarButtonItem(title: Constants.Translations.sortButtonTitle, style: .plain, target: self, action: #selector(buttonAction))
         barButton.tintColor = UIColor(named: Constants.Theme.tintColor)
         barButton.isEnabled = false
