@@ -42,6 +42,7 @@ class MediaPlayerTests: XCTestCase {
         
         XCTAssertTrue(mediaPlayer.currentIndex == 2)
         
+        mediaPlayer.togglePlay()
         mediaPlayer.previous()
         
         XCTAssertTrue(mediaPlayer.currentIndex == 1)
