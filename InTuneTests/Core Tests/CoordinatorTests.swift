@@ -132,10 +132,18 @@ class CoordinatorTests: XCTestCase {
     func testDataReceived() {
         coordinator.musicPlayerPresenter = musicPlayerPresenter
         let dataLoadedCallback = coordinator as DataLoaded
+        let presenter = MockSearchPresenter()
+        coordinator.presenter = presenter
+        coordinator.showLoading()
         
-        dataLoadedCallback.dataReceived(errorMessage: nil)
+        let queue = DispatchQueue.main
         
+        dataLoadedCallback.dataReceived(errorMessage: nil, on: queue)
         
+        queue.async {
+            XCTAssertNil(self.coordinator.hud)
+            XCTAssertTrue(self.presenter.dataReceivedCalled)
+        }
     }
 }
 

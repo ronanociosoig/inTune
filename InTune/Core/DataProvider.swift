@@ -38,9 +38,11 @@ class DataProvider: DataProviding {
     func search(term: String) {
         let searchService = networkService.makeSearchiTunesService()
         
+        let queue = DispatchQueue.main
+        
         // If the search is the same as the last one performed, dismiss the HUD and return
         if term == appData.searchTerm {
-            self.dataLoaded?.dataReceived(errorMessage: nil)
+            self.dataLoaded?.dataReceived(errorMessage: nil, on: queue)
             return
         }
         
@@ -50,15 +52,16 @@ class DataProvider: DataProviding {
         appData.selectedIndex = 0
         
         searchService.load(term: term) { (data, errorMessage) in
+            let queue = DispatchQueue.main
             if let errorMessage = errorMessage {
                 os_log("Error message: %s", log: Log.network, type: .error, errorMessage)
-                self.dataLoaded?.dataReceived(errorMessage: errorMessage)
+                self.dataLoaded?.dataReceived(errorMessage: errorMessage, on: queue)
                 return
             }
             
             guard let data = data else {
                 os_log("Error message: %s", log: Log.network, type: .error, Constants.Translations.Error.noDataError)
-                self.dataLoaded?.dataReceived(errorMessage: Constants.Translations.Error.noDataError)
+                self.dataLoaded?.dataReceived(errorMessage: Constants.Translations.Error.noDataError, on: queue)
                 return
             }
             
@@ -69,16 +72,16 @@ class DataProvider: DataProviding {
                 self.appData.results = serverResponse.results
                 
                 if serverResponse.resultCount == 0 {
-                    self.dataLoaded?.dataReceived(errorMessage: Constants.Translations.Error.noResultsFound)
+                    self.dataLoaded?.dataReceived(errorMessage: Constants.Translations.Error.noResultsFound, on: queue)
                     return
                 }
                 
                 self.prepareSearchResults()
                 self.sort(option: self.appData.currentSortOption)
-                self.dataLoaded?.dataReceived(errorMessage: nil)
+                self.dataLoaded?.dataReceived(errorMessage: nil, on: queue)
             } catch {
                 os_log("Error: %s", log: Log.data, type: .error, error.localizedDescription)
-                self.dataLoaded?.dataReceived(errorMessage: error.localizedDescription)
+                self.dataLoaded?.dataReceived(errorMessage: error.localizedDescription, on: queue)
             }
         }
     }

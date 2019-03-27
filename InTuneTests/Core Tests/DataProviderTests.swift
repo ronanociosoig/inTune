@@ -127,7 +127,7 @@ class MockDataLoader: DataLoaded {
     var errorMessage: String?
     var calledReceived: Bool = false
     
-    func dataReceived(errorMessage: String?) {
+    func dataReceived(errorMessage: String? = nil, on queue: DispatchQueue?)  {
         self.errorMessage = errorMessage
         
         calledReceived = true

@@ -153,8 +153,15 @@ class Coordinator: ActivityView, Coordinating {
 }
 
 extension Coordinator: DataLoaded {
-    func dataReceived(errorMessage: String?) {
-        DispatchQueue.main.async {
+    func dataReceived(errorMessage: String? = nil, on queue: DispatchQueue?) {
+        
+        var localQueue = queue
+        
+        if localQueue == nil {
+            localQueue = .global(qos: .userInteractive)
+        }
+        
+        localQueue?.async {
             self.dismissLoading()
             
             if let errorMessage = errorMessage {

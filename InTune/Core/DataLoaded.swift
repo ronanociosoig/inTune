@@ -9,5 +9,5 @@
 import Foundation
 
 protocol DataLoaded {
-    func dataReceived(errorMessage: String?)
+    func dataReceived(errorMessage: String?, on queue: DispatchQueue?)
 }
