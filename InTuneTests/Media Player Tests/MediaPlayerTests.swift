@@ -28,6 +28,29 @@ class MediaPlayerTests: XCTestCase {
         XCTAssertTrue(mediaPlayer.playing)
         XCTAssertTrue(playerDelegate.prerollCalled)
     }
+    
+    func testNextPrevious() {
+        mediaPlayer.delegate = playerDelegate
+        let url = URL(string: referenceURLString)!
+        mediaPlayer.addPlayList(list: [url, url, url])
+        
+        mediaPlayer.next()
+        
+        XCTAssertTrue(mediaPlayer.currentIndex == 1)
+        
+        mediaPlayer.next()
+        
+        XCTAssertTrue(mediaPlayer.currentIndex == 2)
+        
+        mediaPlayer.previous()
+        
+        XCTAssertTrue(mediaPlayer.currentIndex == 1)
+        
+        mediaPlayer.previous()
+        
+        XCTAssertTrue(mediaPlayer.currentIndex == 0)
+        XCTAssertTrue(mediaPlayer.playing)
+    }
 }
 
 class MockMediaPlayerDelegate: MediaPlayerDelegate {
