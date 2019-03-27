@@ -19,7 +19,7 @@ target 'InTune' do
 
   target 'InTuneUITests' do
     inherit! :search_paths
-    # Pods for testing
+    pod 'KIF', :configurations => ['Debug']
   end
 
 end

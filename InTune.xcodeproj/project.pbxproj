@@ -171,6 +171,7 @@
 		A91C5F5DB97EE765EA898C9A /* Pods-Networking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Networking.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Networking/Pods-Networking.debug.xcconfig"; sourceTree = "<group>"; };
 		AF0944A72249937500D3E07E /* MusicPlayerDataProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerDataProviderTests.swift; sourceTree = "<group>"; };
 		AF16F8BD224BE816001F2B8D /* MediaPlayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPlayerTests.swift; sourceTree = "<group>"; };
+		AF16F8BF224C122D001F2B8D /* InTuneTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "InTuneTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		AF1BB3BF224A6490008FBFEC /* SearchResultTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultTests.swift; sourceTree = "<group>"; };
 		AF1BB3C4224A8E69008FBFEC /* MusicPlayerPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerPresenterTests.swift; sourceTree = "<group>"; };
 		AF1BB3C6224AA8E2008FBFEC /* SearchActionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchActionTests.swift; sourceTree = "<group>"; };
@@ -484,6 +485,7 @@
 				AF6638662242C85700C6688E /* Search Tests */,
 				AFD1FF4021A8256900D2894F /* Mocks */,
 				AFD1FEDC21A6CE7700D2894F /* Info.plist */,
+				AF16F8BF224C122D001F2B8D /* InTuneTests-Bridging-Header.h */,
 			);
 			path = InTuneTests;
 			sourceTree = "<group>";
@@ -720,6 +722,7 @@
 				AFD1FEDD21A6CE7700D2894F /* Sources */,
 				AFD1FEDE21A6CE7700D2894F /* Frameworks */,
 				AFD1FEDF21A6CE7700D2894F /* Resources */,
+				87F61BC15A6D54D068C765BE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -790,6 +793,7 @@
 					};
 					AFD1FED521A6CE7700D2894F = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = AFD1FEC121A6CE7400D2894F;
 					};
 					AFD1FEE021A6CE7700D2894F = {
@@ -945,6 +949,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		87F61BC15A6D54D068C765BE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-InTuneUITests/Pods-InTuneUITests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/KIF/KIF.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KIF.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-InTuneUITests/Pods-InTuneUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B768808B42BF7F4E8656A5A0 /* [CP] Embed Pods Frameworks */ = {
@@ -1343,6 +1369,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MNZD883YQL;
 				INFOPLIST_FILE = InTuneTests/Info.plist;
@@ -1353,6 +1380,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sonomos.InTuneTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "InTuneTests/InTuneTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InTune.app/InTune";
@@ -1365,6 +1394,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MNZD883YQL;
 				INFOPLIST_FILE = InTuneTests/Info.plist;
@@ -1375,6 +1405,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sonomos.InTuneTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "InTuneTests/InTuneTests-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InTune.app/InTune";
