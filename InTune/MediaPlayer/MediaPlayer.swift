@@ -28,10 +28,10 @@ protocol MediaPlaying {
 
 class MediaPlayer: MediaPlaying {
     var playing: Bool = false
-    var playList = [AVPlayerItem]()
+    private var playList = [AVPlayerItem]()
     var currentIndex: Int = 0
     var delegate: MediaPlayerDelegate!
-    var logEnable = false
+    private var logEnable = false
     
     fileprivate var cachingData = false
     fileprivate var playerQueue: AVQueuePlayer?

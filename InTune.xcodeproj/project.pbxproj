@@ -10,6 +10,7 @@
 		25EDE2F7700C844F6A3F7DA1 /* Pods_InTuneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C7455699D1A2AC12AFC8AFB /* Pods_InTuneTests.framework */; };
 		90A688FB600B13D45538BBD9 /* Pods_NetworkingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40BEA9DD20041FF6B39B66D6 /* Pods_NetworkingTests.framework */; };
 		AF0944A82249937500D3E07E /* MusicPlayerDataProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0944A72249937500D3E07E /* MusicPlayerDataProviderTests.swift */; };
+		AF16F8BE224BE816001F2B8D /* MediaPlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF16F8BD224BE816001F2B8D /* MediaPlayerTests.swift */; };
 		AF1BB3C0224A6490008FBFEC /* SearchResultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1BB3BF224A6490008FBFEC /* SearchResultTests.swift */; };
 		AF1BB3C5224A8E69008FBFEC /* MusicPlayerPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1BB3C4224A8E69008FBFEC /* MusicPlayerPresenterTests.swift */; };
 		AF1BB3C7224AA8E2008FBFEC /* SearchActionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1BB3C6224AA8E2008FBFEC /* SearchActionTests.swift */; };
@@ -169,6 +170,7 @@
 		9EACBB391B286CA5CF1436BB /* Pods-InTuneUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InTuneUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InTuneUITests/Pods-InTuneUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A91C5F5DB97EE765EA898C9A /* Pods-Networking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Networking.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Networking/Pods-Networking.debug.xcconfig"; sourceTree = "<group>"; };
 		AF0944A72249937500D3E07E /* MusicPlayerDataProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerDataProviderTests.swift; sourceTree = "<group>"; };
+		AF16F8BD224BE816001F2B8D /* MediaPlayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPlayerTests.swift; sourceTree = "<group>"; };
 		AF1BB3BF224A6490008FBFEC /* SearchResultTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultTests.swift; sourceTree = "<group>"; };
 		AF1BB3C4224A8E69008FBFEC /* MusicPlayerPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerPresenterTests.swift; sourceTree = "<group>"; };
 		AF1BB3C6224AA8E2008FBFEC /* SearchActionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchActionTests.swift; sourceTree = "<group>"; };
@@ -424,6 +426,7 @@
 			isa = PBXGroup;
 			children = (
 				AFA8F57B224AF3B7003EB1E8 /* MediaPlayerDataProviderTests.swift */,
+				AF16F8BD224BE816001F2B8D /* MediaPlayerTests.swift */,
 			);
 			path = "Media Player Tests";
 			sourceTree = "<group>";
@@ -1087,6 +1090,7 @@
 				AFD1FF5821A8490600D2894F /* SearchiTunesServiceTests.swift in Sources */,
 				AF5E4CB7224A238100791599 /* SongDetailPresenterTests.swift in Sources */,
 				AF1BB3C7224AA8E2008FBFEC /* SearchActionTests.swift in Sources */,
+				AF16F8BE224BE816001F2B8D /* MediaPlayerTests.swift in Sources */,
 				AF0944A82249937500D3E07E /* MusicPlayerDataProviderTests.swift in Sources */,
 				AFD1FF4421A8266500D2894F /* MockData.swift in Sources */,
 				AFA8F57C224AF3B7003EB1E8 /* MediaPlayerDataProviderTests.swift in Sources */,
