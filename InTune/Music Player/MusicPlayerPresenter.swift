@@ -12,11 +12,13 @@ protocol MusicPlayerPresenting {
     
     var selectedIndex: Int { get }
     var maxIndex: Int { get }
+    var activityView: ActivityView? { get set }
     
     func togglePlay()
     func isPlaying() -> Bool
     func previousAction()
     func nextAction()
+    func nextItem()
 }
 
 class MusicPlayerPresenter: MusicPlayerPresenting {

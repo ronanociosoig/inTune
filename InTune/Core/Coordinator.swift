@@ -16,7 +16,7 @@ protocol ActivityView {
 
 protocol Coordinating {
     var musicPlayerView: MusicPlayerView? { get set }
-    var musicPlayerPresenter: MusicPlayerPresenter? { get set }
+    var musicPlayerPresenter: MusicPlayerPresenting? { get set }
     var dataProvider: DataProvider? { get set }
     
     func start()
@@ -37,7 +37,7 @@ class Coordinator: ActivityView, Coordinating {
     var hud: JGProgressHUD?
     var presenter: SearchPresenting?
     var musicPlayerView: MusicPlayerView?
-    var musicPlayerPresenter: MusicPlayerPresenter?
+    var musicPlayerPresenter: MusicPlayerPresenting?
     
     init(appController: AppController) {
         window = UIWindow(frame: UIScreen.main.bounds)
@@ -123,7 +123,7 @@ class Coordinator: ActivityView, Coordinating {
                                   dataProvider: dataProvider)
         musicPlayer.presenter = musicPlayerPresenter
         musicPlayerView = musicPlayer
-        appController.musicPlayerPresenter = musicPlayerPresenter
+        appController.musicPlayerPresenter = musicPlayerPresenter as? MusicPlayerPresenter
         musicPlayerPresenter?.activityView = self
     }
     
@@ -178,6 +178,4 @@ extension Coordinator: MediaPlayerDelegate {
     func startedPlaying() {
         dismissLoading()
     }
-    
-    
 }
