@@ -25,6 +25,9 @@ class SearchViewControllerTests: XCTestCase {
     }
     
     func testSearchViewController() {
+        let coordinator = appController.coordinator as! Coordinator
+        
+        UIApplication.shared.keyWindow?.layer.speed = 100
         let viewController = SearchWireframe.makeViewController()
         
         SearchWireframe.prepare(viewController: viewController,
@@ -32,12 +35,61 @@ class SearchViewControllerTests: XCTestCase {
                                 dataProvider: dataProvider as SearchDataProvider)
         
         viewController.presenter = searchPresenter
-        viewController.tableView = UITableView()
+        
+        let tableView = UITableView()
+        viewController.tableView = tableView
         
         viewController.viewDidLoad()
         viewController.viewDidLayoutSubviews()
+        viewController.viewDidAppear(true)
         
         XCTAssertTrue(searchPresenter.viewDidLayoutSubviewsCalled)
         
+        coordinator.window.rootViewController = viewController
+        
+        viewController.showSortOptions()
+        
+//        let alertController = viewController.presentingViewController
+//
+//        _ = alertController?.view
+//
+//        XCTAssertNotNil(alertController)
+        
+        
+        viewController.buttonAction(UIButton.init(type: .system))
+        
+        XCTAssertTrue(searchPresenter.viewDidLayoutSubviewsCalled)
+        
+        viewController.sort(with: .album)
+        
+        XCTAssertTrue(searchPresenter.selectedCalled)
+        
+        
+        let searchBar = UISearchBar()
+        searchBar.text = referenceSearchTerm
+        viewController.searchBarSearchButtonClicked(searchBar)
+        
+        XCTAssertTrue(searchPresenter.searchCalled)
+        
+        let dataSource = MockSearchDataSource()
+        
+        viewController.setDataSource(dataSource: dataSource)
+        viewController.reload()
+        
+        XCTAssertTrue(dataSource.numberOfRowsCalled)
     }
+}
+
+class MockSearchDataSource: SearchDataSource {
+    var numberOfRowsCalled = false
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        numberOfRowsCalled = true
+        return 1
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
+    
 }
