@@ -22,6 +22,9 @@ class SearchViewController: UIViewController {
     var presenter: SearchPresenting?
     var searchText: String?
     
+    let rowHeight: CGFloat = 61
+    let sideInset: CGFloat = 5
+    
     let searchController = UISearchController(searchResultsController: nil)
     
     override func viewDidLoad() {
@@ -54,12 +57,10 @@ class SearchViewController: UIViewController {
     }
     
     override func viewDidLayoutSubviews() {
-        tableView.rowHeight = 61
-        tableView.separatorInset = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
+        tableView.rowHeight = rowHeight
+        tableView.separatorInset = UIEdgeInsets(top: 0, left: sideInset, bottom: 0, right: sideInset)
         tableView.accessibilityLabel = "ResultsTable"
         tableView.isAccessibilityElement = true
-        
-        // guard let presenter = presenter else { return }
         
         presenter?.viewDidLayoutSubviews()
     }

@@ -149,6 +149,7 @@ class CoordinatorTests: XCTestCase {
 
 class MockSearchPresenter: SearchPresenting {
     var dataReceivedCalled = false
+    var viewDidLayoutSubviewsCalled = false
     
     func sortBarButtonAction() {
         
@@ -159,7 +160,7 @@ class MockSearchPresenter: SearchPresenting {
     }
     
     func viewDidLayoutSubviews() {
-        
+        viewDidLayoutSubviewsCalled = true
     }
     
     func select(index: Int) {
