@@ -25,6 +25,9 @@ class SearchViewController: UIViewController {
     let rowHeight: CGFloat = 61
     let sideInset: CGFloat = 5
     
+    let playerContentInset = UIEdgeInsets(top: 0, left: 0, bottom: 63, right: 0)
+    let noPlayerContentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+    
     let searchController = UISearchController(searchResultsController: nil)
     
     override func viewDidLoad() {
@@ -61,6 +64,7 @@ class SearchViewController: UIViewController {
         tableView.separatorInset = UIEdgeInsets(top: 0, left: sideInset, bottom: 0, right: sideInset)
         tableView.accessibilityLabel = "ResultsTable"
         tableView.isAccessibilityElement = true
+        tableView.contentInset = playerContentInset
         
         presenter?.viewDidLayoutSubviews()
     }
