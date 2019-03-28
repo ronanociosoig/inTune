@@ -1,27 +1,32 @@
 #In Tune
-Mobile Code Challenge - HPS Gesundheitscloud.
 
 ## Outline
 
-The application takes advantage of the iTunes search API to read song information. It parses the response into a table with the cells displaying the artwork, track name, artist name, year of the release, the length in minutes and seconds, and the price. 
+The app searches the iTunes API and lists out songs, and can play the previews continuously in a playlist. Tap on one, and it keeps going. In the background too! Nice.
 
-On selecting the cell, it displays a full screen view with the same details as the cell but also the album or collection name. A button can open the track in iTunes Music on the iPhone. 
+The app displays a table with the artwork, track name, artist name, year of the release, the length in minutes and seconds, and the price. 
 
-There is a simple music player at the base of the screen that will play the preview. On selecting the detail view, all the results are added to the queue, such that on tapping play, it will continue to play the next in the selection. 
+Selecting the sort option gives options to sort the table according to artist, album, price, length, genre, and year.
 
-Next and previous track is supported. The application will play music while it is in the background. 
+Tap the cell to show more details. You can also open the track directly in iTunes Music. 
 
-Once the user displays the detail screen, the music player will still be visible on returning to the search screen, and has small amount of trasparency so that the items below are still visible. 
+The music player at the base of the screen that will play the preview. 
 
-It supports social sharing with the available options depending on the user's phone configuration of social media. 
+On selecting the detail view, all the results are added to the music player queue, tap on play and it will continue to play all the previews.
 
-The search results screen has a basic level of sorting for price, genre and length. 
+Next and previous track is supported. 
+
+Did I say that the application will play music while it is in the background? I did, but it's nice you know.
+
+On returning to the search screen, the music player will still be visible on top of the results table (with a small touch of blur).
+
+You can share the track details from the details screen. Useful! 
 
 ## Architecture 
 
 At the root level, the application employs the coordinator pattern to remove the dependency between screens which enables the UI to be updated dynamically. In this project each screen is placed in a folder with all the associated files in the same place. 
 
-The presentation layer uses the well-known Model-View-Presenter pattern, giving a clean seperation of concern between the view and parsing of the data. This was chosen for its simplicy and testability.
+The presentation layer uses the well-known Model-View-Presenter pattern, giving a clean seperation of concern between the view, state and the data.
 
 A wireframe structure is used to manage the dependency injection in the view controller and presenter.
 
@@ -35,17 +40,17 @@ The coordinator is in charge of what screens and views are displayed. The player
 
 The scrolling of the results is optimised by performing all the necessary parsing of data into an array of structures prior to displaying them. The artwork images are loaded asynchronously and cached. It uses a CocoaPod library for this. 
 
-The player is based around the AVQueuePlayer class. It takes an array of AVPlayerItems as an input, and can play the next item once one finishes. It does not support going back to the previous item however. This has been implemented by delting the queue of player items, and building it back again placing the new item at the beginning. 
+The player is based around the AVQueuePlayer class. It takes an array of AVPlayerItems as an input, and can play the next item once one finishes. It does not support going back to the previous item however. This has been implemented by deleting the queue of player items, and building it back again placing the new item at the beginning. 
 
 On loading player items, an asychronous caching process is done to preload the metadata which results in smooth playback of the queue.
 
 ## Automated testing
-The app has good test coverage for the networking layer, the model and parsing layer, and some UI testing for searching and playing a file. 
+The project has tests to cover unit, integration and UI tests. It also has KIF UI testing. Note that running all the tests together will probably fail - especially the KIF tests.  
 
 ## Known Issues
-There seems to be a memory leak related to the UI keyboard prediction view. I haven't found a way to disable it. 
- 
-There seems to be an issue with matching the song with the audio stream being played.
+There seems to be a memory leak related to the UI keyboard prediction view.
+
+Running all the unit tests will fail. Running them separately works. 
 
 ## Improvements
 
