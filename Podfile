@@ -8,8 +8,8 @@ target 'InTune' do
 
   # Pods for InTune
 
-  pod 'Haneke'
-  pod 'JGProgressHUD'
+#  pod 'Haneke'
+#  pod 'JGProgressHUD'
 
   target 'InTuneTests' do
     inherit! :search_paths
