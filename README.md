@@ -2,19 +2,19 @@
 
 ## Outline
 
-The app searches the iTunes API and lists out songs, and can play the previews continuously in a playlist. Tap on one, and it keeps going. In the background too! Nice.
+The app searches the iTunes API and lists out songs, and can play the previews continuously in a playlist. Tap on one, and it keeps going. It plays in the background too! Nice.
 
-The app displays a table with the artwork, track name, artist name, year of the release, the length in minutes and seconds, and the price. 
+The app displays a table with the cover artwork, track name, artist name, year of the release, length, and the price. 
 
-Selecting the sort option gives options to sort the table according to artist, album, price, length, genre, and year.
+Selecting sort gives options to sort the results according to artist, album, price, length, genre, and year.
 
-Tap the cell to show more details. You can also open the track directly in iTunes Music. 
+Tap an item to show more details. here you can also open the track directly in iTunes Music. 
 
-The music player at the base of the screen that will play the preview. 
+The music player at the base of the screen plays the preview. 
 
 On selecting the detail view, all the results are added to the music player queue, tap on play and it will continue to play all the previews.
 
-Next and previous track is supported. 
+Next and previous track are supported.
 
 Did I say that the application will play music while it is in the background? I did, but it's nice you know.
 
@@ -52,6 +52,8 @@ There seems to be a memory leak related to the UI keyboard prediction view.
 
 Running all the unit tests will fail. Running them separately works. 
 
+The player does not behave correctly when running in the simulator. Tapping pause does not always pause the current song. It works perfectly on the device.
+
 ## Improvements
 
 On selecting a song to play there is an initial lag before it plays. Although it does show the loading progress icon in the status bar, this is not very prominent. It would be better to display a larger spinner to make the process clearer. 
@@ -60,4 +62,16 @@ When loading errors happen while steaming this is not shown to the user, and a u
 
 The previous button loads all the songs into the memory cache again. This could be optimised to re-use the previously loaded songs.
 
-It would be nice to add a force touch to the search results, and to the music player view. 
+It would be nice to add a force touch to the search results, and to the music player view.
+
+Add songs to a favorits list. 
+
+Show search history. 
+
+Open song preview pages. 
+
+Replace the networking code with Moya, and update the tests. 
+
+Inject mock data for the UI testing such that it can work offline and the results would always be consistent. 
+
+Improve the UI tests and layout in the results cells and song detail view. 
