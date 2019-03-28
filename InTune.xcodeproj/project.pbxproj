@@ -14,6 +14,7 @@
 		AF16F8C9224C35D0001F2B8D /* KIF+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF16F8C8224C35D0001F2B8D /* KIF+Swift.swift */; };
 		AF16F8CC224C363A001F2B8D /* SearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF16F8CB224C363A001F2B8D /* SearchTests.swift */; };
 		AF16F8CE224D30E5001F2B8D /* SongDetailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF16F8CD224D30E5001F2B8D /* SongDetailTests.swift */; };
+		AF16F8CF224D3E5F001F2B8D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FEF521A6E2E900D2894F /* Constants.swift */; };
 		AF1BB3C0224A6490008FBFEC /* SearchResultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1BB3BF224A6490008FBFEC /* SearchResultTests.swift */; };
 		AF1BB3C5224A8E69008FBFEC /* MusicPlayerPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1BB3C4224A8E69008FBFEC /* MusicPlayerPresenterTests.swift */; };
 		AF1BB3C7224AA8E2008FBFEC /* SearchActionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1BB3C6224AA8E2008FBFEC /* SearchActionTests.swift */; };
@@ -1141,6 +1142,7 @@
 				AFD1FF4421A8266500D2894F /* MockData.swift in Sources */,
 				AFA8F57C224AF3B7003EB1E8 /* MediaPlayerDataProviderTests.swift in Sources */,
 				AFD1FFD321ABF4A800D2894F /* ResultParserTests.swift in Sources */,
+				AF16F8CF224D3E5F001F2B8D /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
