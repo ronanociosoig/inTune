@@ -24,6 +24,7 @@ class AppDataTests: XCTestCase {
     }
     
     func testsortData() {
+        // TODO: Add asserts here to actually check what it is doing. 
         dataProvider.appData.sort(option: .album)
         dataProvider.appData.sort(option: .artist)
         dataProvider.appData.sort(option: .length)

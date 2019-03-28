@@ -36,6 +36,12 @@ class MusicPlayerView: UIView, MusicPlayerViewing {
         blurView.translatesAutoresizingMaskIntoConstraints = false
         blurView.frame = bounds
         insertSubview(blurView, at: 0)
+        
+        togglePlayButton.accessibilityLabel = Constants.Accessibility.MediaPlayer.playButton
+        togglePlayButton.isAccessibilityElement = true
+        
+        nextButton.accessibilityLabel = Constants.Accessibility.MediaPlayer.nextButton
+        nextButton.isAccessibilityElement = true
     }
     
     func configure(result: Result) {
