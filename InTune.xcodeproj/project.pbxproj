@@ -15,7 +15,7 @@
 		AF16F8CC224C363A001F2B8D /* SearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF16F8CB224C363A001F2B8D /* SearchTests.swift */; };
 		AF16F8CE224D30E5001F2B8D /* SongDetailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF16F8CD224D30E5001F2B8D /* SongDetailTests.swift */; };
 		AF16F8CF224D3E5F001F2B8D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FEF521A6E2E900D2894F /* Constants.swift */; };
-		AF16F8D1224D497A001F2B8D /* MediaPlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF16F8D0224D497A001F2B8D /* MediaPlayerTests.swift */; };
+		AF16F8D1224D497A001F2B8D /* MediaPlayerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF16F8D0224D497A001F2B8D /* MediaPlayerUITests.swift */; };
 		AF1BB3C0224A6490008FBFEC /* SearchResultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1BB3BF224A6490008FBFEC /* SearchResultTests.swift */; };
 		AF1BB3C5224A8E69008FBFEC /* MusicPlayerPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1BB3C4224A8E69008FBFEC /* MusicPlayerPresenterTests.swift */; };
 		AF1BB3C7224AA8E2008FBFEC /* SearchActionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1BB3C6224AA8E2008FBFEC /* SearchActionTests.swift */; };
@@ -180,7 +180,7 @@
 		AF16F8C8224C35D0001F2B8D /* KIF+Swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "KIF+Swift.swift"; sourceTree = "<group>"; };
 		AF16F8CB224C363A001F2B8D /* SearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTests.swift; sourceTree = "<group>"; };
 		AF16F8CD224D30E5001F2B8D /* SongDetailTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongDetailTests.swift; sourceTree = "<group>"; };
-		AF16F8D0224D497A001F2B8D /* MediaPlayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPlayerTests.swift; sourceTree = "<group>"; };
+		AF16F8D0224D497A001F2B8D /* MediaPlayerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPlayerUITests.swift; sourceTree = "<group>"; };
 		AF1BB3BF224A6490008FBFEC /* SearchResultTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultTests.swift; sourceTree = "<group>"; };
 		AF1BB3C4224A8E69008FBFEC /* MusicPlayerPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerPresenterTests.swift; sourceTree = "<group>"; };
 		AF1BB3C6224AA8E2008FBFEC /* SearchActionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchActionTests.swift; sourceTree = "<group>"; };
@@ -363,7 +363,7 @@
 			children = (
 				AF16F8CB224C363A001F2B8D /* SearchTests.swift */,
 				AF16F8CD224D30E5001F2B8D /* SongDetailTests.swift */,
-				AF16F8D0224D497A001F2B8D /* MediaPlayerTests.swift */,
+				AF16F8D0224D497A001F2B8D /* MediaPlayerUITests.swift */,
 			);
 			path = "KIF Tests";
 			sourceTree = "<group>";
@@ -1120,7 +1120,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFA8F57E224AF8B7003EB1E8 /* SongDetailDataProviderTests.swift in Sources */,
-				AF16F8D1224D497A001F2B8D /* MediaPlayerTests.swift in Sources */,
+				AF16F8D1224D497A001F2B8D /* MediaPlayerUITests.swift in Sources */,
 				AFD1FF5A21A84C8400D2894F /* MockNetworkService.swift in Sources */,
 				AF16F8CC224C363A001F2B8D /* SearchTests.swift in Sources */,
 				AFD1FFD521AC0F9F00D2894F /* TimeFormatterTests.swift in Sources */,
@@ -1288,6 +1288,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_ENABLE_BATCH_MODE = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -1342,6 +1343,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_ENABLE_BATCH_MODE = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1351,7 +1353,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6002D40DD2C28EF4F0072587 /* Pods-InTune.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MNZD883YQL;
@@ -1372,7 +1373,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1CC03FC266EBF20C54CB73F7 /* Pods-InTune.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MNZD883YQL;
