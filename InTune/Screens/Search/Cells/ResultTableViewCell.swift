@@ -21,11 +21,6 @@ class ResultTableViewCell: UITableViewCell {
     
     var trackIdentifier: Int?
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-    
     func configure(with item: SearchResult) {
         artworkImageView.image = UIImage(named: Constants.Images.placeholder)
         artworkImageView.hnk_setImage(from: item.artworkUrl, placeholder: UIImage(named: Constants.Images.placeholder))
@@ -37,11 +32,4 @@ class ResultTableViewCell: UITableViewCell {
         priceLabel.text = item.price
         trackIdentifier = item.identifier
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
 }
