@@ -6,6 +6,8 @@
 //  Copyright © 2016 Clean Swifter. All rights reserved.
 //
 
+import XCTest
+
 extension XCTestCase {
     func tester(file : String = #file, _ line : Int = #line) -> KIFUITestActor {
         return KIFUITestActor(inFile: file, atLine: line, delegate: self)
