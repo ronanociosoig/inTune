@@ -76,4 +76,12 @@ class SearchTests: KIFTestCase {
         tester().tapView(withAccessibilityLabel: Constants.Accessibility.SearchScreen.sortButton)
         tester().tapView(withAccessibilityLabel: Constants.Accessibility.SearchScreen.SortOptions.year)
     }
+    
+    func testSearchAndScroll() {
+        tester().enterText(searchText, intoViewWithAccessibilityLabel: Constants.Accessibility.SearchScreen.SearchBar.searchTextField)
+        tester().tapView(withAccessibilityLabel: Constants.Accessibility.SearchScreen.searchButton)
+        tester().waitForView(withAccessibilityLabel: Constants.Accessibility.SearchScreen.sortButton)
+        tester().accessibilityScroll(.up)
+        tester().waitForAnimationsToFinish()
+    }
 }
