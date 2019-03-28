@@ -52,6 +52,8 @@ class SongDetailView: UIView {
         }
         
         openInSafariButton.setTitle(Constants.Translations.openIniTunes, for: .normal)
+        openInSafariButton.accessibilityLabel = Constants.Translations.openIniTunes
+        openInSafariButton.isAccessibilityElement = true
     }
     
     @IBAction func openInSafariButtonAction(_ sender: Any) {
