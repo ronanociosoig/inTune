@@ -16,6 +16,11 @@ class SearchTests: KIFTestCase {
         
     }
     
+    func testEnterTextAndCancel() {
+        tester().enterText(searchText, intoViewWithAccessibilityLabel: "SearchTextField")
+        tester().tapView(withAccessibilityLabel: "Cancel")
+    }
+    
     func testSearchAndSortCancel() {
         tester().enterText(searchText, intoViewWithAccessibilityLabel: "SearchTextField")
         tester().tapView(withAccessibilityLabel: "Search")

@@ -29,10 +29,14 @@ class SongDetailTests: KIFTestCase {
         tester().waitForAnimationsToFinish()
         tester().tapView(withAccessibilityLabel: "Share")
     }
-
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
+    func testSearchAndOpeniTunesFromDetail() {
+        tester().enterText(searchText, intoViewWithAccessibilityLabel: "SearchTextField")
+        tester().tapView(withAccessibilityLabel: "Search")
+        tester().waitForAnimationsToFinish()
+        tester().waitForView(withAccessibilityLabel: "Sort")
+        tester().tapView(withAccessibilityLabel: "SearchResultCell")
+        tester().waitForAnimationsToFinish()
+        tester().tapView(withAccessibilityLabel: Constants.Translations.openIniTunes)
     }
-
 }
