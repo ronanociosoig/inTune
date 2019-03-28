@@ -1351,7 +1351,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6002D40DD2C28EF4F0072587 /* Pods-InTune.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MNZD883YQL;
@@ -1372,7 +1371,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1CC03FC266EBF20C54CB73F7 /* Pods-InTune.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MNZD883YQL;
