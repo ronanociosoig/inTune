@@ -40,7 +40,7 @@ class SearchViewController: UIViewController {
     private func configureSearchController() {
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = Constants.Translations.searchBarPlaceholder
-        searchController.searchBar.accessibilityLabel = "Search"
+        searchController.searchBar.accessibilityLabel = "SearchTextField"
         searchController.searchBar.isAccessibilityElement = true
         searchController.searchBar.accessibilityTraits = UIAccessibilityTraits.searchField
         searchController.searchBar.delegate = self
@@ -91,6 +91,7 @@ class SearchViewController: UIViewController {
         let barButton = UIBarButtonItem(title: Constants.Translations.sortButtonTitle, style: .plain, target: self, action: #selector(buttonAction))
         barButton.tintColor = UIColor(named: Constants.Theme.tintColor)
         barButton.isEnabled = false
+        barButton.accessibilityLabel = "Sort"
         navigationItem.rightBarButtonItem = barButton
     }
     
@@ -144,7 +145,7 @@ class SearchViewController: UIViewController {
                                        style: .default) { (_) in
                                         self.sort(with: .album)
         }
-        
+        albumAction.accessibilityLabel = Constants.Translations.SortOptions.album
         alertController.addAction(albumAction)
         
         let cancelAction = UIAlertAction(title: Constants.Translations.cancel,

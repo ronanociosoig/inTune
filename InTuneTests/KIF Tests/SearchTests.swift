@@ -14,10 +14,15 @@ class SearchTests: KIFTestCase {
         
     }
     
-    func testSearchTableView() {
+    func testSearchAndSortByAlbum() {
         let searchText = "Moby"
-        tester().enterText(searchText, intoViewWithAccessibilityLabel: "Search")
+        tester().enterText(searchText, intoViewWithAccessibilityLabel: "SearchTextField")
         tester().tapView(withAccessibilityLabel: "Search")
+        tester().waitForView(withAccessibilityLabel: "Sort")
+        tester().tapView(withAccessibilityLabel: "Sort")
+        tester().tapView(withAccessibilityLabel: "Album")
     }
+    
+    
 
 }
