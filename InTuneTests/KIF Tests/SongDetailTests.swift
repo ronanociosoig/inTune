@@ -17,26 +17,36 @@ class SongDetailTests: KIFTestCase {
     }
     
     func testSearchAndShareFromDetail() {
-        tester().enterText(searchText, intoViewWithAccessibilityLabel: "SearchTextField")
-        tester().tapView(withAccessibilityLabel: "Search")
+        tester().enterText(searchText, intoViewWithAccessibilityLabel: Constants.Accessibility.SearchScreen.SearchBar.searchTextField)
+        tester().tapView(withAccessibilityLabel: Constants.Accessibility.SearchScreen.searchButton)
         tester().waitForAnimationsToFinish()
-        tester().waitForView(withAccessibilityLabel: "Sort")
-        tester().tapView(withAccessibilityLabel: "SearchResultCell")
+        tester().waitForView(withAccessibilityLabel: Constants.Accessibility.SearchScreen.sortButton)
+        tester().tapView(withAccessibilityLabel: Constants.Accessibility.SearchScreen.cell)
         
         // It doesn't find the tableView
         // let firstRow = IndexPath(row: 0, section: 0)
         // tester().tapRow(at: firstRow, inTableViewWithAccessibilityIdentifier: "ResultsTable")
         tester().waitForAnimationsToFinish()
-        tester().tapView(withAccessibilityLabel: "Share")
+        tester().tapView(withAccessibilityLabel: Constants.Accessibility.SongDetailScreen.shareButton)
     }
     
     func testSearchAndOpeniTunesFromDetail() {
-        tester().enterText(searchText, intoViewWithAccessibilityLabel: "SearchTextField")
-        tester().tapView(withAccessibilityLabel: "Search")
+        tester().enterText(searchText, intoViewWithAccessibilityLabel: Constants.Accessibility.SearchScreen.SearchBar.searchTextField)
+        tester().tapView(withAccessibilityLabel: Constants.Accessibility.SearchScreen.searchButton)
         tester().waitForAnimationsToFinish()
-        tester().waitForView(withAccessibilityLabel: "Sort")
-        tester().tapView(withAccessibilityLabel: "SearchResultCell")
+        tester().waitForView(withAccessibilityLabel: Constants.Accessibility.SearchScreen.sortButton)
+        tester().tapView(withAccessibilityLabel: Constants.Accessibility.SearchScreen.cell)
         tester().waitForAnimationsToFinish()
         tester().tapView(withAccessibilityLabel: Constants.Translations.openIniTunes)
+    }
+    
+    func testSearchAndPlayInDetail() {
+        tester().enterText(searchText, intoViewWithAccessibilityLabel: Constants.Accessibility.SearchScreen.SearchBar.searchTextField)
+        tester().tapView(withAccessibilityLabel: Constants.Accessibility.SearchScreen.searchButton)
+        tester().waitForAnimationsToFinish()
+        tester().waitForView(withAccessibilityLabel: Constants.Accessibility.SearchScreen.sortButton)
+        tester().tapView(withAccessibilityLabel: Constants.Accessibility.SearchScreen.cell)
+        tester().waitForAnimationsToFinish()
+        
     }
 }

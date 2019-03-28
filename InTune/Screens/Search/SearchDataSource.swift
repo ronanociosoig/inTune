@@ -30,7 +30,7 @@ class SearchDataSource: NSObject, UITableViewDataSource {
         }
         let item = presenter.item(at: indexPath)
         cell.configure(with: item)
-        cell.accessibilityLabel = "SearchResultCell"
+        cell.accessibilityLabel = Constants.Accessibility.SearchScreen.cell
         cell.isAccessibilityElement = true
 
         return cell

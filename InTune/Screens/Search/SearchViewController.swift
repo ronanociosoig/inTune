@@ -40,12 +40,12 @@ class SearchViewController: UIViewController {
     private func configureSearchController() {
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = Constants.Translations.searchBarPlaceholder
-        searchController.searchBar.accessibilityLabel = "SearchTextField"
+        searchController.searchBar.accessibilityLabel = Constants.Accessibility.SearchScreen.SearchBar.searchTextField
         searchController.searchBar.isAccessibilityElement = true
         searchController.searchBar.accessibilityTraits = UIAccessibilityTraits.searchField
         searchController.searchBar.delegate = self
         searchController.searchBar.tintColor = UIColor(named: Constants.Theme.tintColor)
-        searchController.accessibilityLabel = "SearchController"
+        searchController.accessibilityLabel = Constants.Accessibility.SearchScreen.SearchBar.searchController
         searchController.isAccessibilityElement = true
         navigationItem.searchController = searchController
         definesPresentationContext = true
@@ -62,7 +62,7 @@ class SearchViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         tableView.rowHeight = rowHeight
         tableView.separatorInset = UIEdgeInsets(top: 0, left: sideInset, bottom: 0, right: sideInset)
-        tableView.accessibilityLabel = "ResultsTable"
+        tableView.accessibilityLabel = Constants.Accessibility.SearchScreen.resultsTable
         tableView.isAccessibilityElement = true
         tableView.contentInset = playerContentInset
         tableView.scrollIndicatorInsets = playerContentInset
@@ -91,7 +91,7 @@ class SearchViewController: UIViewController {
         let barButton = UIBarButtonItem(title: Constants.Translations.sortButtonTitle, style: .plain, target: self, action: #selector(buttonAction))
         barButton.tintColor = UIColor(named: Constants.Theme.tintColor)
         barButton.isEnabled = false
-        barButton.accessibilityLabel = "Sort"
+        barButton.accessibilityLabel = Constants.Accessibility.SearchScreen.sortButton
         navigationItem.rightBarButtonItem = barButton
     }
     
@@ -110,48 +110,48 @@ class SearchViewController: UIViewController {
                                          style: .default) { (_) in
             self.sort(with: .length)
         }
-        lengthAction.accessibilityLabel = Constants.Translations.SortOptions.length
+        lengthAction.accessibilityLabel = Constants.Accessibility.SearchScreen.SortOptions.length
         alertController.addAction(lengthAction)
         
         let genreAction = UIAlertAction(title: Constants.Translations.SortOptions.genre,
                                         style: .default) { (_) in
                 self.sort(with: .genre)
         }
-        genreAction.accessibilityLabel = Constants.Translations.SortOptions.genre
+        genreAction.accessibilityLabel = Constants.Accessibility.SearchScreen.SortOptions.genre
         alertController.addAction(genreAction)
         
         let priceAction = UIAlertAction(title: Constants.Translations.SortOptions.price,
                                         style: .default) { (_) in
                                             self.sort(with: .price)
         }
-        priceAction.accessibilityLabel = Constants.Translations.SortOptions.price
+        priceAction.accessibilityLabel = Constants.Accessibility.SearchScreen.SortOptions.price
         alertController.addAction(priceAction)
         
         let artistNameAction = UIAlertAction(title: Constants.Translations.SortOptions.artist,
                                         style: .default) { (_) in
                                             self.sort(with: .artist)
         }
-        artistNameAction.accessibilityLabel = Constants.Translations.SortOptions.artist
+        artistNameAction.accessibilityLabel = Constants.Accessibility.SearchScreen.SortOptions.artist
         alertController.addAction(artistNameAction)
         
         let yearAction = UIAlertAction(title: Constants.Translations.SortOptions.year,
                                              style: .default) { (_) in
                                                 self.sort(with: .year)
         }
-        yearAction.accessibilityLabel = Constants.Translations.SortOptions.year
+        yearAction.accessibilityLabel = Constants.Accessibility.SearchScreen.SortOptions.year
         alertController.addAction(yearAction)
         
         let albumAction = UIAlertAction(title: Constants.Translations.SortOptions.album,
                                        style: .default) { (_) in
                                         self.sort(with: .album)
         }
-        albumAction.accessibilityLabel = Constants.Translations.SortOptions.album
+        albumAction.accessibilityLabel = Constants.Accessibility.SearchScreen.SortOptions.album
         alertController.addAction(albumAction)
         
         let cancelAction = UIAlertAction(title: Constants.Translations.cancel,
                                         style: .cancel,
                                         handler: nil)
-        cancelAction.accessibilityLabel = Constants.Translations.cancel
+        cancelAction.accessibilityLabel = Constants.Accessibility.SearchScreen.SortOptions.cancel
         alertController.addAction(cancelAction)
         
         present(alertController,

@@ -36,7 +36,7 @@ class SongDetailViewController: UIViewController {
     override func viewWillLayoutSubviews() {
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.action, target: self, action: #selector(share(sender:)))
         
-        navigationItem.rightBarButtonItem?.accessibilityLabel = "Share"
+        navigationItem.rightBarButtonItem?.accessibilityLabel = Constants.Accessibility.SongDetailScreen.shareButton
         
         guard let presenter = presenter else { return }
         

@@ -66,5 +66,39 @@ struct Constants {
     struct MusicPlayer {
         static let height: CGFloat = 64.0
     }
+    
+    struct Accessibility {
+        struct SearchScreen {
+            static let sortButton = "Sort"
+            static let resultsTable = "ResultsTable"
+            static let searchButton = "Search"
+            static let cell = "SearchResultCell"
+            
+            struct SearchBar {
+                static let searchController = "SearchController"
+                static let searchTextField = "SearchTextField"
+                static let cancelButton = "Cancel"
+            }
+            
+            struct SortOptions {
+                static let genre = "Genre"
+                static let length = "Length"
+                static let price = "Price"
+                static let artist = "Artist"
+                static let year = "Year"
+                static let album = "Album"
+                static let cancel = "Cancel"
+            }
+        }
+        struct SongDetailScreen {
+            static let openIniTunesButton = "Open In iTunes"
+            static let shareButton = "Share"
+            
+        }
+        struct MediaPlayer {
+            static let playButton = "Play"
+            static let nextButton = "Next"
+        }
+    }
 }
 

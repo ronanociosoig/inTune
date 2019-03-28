@@ -17,63 +17,63 @@ class SearchTests: KIFTestCase {
     }
     
     func testEnterTextAndCancel() {
-        tester().enterText(searchText, intoViewWithAccessibilityLabel: "SearchTextField")
-        tester().tapView(withAccessibilityLabel: "Cancel")
+        tester().enterText(searchText, intoViewWithAccessibilityLabel: Constants.Accessibility.SearchScreen.SearchBar.searchTextField)
+        tester().tapView(withAccessibilityLabel: Constants.Accessibility.SearchScreen.SearchBar.cancelButton)
     }
     
     func testSearchAndSortCancel() {
-        tester().enterText(searchText, intoViewWithAccessibilityLabel: "SearchTextField")
-        tester().tapView(withAccessibilityLabel: "Search")
-        tester().waitForView(withAccessibilityLabel: "Sort")
-        tester().tapView(withAccessibilityLabel: "Sort")
-        tester().tapView(withAccessibilityLabel: "Cancel")
+        tester().enterText(searchText, intoViewWithAccessibilityLabel: Constants.Accessibility.SearchScreen.SearchBar.searchTextField)
+        tester().tapView(withAccessibilityLabel: Constants.Accessibility.SearchScreen.searchButton)
+        tester().waitForView(withAccessibilityLabel: Constants.Accessibility.SearchScreen.sortButton)
+        tester().tapView(withAccessibilityLabel: Constants.Accessibility.SearchScreen.sortButton)
+        tester().tapView(withAccessibilityLabel: Constants.Accessibility.SearchScreen.SortOptions.cancel)
     }
     
     func testSearchAndSortByAlbum() {
-        tester().enterText(searchText, intoViewWithAccessibilityLabel: "SearchTextField")
-        tester().tapView(withAccessibilityLabel: "Search")
-        tester().waitForView(withAccessibilityLabel: "Sort")
-        tester().tapView(withAccessibilityLabel: "Sort")
-        tester().tapView(withAccessibilityLabel: "Album")
+        tester().enterText(searchText, intoViewWithAccessibilityLabel: Constants.Accessibility.SearchScreen.SearchBar.searchTextField)
+        tester().tapView(withAccessibilityLabel: Constants.Accessibility.SearchScreen.searchButton)
+        tester().waitForView(withAccessibilityLabel: Constants.Accessibility.SearchScreen.sortButton)
+        tester().tapView(withAccessibilityLabel: Constants.Accessibility.SearchScreen.sortButton)
+        tester().tapView(withAccessibilityLabel: Constants.Accessibility.SearchScreen.SortOptions.album)
     }
     
     func testSearchAndSortByLength() {
-        tester().enterText(searchText, intoViewWithAccessibilityLabel: "SearchTextField")
-        tester().tapView(withAccessibilityLabel: "Search")
-        tester().waitForView(withAccessibilityLabel: "Sort")
-        tester().tapView(withAccessibilityLabel: "Sort")
-        tester().tapView(withAccessibilityLabel: "Length")
+        tester().enterText(searchText, intoViewWithAccessibilityLabel: Constants.Accessibility.SearchScreen.SearchBar.searchTextField)
+        tester().tapView(withAccessibilityLabel: Constants.Accessibility.SearchScreen.searchButton)
+        tester().waitForView(withAccessibilityLabel: Constants.Accessibility.SearchScreen.sortButton)
+        tester().tapView(withAccessibilityLabel: Constants.Accessibility.SearchScreen.sortButton)
+        tester().tapView(withAccessibilityLabel: Constants.Accessibility.SearchScreen.SortOptions.length)
     }
     
     func testSearchAndSortByPrice() {
-        tester().enterText(searchText, intoViewWithAccessibilityLabel: "SearchTextField")
-        tester().tapView(withAccessibilityLabel: "Search")
-        tester().waitForView(withAccessibilityLabel: "Sort")
-        tester().tapView(withAccessibilityLabel: "Sort")
-        tester().tapView(withAccessibilityLabel: "Price")
+        tester().enterText(searchText, intoViewWithAccessibilityLabel: Constants.Accessibility.SearchScreen.SearchBar.searchTextField)
+        tester().tapView(withAccessibilityLabel: Constants.Accessibility.SearchScreen.searchButton)
+        tester().waitForView(withAccessibilityLabel: Constants.Accessibility.SearchScreen.sortButton)
+        tester().tapView(withAccessibilityLabel: Constants.Accessibility.SearchScreen.sortButton)
+        tester().tapView(withAccessibilityLabel: Constants.Accessibility.SearchScreen.SortOptions.price)
     }
     
     func testSearchAndSortByArtist() {
-        tester().enterText(searchText, intoViewWithAccessibilityLabel: "SearchTextField")
-        tester().tapView(withAccessibilityLabel: "Search")
-        tester().waitForView(withAccessibilityLabel: "Sort")
-        tester().tapView(withAccessibilityLabel: "Sort")
-        tester().tapView(withAccessibilityLabel: "Artist")
+        tester().enterText(searchText, intoViewWithAccessibilityLabel: Constants.Accessibility.SearchScreen.SearchBar.searchTextField)
+        tester().tapView(withAccessibilityLabel: Constants.Accessibility.SearchScreen.searchButton)
+        tester().waitForView(withAccessibilityLabel: Constants.Accessibility.SearchScreen.sortButton)
+        tester().tapView(withAccessibilityLabel: Constants.Accessibility.SearchScreen.sortButton)
+        tester().tapView(withAccessibilityLabel: Constants.Accessibility.SearchScreen.SortOptions.artist)
     }
     
     func testSearchAndSortByGenre() {
-        tester().enterText(searchText, intoViewWithAccessibilityLabel: "SearchTextField")
-        tester().tapView(withAccessibilityLabel: "Search")
-        tester().waitForView(withAccessibilityLabel: "Sort")
-        tester().tapView(withAccessibilityLabel: "Sort")
-        tester().tapView(withAccessibilityLabel: "Genre")
+        tester().enterText(searchText, intoViewWithAccessibilityLabel: Constants.Accessibility.SearchScreen.SearchBar.searchTextField)
+        tester().tapView(withAccessibilityLabel: Constants.Accessibility.SearchScreen.searchButton)
+        tester().waitForView(withAccessibilityLabel: Constants.Accessibility.SearchScreen.sortButton)
+        tester().tapView(withAccessibilityLabel: Constants.Accessibility.SearchScreen.sortButton)
+        tester().tapView(withAccessibilityLabel: Constants.Accessibility.SearchScreen.SortOptions.genre)
     }
 
     func testSearchAndSortByYear() {
-        tester().enterText(searchText, intoViewWithAccessibilityLabel: "SearchTextField")
-        tester().tapView(withAccessibilityLabel: "Search")
-        tester().waitForView(withAccessibilityLabel: "Sort")
-        tester().tapView(withAccessibilityLabel: "Sort")
-        tester().tapView(withAccessibilityLabel: "Year")
+        tester().enterText(searchText, intoViewWithAccessibilityLabel: Constants.Accessibility.SearchScreen.SearchBar.searchTextField)
+        tester().tapView(withAccessibilityLabel: Constants.Accessibility.SearchScreen.searchButton)
+        tester().waitForView(withAccessibilityLabel: Constants.Accessibility.SearchScreen.sortButton)
+        tester().tapView(withAccessibilityLabel: Constants.Accessibility.SearchScreen.sortButton)
+        tester().tapView(withAccessibilityLabel: Constants.Accessibility.SearchScreen.SortOptions.year)
     }
 }
