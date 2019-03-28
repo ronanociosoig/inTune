@@ -25,9 +25,9 @@ extension UITableView {
     }
     
     /// Register UITableViewCell types
-    public func register(cellTypes: UITableViewCell.Type...) {
-        cellTypes.forEach(register)
-    }
+//    public func register(cellTypes: UITableViewCell.Type...) {
+//        cellTypes.forEach(register)
+//    }
     
     /**
      Dequeue generic type `element` of `UITableViewCell` for `indexPath`

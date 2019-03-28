@@ -9,7 +9,13 @@
 import UIKit
 import Haneke
 
-class MusicPlayerView: UIView {
+protocol MusicPlayerViewing {
+    func configure(result: Result)
+    func updateButtons()
+    func updatePlayerButton()
+}
+
+class MusicPlayerView: UIView, MusicPlayerViewing {
     
     @IBOutlet weak var artworkImageView: UIImageView!
     @IBOutlet weak var trackTitleLabel: UILabel!
@@ -18,10 +24,25 @@ class MusicPlayerView: UIView {
     @IBOutlet weak var togglePlayButton: UIButton!
     @IBOutlet weak var previousButton: UIButton!
     
-    var presenter: MusicPlayerPresenting!
+    var presenter: MusicPlayerPresenting?
 
     let playIcon = UIImage(named: Constants.Images.playIcon)
     let pauseIcon = UIImage(named: Constants.Images.pauseIcon)
+    let blurView = UIVisualEffectView(effect: UIBlurEffect(style: .light))
+    
+    override func awakeFromNib() {
+        backgroundColor = .clear
+        
+        blurView.translatesAutoresizingMaskIntoConstraints = false
+        blurView.frame = bounds
+        insertSubview(blurView, at: 0)
+        
+        togglePlayButton.accessibilityLabel = Constants.Accessibility.MediaPlayer.playButton
+        togglePlayButton.isAccessibilityElement = true
+        
+        nextButton.accessibilityLabel = Constants.Accessibility.MediaPlayer.nextButton
+        nextButton.isAccessibilityElement = true
+    }
     
     func configure(result: Result) {
         trackTitleLabel.text = result.trackName
@@ -31,32 +52,35 @@ class MusicPlayerView: UIView {
         artworkImageView.hnk_setImage(from: url, placeholder: UIImage(named: Constants.Images.placeholder))
     }
     
-    func updateButtons() {
-        // Update the next and previous buttons.
-        previousButton.isEnabled = (presenter.selectedIndex > 0)
-        nextButton.isEnabled = (presenter.selectedIndex < presenter.maxIndex)
-        updatePlayerButton()
-    }
-    
-    override func awakeFromNib() {
-        
-    }
-    
     @IBAction func previousButtonAction(_ sender: Any) {
+        guard let presenter = presenter else { return }
         presenter.previousAction()
     }
     
     @IBAction func togglePlayButtonAction(_ sender: Any) {
+        guard let presenter = presenter else { return }
         presenter.togglePlay()
         updatePlayerButton()
     }
     
+    @IBAction func nextButtonAction(_ sender: Any) {
+        guard let presenter = presenter else { return }
+        presenter.nextAction()
+    }
+    
     func updatePlayerButton() {
+        guard let presenter = presenter else { return }
         let image = presenter.isPlaying() ? pauseIcon : playIcon
         togglePlayButton.setImage(image, for: .normal)
     }
     
-    @IBAction func nextButtonAction(_ sender: Any) {
-        presenter.nextAction()
+    func updateButtons() {
+        guard let presenter = presenter else { return }
+        // Update the next and previous buttons.
+        previousButton.isEnabled = (presenter.selectedIndex > 0)
+        nextButton.isEnabled = (presenter.selectedIndex < presenter.maxIndex)
+        updatePlayerButton()
+        
+        blurView.frame = bounds
     }
 }

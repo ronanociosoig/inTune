@@ -12,22 +12,27 @@ protocol MusicPlayerPresenting {
     
     var selectedIndex: Int { get }
     var maxIndex: Int { get }
+    var activityView: ActivityView? { get set }
     
     func togglePlay()
     func isPlaying() -> Bool
     func previousAction()
     func nextAction()
+    func nextItem()
 }
 
 class MusicPlayerPresenter: MusicPlayerPresenting {
-    let mediaPlayer: MediaPlayer
-    let musicPlayerView: MusicPlayerView
-    let dataProvider: MusicPlayerDataProvider
-    var selectedIndex: Int = 0
-    var maxIndex: Int = 0
+    private var mediaPlayer: MediaPlaying
+    private let musicPlayerView: MusicPlayerViewing
+    private let dataProvider: MusicPlayerDataProvider
+    internal var selectedIndex: Int = 0
+    internal var maxIndex: Int = 0
+    internal var activityView: ActivityView?
+    private var searchResults = [SearchResult]()
+    private var results = [Result]()
     
-    init(mediaPlayer: MediaPlayer,
-         musicPlayerView: MusicPlayerView,
+    init(mediaPlayer: MediaPlaying,
+         musicPlayerView: MusicPlayerViewing,
          dataProvider: MusicPlayerDataProvider) {
         self.mediaPlayer = mediaPlayer
         self.musicPlayerView = musicPlayerView
@@ -36,63 +41,63 @@ class MusicPlayerPresenter: MusicPlayerPresenting {
     
     func configureMusicPlayer() {
         selectedIndex = dataProvider.selectedIndex()
+        searchResults.removeAll()
+        searchResults.append(contentsOf: dataProvider.allSearchResults())
+        
+        results.removeAll()
+        results.append(contentsOf: dataProvider.allResults())
+        
+        maxIndex = results.count - 1
+        
         configureMusicPlayer(at: selectedIndex)
     }
     
-    func configureMusicPlayer(at index: Int) {
-        maxIndex = dataProvider.maxIndex()
-        
-        let searchResult = dataProvider.searchResult(at: index)
-        guard let result = dataProvider.result(with: searchResult.identifier) else { return }
+    private func configureMusicPlayer(at index: Int) {
+        let searchResult = searchResults[index]
+        guard let result = result(with: searchResult.identifier) else { return }
         
         musicPlayerView.configure(result: result)
         musicPlayerView.updateButtons()
     }
     
-    func togglePlay() {
+    private func result(with identifier: Int) -> Result? {
+        return (results.filter { $0.trackID == identifier }).first
+    }
+    
+    internal func togglePlay() {
+        mediaPlayer.currentIndex = selectedIndex
         mediaPlayer.togglePlay()
     }
     
-    func isPlaying() -> Bool {
+    internal func isPlaying() -> Bool {
         return mediaPlayer.playing
     }
     
-    func previousAction() {
+    internal func previousAction() {
         
         if selectedIndex > 0 {
             selectedIndex -= 1
-            loadMediaPlayerItems(from: selectedIndex)
+            mediaPlayer.previous()
             configureMusicPlayer(at: selectedIndex)
         }
     }
     
-    func nextAction() {
+    internal func nextAction() {
         mediaPlayer.next()
         nextItem()
     }
     
-    func nextItem() {
+    internal func nextItem() {
 
         if selectedIndex < maxIndex {
             selectedIndex += 1
             
-            let searchResult = dataProvider.searchResult(at: selectedIndex)
-            
-            guard let result = dataProvider.result(with: searchResult.identifier) else { return }
-            
-            musicPlayerView.configure(result: result)
-            musicPlayerView.updateButtons()
+            configureMusicPlayer(at: selectedIndex)
         }
     }
     
     func loadMediaPlayerItems() {
-        let selectedIndex = dataProvider.selectedIndex()
-        loadMediaPlayerItems(from: selectedIndex)
-    }
-    
-    func loadMediaPlayerItems(from index: Int) {
-        
-        let urls = dataProvider.mediaUrls(from: index)
+        let urls = dataProvider.mediaUrls(from: 0)
         
         if mediaPlayer.playing == true {
             mediaPlayer.togglePlay()

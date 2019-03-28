@@ -16,7 +16,17 @@ struct Log {
     static var player = OSLog(subsystem: "com.sonomos.InTune", category: "AVPlayer")
 }
 
-class DataProvider {
+protocol DataProviding: class {
+    
+    init(service: ServiceProvider)
+    
+    func search(term: String)
+    func sort(option: SortOption)
+    func parseResults(results: [Result]) -> [SearchResult]
+    func result(at index: Int) -> Result?
+}
+
+class DataProvider: DataProviding {
     let appData = AppData()
     var dataLoaded: DataLoaded?
     let networkService: ServiceProvider
@@ -28,26 +38,30 @@ class DataProvider {
     func search(term: String) {
         let searchService = networkService.makeSearchiTunesService()
         
+        let queue = DispatchQueue.main
+        
         // If the search is the same as the last one performed, dismiss the HUD and return
         if term == appData.searchTerm {
-            self.dataLoaded?.dataReceived(errorMessage: nil)
+            self.dataLoaded?.dataReceived(errorMessage: nil, on: queue)
             return
         }
         
         appData.searchTerm = term
         appData.results.removeAll()
         appData.searchResults.removeAll()
+        appData.selectedIndex = 0
         
         searchService.load(term: term) { (data, errorMessage) in
+            let queue = DispatchQueue.main
             if let errorMessage = errorMessage {
                 os_log("Error message: %s", log: Log.network, type: .error, errorMessage)
-                self.dataLoaded?.dataReceived(errorMessage: errorMessage)
+                self.dataLoaded?.dataReceived(errorMessage: errorMessage, on: queue)
                 return
             }
             
             guard let data = data else {
                 os_log("Error message: %s", log: Log.network, type: .error, Constants.Translations.Error.noDataError)
-                self.dataLoaded?.dataReceived(errorMessage: Constants.Translations.Error.noDataError)
+                self.dataLoaded?.dataReceived(errorMessage: Constants.Translations.Error.noDataError, on: queue)
                 return
             }
             
@@ -58,21 +72,21 @@ class DataProvider {
                 self.appData.results = serverResponse.results
                 
                 if serverResponse.resultCount == 0 {
-                    self.dataLoaded?.dataReceived(errorMessage: Constants.Translations.Error.noResultsFound)
+                    self.dataLoaded?.dataReceived(errorMessage: Constants.Translations.Error.noResultsFound, on: queue)
                     return
                 }
                 
                 self.prepareSearchResults()
                 self.sort(option: self.appData.currentSortOption)
-                self.dataLoaded?.dataReceived(errorMessage: nil)
+                self.dataLoaded?.dataReceived(errorMessage: nil, on: queue)
             } catch {
                 os_log("Error: %s", log: Log.data, type: .error, error.localizedDescription)
-                self.dataLoaded?.dataReceived(errorMessage: error.localizedDescription)
+                self.dataLoaded?.dataReceived(errorMessage: error.localizedDescription, on: queue)
             }
         }
     }
     
-    func prepareSearchResults() {
+    fileprivate func prepareSearchResults() {
         let results = appData.results
         appData.searchResults = parseResults(results: results)
     }

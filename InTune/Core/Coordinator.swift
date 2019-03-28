@@ -9,19 +9,41 @@
 import UIKit
 import JGProgressHUD
 
-class Coordinator {
-    let window: UIWindow
-    var dataProvider: DataProvider!
-    var appController: AppController!
-    var hud: JGProgressHUD?
-    var presenter: SearchPresenter?
-    var musicPlayerView: MusicPlayerView?
-    var musicPlayerPresenter: MusicPlayerPresenter?
+protocol ActivityView {
+    func showLoading()
+    func dismissLoading()
+}
+
+protocol Coordinating {
+    var musicPlayerView: MusicPlayerView? { get set }
+    var musicPlayerPresenter: MusicPlayerPresenting? { get set }
+    var dataProvider: DataProvider? { get set }
     
-    init() {
+    func start()
+    
+    func showLoading()
+    func dismissLoading()
+    
+    func showSearch()
+    func showSearchResults()
+    func showSongDetail()
+    func showMusicPlayer()
+}
+
+class Coordinator: ActivityView, Coordinating {
+    let window: UIWindow
+    var dataProvider: DataProvider?
+    var appController: AppController
+    var hud: JGProgressHUD?
+    var presenter: SearchPresenting?
+    var musicPlayerView: MusicPlayerView?
+    var musicPlayerPresenter: MusicPlayerPresenting?
+    
+    init(appController: AppController) {
         window = UIWindow(frame: UIScreen.main.bounds)
         window.makeKeyAndVisible()
-        window.tintColor = Constants.Theme.tintColor
+        window.tintColor = UIColor(named: Constants.Theme.tintColor)
+        self.appController = appController
     }
     
     func start() {
@@ -29,30 +51,36 @@ class Coordinator {
     }
     
     func showLoading() {
+        showHud(with: Constants.Translations.loading)
+    }
+    
+    private func showHud(with message: String) {
         
         guard let topViewController = window.rootViewController else { return }
         
         hud = JGProgressHUD(style: .dark)
-        hud?.textLabel.text = Constants.Translations.loading
+        hud?.textLabel.text = message
         hud?.show(in: topViewController.view)
     }
     
     func dismissLoading() {
         hud?.dismiss(animated: true)
+        hud = nil
     }
     
     func showSearch() {
+        guard let dataProvider = dataProvider else { return }
         let viewController = SearchWireframe.makeViewController()
         
         SearchWireframe.prepare(viewController: viewController,
                                 actions: appController as SearchActions,
                                 dataProvider: dataProvider as SearchDataProvider)
         
-        presenter = viewController.presenter
-        
         let navigationController = UINavigationController(rootViewController: viewController)
         
         window.rootViewController = navigationController
+        
+        presenter = viewController.presenter
     }
     
     func showSearchResults() {
@@ -60,6 +88,7 @@ class Coordinator {
     }
 
     func showSongDetail() {
+        guard let dataProvider = dataProvider else { return }
         let viewController = SongDetailWireframe.makeViewController()
         
         SongDetailWireframe.prepare(viewController: viewController,
@@ -71,6 +100,7 @@ class Coordinator {
     }
     
     func showMusicPlayer() {
+        guard let dataProvider = dataProvider else { return }
         guard let navigationController = window.rootViewController as? UINavigationController else { return }
         
         if let musicPlayerView = musicPlayerView {
@@ -93,7 +123,8 @@ class Coordinator {
                                   dataProvider: dataProvider)
         musicPlayer.presenter = musicPlayerPresenter
         musicPlayerView = musicPlayer
-        appController.musicPlayerPresenter = musicPlayerPresenter
+        appController.musicPlayerPresenter = musicPlayerPresenter as? MusicPlayerPresenter
+        musicPlayerPresenter?.activityView = self
     }
     
     func hideMusicPlayer() {
@@ -122,8 +153,15 @@ class Coordinator {
 }
 
 extension Coordinator: DataLoaded {
-    func dataReceived(errorMessage: String?) {
-        DispatchQueue.main.async {
+    func dataReceived(errorMessage: String? = nil, on queue: DispatchQueue?) {
+        
+        var localQueue = queue
+        
+        if localQueue == nil {
+            localQueue = .global(qos: .userInteractive)
+        }
+        
+        localQueue?.async {
             self.dismissLoading()
             
             if let errorMessage = errorMessage {
@@ -136,7 +174,15 @@ extension Coordinator: DataLoaded {
 }
 
 extension Coordinator: MediaPlayerDelegate {
+    func preroll() {
+        showLoading()
+    }
+    
     func update() {
         musicPlayerPresenter?.nextItem()
+    }
+    
+    func startedPlaying() {
+        dismissLoading()
     }
 }

@@ -12,21 +12,11 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MusicPlayerView" customModule="InTune" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="pDP-aH-gqW">
-                    <rect key="frame" x="16" y="5" width="40" height="40"/>
-                    <accessibility key="accessibilityConfiguration" label="Artwork">
-                        <bool key="isElement" value="YES"/>
-                    </accessibility>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="40" id="GIx-0R-woF"/>
-                        <constraint firstAttribute="width" constant="40" id="HJa-Sz-MdT"/>
-                    </constraints>
-                </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ThO-vY-qHL">
-                    <rect key="frame" x="64" y="14.5" width="157" height="21"/>
+                    <rect key="frame" x="72" y="21.5" width="149" height="21"/>
                     <accessibility key="accessibilityConfiguration" label="TrackName"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="21" id="tNd-wf-QQf"/>
@@ -36,7 +26,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MfC-wh-aAa">
-                    <rect key="frame" x="329" y="10" width="30" height="30"/>
+                    <rect key="frame" x="329" y="17" width="30" height="30"/>
                     <accessibility key="accessibilityConfiguration" label="Next"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="30" id="6Sp-xN-CGW"/>
@@ -48,7 +38,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mjP-xM-GqB">
-                    <rect key="frame" x="279" y="10" width="30" height="30"/>
+                    <rect key="frame" x="279" y="17" width="30" height="30"/>
                     <accessibility key="accessibilityConfiguration" label="Play"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="30" id="QLg-bl-Hc3"/>
@@ -59,8 +49,8 @@
                         <action selector="togglePlayButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="MkT-fU-51P"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IJA-UA-P42">
-                    <rect key="frame" x="229" y="10" width="30" height="30"/>
+                <button hidden="YES" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IJA-UA-P42">
+                    <rect key="frame" x="229" y="17" width="30" height="30"/>
                     <accessibility key="accessibilityConfiguration" label="Previous"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="30" id="35m-Q6-Is8"/>
@@ -78,6 +68,16 @@
                         <constraint firstAttribute="height" constant="0.5" id="96H-Ns-qhn"/>
                     </constraints>
                 </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="pDP-aH-gqW">
+                    <rect key="frame" x="16" y="8" width="48" height="48"/>
+                    <accessibility key="accessibilityConfiguration" label="Artwork">
+                        <bool key="isElement" value="YES"/>
+                    </accessibility>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="GIx-0R-woF"/>
+                        <constraint firstAttribute="width" constant="48" id="HJa-Sz-MdT"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.90103274828767121" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>

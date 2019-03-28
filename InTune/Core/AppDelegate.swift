@@ -7,12 +7,11 @@
 //
 
 import UIKit
-// import AVFoundation
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    let appController = AppController()
+    private let appController = AppController()
 
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -22,4 +21,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 }
-

@@ -12,21 +12,19 @@ protocol AppControlling {
     func start()
     func search(term: String)
 }
-
-
+    
 class AppController: AppControlling {
-    let dataProvider = DataProvider(service: NetworkService())
-    var coordinator: Coordinator?
+    var dataProvider = DataProvider(service: NetworkService())
+    var coordinator: Coordinating?
     let mediaPlayer = MediaPlayer()
     var musicPlayerPresenter: MusicPlayerPresenter?
     
     func start() {
-        coordinator = Coordinator()
-        coordinator?.appController = self
+        coordinator = Coordinator(appController: self)
         coordinator?.dataProvider = dataProvider
         coordinator?.start()
         
-        dataProvider.dataLoaded = coordinator
-        mediaPlayer.delegate = coordinator
+        dataProvider.dataLoaded = coordinator as? DataLoaded
+        mediaPlayer.delegate = coordinator as? MediaPlayerDelegate
     }
 }

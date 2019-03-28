@@ -31,6 +31,7 @@ enum MockResponseType {
     case simpleResponse
     case noResultsResponse
     case invalidDateResponse
+    case IggyPopResponse
 }
 
 class MockSearchiTunesService: NetworkService, SearchiTunesLoadingService {
@@ -52,6 +53,9 @@ class MockSearchiTunesService: NetworkService, SearchiTunesLoadingService {
             let outputData = try! MockData.loadInvalidDateResponse()
             completion(outputData, nil)
             return
+        case .IggyPopResponse:
+            let outputData = try! MockData.loadIggyPopResponse()
+            completion(outputData, nil)
         default:
             let outputData = try! MockData.loadNoResultsResponse()
             completion(outputData, nil)

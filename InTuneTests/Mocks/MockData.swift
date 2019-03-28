@@ -8,14 +8,13 @@
 
 import Foundation
 
-struct MockData {
+class MockData {
     static let fileType = "json"
     static let fileReadError = "File not readable"
     static let fileNotFoundError = "File not found"
     
     static func load(name: String) throws -> Data? {
-        let bundle = Bundle.main
-        // let bundle = Bundle(for: type(of: self) as! AnyClass)
+        let bundle = Bundle.init(for: MockData.self)
         
         if let path = bundle.path(forResource: name, ofType: fileType) {
             let fileUrl = URL.init(fileURLWithPath: path)
@@ -46,5 +45,9 @@ struct MockData {
     
     static func loadInvalidDateResponse() throws -> Data? {
         return try load(name:"invalidDateResponse")
+    }
+    
+    static func loadIggyPopResponse() throws -> Data? {
+        return try load(name: "IggyPopResponse")
     }
 }
