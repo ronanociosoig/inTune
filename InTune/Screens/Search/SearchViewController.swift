@@ -102,43 +102,43 @@ class SearchViewController: UIViewController {
     }
 
     func showSortOptions() {
-        let alertController = UIAlertController(title: nil,
-                                                message: Constants.Translations.sortOptions,
+        let alertController = UIAlertController(title: Constants.Translations.sortOptions,
+                                                message: nil,
                                                 preferredStyle: .actionSheet)
         
         let lengthAction = UIAlertAction(title: Constants.Translations.SortOptions.length,
                                          style: .default) { (_) in
             self.sort(with: .length)
         }
-        
+        lengthAction.accessibilityLabel = Constants.Translations.SortOptions.length
         alertController.addAction(lengthAction)
         
         let genreAction = UIAlertAction(title: Constants.Translations.SortOptions.genre,
                                         style: .default) { (_) in
                 self.sort(with: .genre)
         }
-        
+        genreAction.accessibilityLabel = Constants.Translations.SortOptions.genre
         alertController.addAction(genreAction)
         
         let priceAction = UIAlertAction(title: Constants.Translations.SortOptions.price,
                                         style: .default) { (_) in
                                             self.sort(with: .price)
         }
-        
+        priceAction.accessibilityLabel = Constants.Translations.SortOptions.price
         alertController.addAction(priceAction)
         
         let artistNameAction = UIAlertAction(title: Constants.Translations.SortOptions.artist,
                                         style: .default) { (_) in
                                             self.sort(with: .artist)
         }
-        
+        artistNameAction.accessibilityLabel = Constants.Translations.SortOptions.artist
         alertController.addAction(artistNameAction)
         
         let yearAction = UIAlertAction(title: Constants.Translations.SortOptions.year,
                                              style: .default) { (_) in
                                                 self.sort(with: .year)
         }
-        
+        yearAction.accessibilityLabel = Constants.Translations.SortOptions.year
         alertController.addAction(yearAction)
         
         let albumAction = UIAlertAction(title: Constants.Translations.SortOptions.album,
@@ -151,7 +151,7 @@ class SearchViewController: UIViewController {
         let cancelAction = UIAlertAction(title: Constants.Translations.cancel,
                                         style: .cancel,
                                         handler: nil)
-        
+        cancelAction.accessibilityLabel = Constants.Translations.cancel
         alertController.addAction(cancelAction)
         
         present(alertController,

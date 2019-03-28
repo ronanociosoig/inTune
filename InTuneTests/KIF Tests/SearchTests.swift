@@ -9,13 +9,22 @@
 import XCTest
 
 class SearchTests: KIFTestCase {
+    
+    let searchText = "Moby"
 
     override func setUp() {
         
     }
     
+    func testSearchAndSortCancel() {
+        tester().enterText(searchText, intoViewWithAccessibilityLabel: "SearchTextField")
+        tester().tapView(withAccessibilityLabel: "Search")
+        tester().waitForView(withAccessibilityLabel: "Sort")
+        tester().tapView(withAccessibilityLabel: "Sort")
+        tester().tapView(withAccessibilityLabel: "Cancel")
+    }
+    
     func testSearchAndSortByAlbum() {
-        let searchText = "Moby"
         tester().enterText(searchText, intoViewWithAccessibilityLabel: "SearchTextField")
         tester().tapView(withAccessibilityLabel: "Search")
         tester().waitForView(withAccessibilityLabel: "Sort")
@@ -23,6 +32,43 @@ class SearchTests: KIFTestCase {
         tester().tapView(withAccessibilityLabel: "Album")
     }
     
+    func testSearchAndSortByLength() {
+        tester().enterText(searchText, intoViewWithAccessibilityLabel: "SearchTextField")
+        tester().tapView(withAccessibilityLabel: "Search")
+        tester().waitForView(withAccessibilityLabel: "Sort")
+        tester().tapView(withAccessibilityLabel: "Sort")
+        tester().tapView(withAccessibilityLabel: "Length")
+    }
     
+    func testSearchAndSortByPrice() {
+        tester().enterText(searchText, intoViewWithAccessibilityLabel: "SearchTextField")
+        tester().tapView(withAccessibilityLabel: "Search")
+        tester().waitForView(withAccessibilityLabel: "Sort")
+        tester().tapView(withAccessibilityLabel: "Sort")
+        tester().tapView(withAccessibilityLabel: "Price")
+    }
+    
+    func testSearchAndSortByArtist() {
+        tester().enterText(searchText, intoViewWithAccessibilityLabel: "SearchTextField")
+        tester().tapView(withAccessibilityLabel: "Search")
+        tester().waitForView(withAccessibilityLabel: "Sort")
+        tester().tapView(withAccessibilityLabel: "Sort")
+        tester().tapView(withAccessibilityLabel: "Artist")
+    }
+    
+    func testSearchAndSortByGenre() {
+        tester().enterText(searchText, intoViewWithAccessibilityLabel: "SearchTextField")
+        tester().tapView(withAccessibilityLabel: "Search")
+        tester().waitForView(withAccessibilityLabel: "Sort")
+        tester().tapView(withAccessibilityLabel: "Sort")
+        tester().tapView(withAccessibilityLabel: "Genre")
+    }
 
+    func testSearchAndSortByYear() {
+        tester().enterText(searchText, intoViewWithAccessibilityLabel: "SearchTextField")
+        tester().tapView(withAccessibilityLabel: "Search")
+        tester().waitForView(withAccessibilityLabel: "Sort")
+        tester().tapView(withAccessibilityLabel: "Sort")
+        tester().tapView(withAccessibilityLabel: "Year")
+    }
 }
