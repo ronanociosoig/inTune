@@ -30,63 +30,75 @@ class InTuneUITests: XCTestCase {
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
+    
+//    func testSearchForArtist() {
+//
+//        app.navigationBars["Moby"].buttons["Sort"].tap()
+//        app.sheets["Sorting Options"].buttons["Artist"].tap()
+//
+//        let resultstableTable = app.tables["ResultsTable"]
+//        resultstableTable/*@START_MENU_TOKEN@*/.cells.containing(.staticText, identifier:"Everything Is Wrong (LP Version)")/*[[".cells.containing(.staticText, identifier:\"01:14\")",".cells.containing(.staticText, identifier:\"Everything Is Wrong (LP Version)\")"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.staticTexts["Moby"].swipeUp()
+//        resultstableTable.cells.containing(.staticText, identifier:"James Bond Theme").staticTexts["Moby"].tap()
+//        app.staticTexts["Price"].tap()
+//
+//    }
 
-    func testSearchForArtist() {
-        let mKey = app/*@START_MENU_TOKEN@*/.keys["M"]/*[[".keyboards.keys[\"M\"]",".keys[\"M\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
-        mKey.tap()
-        
-        let oKey = app/*@START_MENU_TOKEN@*/.keys["o"]/*[[".keyboards.keys[\"o\"]",".keys[\"o\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
-        oKey.tap()
-        
-        let bKey = app/*@START_MENU_TOKEN@*/.keys["b"]/*[[".keyboards.keys[\"b\"]",".keys[\"b\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
-        bKey.tap()
-        
-        let yKey = app/*@START_MENU_TOKEN@*/.keys["y"]/*[[".keyboards.keys[\"y\"]",".keys[\"y\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
-        yKey.tap()
-        app/*@START_MENU_TOKEN@*/.buttons["Search"]/*[[".keyboards.buttons[\"Search\"]",".buttons[\"Search\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-        app.navigationBars["Moby"].buttons["Sort"].tap()
-        app.sheets.buttons["Genre"].tap()
-    }
-    
-    func testShareResult() {
-        let mKey = app/*@START_MENU_TOKEN@*/.keys["M"]/*[[".keyboards.keys[\"M\"]",".keys[\"M\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
-        mKey.tap()
-        
-        let oKey = app/*@START_MENU_TOKEN@*/.keys["o"]/*[[".keyboards.keys[\"o\"]",".keys[\"o\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
-        oKey.tap()
-        
-        let bKey = app/*@START_MENU_TOKEN@*/.keys["b"]/*[[".keyboards.keys[\"b\"]",".keys[\"b\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
-        bKey.tap()
-        
-        let yKey = app/*@START_MENU_TOKEN@*/.keys["y"]/*[[".keyboards.keys[\"y\"]",".keys[\"y\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
-        yKey.tap()
-        app/*@START_MENU_TOKEN@*/.buttons["Search"]/*[[".keyboards.buttons[\"Search\"]",".buttons[\"Search\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-        app.tables["ResultsTable"]/*@START_MENU_TOKEN@*/.cells.containing(.staticText, identifier:"Let's Go Free")/*[[".cells.containing(.staticText, identifier:\"00:38\")",".cells.containing(.staticText, identifier:\"Let's Go Free\")"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.staticTexts["Moby"].tap()
-    }
-    
-    func testPlayResult() {
-        let mKey = app.keys["M"]
-        mKey.tap()
-        
-        let oKey = app/*@START_MENU_TOKEN@*/.keys["o"]/*[[".keyboards.keys[\"o\"]",".keys[\"o\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
-        oKey.tap()
-        
-        let bKey = app/*@START_MENU_TOKEN@*/.keys["b"]/*[[".keyboards.keys[\"b\"]",".keys[\"b\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
-        bKey.tap()
-        
-        let yKey = app/*@START_MENU_TOKEN@*/.keys["y"]/*[[".keyboards.keys[\"y\"]",".keys[\"y\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
-        yKey.tap()
-        app/*@START_MENU_TOKEN@*/.buttons["Search"]/*[[".keyboards.buttons[\"Search\"]",".buttons[\"Search\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-        app.tables["ResultsTable"]/*@START_MENU_TOKEN@*/.staticTexts["Down Slow"]/*[[".cells.matching(identifier: \"SearchResultCell\").staticTexts[\"Down Slow\"]",".staticTexts[\"Down Slow\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-        
-        let playButton = app.buttons["Play"]
-        playButton.tap()
-        
-        let nextButton = app.buttons["Next"]
-        nextButton.tap()
-        app.navigationBars["Results"].buttons["Results"].tap()
-        
-    }
+//    func testSearchForArtist() {
+//        let mKey = app/*@START_MENU_TOKEN@*/.keys["M"]/*[[".keyboards.keys[\"M\"]",".keys[\"M\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+//        mKey.tap()
+//
+//        let oKey = app/*@START_MENU_TOKEN@*/.keys["o"]/*[[".keyboards.keys[\"o\"]",".keys[\"o\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+//        oKey.tap()
+//
+//        let bKey = app/*@START_MENU_TOKEN@*/.keys["b"]/*[[".keyboards.keys[\"b\"]",".keys[\"b\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+//        bKey.tap()
+//
+//        let yKey = app/*@START_MENU_TOKEN@*/.keys["y"]/*[[".keyboards.keys[\"y\"]",".keys[\"y\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+//        yKey.tap()
+//        app/*@START_MENU_TOKEN@*/.buttons["Search"]/*[[".keyboards.buttons[\"Search\"]",".buttons[\"Search\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+//        app.navigationBars["Moby"].buttons["Sort"].tap()
+//        app.sheets.buttons["Genre"].tap()
+//    }
+//
+//    func testShareResult() {
+//        let mKey = app/*@START_MENU_TOKEN@*/.keys["M"]/*[[".keyboards.keys[\"M\"]",".keys[\"M\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+//        mKey.tap()
+//
+//        let oKey = app/*@START_MENU_TOKEN@*/.keys["o"]/*[[".keyboards.keys[\"o\"]",".keys[\"o\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+//        oKey.tap()
+//
+//        let bKey = app/*@START_MENU_TOKEN@*/.keys["b"]/*[[".keyboards.keys[\"b\"]",".keys[\"b\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+//        bKey.tap()
+//
+//        let yKey = app/*@START_MENU_TOKEN@*/.keys["y"]/*[[".keyboards.keys[\"y\"]",".keys[\"y\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+//        yKey.tap()
+//        app/*@START_MENU_TOKEN@*/.buttons["Search"]/*[[".keyboards.buttons[\"Search\"]",".buttons[\"Search\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+//        app.tables["ResultsTable"]/*@START_MENU_TOKEN@*/.cells.containing(.staticText, identifier:"Let's Go Free")/*[[".cells.containing(.staticText, identifier:\"00:38\")",".cells.containing(.staticText, identifier:\"Let's Go Free\")"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.staticTexts["Moby"].tap()
+//    }
+//
+//    func testPlayResult() {
+//        let mKey = app.keys["M"]
+//        mKey.tap()
+//
+//        let oKey = app/*@START_MENU_TOKEN@*/.keys["o"]/*[[".keyboards.keys[\"o\"]",".keys[\"o\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+//        oKey.tap()
+//
+//        let bKey = app/*@START_MENU_TOKEN@*/.keys["b"]/*[[".keyboards.keys[\"b\"]",".keys[\"b\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+//        bKey.tap()
+//
+//        let yKey = app/*@START_MENU_TOKEN@*/.keys["y"]/*[[".keyboards.keys[\"y\"]",".keys[\"y\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+//        yKey.tap()
+//        app/*@START_MENU_TOKEN@*/.buttons["Search"]/*[[".keyboards.buttons[\"Search\"]",".buttons[\"Search\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+//        app.tables["ResultsTable"]/*@START_MENU_TOKEN@*/.staticTexts["Down Slow"]/*[[".cells.matching(identifier: \"SearchResultCell\").staticTexts[\"Down Slow\"]",".staticTexts[\"Down Slow\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+//
+//        let playButton = app.buttons["Play"]
+//        playButton.tap()
+//
+//        let nextButton = app.buttons["Next"]
+//        nextButton.tap()
+//        app.navigationBars["Results"].buttons["Results"].tap()
+//
+//    }
     
     //  NavigationBar 'InTune.SearchView'
     
