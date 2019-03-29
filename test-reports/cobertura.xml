@@ -1,0 +1,1314 @@
+<?xml version="1.0"?>
+<!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
+<coverage line-rate="0.9290909090909091" branch-rate="1.0000000000000000" lines-covered="1022" lines-valid="1100" branches-covered="0" branches-valid="0" complexity="0.0" timestamp="1553882060" version="Slather 2.4.7">
+  <sources>
+    <source>/Users/ronanocsono/CustomerProjects/GesundheitsCloud/InTune</source>
+  </sources>
+  <packages>
+    <package name="InTune.Core" line-rate="0.9254901960784314" branch-rate="1.0000000000000000" complexity="0.0">
+      <classes>
+        <class name="AppController" filename="InTune/Core/AppController.swift" line-rate="1.0000000000000000" branch-rate="1.0000000000000000" complexity="0.0">
+          <methods/>
+          <lines>
+            <line number="22" branch="false" hits="4"/>
+            <line number="23" branch="false" hits="4"/>
+            <line number="24" branch="false" hits="4"/>
+            <line number="25" branch="false" hits="4"/>
+            <line number="26" branch="false" hits="4"/>
+            <line number="27" branch="false" hits="4"/>
+            <line number="28" branch="false" hits="4"/>
+            <line number="29" branch="false" hits="4"/>
+          </lines>
+        </class>
+        <class name="AppData" filename="InTune/Core/AppData.swift" line-rate="1.0000000000000000" branch-rate="1.0000000000000000" complexity="0.0">
+          <methods/>
+          <lines>
+            <line number="22" branch="false" hits="39"/>
+            <line number="23" branch="false" hits="39"/>
+            <line number="24" branch="false" hits="39"/>
+            <line number="25" branch="false" hits="39"/>
+            <line number="26" branch="false" hits="39"/>
+            <line number="27" branch="false" hits="39"/>
+            <line number="28" branch="false" hits="6570"/>
+            <line number="29" branch="false" hits="6570"/>
+            <line number="30" branch="false" hits="6570"/>
+            <line number="31" branch="false" hits="39"/>
+            <line number="32" branch="false" hits="218"/>
+            <line number="33" branch="false" hits="218"/>
+            <line number="34" branch="false" hits="218"/>
+            <line number="35" branch="false" hits="39"/>
+            <line number="36" branch="false" hits="297"/>
+            <line number="37" branch="false" hits="297"/>
+            <line number="38" branch="false" hits="297"/>
+            <line number="39" branch="false" hits="39"/>
+            <line number="40" branch="false" hits="558"/>
+            <line number="41" branch="false" hits="558"/>
+            <line number="42" branch="false" hits="558"/>
+            <line number="43" branch="false" hits="39"/>
+            <line number="44" branch="false" hits="178"/>
+            <line number="45" branch="false" hits="178"/>
+            <line number="46" branch="false" hits="178"/>
+            <line number="47" branch="false" hits="39"/>
+            <line number="48" branch="false" hits="930"/>
+            <line number="49" branch="false" hits="930"/>
+            <line number="50" branch="false" hits="930"/>
+            <line number="51" branch="false" hits="39"/>
+            <line number="52" branch="false" hits="39"/>
+          </lines>
+        </class>
+        <class name="AppDelegate" filename="InTune/Core/AppDelegate.swift" line-rate="1.0000000000000000" branch-rate="1.0000000000000000" complexity="0.0">
+          <methods/>
+          <lines>
+            <line number="17" branch="false" hits="1"/>
+            <line number="18" branch="false" hits="1"/>
+            <line number="19" branch="false" hits="1"/>
+            <line number="20" branch="false" hits="1"/>
+            <line number="21" branch="false" hits="1"/>
+            <line number="22" branch="false" hits="1"/>
+          </lines>
+        </class>
+        <class name="Coordinator" filename="InTune/Core/Coordinator.swift" line-rate="0.9140625000000000" branch-rate="1.0000000000000000" complexity="0.0">
+          <methods/>
+          <lines>
+            <line number="42" branch="false" hits="13"/>
+            <line number="43" branch="false" hits="13"/>
+            <line number="44" branch="false" hits="13"/>
+            <line number="45" branch="false" hits="13"/>
+            <line number="46" branch="false" hits="13"/>
+            <line number="47" branch="false" hits="13"/>
+            <line number="49" branch="false" hits="13"/>
+            <line number="50" branch="false" hits="13"/>
+            <line number="51" branch="false" hits="13"/>
+            <line number="53" branch="false" hits="3"/>
+            <line number="54" branch="false" hits="3"/>
+            <line number="55" branch="false" hits="3"/>
+            <line number="57" branch="false" hits="3"/>
+            <line number="58" branch="false" hits="3"/>
+            <line number="59" branch="false" hits="3"/>
+            <line number="60" branch="false" hits="3"/>
+            <line number="61" branch="false" hits="3"/>
+            <line number="62" branch="false" hits="3"/>
+            <line number="63" branch="false" hits="3"/>
+            <line number="64" branch="false" hits="3"/>
+            <line number="66" branch="false" hits="2"/>
+            <line number="67" branch="false" hits="2"/>
+            <line number="68" branch="false" hits="2"/>
+            <line number="69" branch="false" hits="2"/>
+            <line number="71" branch="false" hits="13"/>
+            <line number="72" branch="false" hits="13"/>
+            <line number="73" branch="false" hits="13"/>
+            <line number="74" branch="false" hits="13"/>
+            <line number="75" branch="false" hits="13"/>
+            <line number="76" branch="false" hits="13"/>
+            <line number="77" branch="false" hits="13"/>
+            <line number="78" branch="false" hits="13"/>
+            <line number="79" branch="false" hits="13"/>
+            <line number="80" branch="false" hits="13"/>
+            <line number="81" branch="false" hits="13"/>
+            <line number="82" branch="false" hits="13"/>
+            <line number="83" branch="false" hits="13"/>
+            <line number="84" branch="false" hits="13"/>
+            <line number="86" branch="false" hits="1"/>
+            <line number="87" branch="false" hits="1"/>
+            <line number="88" branch="false" hits="1"/>
+            <line number="90" branch="false" hits="1"/>
+            <line number="91" branch="false" hits="1"/>
+            <line number="92" branch="false" hits="1"/>
+            <line number="93" branch="false" hits="1"/>
+            <line number="94" branch="false" hits="1"/>
+            <line number="95" branch="false" hits="1"/>
+            <line number="96" branch="false" hits="1"/>
+            <line number="97" branch="false" hits="1"/>
+            <line number="98" branch="false" hits="1"/>
+            <line number="99" branch="false" hits="1"/>
+            <line number="100" branch="false" hits="1"/>
+            <line number="102" branch="false" hits="1"/>
+            <line number="103" branch="false" hits="1"/>
+            <line number="104" branch="false" hits="1"/>
+            <line number="105" branch="false" hits="1"/>
+            <line number="106" branch="false" hits="1"/>
+            <line number="107" branch="false" hits="0"/>
+            <line number="108" branch="false" hits="0"/>
+            <line number="109" branch="false" hits="1"/>
+            <line number="110" branch="false" hits="1"/>
+            <line number="111" branch="false" hits="1"/>
+            <line number="112" branch="false" hits="1"/>
+            <line number="113" branch="false" hits="1"/>
+            <line number="114" branch="false" hits="1"/>
+            <line number="115" branch="false" hits="1"/>
+            <line number="116" branch="false" hits="1"/>
+            <line number="117" branch="false" hits="1"/>
+            <line number="118" branch="false" hits="1"/>
+            <line number="119" branch="false" hits="1"/>
+            <line number="120" branch="false" hits="1"/>
+            <line number="121" branch="false" hits="1"/>
+            <line number="122" branch="false" hits="1"/>
+            <line number="123" branch="false" hits="1"/>
+            <line number="124" branch="false" hits="1"/>
+            <line number="125" branch="false" hits="1"/>
+            <line number="126" branch="false" hits="1"/>
+            <line number="127" branch="false" hits="1"/>
+            <line number="128" branch="false" hits="1"/>
+            <line number="130" branch="false" hits="1"/>
+            <line number="131" branch="false" hits="1"/>
+            <line number="132" branch="false" hits="1"/>
+            <line number="133" branch="false" hits="1"/>
+            <line number="134" branch="false" hits="1"/>
+            <line number="136" branch="false" hits="1"/>
+            <line number="137" branch="false" hits="1"/>
+            <line number="138" branch="false" hits="1"/>
+            <line number="139" branch="false" hits="1"/>
+            <line number="140" branch="false" hits="1"/>
+            <line number="141" branch="false" hits="1"/>
+            <line number="142" branch="false" hits="1"/>
+            <line number="143" branch="false" hits="1"/>
+            <line number="144" branch="false" hits="1"/>
+            <line number="145" branch="false" hits="1"/>
+            <line number="146" branch="false" hits="1"/>
+            <line number="147" branch="false" hits="1"/>
+            <line number="148" branch="false" hits="1"/>
+            <line number="149" branch="false" hits="1"/>
+            <line number="150" branch="false" hits="1"/>
+            <line number="151" branch="false" hits="1"/>
+            <line number="152" branch="false" hits="1"/>
+            <line number="156" branch="false" hits="2"/>
+            <line number="157" branch="false" hits="2"/>
+            <line number="158" branch="false" hits="2"/>
+            <line number="159" branch="false" hits="2"/>
+            <line number="160" branch="false" hits="2"/>
+            <line number="161" branch="false" hits="0"/>
+            <line number="162" branch="false" hits="2"/>
+            <line number="163" branch="false" hits="2"/>
+            <line number="164" branch="false" hits="2"/>
+            <line number="165" branch="false" hits="0"/>
+            <line number="166" branch="false" hits="0"/>
+            <line number="167" branch="false" hits="0"/>
+            <line number="168" branch="false" hits="0"/>
+            <line number="169" branch="false" hits="0"/>
+            <line number="170" branch="false" hits="0"/>
+            <line number="171" branch="false" hits="0"/>
+            <line number="172" branch="false" hits="0"/>
+            <line number="173" branch="false" hits="2"/>
+            <line number="177" branch="false" hits="1"/>
+            <line number="178" branch="false" hits="1"/>
+            <line number="179" branch="false" hits="1"/>
+            <line number="181" branch="false" hits="1"/>
+            <line number="182" branch="false" hits="1"/>
+            <line number="183" branch="false" hits="1"/>
+            <line number="185" branch="false" hits="1"/>
+            <line number="186" branch="false" hits="1"/>
+            <line number="187" branch="false" hits="1"/>
+          </lines>
+        </class>
+        <class name="DataProvider" filename="InTune/Core/DataProvider.swift" line-rate="0.9024390243902439" branch-rate="1.0000000000000000" complexity="0.0">
+          <methods/>
+          <lines>
+            <line number="34" branch="false" hits="54"/>
+            <line number="35" branch="false" hits="54"/>
+            <line number="36" branch="false" hits="54"/>
+            <line number="38" branch="false" hits="34"/>
+            <line number="39" branch="false" hits="34"/>
+            <line number="40" branch="false" hits="34"/>
+            <line number="41" branch="false" hits="34"/>
+            <line number="42" branch="false" hits="34"/>
+            <line number="43" branch="false" hits="34"/>
+            <line number="44" branch="false" hits="34"/>
+            <line number="45" branch="false" hits="0"/>
+            <line number="46" branch="false" hits="0"/>
+            <line number="47" branch="false" hits="34"/>
+            <line number="48" branch="false" hits="34"/>
+            <line number="49" branch="false" hits="34"/>
+            <line number="50" branch="false" hits="34"/>
+            <line number="51" branch="false" hits="34"/>
+            <line number="52" branch="false" hits="34"/>
+            <line number="53" branch="false" hits="34"/>
+            <line number="54" branch="false" hits="34"/>
+            <line number="55" branch="false" hits="34"/>
+            <line number="56" branch="false" hits="34"/>
+            <line number="57" branch="false" hits="0"/>
+            <line number="58" branch="false" hits="0"/>
+            <line number="59" branch="false" hits="0"/>
+            <line number="60" branch="false" hits="34"/>
+            <line number="61" branch="false" hits="34"/>
+            <line number="62" branch="false" hits="34"/>
+            <line number="63" branch="false" hits="0"/>
+            <line number="64" branch="false" hits="0"/>
+            <line number="65" branch="false" hits="0"/>
+            <line number="66" branch="false" hits="34"/>
+            <line number="67" branch="false" hits="34"/>
+            <line number="68" branch="false" hits="34"/>
+            <line number="69" branch="false" hits="34"/>
+            <line number="70" branch="false" hits="34"/>
+            <line number="71" branch="false" hits="34"/>
+            <line number="72" branch="false" hits="34"/>
+            <line number="73" branch="false" hits="34"/>
+            <line number="74" branch="false" hits="34"/>
+            <line number="75" branch="false" hits="1"/>
+            <line number="76" branch="false" hits="1"/>
+            <line number="77" branch="false" hits="33"/>
+            <line number="78" branch="false" hits="33"/>
+            <line number="79" branch="false" hits="33"/>
+            <line number="80" branch="false" hits="33"/>
+            <line number="81" branch="false" hits="33"/>
+            <line number="82" branch="false" hits="33"/>
+            <line number="83" branch="false" hits="1"/>
+            <line number="84" branch="false" hits="1"/>
+            <line number="85" branch="false" hits="33"/>
+            <line number="86" branch="false" hits="33"/>
+            <line number="87" branch="false" hits="34"/>
+            <line number="89" branch="false" hits="32"/>
+            <line number="90" branch="false" hits="32"/>
+            <line number="91" branch="false" hits="32"/>
+            <line number="92" branch="false" hits="32"/>
+            <line number="94" branch="false" hits="33"/>
+            <line number="95" branch="false" hits="33"/>
+            <line number="96" branch="false" hits="33"/>
+            <line number="97" branch="false" hits="33"/>
+            <line number="98" branch="false" hits="546"/>
+            <line number="99" branch="false" hits="546"/>
+            <line number="100" branch="false" hits="546"/>
+            <line number="101" branch="false" hits="546"/>
+            <line number="102" branch="false" hits="33"/>
+            <line number="103" branch="false" hits="33"/>
+            <line number="105" branch="false" hits="33"/>
+            <line number="106" branch="false" hits="33"/>
+            <line number="107" branch="false" hits="33"/>
+            <line number="109" branch="false" hits="5"/>
+            <line number="110" branch="false" hits="5"/>
+            <line number="111" branch="false" hits="2"/>
+            <line number="112" branch="false" hits="2"/>
+            <line number="113" branch="false" hits="2"/>
+            <line number="114" branch="false" hits="4"/>
+            <line number="115" branch="false" hits="2"/>
+            <line number="116" branch="false" hits="2"/>
+            <line number="117" branch="false" hits="2"/>
+            <line number="118" branch="false" hits="3"/>
+            <line number="119" branch="false" hits="3"/>
+            <line number="120" branch="false" hits="5"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="InTune.Extensions" line-rate="0.9722222222222222" branch-rate="1.0000000000000000" complexity="0.0">
+      <classes>
+        <class name="DateFormatter" filename="InTune/Extensions/DateFormatter.swift" line-rate="1.0000000000000000" branch-rate="1.0000000000000000" complexity="0.0">
+          <methods/>
+          <lines>
+            <line number="12" branch="false" hits="39"/>
+            <line number="13" branch="false" hits="39"/>
+            <line number="14" branch="false" hits="39"/>
+            <line number="15" branch="false" hits="39"/>
+            <line number="16" branch="false" hits="39"/>
+            <line number="17" branch="false" hits="39"/>
+          </lines>
+        </class>
+        <class name="Loadable" filename="InTune/Extensions/Loadable.swift" line-rate="1.0000000000000000" branch-rate="1.0000000000000000" complexity="0.0">
+          <methods/>
+          <lines>
+            <line number="26" branch="false" hits="8"/>
+            <line number="27" branch="false" hits="8"/>
+            <line number="28" branch="false" hits="8"/>
+            <line number="29" branch="false" hits="8"/>
+            <line number="30" branch="false" hits="8"/>
+            <line number="32" branch="false" hits="8"/>
+            <line number="33" branch="false" hits="8"/>
+            <line number="34" branch="false" hits="8"/>
+          </lines>
+        </class>
+        <class name="NumberFormatter" filename="InTune/Extensions/NumberFormatter.swift" line-rate="1.0000000000000000" branch-rate="1.0000000000000000" complexity="0.0">
+          <methods/>
+          <lines>
+            <line number="12" branch="false" hits="36"/>
+            <line number="13" branch="false" hits="36"/>
+            <line number="14" branch="false" hits="36"/>
+            <line number="15" branch="false" hits="36"/>
+            <line number="16" branch="false" hits="36"/>
+            <line number="17" branch="false" hits="36"/>
+            <line number="18" branch="false" hits="36"/>
+          </lines>
+        </class>
+        <class name="UITableViewCell+Extension" filename="InTune/Extensions/UITableViewCell+Extension.swift" line-rate="0.9333333333333333" branch-rate="1.0000000000000000" complexity="0.0">
+          <methods/>
+          <lines>
+            <line number="14" branch="false" hits="37"/>
+            <line number="15" branch="false" hits="37"/>
+            <line number="16" branch="false" hits="37"/>
+            <line number="23" branch="false" hits="12"/>
+            <line number="24" branch="false" hits="12"/>
+            <line number="25" branch="false" hits="12"/>
+            <line number="39" branch="false" hits="13"/>
+            <line number="40" branch="false" hits="13"/>
+            <line number="41" branch="false" hits="13"/>
+            <line number="42" branch="false" hits="13"/>
+            <line number="43" branch="false" hits="0"/>
+            <line number="44" branch="false" hits="13"/>
+            <line number="45" branch="false" hits="13"/>
+            <line number="46" branch="false" hits="13"/>
+            <line number="47" branch="false" hits="13"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="InTune.MediaPlayer" line-rate="0.8216560509554141" branch-rate="1.0000000000000000" complexity="0.0">
+      <classes>
+        <class name="MediaPlayer" filename="InTune/MediaPlayer/MediaPlayer.swift" line-rate="0.8111888111888111" branch-rate="1.0000000000000000" complexity="0.0">
+          <methods/>
+          <lines>
+            <line number="43" branch="false" hits="20"/>
+            <line number="44" branch="false" hits="20"/>
+            <line number="45" branch="false" hits="20"/>
+            <line number="46" branch="false" hits="20"/>
+            <line number="47" branch="false" hits="20"/>
+            <line number="48" branch="false" hits="20"/>
+            <line number="49" branch="false" hits="20"/>
+            <line number="50" branch="false" hits="20"/>
+            <line number="51" branch="false" hits="0"/>
+            <line number="52" branch="false" hits="20"/>
+            <line number="53" branch="false" hits="20"/>
+            <line number="54" branch="false" hits="20"/>
+            <line number="55" branch="false" hits="20"/>
+            <line number="56" branch="false" hits="20"/>
+            <line number="60" branch="false" hits="2"/>
+            <line number="61" branch="false" hits="2"/>
+            <line number="62" branch="false" hits="2"/>
+            <line number="63" branch="false" hits="4"/>
+            <line number="64" branch="false" hits="4"/>
+            <line number="65" branch="false" hits="4"/>
+            <line number="66" branch="false" hits="4"/>
+            <line number="67" branch="false" hits="2"/>
+            <line number="68" branch="false" hits="2"/>
+            <line number="69" branch="false" hits="2"/>
+            <line number="70" branch="false" hits="2"/>
+            <line number="71" branch="false" hits="2"/>
+            <line number="73" branch="false" hits="2"/>
+            <line number="74" branch="false" hits="2"/>
+            <line number="75" branch="false" hits="2"/>
+            <line number="76" branch="false" hits="1"/>
+            <line number="77" branch="false" hits="1"/>
+            <line number="78" branch="false" hits="1"/>
+            <line number="79" branch="false" hits="1"/>
+            <line number="80" branch="false" hits="1"/>
+            <line number="81" branch="false" hits="1"/>
+            <line number="82" branch="false" hits="1"/>
+            <line number="83" branch="false" hits="1"/>
+            <line number="84" branch="false" hits="1"/>
+            <line number="85" branch="false" hits="1"/>
+            <line number="86" branch="false" hits="1"/>
+            <line number="87" branch="false" hits="1"/>
+            <line number="89" branch="false" hits="2"/>
+            <line number="90" branch="false" hits="2"/>
+            <line number="91" branch="false" hits="2"/>
+            <line number="92" branch="false" hits="1"/>
+            <line number="93" branch="false" hits="2"/>
+            <line number="94" branch="false" hits="2"/>
+            <line number="95" branch="false" hits="2"/>
+            <line number="96" branch="false" hits="2"/>
+            <line number="97" branch="false" hits="2"/>
+            <line number="98" branch="false" hits="2"/>
+            <line number="99" branch="false" hits="2"/>
+            <line number="100" branch="false" hits="2"/>
+            <line number="102" branch="false" hits="2"/>
+            <line number="103" branch="false" hits="2"/>
+            <line number="104" branch="false" hits="2"/>
+            <line number="105" branch="false" hits="2"/>
+            <line number="106" branch="false" hits="1"/>
+            <line number="107" branch="false" hits="2"/>
+            <line number="108" branch="false" hits="2"/>
+            <line number="109" branch="false" hits="2"/>
+            <line number="110" branch="false" hits="2"/>
+            <line number="111" branch="false" hits="2"/>
+            <line number="112" branch="false" hits="2"/>
+            <line number="116" branch="false" hits="3"/>
+            <line number="117" branch="false" hits="3"/>
+            <line number="118" branch="false" hits="3"/>
+            <line number="119" branch="false" hits="1"/>
+            <line number="120" branch="false" hits="1"/>
+            <line number="121" branch="false" hits="3"/>
+            <line number="122" branch="false" hits="3"/>
+            <line number="123" branch="false" hits="3"/>
+            <line number="124" branch="false" hits="3"/>
+            <line number="126" branch="false" hits="3"/>
+            <line number="127" branch="false" hits="3"/>
+            <line number="128" branch="false" hits="3"/>
+            <line number="129" branch="false" hits="3"/>
+            <line number="130" branch="false" hits="6"/>
+            <line number="131" branch="false" hits="6"/>
+            <line number="132" branch="false" hits="6"/>
+            <line number="133" branch="false" hits="6"/>
+            <line number="134" branch="false" hits="3"/>
+            <line number="135" branch="false" hits="3"/>
+            <line number="136" branch="false" hits="3"/>
+            <line number="137" branch="false" hits="3"/>
+            <line number="138" branch="false" hits="3"/>
+            <line number="139" branch="false" hits="3"/>
+            <line number="140" branch="false" hits="3"/>
+            <line number="141" branch="false" hits="3"/>
+            <line number="142" branch="false" hits="3"/>
+            <line number="143" branch="false" hits="3"/>
+            <line number="144" branch="false" hits="0"/>
+            <line number="145" branch="false" hits="3"/>
+            <line number="146" branch="false" hits="3"/>
+            <line number="147" branch="false" hits="3"/>
+            <line number="148" branch="false" hits="3"/>
+            <line number="150" branch="false" hits="5"/>
+            <line number="151" branch="false" hits="5"/>
+            <line number="152" branch="false" hits="5"/>
+            <line number="154" branch="false" hits="3"/>
+            <line number="155" branch="false" hits="3"/>
+            <line number="156" branch="false" hits="3"/>
+            <line number="157" branch="false" hits="3"/>
+            <line number="158" branch="false" hits="3"/>
+            <line number="159" branch="false" hits="3"/>
+            <line number="160" branch="false" hits="3"/>
+            <line number="161" branch="false" hits="3"/>
+            <line number="162" branch="false" hits="3"/>
+            <line number="163" branch="false" hits="3"/>
+            <line number="164" branch="false" hits="0"/>
+            <line number="165" branch="false" hits="0"/>
+            <line number="166" branch="false" hits="0"/>
+            <line number="167" branch="false" hits="0"/>
+            <line number="168" branch="false" hits="0"/>
+            <line number="169" branch="false" hits="0"/>
+            <line number="170" branch="false" hits="0"/>
+            <line number="171" branch="false" hits="0"/>
+            <line number="172" branch="false" hits="0"/>
+            <line number="173" branch="false" hits="0"/>
+            <line number="174" branch="false" hits="0"/>
+            <line number="175" branch="false" hits="0"/>
+            <line number="176" branch="false" hits="0"/>
+            <line number="177" branch="false" hits="0"/>
+            <line number="178" branch="false" hits="0"/>
+            <line number="179" branch="false" hits="0"/>
+            <line number="180" branch="false" hits="0"/>
+            <line number="181" branch="false" hits="0"/>
+            <line number="182" branch="false" hits="0"/>
+            <line number="183" branch="false" hits="0"/>
+            <line number="184" branch="false" hits="0"/>
+            <line number="185" branch="false" hits="0"/>
+            <line number="186" branch="false" hits="0"/>
+            <line number="187" branch="false" hits="0"/>
+            <line number="188" branch="false" hits="0"/>
+            <line number="189" branch="false" hits="3"/>
+            <line number="191" branch="false" hits="4"/>
+            <line number="192" branch="false" hits="4"/>
+            <line number="193" branch="false" hits="4"/>
+            <line number="194" branch="false" hits="1"/>
+            <line number="195" branch="false" hits="1"/>
+            <line number="196" branch="false" hits="1"/>
+            <line number="197" branch="false" hits="4"/>
+            <line number="198" branch="false" hits="4"/>
+          </lines>
+        </class>
+        <class name="MediaPlayerDataProvider" filename="InTune/MediaPlayer/MediaPlayerDataProvider.swift" line-rate="0.9285714285714286" branch-rate="1.0000000000000000" complexity="0.0">
+          <methods/>
+          <lines>
+            <line number="17" branch="false" hits="1"/>
+            <line number="18" branch="false" hits="1"/>
+            <line number="19" branch="false" hits="1"/>
+            <line number="20" branch="false" hits="1"/>
+            <line number="21" branch="false" hits="2"/>
+            <line number="22" branch="false" hits="2"/>
+            <line number="23" branch="false" hits="2"/>
+            <line number="24" branch="false" hits="2"/>
+            <line number="25" branch="false" hits="2"/>
+            <line number="26" branch="false" hits="0"/>
+            <line number="27" branch="false" hits="2"/>
+            <line number="28" branch="false" hits="2"/>
+            <line number="29" branch="false" hits="1"/>
+            <line number="30" branch="false" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="InTune.Model" line-rate="1.0000000000000000" branch-rate="1.0000000000000000" complexity="0.0">
+      <classes>
+        <class name="ResultParser" filename="InTune/Model/ResultParser.swift" line-rate="1.0000000000000000" branch-rate="1.0000000000000000" complexity="0.0">
+          <methods/>
+          <lines>
+            <line number="16" branch="false" hits="548"/>
+            <line number="17" branch="false" hits="548"/>
+            <line number="18" branch="false" hits="548"/>
+            <line number="19" branch="false" hits="548"/>
+            <line number="20" branch="false" hits="525"/>
+            <line number="21" branch="false" hits="525"/>
+            <line number="22" branch="false" hits="525"/>
+            <line number="23" branch="false" hits="525"/>
+            <line number="24" branch="false" hits="22"/>
+            <line number="25" branch="false" hits="525"/>
+            <line number="26" branch="false" hits="548"/>
+            <line number="27" branch="false" hits="23"/>
+            <line number="28" branch="false" hits="548"/>
+            <line number="29" branch="false" hits="548"/>
+            <line number="30" branch="false" hits="548"/>
+            <line number="31" branch="false" hits="548"/>
+            <line number="32" branch="false" hits="548"/>
+            <line number="33" branch="false" hits="548"/>
+            <line number="34" branch="false" hits="548"/>
+            <line number="35" branch="false" hits="548"/>
+            <line number="36" branch="false" hits="548"/>
+            <line number="37" branch="false" hits="548"/>
+            <line number="38" branch="false" hits="548"/>
+            <line number="39" branch="false" hits="548"/>
+            <line number="40" branch="false" hits="548"/>
+            <line number="41" branch="false" hits="548"/>
+            <line number="42" branch="false" hits="548"/>
+            <line number="43" branch="false" hits="548"/>
+            <line number="44" branch="false" hits="548"/>
+            <line number="45" branch="false" hits="548"/>
+          </lines>
+        </class>
+        <class name="SearchResult" filename="InTune/Model/SearchResult.swift" line-rate="1.0000000000000000" branch-rate="1.0000000000000000" complexity="0.0">
+          <methods/>
+          <lines>
+            <line number="34" branch="false" hits="549"/>
+            <line number="35" branch="false" hits="549"/>
+            <line number="36" branch="false" hits="549"/>
+            <line number="37" branch="false" hits="549"/>
+            <line number="38" branch="false" hits="549"/>
+            <line number="39" branch="false" hits="549"/>
+            <line number="40" branch="false" hits="549"/>
+            <line number="41" branch="false" hits="549"/>
+            <line number="42" branch="false" hits="549"/>
+            <line number="43" branch="false" hits="549"/>
+            <line number="44" branch="false" hits="549"/>
+            <line number="45" branch="false" hits="549"/>
+            <line number="46" branch="false" hits="549"/>
+          </lines>
+        </class>
+        <class name="ServerResponse" filename="InTune/Model/ServerResponse.swift" line-rate="1.0000000000000000" branch-rate="1.0000000000000000" complexity="0.0">
+          <methods/>
+          <lines>
+            <line number="77" branch="false" hits="2"/>
+            <line number="78" branch="false" hits="2"/>
+            <line number="79" branch="false" hits="2"/>
+            <line number="80" branch="false" hits="2"/>
+            <line number="81" branch="false" hits="2"/>
+            <line number="82" branch="false" hits="2"/>
+            <line number="83" branch="false" hits="2"/>
+            <line number="84" branch="false" hits="2"/>
+            <line number="85" branch="false" hits="2"/>
+            <line number="86" branch="false" hits="2"/>
+            <line number="87" branch="false" hits="2"/>
+            <line number="88" branch="false" hits="2"/>
+            <line number="89" branch="false" hits="2"/>
+            <line number="90" branch="false" hits="2"/>
+            <line number="91" branch="false" hits="2"/>
+            <line number="92" branch="false" hits="2"/>
+            <line number="93" branch="false" hits="2"/>
+            <line number="94" branch="false" hits="2"/>
+            <line number="95" branch="false" hits="2"/>
+            <line number="96" branch="false" hits="2"/>
+            <line number="97" branch="false" hits="2"/>
+            <line number="98" branch="false" hits="2"/>
+            <line number="99" branch="false" hits="2"/>
+            <line number="100" branch="false" hits="2"/>
+          </lines>
+        </class>
+        <class name="TimeFormatter" filename="InTune/Model/TimeFormatter.swift" line-rate="1.0000000000000000" branch-rate="1.0000000000000000" complexity="0.0">
+          <methods/>
+          <lines>
+            <line number="13" branch="false" hits="552"/>
+            <line number="14" branch="false" hits="552"/>
+            <line number="15" branch="false" hits="552"/>
+            <line number="16" branch="false" hits="552"/>
+            <line number="17" branch="false" hits="552"/>
+            <line number="18" branch="false" hits="552"/>
+            <line number="19" branch="false" hits="1"/>
+            <line number="20" branch="false" hits="1"/>
+            <line number="21" branch="false" hits="1"/>
+            <line number="22" branch="false" hits="1"/>
+            <line number="23" branch="false" hits="551"/>
+            <line number="24" branch="false" hits="551"/>
+            <line number="25" branch="false" hits="551"/>
+            <line number="26" branch="false" hits="552"/>
+            <line number="28" branch="false" hits="1100"/>
+            <line number="29" branch="false" hits="1100"/>
+            <line number="30" branch="false" hits="1100"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="InTune.Music Player" line-rate="1.0000000000000000" branch-rate="1.0000000000000000" complexity="0.0">
+      <classes>
+        <class name="MusicPlayerDataProvider" filename="InTune/Music Player/MusicPlayerDataProvider.swift" line-rate="1.0000000000000000" branch-rate="1.0000000000000000" complexity="0.0">
+          <methods/>
+          <lines>
+            <line number="20" branch="false" hits="1"/>
+            <line number="21" branch="false" hits="1"/>
+            <line number="22" branch="false" hits="1"/>
+            <line number="24" branch="false" hits="6"/>
+            <line number="25" branch="false" hits="6"/>
+            <line number="26" branch="false" hits="6"/>
+            <line number="28" branch="false" hits="7"/>
+            <line number="29" branch="false" hits="7"/>
+            <line number="30" branch="false" hits="7"/>
+          </lines>
+        </class>
+        <class name="MusicPlayerPresenter" filename="InTune/Music Player/MusicPlayerPresenter.swift" line-rate="1.0000000000000000" branch-rate="1.0000000000000000" complexity="0.0">
+          <methods/>
+          <lines>
+            <line number="36" branch="false" hits="7"/>
+            <line number="37" branch="false" hits="7"/>
+            <line number="38" branch="false" hits="7"/>
+            <line number="39" branch="false" hits="7"/>
+            <line number="40" branch="false" hits="7"/>
+            <line number="42" branch="false" hits="5"/>
+            <line number="43" branch="false" hits="5"/>
+            <line number="44" branch="false" hits="5"/>
+            <line number="45" branch="false" hits="5"/>
+            <line number="46" branch="false" hits="5"/>
+            <line number="47" branch="false" hits="5"/>
+            <line number="48" branch="false" hits="5"/>
+            <line number="49" branch="false" hits="5"/>
+            <line number="50" branch="false" hits="5"/>
+            <line number="51" branch="false" hits="5"/>
+            <line number="52" branch="false" hits="5"/>
+            <line number="53" branch="false" hits="5"/>
+            <line number="55" branch="false" hits="7"/>
+            <line number="56" branch="false" hits="7"/>
+            <line number="57" branch="false" hits="7"/>
+            <line number="58" branch="false" hits="7"/>
+            <line number="59" branch="false" hits="7"/>
+            <line number="60" branch="false" hits="7"/>
+            <line number="61" branch="false" hits="7"/>
+            <line number="63" branch="false" hits="7"/>
+            <line number="64" branch="false" hits="14"/>
+            <line number="65" branch="false" hits="7"/>
+            <line number="67" branch="false" hits="1"/>
+            <line number="68" branch="false" hits="1"/>
+            <line number="69" branch="false" hits="1"/>
+            <line number="70" branch="false" hits="1"/>
+            <line number="72" branch="false" hits="1"/>
+            <line number="73" branch="false" hits="1"/>
+            <line number="74" branch="false" hits="1"/>
+            <line number="76" branch="false" hits="1"/>
+            <line number="77" branch="false" hits="1"/>
+            <line number="78" branch="false" hits="1"/>
+            <line number="79" branch="false" hits="1"/>
+            <line number="80" branch="false" hits="1"/>
+            <line number="81" branch="false" hits="1"/>
+            <line number="82" branch="false" hits="1"/>
+            <line number="83" branch="false" hits="1"/>
+            <line number="85" branch="false" hits="1"/>
+            <line number="86" branch="false" hits="1"/>
+            <line number="87" branch="false" hits="1"/>
+            <line number="88" branch="false" hits="1"/>
+            <line number="90" branch="false" hits="1"/>
+            <line number="91" branch="false" hits="1"/>
+            <line number="92" branch="false" hits="1"/>
+            <line number="93" branch="false" hits="1"/>
+            <line number="94" branch="false" hits="1"/>
+            <line number="95" branch="false" hits="1"/>
+            <line number="96" branch="false" hits="1"/>
+            <line number="97" branch="false" hits="1"/>
+            <line number="99" branch="false" hits="1"/>
+            <line number="100" branch="false" hits="1"/>
+            <line number="101" branch="false" hits="1"/>
+            <line number="102" branch="false" hits="1"/>
+            <line number="103" branch="false" hits="1"/>
+            <line number="104" branch="false" hits="1"/>
+            <line number="105" branch="false" hits="1"/>
+            <line number="106" branch="false" hits="1"/>
+            <line number="107" branch="false" hits="1"/>
+            <line number="108" branch="false" hits="1"/>
+            <line number="109" branch="false" hits="1"/>
+          </lines>
+        </class>
+        <class name="MusicPlayerView" filename="InTune/Music Player/MusicPlayerView.swift" line-rate="1.0000000000000000" branch-rate="1.0000000000000000" complexity="0.0">
+          <methods/>
+          <lines>
+            <line number="33" branch="false" hits="5"/>
+            <line number="34" branch="false" hits="5"/>
+            <line number="35" branch="false" hits="5"/>
+            <line number="36" branch="false" hits="5"/>
+            <line number="37" branch="false" hits="5"/>
+            <line number="38" branch="false" hits="5"/>
+            <line number="39" branch="false" hits="5"/>
+            <line number="40" branch="false" hits="5"/>
+            <line number="41" branch="false" hits="5"/>
+            <line number="42" branch="false" hits="5"/>
+            <line number="43" branch="false" hits="5"/>
+            <line number="44" branch="false" hits="5"/>
+            <line number="45" branch="false" hits="5"/>
+            <line number="47" branch="false" hits="1"/>
+            <line number="48" branch="false" hits="1"/>
+            <line number="49" branch="false" hits="1"/>
+            <line number="50" branch="false" hits="1"/>
+            <line number="51" branch="false" hits="1"/>
+            <line number="52" branch="false" hits="1"/>
+            <line number="53" branch="false" hits="1"/>
+            <line number="55" branch="false" hits="1"/>
+            <line number="56" branch="false" hits="1"/>
+            <line number="57" branch="false" hits="1"/>
+            <line number="58" branch="false" hits="1"/>
+            <line number="60" branch="false" hits="1"/>
+            <line number="61" branch="false" hits="1"/>
+            <line number="62" branch="false" hits="1"/>
+            <line number="63" branch="false" hits="1"/>
+            <line number="64" branch="false" hits="1"/>
+            <line number="66" branch="false" hits="1"/>
+            <line number="67" branch="false" hits="1"/>
+            <line number="68" branch="false" hits="1"/>
+            <line number="69" branch="false" hits="1"/>
+            <line number="71" branch="false" hits="2"/>
+            <line number="72" branch="false" hits="2"/>
+            <line number="73" branch="false" hits="2"/>
+            <line number="74" branch="false" hits="2"/>
+            <line number="75" branch="false" hits="2"/>
+            <line number="77" branch="false" hits="1"/>
+            <line number="78" branch="false" hits="1"/>
+            <line number="79" branch="false" hits="1"/>
+            <line number="80" branch="false" hits="1"/>
+            <line number="81" branch="false" hits="1"/>
+            <line number="82" branch="false" hits="1"/>
+            <line number="83" branch="false" hits="1"/>
+            <line number="84" branch="false" hits="1"/>
+            <line number="85" branch="false" hits="1"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="InTune.Screens.Search.Cells" line-rate="1.0000000000000000" branch-rate="1.0000000000000000" complexity="0.0">
+      <classes>
+        <class name="ResultTableViewCell" filename="InTune/Screens/Search/Cells/ResultTableViewCell.swift" line-rate="1.0000000000000000" branch-rate="1.0000000000000000" complexity="0.0">
+          <methods/>
+          <lines>
+            <line number="24" branch="false" hits="13"/>
+            <line number="25" branch="false" hits="13"/>
+            <line number="26" branch="false" hits="13"/>
+            <line number="27" branch="false" hits="13"/>
+            <line number="28" branch="false" hits="13"/>
+            <line number="29" branch="false" hits="13"/>
+            <line number="30" branch="false" hits="13"/>
+            <line number="31" branch="false" hits="13"/>
+            <line number="32" branch="false" hits="13"/>
+            <line number="33" branch="false" hits="13"/>
+            <line number="34" branch="false" hits="13"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="InTune.Screens.Search" line-rate="0.9379844961240310" branch-rate="1.0000000000000000" complexity="0.0">
+      <classes>
+        <class name="SearchAction" filename="InTune/Screens/Search/SearchAction.swift" line-rate="1.0000000000000000" branch-rate="1.0000000000000000" complexity="0.0">
+          <methods/>
+          <lines>
+            <line number="18" branch="false" hits="1"/>
+            <line number="19" branch="false" hits="1"/>
+            <line number="20" branch="false" hits="1"/>
+            <line number="21" branch="false" hits="1"/>
+            <line number="22" branch="false" hits="1"/>
+            <line number="23" branch="false" hits="1"/>
+            <line number="24" branch="false" hits="1"/>
+            <line number="25" branch="false" hits="1"/>
+            <line number="26" branch="false" hits="1"/>
+            <line number="27" branch="false" hits="1"/>
+            <line number="28" branch="false" hits="1"/>
+            <line number="29" branch="false" hits="1"/>
+            <line number="30" branch="false" hits="1"/>
+            <line number="31" branch="false" hits="1"/>
+            <line number="32" branch="false" hits="1"/>
+            <line number="33" branch="false" hits="1"/>
+            <line number="35" branch="false" hits="1"/>
+            <line number="36" branch="false" hits="1"/>
+            <line number="37" branch="false" hits="1"/>
+            <line number="38" branch="false" hits="1"/>
+            <line number="39" branch="false" hits="1"/>
+            <line number="40" branch="false" hits="1"/>
+            <line number="41" branch="false" hits="1"/>
+            <line number="42" branch="false" hits="1"/>
+            <line number="43" branch="false" hits="1"/>
+            <line number="44" branch="false" hits="1"/>
+            <line number="45" branch="false" hits="1"/>
+            <line number="47" branch="false" hits="1"/>
+            <line number="48" branch="false" hits="1"/>
+            <line number="49" branch="false" hits="1"/>
+          </lines>
+        </class>
+        <class name="SearchDataProvider" filename="InTune/Screens/Search/SearchDataProvider.swift" line-rate="1.0000000000000000" branch-rate="1.0000000000000000" complexity="0.0">
+          <methods/>
+          <lines>
+            <line number="16" branch="false" hits="37"/>
+            <line number="17" branch="false" hits="37"/>
+            <line number="18" branch="false" hits="37"/>
+          </lines>
+        </class>
+        <class name="SearchDataSource" filename="InTune/Screens/Search/SearchDataSource.swift" line-rate="0.9545454545454546" branch-rate="1.0000000000000000" complexity="0.0">
+          <methods/>
+          <lines>
+            <line number="14" branch="false" hits="12"/>
+            <line number="15" branch="false" hits="12"/>
+            <line number="16" branch="false" hits="12"/>
+            <line number="17" branch="false" hits="12"/>
+            <line number="19" branch="false" hits="11"/>
+            <line number="20" branch="false" hits="11"/>
+            <line number="21" branch="false" hits="11"/>
+            <line number="22" branch="false" hits="11"/>
+            <line number="24" branch="false" hits="13"/>
+            <line number="25" branch="false" hits="13"/>
+            <line number="26" branch="false" hits="13"/>
+            <line number="27" branch="false" hits="13"/>
+            <line number="28" branch="false" hits="13"/>
+            <line number="29" branch="false" hits="0"/>
+            <line number="30" branch="false" hits="13"/>
+            <line number="31" branch="false" hits="13"/>
+            <line number="32" branch="false" hits="13"/>
+            <line number="33" branch="false" hits="13"/>
+            <line number="34" branch="false" hits="13"/>
+            <line number="35" branch="false" hits="13"/>
+            <line number="36" branch="false" hits="13"/>
+            <line number="37" branch="false" hits="13"/>
+          </lines>
+        </class>
+        <class name="SearchPresenter" filename="InTune/Screens/Search/SearchPresenter.swift" line-rate="1.0000000000000000" branch-rate="1.0000000000000000" complexity="0.0">
+          <methods/>
+          <lines>
+            <line number="32" branch="false" hits="19"/>
+            <line number="33" branch="false" hits="19"/>
+            <line number="34" branch="false" hits="19"/>
+            <line number="35" branch="false" hits="19"/>
+            <line number="36" branch="false" hits="19"/>
+            <line number="37" branch="false" hits="19"/>
+            <line number="38" branch="false" hits="19"/>
+            <line number="42" branch="false" hits="12"/>
+            <line number="43" branch="false" hits="12"/>
+            <line number="44" branch="false" hits="12"/>
+            <line number="46" branch="false" hits="2"/>
+            <line number="47" branch="false" hits="2"/>
+            <line number="48" branch="false" hits="2"/>
+            <line number="49" branch="false" hits="2"/>
+            <line number="50" branch="false" hits="2"/>
+            <line number="52" branch="false" hits="14"/>
+            <line number="53" branch="false" hits="14"/>
+            <line number="54" branch="false" hits="14"/>
+            <line number="55" branch="false" hits="14"/>
+            <line number="57" branch="false" hits="21"/>
+            <line number="58" branch="false" hits="21"/>
+            <line number="59" branch="false" hits="21"/>
+            <line number="60" branch="false" hits="21"/>
+            <line number="61" branch="false" hits="21"/>
+            <line number="63" branch="false" hits="1"/>
+            <line number="64" branch="false" hits="1"/>
+            <line number="65" branch="false" hits="1"/>
+            <line number="66" branch="false" hits="1"/>
+            <line number="68" branch="false" hits="1"/>
+            <line number="69" branch="false" hits="1"/>
+            <line number="70" branch="false" hits="1"/>
+            <line number="72" branch="false" hits="1"/>
+            <line number="73" branch="false" hits="1"/>
+            <line number="74" branch="false" hits="1"/>
+            <line number="75" branch="false" hits="1"/>
+            <line number="76" branch="false" hits="1"/>
+            <line number="78" branch="false" hits="1"/>
+            <line number="79" branch="false" hits="1"/>
+            <line number="80" branch="false" hits="1"/>
+          </lines>
+        </class>
+        <class name="SearchViewController" filename="InTune/Screens/Search/SearchViewController.swift" line-rate="0.8986486486486487" branch-rate="1.0000000000000000" complexity="0.0">
+          <methods/>
+          <lines>
+            <line number="33" branch="false" hits="13"/>
+            <line number="34" branch="false" hits="13"/>
+            <line number="35" branch="false" hits="13"/>
+            <line number="36" branch="false" hits="13"/>
+            <line number="37" branch="false" hits="13"/>
+            <line number="38" branch="false" hits="13"/>
+            <line number="40" branch="false" hits="13"/>
+            <line number="41" branch="false" hits="13"/>
+            <line number="42" branch="false" hits="13"/>
+            <line number="43" branch="false" hits="13"/>
+            <line number="44" branch="false" hits="13"/>
+            <line number="45" branch="false" hits="13"/>
+            <line number="46" branch="false" hits="13"/>
+            <line number="47" branch="false" hits="13"/>
+            <line number="48" branch="false" hits="13"/>
+            <line number="49" branch="false" hits="13"/>
+            <line number="50" branch="false" hits="13"/>
+            <line number="51" branch="false" hits="13"/>
+            <line number="52" branch="false" hits="13"/>
+            <line number="54" branch="false" hits="12"/>
+            <line number="55" branch="false" hits="12"/>
+            <line number="56" branch="false" hits="12"/>
+            <line number="57" branch="false" hits="12"/>
+            <line number="58" branch="false" hits="12"/>
+            <line number="59" branch="false" hits="12"/>
+            <line number="60" branch="false" hits="12"/>
+            <line number="62" branch="false" hits="13"/>
+            <line number="63" branch="false" hits="13"/>
+            <line number="64" branch="false" hits="13"/>
+            <line number="65" branch="false" hits="13"/>
+            <line number="66" branch="false" hits="13"/>
+            <line number="67" branch="false" hits="13"/>
+            <line number="68" branch="false" hits="13"/>
+            <line number="69" branch="false" hits="13"/>
+            <line number="70" branch="false" hits="13"/>
+            <line number="71" branch="false" hits="13"/>
+            <line number="73" branch="false" hits="12"/>
+            <line number="74" branch="false" hits="12"/>
+            <line number="75" branch="false" hits="12"/>
+            <line number="76" branch="false" hits="12"/>
+            <line number="77" branch="false" hits="12"/>
+            <line number="78" branch="false" hits="12"/>
+            <line number="79" branch="false" hits="12"/>
+            <line number="80" branch="false" hits="12"/>
+            <line number="81" branch="false" hits="11"/>
+            <line number="82" branch="false" hits="12"/>
+            <line number="83" branch="false" hits="12"/>
+            <line number="85" branch="false" hits="3"/>
+            <line number="86" branch="false" hits="3"/>
+            <line number="87" branch="false" hits="3"/>
+            <line number="88" branch="false" hits="3"/>
+            <line number="90" branch="false" hits="13"/>
+            <line number="91" branch="false" hits="13"/>
+            <line number="92" branch="false" hits="13"/>
+            <line number="93" branch="false" hits="13"/>
+            <line number="94" branch="false" hits="13"/>
+            <line number="95" branch="false" hits="13"/>
+            <line number="96" branch="false" hits="13"/>
+            <line number="98" branch="false" hits="1"/>
+            <line number="99" branch="false" hits="1"/>
+            <line number="100" branch="false" hits="1"/>
+            <line number="101" branch="false" hits="1"/>
+            <line number="102" branch="false" hits="1"/>
+            <line number="104" branch="false" hits="1"/>
+            <line number="105" branch="false" hits="1"/>
+            <line number="106" branch="false" hits="1"/>
+            <line number="107" branch="false" hits="1"/>
+            <line number="108" branch="false" hits="1"/>
+            <line number="109" branch="false" hits="1"/>
+            <line number="110" branch="false" hits="1"/>
+            <line number="111" branch="false" hits="0"/>
+            <line number="112" branch="false" hits="0"/>
+            <line number="113" branch="false" hits="1"/>
+            <line number="114" branch="false" hits="1"/>
+            <line number="115" branch="false" hits="1"/>
+            <line number="116" branch="false" hits="1"/>
+            <line number="117" branch="false" hits="1"/>
+            <line number="118" branch="false" hits="0"/>
+            <line number="119" branch="false" hits="0"/>
+            <line number="120" branch="false" hits="1"/>
+            <line number="121" branch="false" hits="1"/>
+            <line number="122" branch="false" hits="1"/>
+            <line number="123" branch="false" hits="1"/>
+            <line number="124" branch="false" hits="1"/>
+            <line number="125" branch="false" hits="0"/>
+            <line number="126" branch="false" hits="0"/>
+            <line number="127" branch="false" hits="1"/>
+            <line number="128" branch="false" hits="1"/>
+            <line number="129" branch="false" hits="1"/>
+            <line number="130" branch="false" hits="1"/>
+            <line number="131" branch="false" hits="1"/>
+            <line number="132" branch="false" hits="0"/>
+            <line number="133" branch="false" hits="0"/>
+            <line number="134" branch="false" hits="1"/>
+            <line number="135" branch="false" hits="1"/>
+            <line number="136" branch="false" hits="1"/>
+            <line number="137" branch="false" hits="1"/>
+            <line number="138" branch="false" hits="1"/>
+            <line number="139" branch="false" hits="0"/>
+            <line number="140" branch="false" hits="0"/>
+            <line number="141" branch="false" hits="1"/>
+            <line number="142" branch="false" hits="1"/>
+            <line number="143" branch="false" hits="1"/>
+            <line number="144" branch="false" hits="1"/>
+            <line number="145" branch="false" hits="1"/>
+            <line number="146" branch="false" hits="0"/>
+            <line number="147" branch="false" hits="0"/>
+            <line number="148" branch="false" hits="1"/>
+            <line number="149" branch="false" hits="1"/>
+            <line number="150" branch="false" hits="1"/>
+            <line number="151" branch="false" hits="1"/>
+            <line number="152" branch="false" hits="1"/>
+            <line number="153" branch="false" hits="1"/>
+            <line number="154" branch="false" hits="1"/>
+            <line number="155" branch="false" hits="1"/>
+            <line number="156" branch="false" hits="1"/>
+            <line number="157" branch="false" hits="1"/>
+            <line number="158" branch="false" hits="1"/>
+            <line number="159" branch="false" hits="1"/>
+            <line number="160" branch="false" hits="1"/>
+            <line number="162" branch="false" hits="1"/>
+            <line number="163" branch="false" hits="1"/>
+            <line number="164" branch="false" hits="1"/>
+            <line number="165" branch="false" hits="1"/>
+            <line number="171" branch="false" hits="1"/>
+            <line number="172" branch="false" hits="1"/>
+            <line number="173" branch="false" hits="1"/>
+            <line number="174" branch="false" hits="1"/>
+            <line number="175" branch="false" hits="1"/>
+            <line number="176" branch="false" hits="1"/>
+            <line number="183" branch="false" hits="1"/>
+            <line number="184" branch="false" hits="1"/>
+            <line number="185" branch="false" hits="1"/>
+            <line number="186" branch="false" hits="1"/>
+            <line number="187" branch="false" hits="1"/>
+            <line number="188" branch="false" hits="1"/>
+            <line number="189" branch="false" hits="1"/>
+            <line number="190" branch="false" hits="1"/>
+            <line number="191" branch="false" hits="1"/>
+            <line number="197" branch="false" hits="1"/>
+            <line number="198" branch="false" hits="1"/>
+            <line number="199" branch="false" hits="1"/>
+            <line number="201" branch="false" hits="12"/>
+            <line number="202" branch="false" hits="12"/>
+            <line number="203" branch="false" hits="12"/>
+            <line number="205" branch="false" hits="0"/>
+            <line number="206" branch="false" hits="0"/>
+            <line number="207" branch="false" hits="0"/>
+          </lines>
+        </class>
+        <class name="SearchWireframe" filename="InTune/Screens/Search/SearchWireframe.swift" line-rate="1.0000000000000000" branch-rate="1.0000000000000000" complexity="0.0">
+          <methods/>
+          <lines>
+            <line number="12" branch="false" hits="15"/>
+            <line number="13" branch="false" hits="15"/>
+            <line number="14" branch="false" hits="15"/>
+            <line number="15" branch="false" hits="15"/>
+            <line number="16" branch="false" hits="15"/>
+            <line number="18" branch="false" hits="15"/>
+            <line number="19" branch="false" hits="15"/>
+            <line number="20" branch="false" hits="15"/>
+            <line number="21" branch="false" hits="15"/>
+            <line number="22" branch="false" hits="15"/>
+            <line number="23" branch="false" hits="15"/>
+            <line number="24" branch="false" hits="15"/>
+            <line number="25" branch="false" hits="15"/>
+            <line number="26" branch="false" hits="15"/>
+            <line number="27" branch="false" hits="15"/>
+            <line number="28" branch="false" hits="15"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="InTune.Screens.Song Detail" line-rate="0.9767441860465116" branch-rate="1.0000000000000000" complexity="0.0">
+      <classes>
+        <class name="SongDetailDataProvider" filename="InTune/Screens/Song Detail/SongDetailDataProvider.swift" line-rate="1.0000000000000000" branch-rate="1.0000000000000000" complexity="0.0">
+          <methods/>
+          <lines>
+            <line number="16" branch="false" hits="5"/>
+            <line number="17" branch="false" hits="5"/>
+            <line number="18" branch="false" hits="5"/>
+            <line number="19" branch="false" hits="5"/>
+          </lines>
+        </class>
+        <class name="SongDetailPresenter" filename="InTune/Screens/Song Detail/SongDetailPresenter.swift" line-rate="1.0000000000000000" branch-rate="1.0000000000000000" complexity="0.0">
+          <methods/>
+          <lines>
+            <line number="23" branch="false" hits="4"/>
+            <line number="24" branch="false" hits="4"/>
+            <line number="25" branch="false" hits="4"/>
+            <line number="26" branch="false" hits="4"/>
+            <line number="27" branch="false" hits="4"/>
+            <line number="28" branch="false" hits="4"/>
+            <line number="32" branch="false" hits="4"/>
+            <line number="33" branch="false" hits="4"/>
+            <line number="34" branch="false" hits="2"/>
+            <line number="35" branch="false" hits="4"/>
+            <line number="36" branch="false" hits="4"/>
+          </lines>
+        </class>
+        <class name="SongDetailViewController" filename="InTune/Screens/Song Detail/SongDetailViewController.swift" line-rate="0.9661016949152542" branch-rate="1.0000000000000000" complexity="0.0">
+          <methods/>
+          <lines>
+            <line number="22" branch="false" hits="3"/>
+            <line number="23" branch="false" hits="3"/>
+            <line number="24" branch="false" hits="3"/>
+            <line number="25" branch="false" hits="3"/>
+            <line number="26" branch="false" hits="0"/>
+            <line number="27" branch="false" hits="0"/>
+            <line number="28" branch="false" hits="3"/>
+            <line number="29" branch="false" hits="3"/>
+            <line number="30" branch="false" hits="3"/>
+            <line number="31" branch="false" hits="3"/>
+            <line number="32" branch="false" hits="3"/>
+            <line number="33" branch="false" hits="3"/>
+            <line number="34" branch="false" hits="3"/>
+            <line number="36" branch="false" hits="3"/>
+            <line number="37" branch="false" hits="3"/>
+            <line number="38" branch="false" hits="3"/>
+            <line number="39" branch="false" hits="3"/>
+            <line number="40" branch="false" hits="3"/>
+            <line number="41" branch="false" hits="3"/>
+            <line number="42" branch="false" hits="3"/>
+            <line number="43" branch="false" hits="3"/>
+            <line number="44" branch="false" hits="3"/>
+            <line number="46" branch="false" hits="1"/>
+            <line number="47" branch="false" hits="1"/>
+            <line number="48" branch="false" hits="1"/>
+            <line number="50" branch="false" hits="1"/>
+            <line number="51" branch="false" hits="1"/>
+            <line number="52" branch="false" hits="1"/>
+            <line number="53" branch="false" hits="1"/>
+            <line number="54" branch="false" hits="1"/>
+            <line number="55" branch="false" hits="1"/>
+            <line number="56" branch="false" hits="1"/>
+            <line number="57" branch="false" hits="1"/>
+            <line number="58" branch="false" hits="1"/>
+            <line number="59" branch="false" hits="1"/>
+            <line number="60" branch="false" hits="1"/>
+            <line number="61" branch="false" hits="1"/>
+            <line number="62" branch="false" hits="1"/>
+            <line number="63" branch="false" hits="1"/>
+            <line number="64" branch="false" hits="1"/>
+            <line number="65" branch="false" hits="1"/>
+            <line number="66" branch="false" hits="1"/>
+            <line number="67" branch="false" hits="1"/>
+            <line number="68" branch="false" hits="1"/>
+            <line number="69" branch="false" hits="1"/>
+            <line number="70" branch="false" hits="1"/>
+            <line number="71" branch="false" hits="1"/>
+            <line number="72" branch="false" hits="1"/>
+            <line number="73" branch="false" hits="1"/>
+            <line number="74" branch="false" hits="1"/>
+            <line number="75" branch="false" hits="1"/>
+            <line number="76" branch="false" hits="1"/>
+            <line number="80" branch="false" hits="2"/>
+            <line number="81" branch="false" hits="2"/>
+            <line number="82" branch="false" hits="2"/>
+            <line number="83" branch="false" hits="2"/>
+            <line number="84" branch="false" hits="2"/>
+            <line number="85" branch="false" hits="2"/>
+            <line number="86" branch="false" hits="2"/>
+          </lines>
+        </class>
+        <class name="SongDetailWireframe" filename="InTune/Screens/Song Detail/SongDetailWireframe.swift" line-rate="1.0000000000000000" branch-rate="1.0000000000000000" complexity="0.0">
+          <methods/>
+          <lines>
+            <line number="12" branch="false" hits="4"/>
+            <line number="13" branch="false" hits="4"/>
+            <line number="14" branch="false" hits="4"/>
+            <line number="15" branch="false" hits="4"/>
+            <line number="16" branch="false" hits="4"/>
+            <line number="20" branch="false" hits="2"/>
+            <line number="21" branch="false" hits="2"/>
+            <line number="22" branch="false" hits="2"/>
+            <line number="23" branch="false" hits="2"/>
+            <line number="24" branch="false" hits="2"/>
+            <line number="25" branch="false" hits="2"/>
+            <line number="26" branch="false" hits="2"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="InTune.Screens.Song Detail.Views" line-rate="0.8648648648648649" branch-rate="1.0000000000000000" complexity="0.0">
+      <classes>
+        <class name="SongDetailView" filename="InTune/Screens/Song Detail/Views/SongDetailView.swift" line-rate="0.8648648648648649" branch-rate="1.0000000000000000" complexity="0.0">
+          <methods/>
+          <lines>
+            <line number="25" branch="false" hits="2"/>
+            <line number="26" branch="false" hits="2"/>
+            <line number="27" branch="false" hits="2"/>
+            <line number="28" branch="false" hits="2"/>
+            <line number="29" branch="false" hits="2"/>
+            <line number="31" branch="false" hits="2"/>
+            <line number="32" branch="false" hits="2"/>
+            <line number="33" branch="false" hits="2"/>
+            <line number="34" branch="false" hits="2"/>
+            <line number="35" branch="false" hits="2"/>
+            <line number="36" branch="false" hits="2"/>
+            <line number="37" branch="false" hits="2"/>
+            <line number="38" branch="false" hits="1"/>
+            <line number="39" branch="false" hits="1"/>
+            <line number="40" branch="false" hits="2"/>
+            <line number="41" branch="false" hits="1"/>
+            <line number="42" branch="false" hits="2"/>
+            <line number="43" branch="false" hits="2"/>
+            <line number="44" branch="false" hits="2"/>
+            <line number="45" branch="false" hits="2"/>
+            <line number="46" branch="false" hits="2"/>
+            <line number="47" branch="false" hits="2"/>
+            <line number="48" branch="false" hits="2"/>
+            <line number="49" branch="false" hits="2"/>
+            <line number="50" branch="false" hits="2"/>
+            <line number="51" branch="false" hits="2"/>
+            <line number="52" branch="false" hits="2"/>
+            <line number="53" branch="false" hits="2"/>
+            <line number="54" branch="false" hits="2"/>
+            <line number="55" branch="false" hits="2"/>
+            <line number="56" branch="false" hits="2"/>
+            <line number="57" branch="false" hits="2"/>
+            <line number="59" branch="false" hits="0"/>
+            <line number="60" branch="false" hits="0"/>
+            <line number="61" branch="false" hits="0"/>
+            <line number="62" branch="false" hits="0"/>
+            <line number="63" branch="false" hits="0"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="InTune.Services.Networking" line-rate="0.8727272727272727" branch-rate="1.0000000000000000" complexity="0.0">
+      <classes>
+        <class name="NetworkService" filename="InTune/Services/Networking/NetworkService.swift" line-rate="1.0000000000000000" branch-rate="1.0000000000000000" complexity="0.0">
+          <methods/>
+          <lines>
+            <line number="16" branch="false" hits="2"/>
+            <line number="17" branch="false" hits="2"/>
+            <line number="18" branch="false" hits="2"/>
+          </lines>
+        </class>
+        <class name="SearchiTunesService" filename="InTune/Services/Networking/SearchiTunesService.swift" line-rate="0.8888888888888888" branch-rate="1.0000000000000000" complexity="0.0">
+          <methods/>
+          <lines>
+            <line number="13" branch="false" hits="2"/>
+            <line number="14" branch="false" hits="2"/>
+            <line number="15" branch="false" hits="2"/>
+            <line number="16" branch="false" hits="1"/>
+            <line number="17" branch="false" hits="1"/>
+            <line number="18" branch="false" hits="1"/>
+            <line number="19" branch="false" hits="1"/>
+            <line number="20" branch="false" hits="1"/>
+            <line number="21" branch="false" hits="1"/>
+            <line number="22" branch="false" hits="1"/>
+            <line number="23" branch="false" hits="0"/>
+            <line number="24" branch="false" hits="0"/>
+            <line number="25" branch="false" hits="1"/>
+            <line number="26" branch="false" hits="1"/>
+            <line number="27" branch="false" hits="1"/>
+            <line number="28" branch="false" hits="1"/>
+            <line number="29" branch="false" hits="1"/>
+            <line number="30" branch="false" hits="1"/>
+            <line number="31" branch="false" hits="1"/>
+            <line number="32" branch="false" hits="1"/>
+            <line number="33" branch="false" hits="1"/>
+            <line number="34" branch="false" hits="1"/>
+            <line number="35" branch="false" hits="0"/>
+            <line number="36" branch="false" hits="1"/>
+            <line number="37" branch="false" hits="1"/>
+            <line number="38" branch="false" hits="1"/>
+            <line number="39" branch="false" hits="1"/>
+          </lines>
+        </class>
+        <class name="iTunesAPI" filename="InTune/Services/Networking/iTunesAPI.swift" line-rate="0.8400000000000000" branch-rate="1.0000000000000000" complexity="0.0">
+          <methods/>
+          <lines>
+            <line number="17" branch="false" hits="1"/>
+            <line number="18" branch="false" hits="1"/>
+            <line number="19" branch="false" hits="0"/>
+            <line number="20" branch="false" hits="1"/>
+            <line number="21" branch="false" hits="1"/>
+            <line number="22" branch="false" hits="1"/>
+            <line number="24" branch="false" hits="1"/>
+            <line number="25" branch="false" hits="1"/>
+            <line number="26" branch="false" hits="1"/>
+            <line number="28" branch="false" hits="1"/>
+            <line number="29" branch="false" hits="1"/>
+            <line number="30" branch="false" hits="1"/>
+            <line number="32" branch="false" hits="1"/>
+            <line number="33" branch="false" hits="1"/>
+            <line number="34" branch="false" hits="1"/>
+            <line number="35" branch="false" hits="1"/>
+            <line number="36" branch="false" hits="1"/>
+            <line number="37" branch="false" hits="1"/>
+            <line number="38" branch="false" hits="1"/>
+            <line number="39" branch="false" hits="1"/>
+            <line number="40" branch="false" hits="1"/>
+            <line number="41" branch="false" hits="1"/>
+            <line number="43" branch="false" hits="0"/>
+            <line number="44" branch="false" hits="0"/>
+            <line number="45" branch="false" hits="0"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+  </packages>
+</coverage>
