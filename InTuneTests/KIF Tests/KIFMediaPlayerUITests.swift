@@ -8,7 +8,7 @@
 
 import XCTest
 
-class MediaPlayerUITests: KIFTestCase {
+class KIFMediaPlayerUITests: KIFTestCase {
     
     let searchText = "Moby"
     

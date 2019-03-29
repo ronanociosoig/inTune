@@ -8,7 +8,7 @@
 
 import XCTest
 
-class SearchTests: KIFTestCase {
+class KIFSearchTests: KIFTestCase {
     
     let searchText = "Moby"
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1010"
+   LastUpgradeVersion = "1020"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -20,13 +20,26 @@
                ReferencedContainer = "container:InTune.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "AFD1FED521A6CE7700D2894F"
+               BuildableName = "InTuneTests.xctest"
+               BlueprintName = "InTuneTests"
+               ReferencedContainer = "container:InTune.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      codeCoverageEnabled = "YES"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
          <TestableReference
@@ -40,38 +53,69 @@
             </BuildableReference>
             <SkippedTests>
                <Test
-                  Identifier = "KIFMediaPlayerUITests">
+                  Identifier = "AppControllerTests">
                </Test>
                <Test
-                  Identifier = "KIFSearchTests">
+                  Identifier = "AppDataTests">
                </Test>
                <Test
-                  Identifier = "KIFSongDetailTests">
+                  Identifier = "CoordinatorTests">
                </Test>
                <Test
-                  Identifier = "MediaPlayerUITests">
+                  Identifier = "DataProviderTests">
+               </Test>
+               <Test
+                  Identifier = "DateFormatterTests">
+               </Test>
+               <Test
+                  Identifier = "MediaPlayerDataProviderTests">
+               </Test>
+               <Test
+                  Identifier = "MediaPlayerTests">
+               </Test>
+               <Test
+                  Identifier = "MusicPlayerDataProviderTests">
+               </Test>
+               <Test
+                  Identifier = "MusicPlayerPresenterTests">
+               </Test>
+               <Test
+                  Identifier = "MusicPlayerViewTests">
+               </Test>
+               <Test
+                  Identifier = "ResultParserTests">
+               </Test>
+               <Test
+                  Identifier = "SearchActionTests">
+               </Test>
+               <Test
+                  Identifier = "SearchPresenterTests">
+               </Test>
+               <Test
+                  Identifier = "SearchResultTests">
+               </Test>
+               <Test
+                  Identifier = "SearchViewControllerTests">
+               </Test>
+               <Test
+                  Identifier = "SearchWireframeTests">
+               </Test>
+               <Test
+                  Identifier = "SearchiTunesServiceTests">
+               </Test>
+               <Test
+                  Identifier = "SongDetailDataProviderTests">
+               </Test>
+               <Test
+                  Identifier = "SongDetailPresenterTests">
+               </Test>
+               <Test
+                  Identifier = "SongDetailWireframeTests">
+               </Test>
+               <Test
+                  Identifier = "TimeFormatterTests">
                </Test>
             </SkippedTests>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AFD1FEE021A6CE7700D2894F"
-               BuildableName = "InTuneUITests.xctest"
-               BlueprintName = "InTuneUITests"
-               ReferencedContainer = "container:InTune.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AFD1FF7C21A8671300D2894F"
-               BuildableName = "NetworkingTests.xctest"
-               BlueprintName = "NetworkingTests"
-               ReferencedContainer = "container:InTune.xcodeproj">
-            </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
@@ -107,11 +151,6 @@
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
-         <AdditionalOption
-            key = "MallocStackLogging"
-            value = ""
-            isEnabled = "YES">
-         </AdditionalOption>
       </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
