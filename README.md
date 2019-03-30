@@ -1,6 +1,7 @@
 [![Build Status](https://travis-ci.org/ronanociosoig/inTune.svg?branch=master)](https://travis-ci.org/ronanociosoig/inTune)
-[![CircleCI](https://circleci.com/gh/ronanociosoig/inTune.svg?style=svg)](https://circleci.com/gh/ronanociosoig/inTune)
 
+[![CircleCI](https://img.shields.io/circleci/project/github/ronanociosoig/inTune/master.svg)](https://circleci.com/gh/ronanociosoig/inTune/tree/master)
+[![codecov.io](https://codecov.io/github/ronanociosoig/inTune/coverage.svg?branch=master)](https://codecov.io/github/ronanociosoig/inTune?branch=master)
 
 ##In Tune
 
