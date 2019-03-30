@@ -1,7 +1,7 @@
 language: swift
 osx_image: xcode7
 script:
-  - xcodebuild -scheme InTune -workspace InTune.xcworkspace -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone X,OS=12.0' build test
+  - xcodebuild -scheme InTune -workspace InTune.xcworkspace -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone X,OS=12.2' build test
 after_success:
   - slather
   - bash <(curl -s https://codecov.io/bash) -f ./test_reports/cobertura.xml -X coveragepy -X gcov -X xcode
