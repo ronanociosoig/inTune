@@ -1,3 +1,6 @@
+[![CircleCI](https://circleci.com/gh/ronanociosoig/inTune.svg?style=svg)](https://circleci.com/gh/ronanociosoig/inTune)
+
+
 ##In Tune
 
 ### Outline
