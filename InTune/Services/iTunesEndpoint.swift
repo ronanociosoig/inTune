@@ -9,11 +9,11 @@
 import Foundation
 import Moya
 
-enum iTunesAPIEndpoint {
+enum iTunesEndpoint {
     case search(term: String)
 }
 
-extension iTunesAPIEndpoint: TargetType {
+extension iTunesEndpoint: TargetType {
     var baseURL: URL {
         return URL(string: Constants.Network.baseUrlPath)!
     }
