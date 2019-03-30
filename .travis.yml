@@ -1,6 +1,11 @@
 language: swift
 osx_image: xcode10.2
+
+before_install:
+ - gem install cocoapods -v '1.6.0'
+
 script:
+  - pod install
   - xcodebuild -scheme InTune -workspace InTune.xcworkspace -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone X,OS=12.2' build test
 after_success:
   - slather
