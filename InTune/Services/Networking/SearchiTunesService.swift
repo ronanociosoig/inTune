@@ -8,8 +8,20 @@
 
 import Foundation
 import Networking
+import Moya
+import Result
 
-class SearchiTunesService: NetworkService, SearchiTunesLoadingService {
+class SearchiTunesService: SearchiTunesLoadingService {
+    var provider: MoyaProvider<iTunesEndpoint> {
+        if Configuration.uiTesting == true {
+            return MoyaProvider<iTunesEndpoint>(stubClosure: MoyaProvider.immediatelyStub)
+        } else if Configuration.networkTesting {
+            return MoyaProvider<iTunesEndpoint>(plugins: [NetworkLoggerPlugin(verbose: true)])
+        } else {
+            return MoyaProvider<iTunesEndpoint>(callbackQueue: DispatchQueue.global(qos: .background))
+        }
+    }
+    
     func load(term: String, completion: @escaping (_ data: Data?,_ error: String?)->()) {
         
         if term.count == 0 {
@@ -17,23 +29,12 @@ class SearchiTunesService: NetworkService, SearchiTunesLoadingService {
             return
         }
         
-        router.request(.search(term: term)) { (data, response, error) in
-            
-            if let error = error {
+        provider.request(.search(term: term)) { result in
+            switch result {
+            case .success(let response):
+                completion(response.data,nil)
+            case .failure(let error):
                 completion(nil, error.localizedDescription)
-                return
-            }
-            
-            if let response = response as? HTTPURLResponse {
-                
-                let result = NetworkResponseParser.parse(response)
-                
-                switch result {
-                case .success:
-                    completion(data, nil)
-                case .failure(let networkFailureError):
-                    completion(nil, networkFailureError)
-                }
             }
         }
     }
