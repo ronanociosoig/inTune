@@ -22,6 +22,7 @@
 		AF16F8D3224FC28D001F2B8D /* iTunesEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF16F8D2224FC28D001F2B8D /* iTunesEndpoint.swift */; };
 		AF16F8D5224FE0C0001F2B8D /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF16F8D4224FE0C0001F2B8D /* Configuration.swift */; };
 		AF16F8D6224FE0EE001F2B8D /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FF4321A8266500D2894F /* MockData.swift */; };
+		AF16F8D7224FE684001F2B8D /* serverResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = AFD1FF4521A826EF00D2894F /* serverResponse.json */; };
 		AF1BB3C0224A6490008FBFEC /* SearchResultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1BB3BF224A6490008FBFEC /* SearchResultTests.swift */; };
 		AF1BB3C5224A8E69008FBFEC /* MusicPlayerPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1BB3C4224A8E69008FBFEC /* MusicPlayerPresenterTests.swift */; };
 		AF1BB3C7224AA8E2008FBFEC /* SearchActionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1BB3C6224AA8E2008FBFEC /* SearchActionTests.swift */; };
@@ -872,6 +873,7 @@
 				AFD1FECD21A6CE7700D2894F /* Assets.xcassets in Resources */,
 				AFD1FECB21A6CE7400D2894F /* Search.storyboard in Resources */,
 				AF4A0FEC21AE9BEC005F2A4F /* MusicPlayerView.xib in Resources */,
+				AF16F8D7224FE684001F2B8D /* serverResponse.json in Resources */,
 				AFD1FFE921AD482000D2894F /* SongDetail.storyboard in Resources */,
 				AFD1FFC921AB471900D2894F /* ResultTableViewCell.xib in Resources */,
 			);
