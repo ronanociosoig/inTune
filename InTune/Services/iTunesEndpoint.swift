@@ -27,7 +27,7 @@ extension iTunesEndpoint: TargetType {
     }
     
     var sampleData: Data {
-        return Data() //try! MockData.loadComplexServerResponse()
+        return try! MockData.loadComplexServerResponse()!
     }
     
     var task: Task {
