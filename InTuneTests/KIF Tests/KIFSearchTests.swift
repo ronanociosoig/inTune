@@ -10,7 +10,7 @@ import XCTest
 
 class KIFSearchTests: KIFTestCase {
     
-    let searchText = "Moby"
+    let searchText = "Primal Scream"
 
     override func setUp() {
         
