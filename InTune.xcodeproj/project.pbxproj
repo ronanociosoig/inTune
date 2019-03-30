@@ -19,6 +19,10 @@
 		AF16F8CE224D30E5001F2B8D /* KIFSongDetailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF16F8CD224D30E5001F2B8D /* KIFSongDetailTests.swift */; };
 		AF16F8CF224D3E5F001F2B8D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FEF521A6E2E900D2894F /* Constants.swift */; };
 		AF16F8D1224D497A001F2B8D /* KIFMediaPlayerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF16F8D0224D497A001F2B8D /* KIFMediaPlayerUITests.swift */; };
+		AF16F8D3224FC28D001F2B8D /* iTunesEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF16F8D2224FC28D001F2B8D /* iTunesEndpoint.swift */; };
+		AF16F8D5224FE0C0001F2B8D /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF16F8D4224FE0C0001F2B8D /* Configuration.swift */; };
+		AF16F8D6224FE0EE001F2B8D /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FF4321A8266500D2894F /* MockData.swift */; };
+		AF16F8D7224FE684001F2B8D /* serverResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = AFD1FF4521A826EF00D2894F /* serverResponse.json */; };
 		AF1BB3C0224A6490008FBFEC /* SearchResultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1BB3BF224A6490008FBFEC /* SearchResultTests.swift */; };
 		AF1BB3C5224A8E69008FBFEC /* MusicPlayerPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1BB3C4224A8E69008FBFEC /* MusicPlayerPresenterTests.swift */; };
 		AF1BB3C7224AA8E2008FBFEC /* SearchActionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1BB3C6224AA8E2008FBFEC /* SearchActionTests.swift */; };
@@ -178,6 +182,8 @@
 		AF16F8CB224C363A001F2B8D /* KIFSearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KIFSearchTests.swift; sourceTree = "<group>"; };
 		AF16F8CD224D30E5001F2B8D /* KIFSongDetailTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KIFSongDetailTests.swift; sourceTree = "<group>"; };
 		AF16F8D0224D497A001F2B8D /* KIFMediaPlayerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KIFMediaPlayerUITests.swift; sourceTree = "<group>"; };
+		AF16F8D2224FC28D001F2B8D /* iTunesEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesEndpoint.swift; sourceTree = "<group>"; };
+		AF16F8D4224FE0C0001F2B8D /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		AF1BB3BF224A6490008FBFEC /* SearchResultTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultTests.swift; sourceTree = "<group>"; };
 		AF1BB3C4224A8E69008FBFEC /* MusicPlayerPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerPresenterTests.swift; sourceTree = "<group>"; };
 		AF1BB3C6224AA8E2008FBFEC /* SearchActionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchActionTests.swift; sourceTree = "<group>"; };
@@ -506,6 +512,7 @@
 		AFD1FEF321A6DE6600D2894F /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				AF16F8D4224FE0C0001F2B8D /* Configuration.swift */,
 				AFD1FEC521A6CE7400D2894F /* AppDelegate.swift */,
 				AFD1FEF721A6F38300D2894F /* AppController.swift */,
 				AFD1FEF521A6E2E900D2894F /* Constants.swift */,
@@ -572,6 +579,7 @@
 				AFD1FFA421A868B100D2894F /* NetworkService.swift */,
 				AFD1FFA221A868B100D2894F /* SearchiTunesService.swift */,
 				AFD1FFA521A868B100D2894F /* ServiceProvider.swift */,
+				AF16F8D2224FC28D001F2B8D /* iTunesEndpoint.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -678,7 +686,6 @@
 				C2A753BB13FD42219895A2FA /* Pods-NetworkingTests.debug.xcconfig */,
 				B192EB695026F4BA97B13D6C /* Pods-NetworkingTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -866,6 +873,7 @@
 				AFD1FECD21A6CE7700D2894F /* Assets.xcassets in Resources */,
 				AFD1FECB21A6CE7400D2894F /* Search.storyboard in Resources */,
 				AF4A0FEC21AE9BEC005F2A4F /* MusicPlayerView.xib in Resources */,
+				AF16F8D7224FE684001F2B8D /* serverResponse.json in Resources */,
 				AFD1FFE921AD482000D2894F /* SongDetail.storyboard in Resources */,
 				AFD1FFC921AB471900D2894F /* ResultTableViewCell.xib in Resources */,
 			);
@@ -1100,14 +1108,17 @@
 				AFD1FFF121AD490200D2894F /* SongDetailActions.swift in Sources */,
 				AFD1FF5F21A85CE200D2894F /* SearchWireframe.swift in Sources */,
 				AFD1FFF721AD6C2900D2894F /* SongDetailView.swift in Sources */,
+				AF16F8D3224FC28D001F2B8D /* iTunesEndpoint.swift in Sources */,
 				AFD1FF3E21A8253600D2894F /* ServerResponse.swift in Sources */,
 				AFD1FFEB21AD486D00D2894F /* SongDetailViewController.swift in Sources */,
 				AF4A0FEE21AEA3AC005F2A4F /* MusicPlayerView.swift in Sources */,
 				AFD1FEFA21A6F39600D2894F /* AppData.swift in Sources */,
+				AF16F8D6224FE0EE001F2B8D /* MockData.swift in Sources */,
 				AFD1FFA921A868B200D2894F /* ServiceProvider.swift in Sources */,
 				AFD1FFD721AC10AE00D2894F /* TimeFormatter.swift in Sources */,
 				AFD1FFE521ACABAC00D2894F /* Loadable.swift in Sources */,
 				AFD1FFDB21AC651800D2894F /* UITableViewCell+Extension.swift in Sources */,
+				AF16F8D5224FE0C0001F2B8D /* Configuration.swift in Sources */,
 				AFD1FFA821A868B200D2894F /* NetworkService.swift in Sources */,
 				AFD1FFC321AA10F900D2894F /* SearchDataProvider.swift in Sources */,
 				AF4A0FF521AF32C5005F2A4F /* MusicPlayerPresenter.swift in Sources */,
