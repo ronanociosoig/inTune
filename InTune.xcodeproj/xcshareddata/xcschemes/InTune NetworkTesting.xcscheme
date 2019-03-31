@@ -20,20 +20,6 @@
                ReferencedContainer = "container:InTune.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "NO"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AF2447B22251678F002E0B78"
-               BuildableName = "InTuneUITests.xctest"
-               BlueprintName = "InTuneUITests"
-               ReferencedContainer = "container:InTune.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -42,16 +28,6 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AF2447B22251678F002E0B78"
-               BuildableName = "InTuneUITests.xctest"
-               BlueprintName = "InTuneUITests"
-               ReferencedContainer = "container:InTune.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
@@ -87,7 +63,7 @@
       </BuildableProductRunnable>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "UITesting"
+            argument = "NetworkTesting"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>

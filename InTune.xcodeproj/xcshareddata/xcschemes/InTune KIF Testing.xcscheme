@@ -121,7 +121,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AF24479622515663002E0B78"
+               BlueprintIdentifier = "AF2447B22251678F002E0B78"
                BuildableName = "InTuneUITests.xctest"
                BlueprintName = "InTuneUITests"
                ReferencedContainer = "container:InTune.xcodeproj">
