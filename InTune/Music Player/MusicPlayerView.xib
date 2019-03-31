@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,10 +16,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ThO-vY-qHL">
-                    <rect key="frame" x="72" y="21.5" width="149" height="21"/>
+                    <rect key="frame" x="76" y="23" width="195" height="18"/>
                     <accessibility key="accessibilityConfiguration" label="TrackName"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="21" id="tNd-wf-QQf"/>
+                        <constraint firstAttribute="height" constant="18" id="tNd-wf-QQf"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -81,11 +81,10 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.90103274828767121" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="ThO-vY-qHL" firstAttribute="leading" secondItem="pDP-aH-gqW" secondAttribute="trailing" constant="8" id="2ME-Wc-sPr"/>
+                <constraint firstItem="ThO-vY-qHL" firstAttribute="leading" secondItem="pDP-aH-gqW" secondAttribute="trailing" constant="12" id="2ME-Wc-sPr"/>
                 <constraint firstAttribute="trailing" secondItem="Fo0-Zc-O6g" secondAttribute="trailing" id="2iD-gI-tJG"/>
                 <constraint firstItem="pDP-aH-gqW" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="66i-hN-HcL"/>
                 <constraint firstItem="mjP-xM-GqB" firstAttribute="leading" secondItem="IJA-UA-P42" secondAttribute="trailing" constant="20" id="IfS-DQ-iLG"/>
-                <constraint firstItem="IJA-UA-P42" firstAttribute="leading" secondItem="ThO-vY-qHL" secondAttribute="trailing" constant="8" id="KoF-Wj-HBl"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="MfC-wh-aAa" secondAttribute="trailing" constant="16" id="N5u-g8-4nl"/>
                 <constraint firstItem="pDP-aH-gqW" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="QUJ-4c-aA7"/>
                 <constraint firstItem="Fo0-Zc-O6g" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Sgp-eE-bxE"/>
@@ -93,6 +92,7 @@
                 <constraint firstItem="mjP-xM-GqB" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="bkb-JM-kqO"/>
                 <constraint firstItem="ThO-vY-qHL" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="byc-xZ-igL"/>
                 <constraint firstItem="Fo0-Zc-O6g" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="lxn-EL-IOg"/>
+                <constraint firstItem="mjP-xM-GqB" firstAttribute="leading" secondItem="ThO-vY-qHL" secondAttribute="trailing" constant="8" id="qTc-7K-U9o"/>
                 <constraint firstItem="MfC-wh-aAa" firstAttribute="leading" secondItem="mjP-xM-GqB" secondAttribute="trailing" constant="20" id="vsx-sE-eX3"/>
                 <constraint firstItem="IJA-UA-P42" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="yV5-X4-BgY"/>
             </constraints>
@@ -105,7 +105,7 @@
                 <outlet property="togglePlayButton" destination="mjP-xM-GqB" id="atY-4Q-XaV"/>
                 <outlet property="trackTitleLabel" destination="ThO-vY-qHL" id="n5S-cG-C3C"/>
             </connections>
-            <point key="canvasLocation" x="68" y="-286"/>
+            <point key="canvasLocation" x="68" y="-286.05697151424289"/>
         </view>
     </objects>
     <resources>
