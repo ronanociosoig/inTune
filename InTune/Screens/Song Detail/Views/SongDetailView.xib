@@ -77,12 +77,12 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j86-C2-kas">
-                    <rect key="frame" x="16" y="237" width="343" height="30"/>
+                    <rect key="frame" x="90" y="237" width="195" height="48"/>
                     <accessibility key="accessibilityConfiguration" label="Open"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="30" id="jXm-p8-K8H"/>
+                        <constraint firstAttribute="height" constant="48" id="jXm-p8-K8H"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
                     <state key="normal" title="Button"/>
                     <connections>
                         <action selector="openInSafariButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="LYh-ua-OaN"/>
@@ -93,8 +93,8 @@
             <constraints>
                 <constraint firstItem="M6F-DF-56t" firstAttribute="top" secondItem="1H6-Yt-4uL" secondAttribute="bottom" constant="8" id="CVj-fl-bCO"/>
                 <constraint firstItem="1H6-Yt-4uL" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="SuW-kI-WgE"/>
-                <constraint firstItem="j86-C2-kas" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="VeV-Oo-GVB"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="j86-C2-kas" secondAttribute="trailing" constant="16" id="bBL-Ly-uDt"/>
+                <constraint firstItem="j86-C2-kas" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="90" id="VeV-Oo-GVB"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="j86-C2-kas" secondAttribute="trailing" constant="90" id="bBL-Ly-uDt"/>
                 <constraint firstItem="1H6-Yt-4uL" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="bQx-ds-NnF"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Xoq-DI-wOA" secondAttribute="trailing" id="dE1-fr-40w"/>
                 <constraint firstItem="Xoq-DI-wOA" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="17" id="f70-7j-4Eo"/>
@@ -113,7 +113,7 @@
                 <outlet property="releaseDateLabel" destination="rWl-X9-gcM" id="Nbb-If-EM3"/>
                 <outlet property="trackNameLabel" destination="Xek-Ow-Esj" id="V7d-C3-grb"/>
             </connections>
-            <point key="canvasLocation" x="383" y="-535"/>
+            <point key="canvasLocation" x="95" y="-575"/>
         </view>
     </objects>
     <resources>
