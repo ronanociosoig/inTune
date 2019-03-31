@@ -42,6 +42,9 @@ class MusicPlayerView: UIView, MusicPlayerViewing {
         
         nextButton.accessibilityLabel = Constants.Accessibility.MediaPlayer.nextButton
         nextButton.isAccessibilityElement = true
+        
+        artworkImageView.layer.cornerRadius = 3
+        artworkImageView.layer.masksToBounds = true
     }
     
     func configure(result: Result) {

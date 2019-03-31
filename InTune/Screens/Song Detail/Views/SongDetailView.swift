@@ -41,6 +41,8 @@ class SongDetailView: UIView {
             priceLabel.text = Constants.Translations.notAvailable
         }
         
+        artworkImageView.layer.cornerRadius = 5
+        artworkImageView.layer.masksToBounds = true
         artworkImageView.image = UIImage(named: Constants.Images.largePlaceholder)
         
         collectionNameLabel.text = result.collectionName

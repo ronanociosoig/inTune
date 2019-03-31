@@ -22,6 +22,8 @@ class ResultTableViewCell: UITableViewCell {
     var trackIdentifier: Int?
     
     func configure(with item: SearchResult) {
+        artworkImageView.layer.cornerRadius = 3
+        artworkImageView.layer.masksToBounds = true
         artworkImageView.image = UIImage(named: Constants.Images.placeholder)
         artworkImageView.hnk_setImage(from: item.artworkUrl, placeholder: UIImage(named: Constants.Images.placeholder))
         trackNameLabel.text = item.trackName
