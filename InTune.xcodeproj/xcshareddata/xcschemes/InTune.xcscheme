@@ -20,34 +20,6 @@
                ReferencedContainer = "container:InTune.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "NO"
-            buildForRunning = "NO"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AFD1FEE021A6CE7700D2894F"
-               BuildableName = "InTuneUITests.xctest"
-               BlueprintName = "InTuneUITests"
-               ReferencedContainer = "container:InTune.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "NO"
-            buildForRunning = "NO"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AFD1FF7C21A8671300D2894F"
-               BuildableName = "NetworkingTests.xctest"
-               BlueprintName = "NetworkingTests"
-               ReferencedContainer = "container:InTune.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction

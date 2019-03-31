@@ -91,7 +91,7 @@ class SearchiTunesServiceTests: XCTestCase {
             }
             
             guard let data = data else {
-                XCTFail()
+                XCTFail("Must have a response to run the test.")
                 return
             }
             
@@ -103,7 +103,7 @@ class SearchiTunesServiceTests: XCTestCase {
                 print("results output: \(String(describing: results))")
                 expectation.fulfill()
             } catch {
-                XCTFail()
+                XCTFail("Failed to parse the JSON response.")
             }
         }
         

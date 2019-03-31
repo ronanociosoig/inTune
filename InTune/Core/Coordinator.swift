@@ -113,7 +113,9 @@ class Coordinator: ActivityView, Coordinating {
         let height = Constants.MusicPlayer.height
         let viewFrame = navigationController.view.frame
         let insets = navigationController.view.safeAreaInsets
-        let frame = CGRect(origin: CGPoint(x: 0, y: viewFrame.size.height - height - insets.bottom), size: CGSize(width: viewFrame.size.width, height: height))
+        let size = CGSize(width: viewFrame.size.width, height: height)
+        let point = CGPoint(x: 0, y: viewFrame.size.height - height - insets.bottom)
+        let frame = CGRect(origin: point, size: size)
         musicPlayer.frame = frame
         navigationController.view.addSubview(musicPlayer)
         

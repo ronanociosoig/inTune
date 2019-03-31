@@ -22,15 +22,15 @@
          </BuildActionEntry>
          <BuildActionEntry
             buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AFD1FED521A6CE7700D2894F"
-               BuildableName = "InTuneTests.xctest"
-               BlueprintName = "InTuneTests"
+               BlueprintIdentifier = "AF2447B22251678F002E0B78"
+               BuildableName = "InTuneUITests.xctest"
+               BlueprintName = "InTuneUITests"
                ReferencedContainer = "container:InTune.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -42,6 +42,16 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "AF2447B22251678F002E0B78"
+               BuildableName = "InTuneUITests.xctest"
+               BlueprintName = "InTuneUITests"
+               ReferencedContainer = "container:InTune.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
@@ -78,6 +88,10 @@
       <CommandLineArguments>
          <CommandLineArgument
             argument = "NetworkTesting"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "UITesting"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>
