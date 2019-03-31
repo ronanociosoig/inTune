@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -25,44 +25,46 @@
                         <constraint firstAttribute="width" constant="120" id="bA4-Yh-r69"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xek-Ow-Esj">
-                    <rect key="frame" x="144" y="20" width="215" height="40"/>
-                    <accessibility key="accessibilityConfiguration" label="TrackName"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="40" id="kZh-Pp-qKV"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iVa-mt-9Ty">
-                    <rect key="frame" x="144" y="63" width="215" height="18"/>
-                    <accessibility key="accessibilityConfiguration" label="Artist"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rWl-X9-gcM">
-                    <rect key="frame" x="144" y="95" width="215" height="21"/>
-                    <accessibility key="accessibilityConfiguration" label="ReleaseDate"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="21" id="280-qy-maz"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X21-VO-3PC">
-                    <rect key="frame" x="144" y="122" width="106" height="21"/>
-                    <accessibility key="accessibilityConfiguration" label="Price"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="106" id="RJz-gW-aMD"/>
-                        <constraint firstAttribute="height" constant="21" id="nKO-U8-gw9"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Xoq-DI-wOA">
+                    <rect key="frame" x="150" y="17" width="225" height="76.5"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xek-Ow-Esj">
+                            <rect key="frame" x="0.0" y="0.0" width="225" height="19.5"/>
+                            <accessibility key="accessibilityConfiguration" label="TrackName"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iVa-mt-9Ty">
+                            <rect key="frame" x="0.0" y="18.5" width="225" height="18"/>
+                            <accessibility key="accessibilityConfiguration" label="Artist"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rWl-X9-gcM">
+                            <rect key="frame" x="0.0" y="35.5" width="225" height="21"/>
+                            <accessibility key="accessibilityConfiguration" label="ReleaseDate"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="280-qy-maz"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X21-VO-3PC">
+                            <rect key="frame" x="0.0" y="55.5" width="225" height="21"/>
+                            <accessibility key="accessibilityConfiguration" label="Price"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="106" id="RJz-gW-aMD"/>
+                                <constraint firstAttribute="height" constant="21" id="nKO-U8-gw9"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Collection" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M6F-DF-56t">
                     <rect key="frame" x="16" y="148" width="343" height="40"/>
                     <accessibility key="accessibilityConfiguration" label="Album"/>
@@ -89,24 +91,16 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="Xek-Ow-Esj" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="20s-c2-JVf"/>
-                <constraint firstItem="iVa-mt-9Ty" firstAttribute="top" secondItem="Xek-Ow-Esj" secondAttribute="bottom" constant="3" id="5ok-0g-LHU"/>
                 <constraint firstItem="M6F-DF-56t" firstAttribute="top" secondItem="1H6-Yt-4uL" secondAttribute="bottom" constant="8" id="CVj-fl-bCO"/>
-                <constraint firstItem="Xek-Ow-Esj" firstAttribute="leading" secondItem="1H6-Yt-4uL" secondAttribute="trailing" constant="8" id="Hv8-no-SWX"/>
-                <constraint firstItem="iVa-mt-9Ty" firstAttribute="leading" secondItem="1H6-Yt-4uL" secondAttribute="trailing" constant="8" id="QrA-YP-eJl"/>
                 <constraint firstItem="1H6-Yt-4uL" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="SuW-kI-WgE"/>
                 <constraint firstItem="j86-C2-kas" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="VeV-Oo-GVB"/>
-                <constraint firstItem="rWl-X9-gcM" firstAttribute="leading" secondItem="1H6-Yt-4uL" secondAttribute="trailing" constant="8" id="WDX-GL-p8U"/>
-                <constraint firstItem="X21-VO-3PC" firstAttribute="leading" secondItem="1H6-Yt-4uL" secondAttribute="trailing" constant="8" id="XOX-cL-isW"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="j86-C2-kas" secondAttribute="trailing" constant="16" id="bBL-Ly-uDt"/>
                 <constraint firstItem="1H6-Yt-4uL" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="bQx-ds-NnF"/>
-                <constraint firstItem="X21-VO-3PC" firstAttribute="top" secondItem="rWl-X9-gcM" secondAttribute="bottom" constant="6" id="hq4-WI-ala"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Xoq-DI-wOA" secondAttribute="trailing" id="dE1-fr-40w"/>
+                <constraint firstItem="Xoq-DI-wOA" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="17" id="f70-7j-4Eo"/>
                 <constraint firstItem="M6F-DF-56t" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="iQo-hK-FqQ"/>
-                <constraint firstItem="rWl-X9-gcM" firstAttribute="top" secondItem="iVa-mt-9Ty" secondAttribute="bottom" constant="14" id="p1E-80-t6K"/>
+                <constraint firstItem="Xoq-DI-wOA" firstAttribute="leading" secondItem="1H6-Yt-4uL" secondAttribute="trailing" constant="14" id="kyW-KD-8e1"/>
                 <constraint firstItem="j86-C2-kas" firstAttribute="top" secondItem="M6F-DF-56t" secondAttribute="bottom" constant="49" id="tsc-dl-HJt"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="rWl-X9-gcM" secondAttribute="trailing" constant="16" id="usb-Po-Lqd"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="iVa-mt-9Ty" secondAttribute="trailing" constant="16" id="zDh-vy-nLw"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Xek-Ow-Esj" secondAttribute="trailing" constant="16" id="zme-Di-DsI"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
@@ -119,7 +113,7 @@
                 <outlet property="releaseDateLabel" destination="rWl-X9-gcM" id="Nbb-If-EM3"/>
                 <outlet property="trackNameLabel" destination="Xek-Ow-Esj" id="V7d-C3-grb"/>
             </connections>
-            <point key="canvasLocation" x="461.60000000000002" y="-477.21139430284859"/>
+            <point key="canvasLocation" x="383" y="-535"/>
         </view>
     </objects>
     <resources>
