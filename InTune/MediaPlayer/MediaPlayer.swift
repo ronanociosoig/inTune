@@ -10,7 +10,7 @@ import Foundation
 import AVFoundation
 import os.log
 
-protocol MediaPlayerDelegate {
+protocol MediaPlayerDelegate: class {
     func update()
     func preroll()
     func startedPlaying()
@@ -30,7 +30,7 @@ class MediaPlayer: MediaPlaying {
     var playing: Bool = false
     private var playList = [AVPlayerItem]()
     var currentIndex: Int = 0
-    var delegate: MediaPlayerDelegate!
+    weak var delegate: MediaPlayerDelegate!
     private var logEnable = false
     
     fileprivate var cachingData = false
@@ -46,8 +46,7 @@ class MediaPlayer: MediaPlaying {
             let category = AVAudioSession.Category.playback
             try audioSession.setCategory(category, mode: .default, options: .mixWithOthers)
             try audioSession.setActive(true)
-        }
-        catch {
+        } catch {
             os_log("Setting category to AVAudioSessionCategoryPlayback failed.", log: Log.player, type: .error)
         }
         
@@ -160,8 +159,7 @@ class MediaPlayer: MediaPlaying {
         let mainQueue = DispatchQueue.main
         // Add time observer
         timeObserverToken =
-            playerQueue?.addPeriodicTimeObserver(forInterval: interval, queue: mainQueue) {
-                [weak self] time in
+            playerQueue?.addPeriodicTimeObserver(forInterval: interval, queue: mainQueue) { [weak self] _ in
                 // update player transport UI
                 if let currentTime = self?.playerQueue?.currentTime() {
                     if self?.cachingData == true {
@@ -197,4 +195,3 @@ class MediaPlayer: MediaPlaying {
         }
     }
 }
-

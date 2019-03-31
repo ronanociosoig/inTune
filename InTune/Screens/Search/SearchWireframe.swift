@@ -10,9 +10,9 @@ import UIKit
 
 struct SearchWireframe {
     static func makeViewController() -> SearchViewController {
-        let moduleName = "SearchViewController"
+        // let moduleName = "SearchViewController"
         let storyboard = UIStoryboard.init(name: "Search", bundle: nil)
-        return storyboard.instantiateViewController(withIdentifier: moduleName) as! SearchViewController
+        return SearchViewController.instantiateFromStoryboard(storyboard: storyboard)
     }
     
     static func prepare(viewController: SearchViewController, actions: SearchActions, dataProvider: SearchDataProvider) {
@@ -23,7 +23,5 @@ struct SearchWireframe {
                                         dataProvider: dataProvider)
         
         viewController.presenter = presenter
-        
-        
     }
 }

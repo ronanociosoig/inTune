@@ -13,6 +13,5 @@ protocol ServiceProvider: AnyObject {
 }
 
 protocol SearchiTunesLoadingService: AnyObject {
-    func load(term: String, completion: @escaping (_ data: Data?,_ error: String?)->())
+    func load(term: String, completion: @escaping (_ data: Data?, _ error: String?) -> Void)
 }
-

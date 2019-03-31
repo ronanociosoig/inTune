@@ -11,6 +11,8 @@ import Networking
 
 @testable import InTune
 
+// swiftlint:disable all
+
 class MockNetworkService: ServiceProvider {
     
     var responseType: MockResponseType = .complexResponse
@@ -31,14 +33,14 @@ enum MockResponseType {
     case simpleResponse
     case noResultsResponse
     case invalidDateResponse
-    case IggyPopResponse
+    case iggyPopResponse
 }
 
 class MockSearchiTunesService: NetworkService, SearchiTunesLoadingService {
     
     var responseType: MockResponseType = .complexResponse
     
-    func load(term: String, completion: @escaping (Data?, String?) -> ()) {
+    func load(term: String, completion: @escaping (Data?, String?) -> Void) {
         
         switch responseType {
         case MockResponseType.complexResponse:
@@ -53,7 +55,7 @@ class MockSearchiTunesService: NetworkService, SearchiTunesLoadingService {
             let outputData = try! MockData.loadInvalidDateResponse()
             completion(outputData, nil)
             return
-        case .IggyPopResponse:
+        case .iggyPopResponse:
             let outputData = try! MockData.loadIggyPopResponse()
             completion(outputData, nil)
         default:

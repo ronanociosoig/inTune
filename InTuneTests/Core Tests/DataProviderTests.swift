@@ -29,7 +29,7 @@ class DataProviderTests: XCTestCase {
         XCTAssertNotNil(dataProvider)
         XCTAssertNotNil(dataProvider.appData)
         XCTAssertNil(dataProvider.appData.searchTerm)
-        XCTAssertTrue(dataProvider.appData.results.count == 0)
+        XCTAssertTrue(!dataProvider.appData.results.isEmpty)
     }
 
     func testDataProviderStoresSearchTerm() {
@@ -43,14 +43,14 @@ class DataProviderTests: XCTestCase {
         networkService.responseType = .noResultsResponse
         dataProvider.search(term: referenceSearchTerm)
         
-        XCTAssertTrue(dataProvider.appData.results.count == 0)
+        XCTAssertTrue(!dataProvider.appData.results.isEmpty)
     }
     
     func testDataProviderHas2Results() {
         networkService.responseType = .simpleResponse
         dataProvider.search(term: referenceSearchTerm)
         
-        XCTAssertTrue(dataProvider.appData.results.count > 0)
+        XCTAssertTrue(!dataProvider.appData.results.isEmpty)
         XCTAssertTrue(dataProvider.appData.results.count == 2)
     }
     
@@ -58,7 +58,7 @@ class DataProviderTests: XCTestCase {
         networkService.responseType = .complexResponse
         dataProvider.search(term: referenceSearchTerm)
 
-        XCTAssertTrue(dataProvider.appData.results.count > 0)
+        XCTAssertTrue(!dataProvider.appData.results.isEmpty)
         XCTAssertTrue(dataProvider.appData.results.count == 50)
     }
     
@@ -105,7 +105,7 @@ class DataProviderTests: XCTestCase {
         networkService.responseType = .complexResponse
         dataProvider.search(term: referenceSearchTerm)
         
-        XCTAssertTrue(dataProvider.appData.results.count > 0)
+        XCTAssertTrue(!dataProvider.appData.results.isEmpty)
         XCTAssertTrue(dataProvider.appData.results.count == 50)
         
         networkService.responseType = .simpleResponse
@@ -115,7 +115,7 @@ class DataProviderTests: XCTestCase {
     }
     
     func testIggyPopData() {
-        networkService.responseType = .IggyPopResponse
+        networkService.responseType = .iggyPopResponse
         dataProvider.search(term: "Iggy Pop")
         
         XCTAssertTrue(dataProvider.appData.results.count == 50)
@@ -127,7 +127,7 @@ class MockDataLoader: DataLoaded {
     var errorMessage: String?
     var calledReceived: Bool = false
     
-    func dataReceived(errorMessage: String? = nil, on queue: DispatchQueue?)  {
+    func dataReceived(errorMessage: String? = nil, on queue: DispatchQueue?) {
         self.errorMessage = errorMessage
         
         calledReceived = true

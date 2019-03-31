@@ -12,7 +12,8 @@ struct SongDetailWireframe {
     static func makeViewController() -> SongDetailViewController {
         let moduleName = "SongDetail"
         let storyboard = UIStoryboard.init(name: moduleName, bundle: nil)
-        return storyboard.instantiateViewController(withIdentifier: moduleName) as! SongDetailViewController
+        
+        return SongDetailViewController.instantiateFromStoryboard(storyboard: storyboard)
     }
     
     static func prepare(viewController: SongDetailViewController,

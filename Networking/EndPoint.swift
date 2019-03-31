@@ -8,7 +8,7 @@
 
 import Foundation
 
-public typealias HTTPHeaders = [String:String]
+public typealias HTTPHeaders = [String: String]
 
 public protocol EndPointType {
     var baseURL: URL { get }

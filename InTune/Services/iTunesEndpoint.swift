@@ -14,9 +14,11 @@ enum iTunesEndpoint {
 }
 
 extension iTunesEndpoint: TargetType {
+    // swiftlint:disable force_unwrapping
     var baseURL: URL {
         return URL(string: Constants.Network.baseUrlPath)!
     }
+    // swiftlint:enable force_unwrapping
     
     var path: String {
         return Constants.Network.searchPath
@@ -26,20 +28,26 @@ extension iTunesEndpoint: TargetType {
         return .get
     }
     
+    // swiftlint:disable force_try force_unwrapping
     var sampleData: Data {
         return try! MockData.loadComplexServerResponse()!
     }
     
+    // swiftlint:enable force_try force_unwrapping
+    
     var task: Task {
         switch self {
         case .search(let term):
-            return .requestParameters(parameters: [Constants.Network.searchParameter:term, Constants.Network.media:Constants.Network.music,
-                                                   Constants.Network.entity:Constants.Network.song,
-                                                   Constants.Network.limit: Constants.Network.resultsLimit], encoding: URLEncoding.default)
+            return .requestParameters(parameters:
+                [Constants.Network.searchParameter: term,
+                 Constants.Network.media: Constants.Network.music,
+                Constants.Network.entity: Constants.Network.song,
+                Constants.Network.limit: Constants.Network.resultsLimit],
+                                      encoding: URLEncoding.default)
         }
     }
     
-    var headers: [String : String]? {
+    var headers: [String: String]? {
         return nil
     }
 }

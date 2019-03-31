@@ -6,6 +6,8 @@
 //  Copyright © 2018 Sonomos. All rights reserved.
 //
 
+// swiftlint:disable nesting identifier_name
+
 import UIKit
 
 struct Constants {
@@ -101,4 +103,3 @@ struct Constants {
         }
     }
 }
-

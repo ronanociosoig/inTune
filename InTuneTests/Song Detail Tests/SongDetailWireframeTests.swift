@@ -37,7 +37,7 @@ class SongDetailWireframeTests: XCTestCase {
         viewController.viewDidAppear(true)
         
         guard let result = dataProvider.appData.results.first else {
-            XCTFail()
+            XCTFail("Must have at least one result.")
             return
         }
         

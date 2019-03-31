@@ -24,7 +24,7 @@ class TimeFormatterTests: XCTestCase {
     }
     
     func testOneSecondDurationParsing() {
-        let output = TimeFormatter.string(from:1000)
+        let output = TimeFormatter.string(from: 1000)
         XCTAssertTrue(output == "00:01")
     }
     

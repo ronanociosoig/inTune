@@ -6,6 +6,8 @@
 //  Copyright © 2019 Sonomos. All rights reserved.
 //
 
+// swiftlint:disable all
+
 import XCTest
 
 @testable import InTune
@@ -190,7 +192,7 @@ class MockMusicDataProvider: MusicPlayerDataProvider {
         mediaUrlsCalled = true
         let url1 = URL(string: "http://www.apple.com/media/file1.mp3")!
         let url2 = URL(string: "http://www.apple.com/media/file2.mp3")!
-        return [url1,url2]
+        return [url1, url2]
     }
     
     func selectedIndex() -> Int {

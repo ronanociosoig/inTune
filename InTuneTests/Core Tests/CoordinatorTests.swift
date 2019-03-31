@@ -58,7 +58,7 @@ class CoordinatorTests: XCTestCase {
         coordinator.showSongDetail()
         
         guard let navigationController = coordinator.window.rootViewController as? UINavigationController else {
-            XCTFail()
+            XCTFail("RootViewController must be a NavigationController")
             return
         }
         
@@ -72,7 +72,7 @@ class CoordinatorTests: XCTestCase {
         coordinator.showMusicPlayer()
         
         guard let navigationController = coordinator.window.rootViewController as? UINavigationController else {
-            XCTFail()
+            XCTFail("RootViewController must be a NavigationController")
             return
         }
         
@@ -91,7 +91,7 @@ class CoordinatorTests: XCTestCase {
             
             if name == "MusicPlayerView" {
                 
-                XCTFail()
+                XCTFail("The Music Player view should not visible.")
                 return
             }
         }
@@ -103,7 +103,7 @@ class CoordinatorTests: XCTestCase {
         coordinator.showAlert(with: "Validate Testing")
         
         guard let navigationController = coordinator.window.rootViewController as? UINavigationController else {
-            XCTFail()
+            XCTFail("RootViewController must be a NavigationController")
             return
         }
         

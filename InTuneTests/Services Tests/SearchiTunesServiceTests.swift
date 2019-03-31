@@ -6,6 +6,8 @@
 //  Copyright © 2018 Sonomos. All rights reserved.
 //
 
+// swiftlint:disable all
+
 import XCTest
 import Networking
 
@@ -29,7 +31,7 @@ class SearchiTunesServiceTests: XCTestCase {
         let networkService = NetworkService()
         let searchService = networkService.makeSearchiTunesService()
 
-        searchService.load(term: "") { (data, errorMessage) in
+        searchService.load(term: "") { (_, errorMessage) in
             XCTAssertNotNil(errorMessage)
 
             if errorMessage != nil {
@@ -47,7 +49,7 @@ class SearchiTunesServiceTests: XCTestCase {
         let searchService = networkService.makeSearchiTunesService() as! MockSearchiTunesService
         searchService.responseType = .complexResponse
         
-        searchService.load(term: "something you cannot find") { (data, errorMessage) in
+        searchService.load(term: "something you cannot find") { (data, _) in
             XCTAssertNotNil(data)
             
             if data != nil {
@@ -63,9 +65,9 @@ class SearchiTunesServiceTests: XCTestCase {
         
         let networkService = MockNetworkService()
         let searchService = networkService.makeSearchiTunesService() as! MockSearchiTunesService
-        searchService.responseType = .IggyPopResponse
+        searchService.responseType = .iggyPopResponse
         
-        searchService.load(term: "something you cannot find") { (data, errorMessage) in
+        searchService.load(term: "something you cannot find") { (data, _) in
             XCTAssertNotNil(data)
             
             if data != nil {

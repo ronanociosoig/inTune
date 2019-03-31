@@ -8,6 +8,8 @@
 
 import Foundation
 
+// swiftlint:disable all
+
 class MockData {
     static let fileType = "json"
     static let fileReadError = "File not readable"
@@ -32,19 +34,19 @@ class MockData {
     }
     
     static func loadNoResultsResponse() throws -> Data? {
-        return try load(name:"noResultsServerResponse" )
+        return try load(name: "noResultsServerResponse" )
     }
     
     static func loadSimpleResponse() throws -> Data? {
-        return try load(name:"simpleServerResponse")
+        return try load(name: "simpleServerResponse")
     }
     
     static func loadComplexServerResponse() throws -> Data? {
-        return try load(name:"serverResponse")
+        return try load(name: "serverResponse")
     }
     
     static func loadInvalidDateResponse() throws -> Data? {
-        return try load(name:"invalidDateResponse")
+        return try load(name: "invalidDateResponse")
     }
     
     static func loadIggyPopResponse() throws -> Data? {

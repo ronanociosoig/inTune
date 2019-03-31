@@ -16,7 +16,6 @@ extension UITableViewCell {
     }
 }
 
-
 extension UITableView {
     
     /// Register UITableViewCell type
