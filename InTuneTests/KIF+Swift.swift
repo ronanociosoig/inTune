@@ -6,6 +6,8 @@
 //  Copyright © 2016 Clean Swifter. All rights reserved.
 //
 
+// swiftlint:disable all
+
 import XCTest
 
 extension XCTestCase {

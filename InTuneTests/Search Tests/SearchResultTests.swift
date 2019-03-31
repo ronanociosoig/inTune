@@ -6,6 +6,8 @@
 //  Copyright © 2019 Sonomos. All rights reserved.
 //
 
+// swiftlint:disable all
+
 import XCTest
 
 @testable import InTune
@@ -29,7 +31,7 @@ class SearchResultTests: XCTestCase {
         let results = serverResponse.results
         
         guard let result = results.first else {
-            XCTFail()
+            XCTFail("There must be some results. ")
             return
         }
         

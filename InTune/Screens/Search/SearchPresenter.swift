@@ -45,7 +45,7 @@ extension SearchPresenter: SearchPresenting {
     
     func dataReceived() {
         let searchResults = dataProvider.searchResults()
-        viewController.sortButton(enabled: (searchResults.count > 0))
+        viewController.sortButton(enabled: (!searchResults.isEmpty))
         viewController.reload()
     }
     

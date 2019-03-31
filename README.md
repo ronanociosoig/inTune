@@ -1,3 +1,7 @@
+[![Build Status](https://travis-ci.org/ronanociosoig/inTune.svg?branch=master)](https://travis-ci.org/ronanociosoig/inTune)
+[![CircleCI](https://circleci.com/gh/ronanociosoig/inTune.svg?style=svg)](https://circleci.com/gh/ronanociosoig/inTune)
+[![codecov.io](https://codecov.io/github/ronanociosoig/inTune/coverage.svg?branch=master)](https://codecov.io/github/ronanociosoig/inTune?branch=master)
+
 ##In Tune
 
 ### Outline

@@ -6,6 +6,8 @@
 //  Copyright © 2019 Sonomos. All rights reserved.
 //
 
+// swiftlint:disable all
+
 import XCTest
 
 @testable import InTune
@@ -55,7 +57,6 @@ class SearchViewControllerTests: XCTestCase {
 //
 //        XCTAssertNotNil(alertController)
         
-        
         viewController.buttonAction(UIButton.init(type: .system))
         
         XCTAssertTrue(searchPresenter.viewDidLayoutSubviewsCalled)
@@ -63,7 +64,6 @@ class SearchViewControllerTests: XCTestCase {
         viewController.sort(with: .album)
         
         XCTAssertTrue(searchPresenter.selectedCalled)
-        
         
         let searchBar = UISearchBar()
         searchBar.text = referenceSearchTerm

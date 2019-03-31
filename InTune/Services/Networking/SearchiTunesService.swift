@@ -22,9 +22,9 @@ class SearchiTunesService: SearchiTunesLoadingService {
         }
     }
     
-    func load(term: String, completion: @escaping (_ data: Data?,_ error: String?)->()) {
+    func load(term: String, completion: @escaping (_ data: Data?, _ error: String?) -> Void) {
         
-        if term.count == 0 {
+        if term.isEmpty {
             completion(nil, NetworkResponse.noData.rawValue)
             return
         }
@@ -32,7 +32,7 @@ class SearchiTunesService: SearchiTunesLoadingService {
         provider.request(.search(term: term)) { result in
             switch result {
             case .success(let response):
-                completion(response.data,nil)
+                completion(response.data, nil)
             case .failure(let error):
                 completion(nil, error.localizedDescription)
             }

@@ -23,6 +23,7 @@
 		AF16F8D5224FE0C0001F2B8D /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF16F8D4224FE0C0001F2B8D /* Configuration.swift */; };
 		AF16F8D6224FE0EE001F2B8D /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FF4321A8266500D2894F /* MockData.swift */; };
 		AF16F8D7224FE684001F2B8D /* serverResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = AFD1FF4521A826EF00D2894F /* serverResponse.json */; };
+		AF16F8DA2250ADDD001F2B8D /* UIViewController+StoryboardInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF16F8D92250ADDC001F2B8D /* UIViewController+StoryboardInstantiable.swift */; };
 		AF1BB3C0224A6490008FBFEC /* SearchResultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1BB3BF224A6490008FBFEC /* SearchResultTests.swift */; };
 		AF1BB3C5224A8E69008FBFEC /* MusicPlayerPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1BB3C4224A8E69008FBFEC /* MusicPlayerPresenterTests.swift */; };
 		AF1BB3C7224AA8E2008FBFEC /* SearchActionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1BB3C6224AA8E2008FBFEC /* SearchActionTests.swift */; };
@@ -184,6 +185,7 @@
 		AF16F8D0224D497A001F2B8D /* KIFMediaPlayerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KIFMediaPlayerUITests.swift; sourceTree = "<group>"; };
 		AF16F8D2224FC28D001F2B8D /* iTunesEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesEndpoint.swift; sourceTree = "<group>"; };
 		AF16F8D4224FE0C0001F2B8D /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		AF16F8D92250ADDC001F2B8D /* UIViewController+StoryboardInstantiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+StoryboardInstantiable.swift"; sourceTree = "<group>"; };
 		AF1BB3BF224A6490008FBFEC /* SearchResultTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultTests.swift; sourceTree = "<group>"; };
 		AF1BB3C4224A8E69008FBFEC /* MusicPlayerPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerPresenterTests.swift; sourceTree = "<group>"; };
 		AF1BB3C6224AA8E2008FBFEC /* SearchActionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchActionTests.swift; sourceTree = "<group>"; };
@@ -655,6 +657,7 @@
 		AFD1FFCF21ABE77600D2894F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				AF16F8D92250ADDC001F2B8D /* UIViewController+StoryboardInstantiable.swift */,
 				AFD1FFD021ABF1EA00D2894F /* DateFormatter.swift */,
 				AFD1FFDA21AC651800D2894F /* UITableViewCell+Extension.swift */,
 				AFD1FFE421ACABAC00D2894F /* Loadable.swift */,
@@ -708,6 +711,7 @@
 			buildConfigurationList = AFD1FEEA21A6CE7700D2894F /* Build configuration list for PBXNativeTarget "InTune" */;
 			buildPhases = (
 				8D1A401BC8F58EFD3E5D3700 /* [CP] Check Pods Manifest.lock */,
+				AF16F8D8225025B1001F2B8D /* Swift Lint Run Script */,
 				AFD1FEBE21A6CE7400D2894F /* Sources */,
 				AFD1FEBF21A6CE7400D2894F /* Frameworks */,
 				AFD1FEC021A6CE7400D2894F /* Resources */,
@@ -1011,6 +1015,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		AF16F8D8225025B1001F2B8D /* Swift Lint Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Swift Lint Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
 		EC77250FE00540251FA4E671 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1097,6 +1119,7 @@
 				AFD1FFC521AA156400D2894F /* SearchAction.swift in Sources */,
 				AFD1FFE721AD464100D2894F /* SongDetailWireframe.swift in Sources */,
 				AFD1FFA721A868B200D2894F /* iTunesAPI.swift in Sources */,
+				AF16F8DA2250ADDD001F2B8D /* UIViewController+StoryboardInstantiable.swift in Sources */,
 				AF4A0FF721AF3873005F2A4F /* MusicPlayerDataProvider.swift in Sources */,
 				AFD1FEF621A6E2E900D2894F /* Constants.swift in Sources */,
 				AF4A0FF021AED2B1005F2A4F /* MediaPlayerDataProvider.swift in Sources */,

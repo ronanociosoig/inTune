@@ -1,4 +1,7 @@
+# .slather.yml
+
 coverage_service: cobertura_xml
 workspace: ./InTune.workspace
 scheme: InTune
+source_directory: ./InTune 
 output_directory: ./test-reports

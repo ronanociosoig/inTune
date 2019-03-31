@@ -6,6 +6,8 @@
 //  Copyright © 2018 Sonomos. All rights reserved.
 //
 
+// swiftlint:disable all
+
 import XCTest
 
 @testable import Networking
@@ -91,7 +93,7 @@ class URLParameterEncodingTests: XCTestCase {
         do {
             try encoder.encode(urlRequest: &request, with: parameters)
         } catch {
-            XCTFail()
+            XCTFail("Encoding failed.")
             return
         }
         
@@ -99,6 +101,4 @@ class URLParameterEncodingTests: XCTestCase {
         let contentTypeFromHeader = headers![encoder.contentTypeKey]
         XCTAssertTrue(contentTypeValue == contentTypeFromHeader, "Header should contain the content type header.")
     }
-    
-    
 }

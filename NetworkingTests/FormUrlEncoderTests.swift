@@ -22,7 +22,7 @@ class FormUrlEncoderTests: XCTestCase {
 
     func testSingleParameterEncoding() {
         let encoder = FormUrlParameterEncoder()
-        let inputData: Parameters = ["country":"UK"]
+        let inputData: Parameters = ["country": "UK"]
         let referenceOutput = "country=UK"
         let output = encoder.urlEncode(parameters: inputData)
         
@@ -31,7 +31,7 @@ class FormUrlEncoderTests: XCTestCase {
     
     func testMultiParameterEncoding() {
         let encoder = FormUrlParameterEncoder()
-        let inputData: Parameters = ["country":"UK", "adult": 1, "locale": "en-GB"]
+        let inputData: Parameters = ["country": "UK", "adult": 1, "locale": "en-GB"]
         let output = encoder.urlEncode(parameters: inputData)
         let parts = output.split(separator: "&")
         XCTAssertTrue(parts.count == 3)

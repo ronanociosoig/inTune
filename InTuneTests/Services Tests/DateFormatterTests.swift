@@ -6,6 +6,8 @@
 //  Copyright © 2018 Sonomos. All rights reserved.
 //
 
+// swiftlint:disable all
+
 import XCTest
 
 @testable import InTune

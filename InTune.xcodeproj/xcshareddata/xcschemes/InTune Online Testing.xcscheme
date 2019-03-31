@@ -20,6 +20,20 @@
                ReferencedContainer = "container:InTune.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "AFD1FED521A6CE7700D2894F"
+               BuildableName = "InTuneTests.xctest"
+               BlueprintName = "InTuneTests"
+               ReferencedContainer = "container:InTune.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction

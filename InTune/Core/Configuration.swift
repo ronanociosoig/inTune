@@ -30,6 +30,14 @@ struct Configuration {
     }
     
     static var mockSearchData: Data? {
-        return try! MockData.loadComplexServerResponse()
+        do {
+            guard let data = try MockData.loadComplexServerResponse() else {
+                return Data()
+            }
+            return data
+        } catch {
+            return Data()
+        }
+
     }
 }

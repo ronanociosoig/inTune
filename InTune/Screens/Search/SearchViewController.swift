@@ -181,7 +181,7 @@ extension SearchViewController: UITableViewDelegate {
 extension SearchViewController: UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        if let text = searchBar.text, text.count > 0 {
+        if let text = searchBar.text, !text.isEmpty {
             title = text
             searchText = text
             guard let presenter = presenter else { return }
@@ -206,4 +206,3 @@ extension SearchViewController: ViewController {
         navigationItem.rightBarButtonItem?.isEnabled = enabled
     }
 }
-

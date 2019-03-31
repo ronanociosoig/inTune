@@ -8,7 +8,7 @@
 
 import Foundation
 
-public typealias Parameters = [String:Any]
+public typealias Parameters = [String: Any]
 
 public protocol ParameterEncoder {
     var contentTypeKey: String { get }
@@ -52,13 +52,13 @@ public enum ParameterEncoding {
                 guard let bodyParameters = bodyParameters else { return }
                 try FormUrlParameterEncoder().encode(urlRequest: &urlRequest, with: bodyParameters)
             }
-        }catch {
+        } catch {
             throw error
         }
     }
 }
 
-public enum NetworkError : String, Error {
+public enum NetworkError: String, Error {
     case parametersNil = "Parameters were nil."
     case encodingFailed = "Parameter encoding failed."
     case missingURL = "URL is nil."

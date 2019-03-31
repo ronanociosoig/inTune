@@ -33,5 +33,3 @@ public extension Loadable where Self: UIView {
         return String(describing: self)
     }
 }
-
-

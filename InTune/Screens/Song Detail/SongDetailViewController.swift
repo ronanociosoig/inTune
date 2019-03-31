@@ -53,12 +53,16 @@ class SongDetailViewController: UIViewController {
         
         let image = UIImage(named: Constants.Images.largePlaceholder)
         
+        // swiftlint:disable force_unwrapping
+        
         let activity = UIActivityViewController(activityItems: [
             songDetailView.trackNameLabel.text ?? "Unknown",
             songDetailView.artistNameLabel.text ?? "Unknown",
             songDetailView.artworkImageView.image ?? image!,
             songDetailView.trackViewURL
             ], applicationActivities: nil)
+        
+        // swiftlint:enable force_unwrapping
         
         // Anything you want to exclude
         activity.excludedActivityTypes = [
@@ -69,7 +73,7 @@ class SongDetailViewController: UIViewController {
             UIActivity.ActivityType.addToReadingList,
             UIActivity.ActivityType.postToFlickr,
             UIActivity.ActivityType.postToVimeo,
-            UIActivity.ActivityType.postToTencentWeibo,
+            UIActivity.ActivityType.postToTencentWeibo
         ]
         
         self.present(activity, animated: true, completion: nil)

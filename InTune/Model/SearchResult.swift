@@ -28,7 +28,7 @@ struct SearchResult: Codable {
          collectionName: String,
          genre: String,
          duration: Int,
-         durationText:String,
+         durationText: String,
          releaseDate: String,
          price: String,
          previewURL: String) {

@@ -31,7 +31,6 @@ class SearchPresenterTests: XCTestCase {
                                         actions: actions,
                                         dataProvider: dataProvider)
         
-        
         // view did layout subviews calls set data source
         presenter.viewDidLayoutSubviews()
         XCTAssertTrue(viewController.setDataSourceCalled)
@@ -62,13 +61,10 @@ class SearchPresenterTests: XCTestCase {
         XCTAssertTrue(actions.searchCalled)
         XCTAssertTrue(actions.term == expectedSearchTerm)
 
-        
         dataProvider.search(term: expectedSearchTerm)
         
         presenter.select(index: expectedIndex)
         XCTAssertTrue(actions.selectedIndex == expectedIndex)
-        
-        
     }
     
     func testItemAtIndex() {
@@ -83,7 +79,6 @@ class SearchPresenterTests: XCTestCase {
         let item = presenter.item(at: indexPath)
         
         XCTAssertEqual(expectedItem.identifier, item.identifier)
-        
     }
     
     func testSelectedOption() {
@@ -119,7 +114,6 @@ class MockSearchActions: SearchActions {
     func sort(option: SortOption) {
         sortCalled = true
     }
-    
 }
 
 class MockSearchViewController: ViewController {

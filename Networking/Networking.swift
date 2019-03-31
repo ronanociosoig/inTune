@@ -8,7 +8,7 @@
 
 import Foundation
 
-public enum NetworkResponse:String {
+public enum NetworkResponse: String {
     case success
     case authenticationError = "You need to be authenticated first."
     case badRequest = "Bad request"
@@ -25,7 +25,7 @@ public enum Result<String> {
 }
 
 public struct NetworkResponseParser {
-    public static func parse(_ response: HTTPURLResponse) -> Result<String>{
+    public static func parse(_ response: HTTPURLResponse) -> Result<String> {
         switch response.statusCode {
         case 200...299: return .success
         case 304: return .failure(NetworkResponse.notModified.rawValue)
