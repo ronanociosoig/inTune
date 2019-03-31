@@ -1,17 +1,14 @@
 //
 //  NetworkService.swift
-//  BitRich
+//  InTune
 //
-//  Created by Ronan on 04/11/2018.
-//  Copyright © 2018 Sonomos. All rights reserved.
+//  Created by Ronan on 31/03/2019.
+//  Copyright © 2019 Sonomos. All rights reserved.
 //
 
 import Foundation
-import Networking
 
 class NetworkService: ServiceProvider {
-    
-    let router = Router<iTunesAPI>()
     
     func makeSearchiTunesService() -> SearchiTunesLoadingService {
         return SearchiTunesService()

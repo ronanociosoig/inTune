@@ -10,8 +10,6 @@
 		0F1A73BFB5C076601A957429 /* Pods_InTuneUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF840F5ED9CFE0B9FEF22DC2 /* Pods_InTuneUITests.framework */; };
 		1484868205BF3F2E2605691D /* Pods_InTune.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC0172265854DA2D0A468097 /* Pods_InTune.framework */; };
 		3974A4F4C76DE04A3A7D4ED1 /* Pods_InTuneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A444914D00E17E9800FF2C1F /* Pods_InTuneTests.framework */; };
-		4A198F6113350C40CC81BDC6 /* Pods_NetworkingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9807DD107F4163D0AD7F8CCA /* Pods_NetworkingTests.framework */; };
-		5822082F76F251CE8968FAC7 /* Pods_Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13CB23CA2544224CED6572F0 /* Pods_Networking.framework */; };
 		AF0944A82249937500D3E07E /* MusicPlayerDataProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0944A72249937500D3E07E /* MusicPlayerDataProviderTests.swift */; };
 		AF16F8BE224BE816001F2B8D /* MediaPlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF16F8BD224BE816001F2B8D /* MediaPlayerTests.swift */; };
 		AF16F8C9224C35D0001F2B8D /* KIF+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF16F8C8224C35D0001F2B8D /* KIF+Swift.swift */; };
@@ -29,6 +27,7 @@
 		AF1BB3C7224AA8E2008FBFEC /* SearchActionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1BB3C6224AA8E2008FBFEC /* SearchActionTests.swift */; };
 		AF1BB3C9224AC868008FBFEC /* MusicPlayerViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1BB3C8224AC868008FBFEC /* MusicPlayerViewTests.swift */; };
 		AF1BB3CB224AD4EC008FBFEC /* AppDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1BB3CA224AD4EC008FBFEC /* AppDataTests.swift */; };
+		AF2447922250C27D002E0B78 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2447912250C27D002E0B78 /* NetworkService.swift */; };
 		AF4A0FEC21AE9BEC005F2A4F /* MusicPlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF4A0FEB21AE9BEC005F2A4F /* MusicPlayerView.xib */; };
 		AF4A0FEE21AEA3AC005F2A4F /* MusicPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4A0FED21AEA3AB005F2A4F /* MusicPlayerView.swift */; };
 		AF4A0FF021AED2B1005F2A4F /* MediaPlayerDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4A0FEF21AED2B1005F2A4F /* MediaPlayerDataProvider.swift */; };
@@ -64,25 +63,10 @@
 		AFD1FF5D21A84C9200D2894F /* serverResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = AFD1FF4521A826EF00D2894F /* serverResponse.json */; };
 		AFD1FF5F21A85CE200D2894F /* SearchWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FF5E21A85CE200D2894F /* SearchWireframe.swift */; };
 		AFD1FF6121A85D8700D2894F /* CoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FF6021A85D8700D2894F /* CoordinatorTests.swift */; };
-		AFD1FF7E21A8671300D2894F /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFD1FF7521A8671300D2894F /* Networking.framework */; };
-		AFD1FF8721A8671300D2894F /* Networking.h in Headers */ = {isa = PBXBuildFile; fileRef = AFD1FF7721A8671300D2894F /* Networking.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AFD1FF8A21A8671300D2894F /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFD1FF7521A8671300D2894F /* Networking.framework */; };
-		AFD1FF8B21A8671300D2894F /* Networking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AFD1FF7521A8671300D2894F /* Networking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		AFD1FF9A21A8674800D2894F /* FormUrlParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FF9321A8674600D2894F /* FormUrlParameterEncoder.swift */; };
-		AFD1FF9B21A8674800D2894F /* ParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FF9421A8674600D2894F /* ParameterEncoder.swift */; };
-		AFD1FF9C21A8674800D2894F /* URLParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FF9521A8674600D2894F /* URLParameterEncoder.swift */; };
-		AFD1FF9D21A8674800D2894F /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FF9621A8674600D2894F /* JSONParameterEncoder.swift */; };
-		AFD1FF9E21A8674800D2894F /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FF9721A8674700D2894F /* Router.swift */; };
-		AFD1FF9F21A8674800D2894F /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FF9821A8674700D2894F /* EndPoint.swift */; };
-		AFD1FFA021A8674800D2894F /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FF9921A8674700D2894F /* Networking.swift */; };
 		AFD1FFA621A868B200D2894F /* SearchiTunesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FFA221A868B100D2894F /* SearchiTunesService.swift */; };
-		AFD1FFA721A868B200D2894F /* iTunesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FFA321A868B100D2894F /* iTunesAPI.swift */; };
-		AFD1FFA821A868B200D2894F /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FFA421A868B100D2894F /* NetworkService.swift */; };
 		AFD1FFA921A868B200D2894F /* ServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FFA521A868B100D2894F /* ServiceProvider.swift */; };
 		AFD1FFAD21A86E3200D2894F /* noResultsServerResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = AFD1FF4A21A8284700D2894F /* noResultsServerResponse.json */; };
 		AFD1FFAF21A8704800D2894F /* DataProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FFAE21A8704800D2894F /* DataProviderTests.swift */; };
-		AFD1FFB121A874E600D2894F /* URLParameterEncodingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FFB021A874E600D2894F /* URLParameterEncodingTests.swift */; };
-		AFD1FFB321A874FB00D2894F /* FormUrlEncoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FFB221A874FB00D2894F /* FormUrlEncoderTests.swift */; };
 		AFD1FFB521A87BAB00D2894F /* AppControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FFB421A87BAB00D2894F /* AppControllerTests.swift */; };
 		AFD1FFB721A888EA00D2894F /* DataLoaded.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FFB621A888EA00D2894F /* DataLoaded.swift */; };
 		AFD1FFC121A9D5E600D2894F /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FFC021A9D5E600D2894F /* SearchPresenter.swift */; };
@@ -128,27 +112,6 @@
 			remoteGlobalIDString = AFD1FEC121A6CE7400D2894F;
 			remoteInfo = InTune;
 		};
-		AFD1FF7F21A8671300D2894F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AFD1FEBA21A6CE7400D2894F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = AFD1FF7421A8671300D2894F;
-			remoteInfo = Networking;
-		};
-		AFD1FF8121A8671300D2894F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AFD1FEBA21A6CE7400D2894F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = AFD1FEC121A6CE7400D2894F;
-			remoteInfo = InTune;
-		};
-		AFD1FF8821A8671300D2894F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AFD1FEBA21A6CE7400D2894F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = AFD1FF7421A8671300D2894F;
-			remoteInfo = Networking;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -158,7 +121,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				AFD1FF8B21A8671300D2894F /* Networking.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -191,6 +153,7 @@
 		AF1BB3C6224AA8E2008FBFEC /* SearchActionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchActionTests.swift; sourceTree = "<group>"; };
 		AF1BB3C8224AC868008FBFEC /* MusicPlayerViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerViewTests.swift; sourceTree = "<group>"; };
 		AF1BB3CA224AD4EC008FBFEC /* AppDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDataTests.swift; sourceTree = "<group>"; };
+		AF2447912250C27D002E0B78 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		AF4A0FEB21AE9BEC005F2A4F /* MusicPlayerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicPlayerView.xib; sourceTree = "<group>"; };
 		AF4A0FED21AEA3AB005F2A4F /* MusicPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerView.swift; sourceTree = "<group>"; };
 		AF4A0FEF21AED2B1005F2A4F /* MediaPlayerDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPlayerDataProvider.swift; sourceTree = "<group>"; };
@@ -231,25 +194,9 @@
 		AFD1FF5921A84C8300D2894F /* MockNetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockNetworkService.swift; sourceTree = "<group>"; };
 		AFD1FF5E21A85CE200D2894F /* SearchWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchWireframe.swift; sourceTree = "<group>"; };
 		AFD1FF6021A85D8700D2894F /* CoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorTests.swift; sourceTree = "<group>"; };
-		AFD1FF7521A8671300D2894F /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AFD1FF7721A8671300D2894F /* Networking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Networking.h; sourceTree = "<group>"; };
-		AFD1FF7821A8671300D2894F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AFD1FF7D21A8671300D2894F /* NetworkingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AFD1FF8621A8671300D2894F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AFD1FF9321A8674600D2894F /* FormUrlParameterEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormUrlParameterEncoder.swift; sourceTree = "<group>"; };
-		AFD1FF9421A8674600D2894F /* ParameterEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterEncoder.swift; sourceTree = "<group>"; };
-		AFD1FF9521A8674600D2894F /* URLParameterEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLParameterEncoder.swift; sourceTree = "<group>"; };
-		AFD1FF9621A8674600D2894F /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
-		AFD1FF9721A8674700D2894F /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
-		AFD1FF9821A8674700D2894F /* EndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
-		AFD1FF9921A8674700D2894F /* Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		AFD1FFA221A868B100D2894F /* SearchiTunesService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchiTunesService.swift; path = Networking/SearchiTunesService.swift; sourceTree = "<group>"; };
-		AFD1FFA321A868B100D2894F /* iTunesAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = iTunesAPI.swift; path = Networking/iTunesAPI.swift; sourceTree = "<group>"; };
-		AFD1FFA421A868B100D2894F /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkService.swift; path = Networking/NetworkService.swift; sourceTree = "<group>"; };
 		AFD1FFA521A868B100D2894F /* ServiceProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServiceProvider.swift; path = Networking/ServiceProvider.swift; sourceTree = "<group>"; };
 		AFD1FFAE21A8704800D2894F /* DataProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProviderTests.swift; sourceTree = "<group>"; };
-		AFD1FFB021A874E600D2894F /* URLParameterEncodingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLParameterEncodingTests.swift; sourceTree = "<group>"; };
-		AFD1FFB221A874FB00D2894F /* FormUrlEncoderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormUrlEncoderTests.swift; sourceTree = "<group>"; };
 		AFD1FFB421A87BAB00D2894F /* AppControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppControllerTests.swift; sourceTree = "<group>"; };
 		AFD1FFB621A888EA00D2894F /* DataLoaded.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataLoaded.swift; sourceTree = "<group>"; };
 		AFD1FFBD21A987FE00D2894F /* invalidDateResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = invalidDateResponse.json; sourceTree = "<group>"; };
@@ -294,7 +241,6 @@
 			files = (
 				AFD1000021ADA14A00D2894F /* AVFoundation.framework in Frameworks */,
 				AFD1FFFE21ADA03700D2894F /* AVKit.framework in Frameworks */,
-				AFD1FF8A21A8671300D2894F /* Networking.framework in Frameworks */,
 				1484868205BF3F2E2605691D /* Pods_InTune.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -312,23 +258,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F1A73BFB5C076601A957429 /* Pods_InTuneUITests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AFD1FF7221A8671300D2894F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5822082F76F251CE8968FAC7 /* Pods_Networking.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AFD1FF7A21A8671300D2894F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AFD1FF7E21A8671300D2894F /* Networking.framework in Frameworks */,
-				4A198F6113350C40CC81BDC6 /* Pods_NetworkingTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,8 +378,6 @@
 				AFD1FEC421A6CE7400D2894F /* InTune */,
 				AFD1FED921A6CE7700D2894F /* InTuneTests */,
 				AFD1FEE421A6CE7700D2894F /* InTuneUITests */,
-				AFD1FF7621A8671300D2894F /* Networking */,
-				AFD1FF8321A8671300D2894F /* NetworkingTests */,
 				AFD1FEC321A6CE7400D2894F /* Products */,
 				8945FFC58F970ADBAA1A21E0 /* Frameworks */,
 				F42760C2113A8067459FE277 /* Pods */,
@@ -463,8 +390,6 @@
 				AFD1FEC221A6CE7400D2894F /* InTune.app */,
 				AFD1FED621A6CE7700D2894F /* InTuneTests.xctest */,
 				AFD1FEE121A6CE7700D2894F /* InTuneUITests.xctest */,
-				AFD1FF7521A8671300D2894F /* Networking.framework */,
-				AFD1FF7D21A8671300D2894F /* NetworkingTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -577,11 +502,10 @@
 		AFD1FF0421A8053900D2894F /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				AFD1FFA321A868B100D2894F /* iTunesAPI.swift */,
-				AFD1FFA421A868B100D2894F /* NetworkService.swift */,
 				AFD1FFA221A868B100D2894F /* SearchiTunesService.swift */,
 				AFD1FFA521A868B100D2894F /* ServiceProvider.swift */,
 				AF16F8D2224FC28D001F2B8D /* iTunesEndpoint.swift */,
+				AF2447912250C27D002E0B78 /* NetworkService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -609,40 +533,6 @@
 				AFD1FF5921A84C8300D2894F /* MockNetworkService.swift */,
 			);
 			path = Mocks;
-			sourceTree = "<group>";
-		};
-		AFD1FF7621A8671300D2894F /* Networking */ = {
-			isa = PBXGroup;
-			children = (
-				AFD1FF9221A8674600D2894F /* Encoder */,
-				AFD1FF9821A8674700D2894F /* EndPoint.swift */,
-				AFD1FF9921A8674700D2894F /* Networking.swift */,
-				AFD1FF9721A8674700D2894F /* Router.swift */,
-				AFD1FF7721A8671300D2894F /* Networking.h */,
-				AFD1FF7821A8671300D2894F /* Info.plist */,
-			);
-			path = Networking;
-			sourceTree = "<group>";
-		};
-		AFD1FF8321A8671300D2894F /* NetworkingTests */ = {
-			isa = PBXGroup;
-			children = (
-				AFD1FFB221A874FB00D2894F /* FormUrlEncoderTests.swift */,
-				AFD1FFB021A874E600D2894F /* URLParameterEncodingTests.swift */,
-				AFD1FF8621A8671300D2894F /* Info.plist */,
-			);
-			path = NetworkingTests;
-			sourceTree = "<group>";
-		};
-		AFD1FF9221A8674600D2894F /* Encoder */ = {
-			isa = PBXGroup;
-			children = (
-				AFD1FF9321A8674600D2894F /* FormUrlParameterEncoder.swift */,
-				AFD1FF9421A8674600D2894F /* ParameterEncoder.swift */,
-				AFD1FF9521A8674600D2894F /* URLParameterEncoder.swift */,
-				AFD1FF9621A8674600D2894F /* JSONParameterEncoder.swift */,
-			);
-			path = Encoder;
 			sourceTree = "<group>";
 		};
 		AFD1FFCC21AB5B4F00D2894F /* Cells */ = {
@@ -694,17 +584,6 @@
 		};
 /* End PBXGroup section */
 
-/* Begin PBXHeadersBuildPhase section */
-		AFD1FF7021A8671300D2894F /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AFD1FF8721A8671300D2894F /* Networking.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
 /* Begin PBXNativeTarget section */
 		AFD1FEC121A6CE7400D2894F /* InTune */ = {
 			isa = PBXNativeTarget;
@@ -721,7 +600,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				AFD1FF8921A8671300D2894F /* PBXTargetDependency */,
 			);
 			name = InTune;
 			productName = InTune;
@@ -767,45 +645,6 @@
 			productReference = AFD1FEE121A6CE7700D2894F /* InTuneUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
-		AFD1FF7421A8671300D2894F /* Networking */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = AFD1FF8C21A8671300D2894F /* Build configuration list for PBXNativeTarget "Networking" */;
-			buildPhases = (
-				EC77250FE00540251FA4E671 /* [CP] Check Pods Manifest.lock */,
-				AFD1FF7021A8671300D2894F /* Headers */,
-				AFD1FF7121A8671300D2894F /* Sources */,
-				AFD1FF7221A8671300D2894F /* Frameworks */,
-				AFD1FF7321A8671300D2894F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Networking;
-			productName = Networking;
-			productReference = AFD1FF7521A8671300D2894F /* Networking.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		AFD1FF7C21A8671300D2894F /* NetworkingTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = AFD1FF8F21A8671300D2894F /* Build configuration list for PBXNativeTarget "NetworkingTests" */;
-			buildPhases = (
-				FB1BA057210EC4D97EBD49E8 /* [CP] Check Pods Manifest.lock */,
-				AFD1FF7921A8671300D2894F /* Sources */,
-				AFD1FF7A21A8671300D2894F /* Frameworks */,
-				AFD1FF7B21A8671300D2894F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				AFD1FF8021A8671300D2894F /* PBXTargetDependency */,
-				AFD1FF8221A8671300D2894F /* PBXTargetDependency */,
-			);
-			name = NetworkingTests;
-			productName = NetworkingTests;
-			productReference = AFD1FF7D21A8671300D2894F /* NetworkingTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -833,15 +672,6 @@
 						CreatedOnToolsVersion = 10.1;
 						TestTargetID = AFD1FEC121A6CE7400D2894F;
 					};
-					AFD1FF7421A8671300D2894F = {
-						CreatedOnToolsVersion = 10.1;
-						LastSwiftMigration = 1010;
-					};
-					AFD1FF7C21A8671300D2894F = {
-						CreatedOnToolsVersion = 10.1;
-						LastSwiftMigration = 1010;
-						TestTargetID = AFD1FEC121A6CE7400D2894F;
-					};
 				};
 			};
 			buildConfigurationList = AFD1FEBD21A6CE7400D2894F /* Build configuration list for PBXProject "InTune" */;
@@ -860,8 +690,6 @@
 				AFD1FEC121A6CE7400D2894F /* InTune */,
 				AFD1FED521A6CE7700D2894F /* InTuneTests */,
 				AFD1FEE021A6CE7700D2894F /* InTuneUITests */,
-				AFD1FF7421A8671300D2894F /* Networking */,
-				AFD1FF7C21A8671300D2894F /* NetworkingTests */,
 			);
 		};
 /* End PBXProject section */
@@ -896,20 +724,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		AFD1FEDF21A6CE7700D2894F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AFD1FF7321A8671300D2894F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AFD1FF7B21A8671300D2894F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1033,28 +847,6 @@
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
-		EC77250FE00540251FA4E671 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Networking-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		EFBABF64367DFBDF50B8EE1D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1071,28 +863,6 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-InTuneUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FB1BA057210EC4D97EBD49E8 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-NetworkingTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1116,9 +886,9 @@
 				AFD1FFEF21AD48F400D2894F /* SongDetailDataProvider.swift in Sources */,
 				AFD1FEC621A6CE7400D2894F /* AppDelegate.swift in Sources */,
 				AFD1FFCE21AB5EAB00D2894F /* ResultParser.swift in Sources */,
+				AF2447922250C27D002E0B78 /* NetworkService.swift in Sources */,
 				AFD1FFC521AA156400D2894F /* SearchAction.swift in Sources */,
 				AFD1FFE721AD464100D2894F /* SongDetailWireframe.swift in Sources */,
-				AFD1FFA721A868B200D2894F /* iTunesAPI.swift in Sources */,
 				AF16F8DA2250ADDD001F2B8D /* UIViewController+StoryboardInstantiable.swift in Sources */,
 				AF4A0FF721AF3873005F2A4F /* MusicPlayerDataProvider.swift in Sources */,
 				AFD1FEF621A6E2E900D2894F /* Constants.swift in Sources */,
@@ -1142,7 +912,6 @@
 				AFD1FFE521ACABAC00D2894F /* Loadable.swift in Sources */,
 				AFD1FFDB21AC651800D2894F /* UITableViewCell+Extension.swift in Sources */,
 				AF16F8D5224FE0C0001F2B8D /* Configuration.swift in Sources */,
-				AFD1FFA821A868B200D2894F /* NetworkService.swift in Sources */,
 				AFD1FFC321AA10F900D2894F /* SearchDataProvider.swift in Sources */,
 				AF4A0FF521AF32C5005F2A4F /* MusicPlayerPresenter.swift in Sources */,
 				AFD1FFC821AB471900D2894F /* ResultTableViewCell.swift in Sources */,
@@ -1193,29 +962,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AFD1FF7121A8671300D2894F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AFD1FF9F21A8674800D2894F /* EndPoint.swift in Sources */,
-				AFD1FF9D21A8674800D2894F /* JSONParameterEncoder.swift in Sources */,
-				AFD1FF9B21A8674800D2894F /* ParameterEncoder.swift in Sources */,
-				AFD1FF9E21A8674800D2894F /* Router.swift in Sources */,
-				AFD1FF9A21A8674800D2894F /* FormUrlParameterEncoder.swift in Sources */,
-				AFD1FF9C21A8674800D2894F /* URLParameterEncoder.swift in Sources */,
-				AFD1FFA021A8674800D2894F /* Networking.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AFD1FF7921A8671300D2894F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AFD1FFB321A874FB00D2894F /* FormUrlEncoderTests.swift in Sources */,
-				AFD1FFB121A874E600D2894F /* URLParameterEncodingTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -1228,21 +974,6 @@
 			isa = PBXTargetDependency;
 			target = AFD1FEC121A6CE7400D2894F /* InTune */;
 			targetProxy = AFD1FEE221A6CE7700D2894F /* PBXContainerItemProxy */;
-		};
-		AFD1FF8021A8671300D2894F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = AFD1FF7421A8671300D2894F /* Networking */;
-			targetProxy = AFD1FF7F21A8671300D2894F /* PBXContainerItemProxy */;
-		};
-		AFD1FF8221A8671300D2894F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = AFD1FEC121A6CE7400D2894F /* InTune */;
-			targetProxy = AFD1FF8121A8671300D2894F /* PBXContainerItemProxy */;
-		};
-		AFD1FF8921A8671300D2894F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = AFD1FF7421A8671300D2894F /* Networking */;
-			targetProxy = AFD1FF8821A8671300D2894F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1513,114 +1244,6 @@
 			};
 			name = Release;
 		};
-		AFD1FF8D21A8671300D2894F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F5F4E6ADEA2443EEFE98B2F0 /* Pods-Networking.debug.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = MNZD883YQL;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Networking/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.sonomos.Networking;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		AFD1FF8E21A8671300D2894F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2C732F0A454DDB6FF8C190D3 /* Pods-Networking.release.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = MNZD883YQL;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Networking/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.sonomos.Networking;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		AFD1FF9021A8671300D2894F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C2A753BB13FD42219895A2FA /* Pods-NetworkingTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MNZD883YQL;
-				INFOPLIST_FILE = NetworkingTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.sonomos.NetworkingTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InTune.app/InTune";
-			};
-			name = Debug;
-		};
-		AFD1FF9121A8671300D2894F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B192EB695026F4BA97B13D6C /* Pods-NetworkingTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MNZD883YQL;
-				INFOPLIST_FILE = NetworkingTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.sonomos.NetworkingTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InTune.app/InTune";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1656,24 +1279,6 @@
 			buildConfigurations = (
 				AFD1FEF121A6CE7700D2894F /* Debug */,
 				AFD1FEF221A6CE7700D2894F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		AFD1FF8C21A8671300D2894F /* Build configuration list for PBXNativeTarget "Networking" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				AFD1FF8D21A8671300D2894F /* Debug */,
-				AFD1FF8E21A8671300D2894F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		AFD1FF8F21A8671300D2894F /* Build configuration list for PBXNativeTarget "NetworkingTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				AFD1FF9021A8671300D2894F /* Debug */,
-				AFD1FF9121A8671300D2894F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
