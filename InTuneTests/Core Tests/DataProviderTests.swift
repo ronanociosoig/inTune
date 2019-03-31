@@ -29,7 +29,7 @@ class DataProviderTests: XCTestCase {
         XCTAssertNotNil(dataProvider)
         XCTAssertNotNil(dataProvider.appData)
         XCTAssertNil(dataProvider.appData.searchTerm)
-        XCTAssertTrue(!dataProvider.appData.results.isEmpty)
+        XCTAssertTrue(dataProvider.appData.results.isEmpty)
     }
 
     func testDataProviderStoresSearchTerm() {
@@ -43,7 +43,7 @@ class DataProviderTests: XCTestCase {
         networkService.responseType = .noResultsResponse
         dataProvider.search(term: referenceSearchTerm)
         
-        XCTAssertTrue(!dataProvider.appData.results.isEmpty)
+        XCTAssertTrue(dataProvider.appData.results.isEmpty)
     }
     
     func testDataProviderHas2Results() {
