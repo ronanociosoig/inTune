@@ -77,7 +77,8 @@ class Coordinator: ActivityView, Coordinating {
                                 dataProvider: dataProvider as SearchDataProvider)
         
         let navigationController = UINavigationController(rootViewController: viewController)
-        
+        // navigationController.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        // navigationController.navigationBar.shadowImage = UIImage()
         window.rootViewController = navigationController
         
         presenter = viewController.presenter
