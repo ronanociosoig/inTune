@@ -100,6 +100,16 @@ class Coordinator: ActivityView, Coordinating {
         navigationController.pushViewController(viewController, animated: true)
     }
     
+    fileprivate func adjustPlayerFrame(_ navigationController: UINavigationController, _ musicPlayer: MusicPlayerView) {
+        let height = Constants.MusicPlayer.height
+        let viewFrame = navigationController.view.frame
+        let insets = navigationController.view.safeAreaInsets
+        let size = CGSize(width: viewFrame.size.width, height: height)
+        let point = CGPoint(x: 0, y: viewFrame.size.height - height - insets.bottom)
+        let frame = CGRect(origin: point, size: size)
+        musicPlayer.frame = frame
+    }
+    
     func showMusicPlayer() {
         guard let dataProvider = dataProvider else { return }
         guard let navigationController = window.rootViewController as? UINavigationController else { return }
@@ -111,13 +121,8 @@ class Coordinator: ActivityView, Coordinating {
         
         guard let musicPlayer = MusicPlayerView.loadFromNib() else { return }
         
-        let height = Constants.MusicPlayer.height
-        let viewFrame = navigationController.view.frame
-        let insets = navigationController.view.safeAreaInsets
-        let size = CGSize(width: viewFrame.size.width, height: height)
-        let point = CGPoint(x: 0, y: viewFrame.size.height - height - insets.bottom)
-        let frame = CGRect(origin: point, size: size)
-        musicPlayer.frame = frame
+        adjustPlayerFrame(navigationController, musicPlayer)
+        
         navigationController.view.addSubview(musicPlayer)
         
         musicPlayerPresenter =
