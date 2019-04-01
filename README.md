@@ -27,6 +27,8 @@ Sharing the track details from the details screen.
 
 ## Architecture 
 
+![App architecture outline](AppArchitecture.png)
+
 At the root level, the application employs the coordinator pattern to remove the dependency between screens which enables the UI to be updated dynamically. In this project each screen is placed in a folder with all the associated files in the same place. 
 
 The presentation layer uses the well-known Model-View-Presenter pattern, giving a clean seperation of concern between the view, state and the data.
