@@ -2,9 +2,10 @@
 [![codecov.io](https://codecov.io/github/ronanociosoig/inTune/coverage.svg?branch=master)](https://codecov.io/github/ronanociosoig/inTune?branch=master)
 [![CircleCI](https://circleci.com/gh/ronanociosoig/inTune.svg?style=svg)](https://circleci.com/gh/ronanociosoig/inTune)
 [![codebeat badge](https://codebeat.co/badges/ef478c94-9b65-481f-a9ec-4a7185867400)](https://codebeat.co/projects/github-com-ronanociosoig-intune-master)
-##In Tune
 
-### Outline
+# In Tune
+
+## Outline
 
 The app searches the iTunes API and lists out songs, and can play the previews continuously in a playlist. Tap on one, and it keeps going. It plays in the background too! Nice.
 
@@ -22,7 +23,7 @@ On returning to the search screen, the music player will still be visible on top
 
 Sharing the track details from the details screen. 
 
-### Architecture 
+## Architecture 
 
 At the root level, the application employs the coordinator pattern to remove the dependency between screens which enables the UI to be updated dynamically. In this project each screen is placed in a folder with all the associated files in the same place. 
 
@@ -34,7 +35,7 @@ The data provider class acts as a data access layer, which has extensions define
 
 An AppData class is used to maintain global state across views. The data provider controls the access to this information. The view controllers only have read-only access, and the data can be changed using actions. This is form of uni-directional data flow, and helps to prevent inconsistencies in the screens and data presented. 
 
-### Implementation 
+## Implementation 
 
 The coordinator is in charge of what screens and views are displayed. The player view is added and controlled independently of the 2 screens, and is managed by the coordinator. 
 
