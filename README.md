@@ -5,6 +5,8 @@
 
 # In Tune
 
+![Screen shots](InTuneAppScreenshots.png)
+
 ## Outline
 
 The app searches the iTunes API and lists out songs, and can play the previews continuously in a playlist. Tap on one, and it keeps going. It plays in the background too! Nice.
