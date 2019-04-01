@@ -1,9 +1,9 @@
 //
 //  KIF+Swift.swift
-//  KIFDemoApp
+//  InTuneTests
 //
-//  Created by Andy Obusek on 4/27/16.
-//  Copyright © 2016 Clean Swifter. All rights reserved.
+//  Created by Ronan on 31/03/2019.
+//  Copyright © 2019 Sonomos. All rights reserved.
 //
 
 // swiftlint:disable all
