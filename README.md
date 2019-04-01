@@ -9,7 +9,7 @@
 
 ## Outline
 
-The app searches the iTunes API and lists out the results in a table. It can play the previews continuously in a playlist. Tap on one, and it keeps going. It plays in the background too! Nice.
+The app searches the [iTunes API](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/iTuneSearchAPI/Searching.html#//apple_ref/doc/uid/TP40017632-CH5-SW1) and lists out the results in a table. It can play the previews continuously in a playlist. Tap on one, and it keeps going. It plays in the background too! Nice.
 
 Selecting sort gives options to sort the results according to artist, album, price, length, genre, and year.
 
