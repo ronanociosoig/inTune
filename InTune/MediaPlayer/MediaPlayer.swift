@@ -150,6 +150,29 @@ class MediaPlayer: MediaPlaying {
         playerQueue?.currentItem?.seek(to: CMTime.zero, completionHandler: nil)
     }
     
+    fileprivate func updateDelegate(_ duration: inout Double, _ currentTime: CMTime) {
+        if duration == Double.nan {
+            duration = MediaPlayer.iTunesPreviewDuration
+        }
+        
+        if duration - currentTime.seconds < 1 {
+            // we are ending the track.
+            // send a notification to the player.
+            
+            os_log("Track end", log: Log.player, type: .info)
+            self.next()
+            self.delegate.update()
+        }
+    }
+    
+    fileprivate func playAfterCaching() {
+        if self.cachingData == true {
+            self.cachingData = false
+            self.delegate.startedPlaying()
+            os_log("Caching done", log: Log.player, type: .info)
+        }
+    }
+    
     fileprivate func addPeriodicTimeObserver() {
         os_log("AddPeriodicTimeObserver", log: Log.player, type: .info)
         // Invoke callback every half second
@@ -162,26 +185,11 @@ class MediaPlayer: MediaPlaying {
             playerQueue?.addPeriodicTimeObserver(forInterval: interval, queue: mainQueue) { [weak self] _ in
                 // update player transport UI
                 if let currentTime = self?.playerQueue?.currentTime() {
-                    if self?.cachingData == true {
-                        self?.cachingData = false
-                        self?.delegate.startedPlaying()
-                        os_log("Caching done", log: Log.player, type: .info)
-                    }
+                    self?.playAfterCaching()
                     
                     guard var duration = self?.playerQueue?.currentItem?.duration.seconds else { return }
                 
-                    if duration == Double.nan {
-                        duration = MediaPlayer.iTunesPreviewDuration
-                    }
-                    
-                    if duration - currentTime.seconds < 1 {
-                        // we are ending the track.
-                        // send a notification to the player.
-                        
-                        os_log("Track end", log: Log.player, type: .info)
-                        self?.next()
-                        self?.delegate.update()
-                    }
+                    self?.updateDelegate(&duration, currentTime)
                 }
         }
     }

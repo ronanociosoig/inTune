@@ -28,6 +28,30 @@ class SongDetailView: UIView {
         return result.primaryGenreName + " • " + dateFormatter.string(from: result.releaseDate)
     }
     
+    fileprivate func configureButton() {
+        openInSafariButton.setTitle(Constants.Translations.openIniTunes, for: .normal)
+        openInSafariButton.accessibilityLabel = Constants.Translations.openIniTunes
+        openInSafariButton.isAccessibilityElement = true
+        
+        openInSafariButton.backgroundColor = UIColor(white: 0.96, alpha: 1.0)
+        openInSafariButton.layer.cornerRadius = 8
+        openInSafariButton.layer.masksToBounds = true
+    }
+    
+    fileprivate func configureArtworkImageView(_ result: Result) {
+        artworkImageView.layer.cornerRadius = 5
+        artworkImageView.layer.masksToBounds = true
+        artworkImageView.image = UIImage(named: Constants.Images.largePlaceholder)
+        
+        collectionNameLabel.text = result.collectionName
+        
+        trackViewURL = result.trackViewURL
+        
+        if let url = URL(string: result.artworkUrl100) {
+            artworkImageView.hnk_setImage(from: url, placeholder: UIImage(named: Constants.Images.largePlaceholder))
+        }
+    }
+    
     func configure(with result: Result) {
         trackNameLabel.text = result.trackName
         artistNameLabel.text = result.artistName
@@ -41,25 +65,9 @@ class SongDetailView: UIView {
             priceLabel.text = Constants.Translations.notAvailable
         }
         
-        artworkImageView.layer.cornerRadius = 5
-        artworkImageView.layer.masksToBounds = true
-        artworkImageView.image = UIImage(named: Constants.Images.largePlaceholder)
+        configureArtworkImageView(result)
         
-        collectionNameLabel.text = result.collectionName
-        
-        trackViewURL = result.trackViewURL
-        
-        if let url = URL(string: result.artworkUrl100) {
-            artworkImageView.hnk_setImage(from: url, placeholder: UIImage(named: Constants.Images.largePlaceholder))
-        }
-        
-        openInSafariButton.setTitle(Constants.Translations.openIniTunes, for: .normal)
-        openInSafariButton.accessibilityLabel = Constants.Translations.openIniTunes
-        openInSafariButton.isAccessibilityElement = true
-        
-        openInSafariButton.backgroundColor = UIColor(white: 0.96, alpha: 1.0)
-        openInSafariButton.layer.cornerRadius = 8
-        openInSafariButton.layer.masksToBounds = true
+        configureButton()
     }
     
     @IBAction func openInSafariButtonAction(_ sender: Any) {
