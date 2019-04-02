@@ -20,7 +20,7 @@ class SongDetailView: UIView {
     
     @IBOutlet weak var openInSafariButton: UIButton!
     
-    var trackViewURL: String!
+    var trackViewURL: String?
     
     func dateAndGenre(result: Result) -> String {
         let dateFormatter = DateFormatter.simpleDateFormatter()

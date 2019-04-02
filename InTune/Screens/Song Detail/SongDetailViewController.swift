@@ -59,7 +59,7 @@ class SongDetailViewController: UIViewController {
             songDetailView.trackNameLabel.text ?? "Unknown",
             songDetailView.artistNameLabel.text ?? "Unknown",
             songDetailView.artworkImageView.image ?? image!,
-            songDetailView.trackViewURL
+            songDetailView.trackViewURL ?? ""
             ], applicationActivities: nil)
         
         // swiftlint:enable force_unwrapping
