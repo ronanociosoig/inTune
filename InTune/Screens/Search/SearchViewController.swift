@@ -12,7 +12,7 @@ protocol ViewController: class {
     func reload()
     func setDataSource(dataSource: SearchDataSource)
     func sortButton(enabled: Bool)
-    func showSortOptions()
+    func showSortOptions(alertController: UIAlertController)
 }
 
 class SearchViewController: UIViewController {
@@ -101,89 +101,10 @@ class SearchViewController: UIViewController {
         presenter.sortBarButtonAction()
     }
 
-    func showSortOptions() {
-        let alertController = UIAlertController(title: Constants.Translations.sortOptions,
-                                                message: nil,
-                                                preferredStyle: .actionSheet)
-        
-        alertController.addAction(lengthAlertAction())
-        alertController.addAction(genreAlertAction())
-        alertController.addAction(priceAlertAction())
-        alertController.addAction(artistNameAction())
-        alertController.addAction(yearAction())
-        alertController.addAction(albumAlertAction())
-        alertController.addAction(cancelAction())
-        
+    func showSortOptions(alertController: UIAlertController) {
         present(alertController,
                                animated: true,
                                completion: nil)
-    }
-    
-    func lengthAlertAction() -> UIAlertAction {
-        let action = UIAlertAction(title: Constants.Translations.SortOptions.length,
-                                         style: .default) { (_) in
-                                            self.sort(with: .length)
-        }
-        action.accessibilityLabel = Constants.Accessibility.SearchScreen.SortOptions.length
-        return action
-    }
-    
-    func albumAlertAction() -> UIAlertAction {
-        let action = UIAlertAction(title: Constants.Translations.SortOptions.album,
-                                        style: .default) { (_) in
-                                            self.sort(with: .album)
-        }
-        action.accessibilityLabel = Constants.Accessibility.SearchScreen.SortOptions.album
-        return action
-    }
-    
-    func genreAlertAction() -> UIAlertAction {
-        let action = UIAlertAction(title: Constants.Translations.SortOptions.genre,
-                                        style: .default) { (_) in
-                                            self.sort(with: .genre)
-        }
-        action.accessibilityLabel = Constants.Accessibility.SearchScreen.SortOptions.genre
-        return action
-    }
-    
-    func priceAlertAction() -> UIAlertAction {
-        let action = UIAlertAction(title: Constants.Translations.SortOptions.price,
-                                        style: .default) { (_) in
-                                            self.sort(with: .price)
-        }
-        action.accessibilityLabel = Constants.Accessibility.SearchScreen.SortOptions.price
-        return action
-    }
-    
-    func artistNameAction() -> UIAlertAction {
-        let action = UIAlertAction(title: Constants.Translations.SortOptions.artist,
-                                             style: .default) { (_) in
-                                                self.sort(with: .artist)
-        }
-        action.accessibilityLabel = Constants.Accessibility.SearchScreen.SortOptions.artist
-        return action
-    }
-    
-    func yearAction() -> UIAlertAction {
-        let action = UIAlertAction(title: Constants.Translations.SortOptions.year,
-                                       style: .default) { (_) in
-                                        self.sort(with: .year)
-        }
-        action.accessibilityLabel = Constants.Accessibility.SearchScreen.SortOptions.year
-        return action
-    }
-    
-    func cancelAction() -> UIAlertAction {
-        let action = UIAlertAction(title: Constants.Translations.cancel,
-                                         style: .cancel,
-                                         handler: nil)
-        action.accessibilityLabel = Constants.Accessibility.SearchScreen.SortOptions.cancel
-        return action
-    }
-    
-    func sort(with option: SortOption) {
-        guard let presenter = presenter else { return }
-        presenter.selected(option: option)
     }
 }
 

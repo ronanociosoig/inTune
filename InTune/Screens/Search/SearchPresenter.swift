@@ -66,7 +66,8 @@ extension SearchPresenter: SearchPresenting {
     }
     
     func sortBarButtonAction() {
-        viewController.showSortOptions()
+        let alertController = SortAlertBuilder.makeSortAlertController(presenter: self)
+        viewController.showSortOptions(alertController: alertController)
     }
     
     func selected(option: SortOption) {
