@@ -7,73 +7,74 @@
 //
 
 import UIKit
+import RxSwift
 
 struct SortAlertBuilder {
-    static func makeSortAlertController(presenter: SearchPresenting) -> UIAlertController {
+    static func makeSortAlertController(sortSubject: PublishSubject<SortOption>) -> UIAlertController {
         let alertController = UIAlertController(title: Constants.Translations.sortOptions,
                                                 message: nil,
                                                 preferredStyle: .actionSheet)
         
-        alertController.addAction(lengthAlertAction(presenter: presenter))
-        alertController.addAction(genreAlertAction(presenter: presenter))
-        alertController.addAction(priceAlertAction(presenter: presenter))
-        alertController.addAction(artistNameAction(presenter: presenter))
-        alertController.addAction(yearAction(presenter: presenter))
-        alertController.addAction(albumAlertAction(presenter: presenter))
+        alertController.addAction(lengthAlertAction(sortSubject: sortSubject))
+        alertController.addAction(genreAlertAction(sortSubject: sortSubject))
+        alertController.addAction(priceAlertAction(sortSubject: sortSubject))
+        alertController.addAction(artistNameAction(sortSubject: sortSubject))
+        alertController.addAction(yearAction(sortSubject: sortSubject))
+        alertController.addAction(albumAlertAction(sortSubject: sortSubject))
         alertController.addAction(cancelAction())
         
         return alertController
     }
     
-    static func lengthAlertAction(presenter: SearchPresenting) -> UIAlertAction {
+    static func lengthAlertAction(sortSubject: PublishSubject<SortOption>) -> UIAlertAction {
         let action = UIAlertAction(title: Constants.Translations.SortOptions.length,
                                    style: .default) { (_) in
-                                    presenter.selected(option: .length)
+                                    sortSubject.onNext(.length)
         }
         action.accessibilityLabel = Constants.Accessibility.SearchScreen.SortOptions.length
         return action
     }
     
-    static func albumAlertAction(presenter: SearchPresenting) -> UIAlertAction {
+    static func albumAlertAction(sortSubject: PublishSubject<SortOption>) -> UIAlertAction {
         let action = UIAlertAction(title: Constants.Translations.SortOptions.album,
                                    style: .default) { (_) in
-                                    presenter.selected(option: .album)
+                                    sortSubject.onNext(.album)
         }
         action.accessibilityLabel = Constants.Accessibility.SearchScreen.SortOptions.album
         return action
     }
     
-    static func genreAlertAction(presenter: SearchPresenting) -> UIAlertAction {
+    static func genreAlertAction(sortSubject: PublishSubject<SortOption>) -> UIAlertAction {
         let action = UIAlertAction(title: Constants.Translations.SortOptions.genre,
                                    style: .default) { (_) in
-                                    presenter.selected(option: .genre)
+                                    sortSubject.onNext(.genre)
         }
         action.accessibilityLabel = Constants.Accessibility.SearchScreen.SortOptions.genre
         return action
     }
     
-    static func priceAlertAction(presenter: SearchPresenting) -> UIAlertAction {
+    static func priceAlertAction(sortSubject: PublishSubject<SortOption>) -> UIAlertAction {
         let action = UIAlertAction(title: Constants.Translations.SortOptions.price,
                                    style: .default) { (_) in
-                                    presenter.selected(option: .price)
+                                    sortSubject.onNext(.price)
         }
         action.accessibilityLabel = Constants.Accessibility.SearchScreen.SortOptions.price
         return action
     }
     
-    static func artistNameAction(presenter: SearchPresenting) -> UIAlertAction {
+    static func artistNameAction(sortSubject: PublishSubject<SortOption>) -> UIAlertAction {
         let action = UIAlertAction(title: Constants.Translations.SortOptions.artist,
                                    style: .default) { (_) in
-                                    presenter.selected(option: .artist)
+                                    sortSubject.onNext(.artist)
         }
         action.accessibilityLabel = Constants.Accessibility.SearchScreen.SortOptions.artist
         return action
     }
     
-    static func yearAction(presenter: SearchPresenting) -> UIAlertAction {
+    static func yearAction(sortSubject: PublishSubject<SortOption>) -> UIAlertAction {
         let action = UIAlertAction(title: Constants.Translations.SortOptions.year,
                                    style: .default) { (_) in
-                                    presenter.selected(option: .year)
+                                    sortSubject.onNext(.year)
         }
         action.accessibilityLabel = Constants.Accessibility.SearchScreen.SortOptions.year
         return action

@@ -7,10 +7,10 @@
 //
 
 import Foundation
+import RxSwift
 
 protocol SearchPresenting: class {
     func sortBarButtonAction()
-    func selected(option: SortOption)
     func viewDidLayoutSubviews()
     func select(index: Int)
     func search(term: String)
@@ -24,6 +24,9 @@ class SearchPresenter {
     private var viewController: ViewController
     private var dataProvider: SearchDataProvider
     private var term: String?
+    
+    let sortSubject = PublishSubject<SortOption>()
+    let disposeBag = DisposeBag()
     
     let dataSource = SearchDataSource()
     
@@ -66,16 +69,16 @@ extension SearchPresenter: SearchPresenting {
     }
     
     func sortBarButtonAction() {
-        let alertController = SortAlertBuilder.makeSortAlertController(presenter: self)
+        let alertController = SortAlertBuilder.makeSortAlertController(sortSubject: sortSubject)
         viewController.showSortOptions(alertController: alertController)
-    }
-    
-    func selected(option: SortOption) {
-        actions.sort(option: option)
         
-        viewController.reload()
+        sortSubject.subscribe { (selectedOption) in
+            guard let selectedOption = selectedOption.element else { return }
+            self.actions.sort(option: selectedOption)
+            self.viewController.reload()
+        }.disposed(by: disposeBag)
     }
-    
+
     func select(index: Int) {
         actions.select(index: index)
     }
