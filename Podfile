@@ -11,6 +11,8 @@ target 'InTune' do
   pod 'Haneke'
   pod 'JGProgressHUD'
   pod 'Moya'
+  pod 'RxSwift'
+  pod 'RxCocoa'
 
   target 'InTuneTests' do
     inherit! :search_paths

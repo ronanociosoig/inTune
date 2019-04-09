@@ -11,12 +11,19 @@ PODS:
     - Alamofire (~> 4.1)
     - Result (~> 3.0)
   - Result (3.2.4)
+  - RxAtomic (4.4.2)
+  - RxCocoa (4.4.2):
+    - RxSwift (>= 4.4.2, ~> 4.4)
+  - RxSwift (4.4.2):
+    - RxAtomic (>= 4.4.2, ~> 4.4)
 
 DEPENDENCIES:
   - Haneke
   - JGProgressHUD
   - KIF
   - Moya
+  - RxCocoa
+  - RxSwift
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -26,6 +33,9 @@ SPEC REPOS:
     - KIF
     - Moya
     - Result
+    - RxAtomic
+    - RxCocoa
+    - RxSwift
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
@@ -34,7 +44,10 @@ SPEC CHECKSUMS:
   KIF: f3d01c109ee9d1cfe6b0f2bb2aa278e807e971e2
   Moya: a725035953bc1c0eb1be505ab903984501d82440
   Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
+  RxAtomic: d00e97c10db88c6f08540e0bf2752fc5a2404167
+  RxCocoa: 477990dc3b4c3ff55fb0ac77e1cc06244e0aaec8
+  RxSwift: 74c29b693c8e42b0f64400e8b06564575742d649
 
-PODFILE CHECKSUM: e4a64eb126123ad05326a625f55a7dcb1b2840df
+PODFILE CHECKSUM: 882dde23c23bf13dfe6d2288f001443466eb604e
 
 COCOAPODS: 1.6.1

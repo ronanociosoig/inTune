@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 @testable import InTune
 
 // swiftlint:disable all
