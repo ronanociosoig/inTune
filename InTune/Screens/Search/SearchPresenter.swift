@@ -38,6 +38,12 @@ class SearchPresenter {
         self.dataProvider = dataProvider
         
         dataSource.presenter = self
+        
+        sortSubject.subscribe { (selectedOption) in
+            guard let selectedOption = selectedOption.element else { return }
+            self.actions.sort(option: selectedOption)
+            self.viewController.reload()
+        }.disposed(by: disposeBag)
     }
 }
 
@@ -66,17 +72,12 @@ extension SearchPresenter: SearchPresenting {
     func search(term: String) {
         self.term = term
         actions.search(term: term)
+        
     }
     
     func sortBarButtonAction() {
         let alertController = SortAlertBuilder.makeSortAlertController(sortSubject: sortSubject)
         viewController.showSortOptions(alertController: alertController)
-        
-        sortSubject.subscribe { (selectedOption) in
-            guard let selectedOption = selectedOption.element else { return }
-            self.actions.sort(option: selectedOption)
-            self.viewController.reload()
-        }.disposed(by: disposeBag)
     }
 
     func select(index: Int) {

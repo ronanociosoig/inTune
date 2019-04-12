@@ -7,6 +7,8 @@
 //
 
 import XCTest
+import RxCocoa
+import RxSwift
 
 @testable import InTune
 
@@ -20,10 +22,6 @@ class SearchPresenterTests: XCTestCase {
     override func setUp() {
         dataProvider = DataProvider(service: networkService)
         networkService.responseType = .simpleResponse
-    }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
     func testSearchPresenter() {
@@ -88,9 +86,12 @@ class SearchPresenterTests: XCTestCase {
         
         dataProvider.search(term: expectedSearchTerm)
         
-        presenter.selected(option: .album)
-        XCTAssertTrue(actions.sortCalled)
-        XCTAssertTrue(viewController.reloadCalled)
+        presenter.sortSubject.onNext(.album)
+        
+        let called = actions.sortCalled
+        XCTAssertTrue(called)
+        let reloadCalled = viewController.reloadCalled
+        XCTAssertTrue(reloadCalled)
     }
 }
 
@@ -136,7 +137,7 @@ class MockSearchViewController: ViewController {
         sortButtonEnabled = enabled
     }
     
-    func showSortOptions() {
+    func showSortOptions(alertController: UIAlertController) {
         showSortOptionsCalled = true
     }
 }

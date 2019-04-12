@@ -49,22 +49,9 @@ class SearchViewControllerTests: XCTestCase {
         
         coordinator.window.rootViewController = viewController
         
-        viewController.showSortOptions()
-        
-//        let alertController = viewController.presentingViewController
-//
-//        _ = alertController?.view
-//
-//        XCTAssertNotNil(alertController)
-        
         viewController.buttonAction(UIButton.init(type: .system))
         
         XCTAssertTrue(searchPresenter.viewDidLayoutSubviewsCalled)
-        
-        viewController.sort(with: .album)
-        
-        XCTAssertTrue(searchPresenter.selectedCalled)
-        
         let searchBar = UISearchBar()
         searchBar.text = referenceSearchTerm
         viewController.searchBarSearchButtonClicked(searchBar)
@@ -79,7 +66,8 @@ class SearchViewControllerTests: XCTestCase {
         XCTAssertTrue(dataSource.numberOfRowsCalled)
         let indexPath = IndexPath(row: 0, section: 0)
         viewController.tableView(tableView, didSelectRowAt: indexPath)
-        XCTAssertTrue(searchPresenter.selectCalled)
+        let selectCalled = searchPresenter.selectCalled
+        XCTAssertTrue(selectCalled)
     }
 }
 

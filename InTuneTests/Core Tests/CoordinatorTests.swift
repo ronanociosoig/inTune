@@ -151,16 +151,11 @@ class MockSearchPresenter: SearchPresenting {
     var dataReceivedCalled = false
     var viewDidLayoutSubviewsCalled = false
     var sortBarButtonActionCalled = false
-    var selectedCalled = false
     var searchCalled = false
-    var selectCalled = false 
+    var selectCalled = false
     
     func sortBarButtonAction() {
         sortBarButtonActionCalled = true
-    }
-    
-    func selected(option: SortOption) {
-        selectedCalled = true
     }
     
     func viewDidLayoutSubviews() {
@@ -180,7 +175,17 @@ class MockSearchPresenter: SearchPresenting {
     }
     
     func item(at indexPath: IndexPath) -> SearchResult {
-        return SearchResult(identifier: 123, artworkUrl: URL(string: "https://itunes.apple.com"), artistName: "U2", trackName: "Bloody Sunday", collectionName: "Album", genre: "Rock", duration: 35295235, durationText: "5.45", releaseDate: "1984-03-42", price: "1.25", previewURL: "https://itunes.apple.com/preview/123/page.html")
+        return SearchResult(identifier: 123,
+                            artworkUrl: URL(string: "https://itunes.apple.com"),
+                            artistName: "U2",
+                            trackName: "Bloody Sunday",
+                            collectionName: "Album",
+                            genre: "Rock",
+                            duration: 35295235,
+                            durationText: "5.45",
+                            releaseDate: "1984-03-42",
+                            price: "1.25",
+                            previewURL: "https://itunes.apple.com/preview/123/page.html")
     }
     
     func dataReceived() {
