@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1484868205BF3F2E2605691D /* Pods_InTune.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC0172265854DA2D0A468097 /* Pods_InTune.framework */; };
 		3974A4F4C76DE04A3A7D4ED1 /* Pods_InTuneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A444914D00E17E9800FF2C1F /* Pods_InTuneTests.framework */; };
+		978BA6DF3671958B3B998539 /* Pods_InTuneUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C2F19A7992E92234ED35771 /* Pods_InTuneUITests.framework */; };
 		AF0944A82249937500D3E07E /* MusicPlayerDataProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0944A72249937500D3E07E /* MusicPlayerDataProviderTests.swift */; };
 		AF16F8BE224BE816001F2B8D /* MediaPlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF16F8BD224BE816001F2B8D /* MediaPlayerTests.swift */; };
 		AF16F8C9224C35D0001F2B8D /* KIF+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF16F8C8224C35D0001F2B8D /* KIF+Swift.swift */; };
@@ -95,7 +96,6 @@
 		AFD1FFF721AD6C2900D2894F /* SongDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FFF621AD6C2900D2894F /* SongDetailView.swift */; };
 		AFD1FFFC21AD9FE300D2894F /* MediaPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD1FFFB21AD9FE300D2894F /* MediaPlayer.swift */; };
 		AFD1FFFE21ADA03700D2894F /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFD1FFFD21ADA03700D2894F /* AVKit.framework */; };
-		BFED9141DC7202ECAA7CFD4C /* Pods_InTuneUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF840F5ED9CFE0B9FEF22DC2 /* Pods_InTuneUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -134,6 +134,7 @@
 		2C732F0A454DDB6FF8C190D3 /* Pods-Networking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Networking.release.xcconfig"; path = "Target Support Files/Pods-Networking/Pods-Networking.release.xcconfig"; sourceTree = "<group>"; };
 		37AFA05EA42DB3F5505702D0 /* Pods-InTuneTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InTuneTests.release.xcconfig"; path = "Target Support Files/Pods-InTuneTests/Pods-InTuneTests.release.xcconfig"; sourceTree = "<group>"; };
 		694E40BDB77EE3E1DAAE5D2D /* Pods-InTuneTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InTuneTests.debug.xcconfig"; path = "Target Support Files/Pods-InTuneTests/Pods-InTuneTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7C2F19A7992E92234ED35771 /* Pods_InTuneUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InTuneUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D12B4274F803C7A3639B62E /* Pods-InTune.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InTune.debug.xcconfig"; path = "Target Support Files/Pods-InTune/Pods-InTune.debug.xcconfig"; sourceTree = "<group>"; };
 		9807DD107F4163D0AD7F8CCA /* Pods_NetworkingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NetworkingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A07B5125DC812EBE1DD26D73 /* Pods-InTuneUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InTuneUITests.debug.xcconfig"; path = "Target Support Files/Pods-InTuneUITests/Pods-InTuneUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -232,7 +233,6 @@
 		B192EB695026F4BA97B13D6C /* Pods-NetworkingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkingTests.release.xcconfig"; path = "Target Support Files/Pods-NetworkingTests/Pods-NetworkingTests.release.xcconfig"; sourceTree = "<group>"; };
 		C2A753BB13FD42219895A2FA /* Pods-NetworkingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkingTests.debug.xcconfig"; path = "Target Support Files/Pods-NetworkingTests/Pods-NetworkingTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CEBD3AFACA4D646A9AAB15E5 /* Pods-InTune.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InTune.release.xcconfig"; path = "Target Support Files/Pods-InTune/Pods-InTune.release.xcconfig"; sourceTree = "<group>"; };
-		EF840F5ED9CFE0B9FEF22DC2 /* Pods_InTuneUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InTuneUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5F4E6ADEA2443EEFE98B2F0 /* Pods-Networking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Networking.debug.xcconfig"; path = "Target Support Files/Pods-Networking/Pods-Networking.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -241,7 +241,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BFED9141DC7202ECAA7CFD4C /* Pods_InTuneUITests.framework in Frameworks */,
+				978BA6DF3671958B3B998539 /* Pods_InTuneUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,9 +273,9 @@
 				AFD1FFFD21ADA03700D2894F /* AVKit.framework */,
 				AC0172265854DA2D0A468097 /* Pods_InTune.framework */,
 				A444914D00E17E9800FF2C1F /* Pods_InTuneTests.framework */,
-				EF840F5ED9CFE0B9FEF22DC2 /* Pods_InTuneUITests.framework */,
 				13CB23CA2544224CED6572F0 /* Pods_Networking.framework */,
 				9807DD107F4163D0AD7F8CCA /* Pods_NetworkingTests.framework */,
+				7C2F19A7992E92234ED35771 /* Pods_InTuneUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -596,6 +596,7 @@
 				AF2447AF2251678F002E0B78 /* Sources */,
 				AF2447B02251678F002E0B78 /* Frameworks */,
 				AF2447B12251678F002E0B78 /* Resources */,
+				70324E6B12C034BC3E0CFE69 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -660,10 +661,12 @@
 				TargetAttributes = {
 					AF2447B22251678F002E0B78 = {
 						CreatedOnToolsVersion = 10.2;
+						LastSwiftMigration = 1020;
 						TestTargetID = AFD1FEC121A6CE7400D2894F;
 					};
 					AFD1FEC121A6CE7400D2894F = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -800,6 +803,42 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-InTuneTests/Pods-InTuneTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		70324E6B12C034BC3E0CFE69 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-InTuneUITests/Pods-InTuneUITests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Haneke/Haneke.framework",
+				"${BUILT_PRODUCTS_DIR}/JGProgressHUD/JGProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Haneke.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JGProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-InTuneUITests/Pods-InTuneUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8D1A401BC8F58EFD3E5D3700 /* [CP] Check Pods Manifest.lock */ = {
@@ -1190,7 +1229,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sonomos.InTune;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -1210,7 +1249,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sonomos.InTune;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -1234,7 +1273,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "InTuneTests/InTuneTests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InTune.app/InTune";
 			};
@@ -1258,7 +1297,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.sonomos.InTuneTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "InTuneTests/InTuneTests-Bridging-Header.h";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InTune.app/InTune";
 			};

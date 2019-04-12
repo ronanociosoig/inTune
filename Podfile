@@ -21,8 +21,15 @@ target 'InTune' do
     pod 'RxBlocking'
   end
 
-  target 'InTuneUITests' do
-    inherit! :search_paths
-  end
+end
 
+target 'InTuneUITests' do
+  use_frameworks!
+  inhibit_all_warnings!
+  #inherit! :search_paths
+  pod 'Haneke'
+  pod 'JGProgressHUD'
+  pod 'Moya'
+  pod 'RxSwift'
+  pod 'RxCocoa'
 end

@@ -165,9 +165,9 @@ class InTuneUITests: XCTestCase {
         app/*@START_MENU_TOKEN@*/.keys["m"]/*[[".keyboards.keys[\"m\"]",".keys[\"m\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
         app/*@START_MENU_TOKEN@*/.buttons["Search"]/*[[".keyboards.buttons[\"Search\"]",".buttons[\"Search\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
         
-        app.tables["ResultsTable"]/*@START_MENU_TOKEN@*/.cells.containing(.staticText, identifier:"Shine Like Stars")/*[[".cells.containing(.staticText, identifier:\"03:45\")",".cells.containing(.staticText, identifier:\"Shine Like Stars\")"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.staticTexts["Alternative"].tap()
+        app.tables["ResultsTable"].cells.containing(.staticText, identifier: "Shine Like Stars").staticTexts["Alternative"].tap()
         
-        let resultsElementsQuery = app.otherElements.containing(.navigationBar, identifier:"Results")
+        let resultsElementsQuery = app.otherElements.containing(.navigationBar, identifier: "Results")
         let element = resultsElementsQuery.children(matching: .other).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element
         element.tap()
         element.tap()
