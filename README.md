@@ -1,11 +1,18 @@
+
+
+
+# In Tune
+
+<p align="center">
+    <img src="InTuneAppScreenshots.png" width="600” max-width="90%" alt="InTune" />
+</p>
+
+<img src="https://img.shields.io/badge/Swift-5.0-orange.svg" />
 [![Build Status](https://travis-ci.org/ronanociosoig/inTune.svg?branch=master)](https://travis-ci.org/ronanociosoig/inTune)
 [![codecov.io](https://codecov.io/github/ronanociosoig/inTune/coverage.svg?branch=master)](https://codecov.io/github/ronanociosoig/inTune?branch=master)
 [![CircleCI](https://circleci.com/gh/ronanociosoig/inTune.svg?style=svg)](https://circleci.com/gh/ronanociosoig/inTune)
 [![codebeat badge](https://codebeat.co/badges/ef478c94-9b65-481f-a9ec-4a7185867400)](https://codebeat.co/projects/github-com-ronanociosoig-intune-master)
 
-# In Tune
-
-![Screen shots](InTuneAppScreenshots.png)
 
 ## Outline
 
@@ -21,7 +28,9 @@ On returning to the search screen, the music player will still be visible on top
 
 ## Architecture 
 
-![App architecture outline](AppArchitecture.png)
+<p align="center">
+    <img src="AppArchitecture.png" width="600” max-width="90%" alt="App Architecture" />
+</p>
 
 At the root level, the application employs the [coordinator pattern](http://khanlou.com/2015/01/the-coordinator/) to remove the dependency between screens, enabling better reusability and testability. 
 
