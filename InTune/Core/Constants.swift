@@ -93,7 +93,7 @@ struct Constants {
             }
         }
         struct SongDetailScreen {
-            static let openIniTunesButton = "Open In iTunes"
+            static let openIniTunesButton = "Open In Music.app"
             static let shareButton = "Share"
             
         }
