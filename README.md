@@ -2,6 +2,7 @@
 [![codecov.io](https://codecov.io/github/ronanociosoig/inTune/coverage.svg?branch=master)](https://codecov.io/github/ronanociosoig/inTune?branch=master)
 [![CircleCI](https://circleci.com/gh/ronanociosoig/inTune.svg?style=svg)](https://circleci.com/gh/ronanociosoig/inTune)
 [![codebeat badge](https://codebeat.co/badges/ef478c94-9b65-481f-a9ec-4a7185867400)](https://codebeat.co/projects/github-com-ronanociosoig-intune-master)
+[![Maintainability](https://api.codeclimate.com/v1/badges/2e09361b5c52f8f07d02/maintainability)](https://codeclimate.com/github/ronanociosoig/inTune/maintainability)
 
 # In Tune
 
