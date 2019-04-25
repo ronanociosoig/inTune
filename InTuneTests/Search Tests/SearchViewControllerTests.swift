@@ -49,8 +49,6 @@ class SearchViewControllerTests: XCTestCase {
         
         coordinator.window.rootViewController = viewController
         
-        viewController.buttonAction(UIButton.init(type: .system))
-        
         XCTAssertTrue(searchPresenter.viewDidLayoutSubviewsCalled)
         let searchBar = UISearchBar()
         searchBar.text = referenceSearchTerm

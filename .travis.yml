@@ -6,7 +6,7 @@ before_install:
 
 script:
   - pod install
-  - xcodebuild -scheme InTune -workspace InTune.xcworkspace -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone X,OS=12.2' build test
+  - xcodebuild -scheme InTune -workspace InTune.xcworkspace -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone X,OS=12.2' -quiet build test
 after_success:
   - slather
   - bash <(curl -s https://codecov.io/bash) -t bb18b7f1-c811-4c82-af1d-a21d7ef47a44

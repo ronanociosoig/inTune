@@ -10,6 +10,8 @@ import Foundation
 import RxSwift
 
 protocol SearchPresenting: class {
+    // var tappedPlayPause: PublishSubject<Any> { get };<Void>
+    
     func sortBarButtonAction()
     func viewDidLayoutSubviews()
     func select(index: Int)
@@ -29,6 +31,8 @@ class SearchPresenter {
     let disposeBag = DisposeBag()
     
     let dataSource = SearchDataSource()
+    
+    // public let tappedPlayPause: PublishSubject<Void> = .init()
     
     init(viewController: ViewController,
          actions: SearchActions,

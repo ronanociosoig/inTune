@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 protocol ViewController: class {
     func reload()
@@ -30,11 +32,19 @@ class SearchViewController: UIViewController {
     
     private let searchController = UISearchController(searchResultsController: nil)
     
+    private let disposeBag = DisposeBag()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureSearchController()
-
         addNavigationButton()
+        
+        _ = navigationItem.rightBarButtonItem?.rx.tap.asObservable()
+            .subscribe(onNext: { [unowned self] (_) in
+                guard let presenter = self.presenter else { return }
+                
+                presenter.sortBarButtonAction()
+            })
     }
     
     private func configureSearchController() {
@@ -88,17 +98,13 @@ class SearchViewController: UIViewController {
     }
     
     private func addNavigationButton() {
-        let barButton = UIBarButtonItem(title: Constants.Translations.sortButtonTitle, style: .plain, target: self, action: #selector(buttonAction))
+        
+        let barButton = UIBarButtonItem(title: Constants.Translations.sortButtonTitle, style: .plain, target: nil, action: nil)
+        
         barButton.tintColor = UIColor(named: Constants.Theme.tintColor)
         barButton.isEnabled = false
         barButton.accessibilityLabel = Constants.Accessibility.SearchScreen.sortButton
         navigationItem.rightBarButtonItem = barButton
-    }
-    
-    @objc func buttonAction(_ sender: Any) {
-        guard let presenter = presenter else { return }
-        
-        presenter.sortBarButtonAction()
     }
 
     func showSortOptions(alertController: UIAlertController) {
