@@ -1,12 +1,38 @@
-[![Build Status](https://travis-ci.org/ronanociosoig/inTune.svg?branch=master)](https://travis-ci.org/ronanociosoig/inTune)
-[![codecov.io](https://codecov.io/github/ronanociosoig/inTune/coverage.svg?branch=master)](https://codecov.io/github/ronanociosoig/inTune?branch=master)
-[![CircleCI](https://circleci.com/gh/ronanociosoig/inTune.svg?style=svg)](https://circleci.com/gh/ronanociosoig/inTune)
-[![codebeat badge](https://codebeat.co/badges/ef478c94-9b65-481f-a9ec-4a7185867400)](https://codebeat.co/projects/github-com-ronanociosoig-intune-master)
-[![Maintainability](https://api.codeclimate.com/v1/badges/2e09361b5c52f8f07d02/maintainability)](https://codeclimate.com/github/ronanociosoig/inTune/maintainability)
+
+<p align="center">
+    <img src="InTuneAppScreenshots.png"
+      width=700>
+</p>
+<p align="center">
+	<a href="https://travis-ci.org/ronanociosoig/inTune">
+		<img src="https://travis-ci.org/ronanociosoig/inTune.svg?branch=master" alt="Build Status">
+	</a>
+	<a href="https://codecov.io/github/ronanociosoig/inTune?branch=master">
+		<img src="https://codecov.io/github/ronanociosoig/inTune/coverage.svg?branch=master" alt="codecov.io">
+	</a>
+	<a href="https://circleci.com/gh/ronanociosoig/inTune">
+		<img src="https://circleci.com/gh/ronanociosoig/inTune.svg?style=svg" alt="CircleCI">
+	</a>
+	<a href="https://codebeat.co/projects/github-com-ronanociosoig-intune-master">
+		<img src="https://codebeat.co/badges/ef478c94-9b65-481f-a9ec-4a7185867400" alt="codebeat badge">
+	</a>
+	<a href="https://codeclimate.com/github/ronanociosoig/inTune/maintainability">
+		<img src="https://api.codeclimate.com/v1/badges/2e09361b5c52f8f07d02/maintainability" alt="Code Climate Maintainability">
+	</a>
+</p>
+<p align="center">
+    <a href="#outline">Outline</a>
+  • <a href="#architecture">Architecture</a>
+  • <a href="#implementation">Implementation</a>
+  • <a href="#integrations">Integrations</a>
+  • <a href="#automated_testing">Automated testing</a>
+  • <a href="#known_issues">Known Issues</a>
+  • <a href="#improvements">Improvements</a>
+</p>
 
 # In Tune
 
-![Screen shots](InTuneAppScreenshots.png)
+A simple app that uses the iTunes API to playback song previews.
 
 ## Outline
 
