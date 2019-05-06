@@ -25,8 +25,8 @@
   • <a href="#architecture">Architecture</a>
   • <a href="#implementation">Implementation</a>
   • <a href="#integrations">Integrations</a>
-  • <a href="#automated_testing">Automated testing</a>
-  • <a href="#known_issues">Known Issues</a>
+  • <a href="#automated-testing">Automated testing</a>
+  • <a href="#known-issues">Known Issues</a>
   • <a href="#improvements">Improvements</a>
 </p>
 
@@ -78,7 +78,7 @@ Code quality checking is run by using [SwiftLint](https://github.com/realm/Swift
 
 [CodeCov](https://codecov.io) is integrated to validate and give reporting on the unit and integration test coverage.
 
-## Automated testing
+## Automated Testing
 The project has unit, integration and UI tests. The UI tests are implemented using both the Xcode standard UI test as well as [KIF](https://github.com/kif-framework/KIF). 
 
 The project has 4 schemes that separate out the different types of testing. 
