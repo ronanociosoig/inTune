@@ -25,7 +25,7 @@
   • <a href="#architecture">Architecture</a>
   • <a href="#implementation">Implementation</a>
   • <a href="#integrations">Integrations</a>
-  • <a href="#automated-testing">Automated testing</a>
+  • <a href="#automated-testing">Automated Testing</a>
   • <a href="#known-issues">Known Issues</a>
   • <a href="#improvements">Improvements</a>
 </p>
