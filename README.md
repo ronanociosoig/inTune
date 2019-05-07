@@ -4,6 +4,9 @@
       width=700>
 </p>
 <p align="center">
+	<a href="https://app.bitrise.io/app/f0c3d71c60b18d54#/builds">
+		<img src="https://app.bitrise.io/app/f0c3d71c60b18d54/status.svg?token=gubpfBN7Il1m9iBHtn45Zw" alt="Bitrise.io">
+	</a>
 	<a href="https://travis-ci.org/ronanociosoig/inTune">
 		<img src="https://travis-ci.org/ronanociosoig/inTune.svg?branch=master" alt="Build Status">
 	</a>
