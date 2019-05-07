@@ -16,6 +16,7 @@
 	<a href="https://circleci.com/gh/ronanociosoig/inTune">
 		<img src="https://circleci.com/gh/ronanociosoig/inTune.svg?style=svg" alt="CircleCI">
 	</a>
+	<img src="https://img.shields.io/badge/Swift-5.0-orange.svg" alt="Swift 5.0"/>
 	<a href="https://codebeat.co/projects/github-com-ronanociosoig-intune-master">
 		<img src="https://codebeat.co/badges/ef478c94-9b65-481f-a9ec-4a7185867400" alt="codebeat badge">
 	</a>
