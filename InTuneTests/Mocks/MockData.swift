@@ -50,6 +50,6 @@ class MockData {
     }
     
     static func loadIggyPopResponse() throws -> Data? {
-        return try load(name: "IggyPopResponse")
+        return try load(name: "noResultsServerResponse")
     }
 }
