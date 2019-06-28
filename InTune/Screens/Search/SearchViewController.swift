@@ -61,6 +61,10 @@ class SearchViewController: UIViewController {
         definesPresentationContext = true
     }
     
+    func noNeededFunction(with aString: String, another string: String, aNumber: Int, aFloat: Float, second: Int, third: Int, fourth: Int) {
+        print("Do nothing here.")
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
