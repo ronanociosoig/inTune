@@ -30,6 +30,8 @@ class DataProvider: DataProviding {
     let appData = AppData()
     var dataLoaded: DataLoaded?
     let networkService: ServiceProvider
+    
+    var searchTerm: String?
 
     required init(service: ServiceProvider) {
         self.networkService = service
@@ -41,12 +43,12 @@ class DataProvider: DataProviding {
         let queue = DispatchQueue.main
         
         // If the search is the same as the last one performed, dismiss the HUD and return
-        if term == appData.searchTerm {
+        if term == searchTerm {
             self.dataLoaded?.dataReceived(errorMessage: nil, on: queue)
             return
         }
         
-        appData.searchTerm = term
+        searchTerm = term
         appData.results.removeAll()
         appData.searchResults.removeAll()
         appData.selectedIndex = 0
