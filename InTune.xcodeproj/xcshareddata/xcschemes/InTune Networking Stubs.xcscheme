@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B2243328B34C571D9A88F4DABA7B1213"
-               BuildableName = "Pods_InTune.framework"
-               BlueprintName = "Pods-InTune"
-               ReferencedContainer = "container:Pods.xcodeproj">
+               BlueprintIdentifier = "AFD1FEC121A6CE7400D2894F"
+               BuildableName = "InTune.app"
+               BlueprintName = "InTune"
+               ReferencedContainer = "container:InTune.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -29,6 +29,15 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "AFD1FEC121A6CE7400D2894F"
+            BuildableName = "InTune.app"
+            BlueprintName = "InTune"
+            ReferencedContainer = "container:InTune.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -42,15 +51,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B2243328B34C571D9A88F4DABA7B1213"
-            BuildableName = "Pods_InTune.framework"
-            BlueprintName = "Pods-InTune"
-            ReferencedContainer = "container:Pods.xcodeproj">
+            BlueprintIdentifier = "AFD1FEC121A6CE7400D2894F"
+            BuildableName = "InTune.app"
+            BlueprintName = "InTune"
+            ReferencedContainer = "container:InTune.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -60,6 +70,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "AFD1FEC121A6CE7400D2894F"
+            BuildableName = "InTune.app"
+            BlueprintName = "InTune"
+            ReferencedContainer = "container:InTune.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

@@ -13,10 +13,12 @@ target 'InTune' do
   pod 'Moya'
   pod 'RxSwift'
   pod 'RxCocoa'
+  pod 'OHHTTPStubs/Swift', :configurations => ['Debug']
 
   target 'InTuneTests' do
     inherit! :search_paths
     pod 'KIF', :configurations => ['Debug']
+    
     pod 'RxTest'
     pod 'RxBlocking'
   end
