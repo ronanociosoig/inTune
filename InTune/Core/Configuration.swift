@@ -40,4 +40,9 @@ struct Configuration {
         }
 
     }
+    
+    static var useStubs: Bool {
+        let arguments = CommandLine.arguments
+        return arguments.contains("NetworkStubs")
+    }
 }

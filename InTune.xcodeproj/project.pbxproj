@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -30,6 +30,7 @@
 		AF2447922250C27D002E0B78 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2447912250C27D002E0B78 /* NetworkService.swift */; };
 		AF2447B62251678F002E0B78 /* InTuneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2447B52251678F002E0B78 /* InTuneUITests.swift */; };
 		AF2F34032253B2920087E41E /* SortAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2F34022253B2920087E41E /* SortAlertController.swift */; };
+		AF334EFE2329172E00DE77E4 /* simpleServerResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = AFD1FF4721A827DC00D2894F /* simpleServerResponse.json */; };
 		AF4A0FEC21AE9BEC005F2A4F /* MusicPlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF4A0FEB21AE9BEC005F2A4F /* MusicPlayerView.xib */; };
 		AF4A0FEE21AEA3AC005F2A4F /* MusicPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4A0FED21AEA3AB005F2A4F /* MusicPlayerView.swift */; };
 		AF4A0FF021AED2B1005F2A4F /* MediaPlayerDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4A0FEF21AED2B1005F2A4F /* MediaPlayerDataProvider.swift */; };
@@ -721,6 +722,7 @@
 				AF16F8D7224FE684001F2B8D /* serverResponse.json in Resources */,
 				AFD1FFE921AD482000D2894F /* SongDetail.storyboard in Resources */,
 				AFD1FFC921AB471900D2894F /* ResultTableViewCell.xib in Resources */,
+				AF334EFE2329172E00DE77E4 /* simpleServerResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
